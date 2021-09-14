@@ -15,6 +15,14 @@ namespace INF164HWAss1
         public frmLoadingScreen()
         {
             InitializeComponent();
+
+            Arcade a = new Arcade();
+            a.Visible = true;
+        }
+
+        private void frmLoadingScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
