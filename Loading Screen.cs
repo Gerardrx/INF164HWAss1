@@ -10,19 +10,35 @@ using System.Windows.Forms;
 
 namespace INF164HWAss1
 {
-    public partial class frmLoadingScreen : Form
+    public partial class frmLoading : Form
     {
-        public frmLoadingScreen()
+        public frmLoading()
         {
             InitializeComponent();
+
+            LoadingTimer.Start();
 
             Arcade a = new Arcade();
             a.Visible = true;
         }
 
-        private void frmLoadingScreen_Load(object sender, EventArgs e)
-        {
+        int time = 0;
 
+        private void LoadingTimer_Tick(object sender, EventArgs e)
+        {
+            time++;
+
+            if (time == 3)
+            {
+                LoadingTimer.Stop();
+
+                //Hide the loading form
+                this.Hide();
+
+                //Create a new menu form
+                frmMenu mm = new frmMenu();
+                mm.Visible = true;
+            }
         }
     }
 }

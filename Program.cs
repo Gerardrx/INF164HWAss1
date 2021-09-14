@@ -16,7 +16,7 @@ namespace INF164HWAss1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLoadingScreen());
+            Application.Run(new frmLoading());
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace INF164HWAss1
 {
-    partial class frmWelcomeMenu
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,13 @@ namespace INF164HWAss1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWelcomeMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.btnPlay = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnInstructions = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.CloseFadeTimer = new System.Windows.Forms.Timer(this.components);
-            this.pbLoadingScreen = new System.Windows.Forms.PictureBox();
-            this.LoadingTimer = new System.Windows.Forms.Timer(this.components);
             this.OpenFadeTimer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoadingScreen)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -101,29 +98,12 @@ namespace INF164HWAss1
             this.CloseFadeTimer.Interval = 10;
             this.CloseFadeTimer.Tick += new System.EventHandler(this.CloseFadeTimer_Tick);
             // 
-            // pbLoadingScreen
-            // 
-            this.pbLoadingScreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLoadingScreen.Image = global::INF164HWAss1.Properties.Resources.Loading_Screen;
-            this.pbLoadingScreen.InitialImage = null;
-            this.pbLoadingScreen.Location = new System.Drawing.Point(-1, 0);
-            this.pbLoadingScreen.Name = "pbLoadingScreen";
-            this.pbLoadingScreen.Size = new System.Drawing.Size(387, 388);
-            this.pbLoadingScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLoadingScreen.TabIndex = 4;
-            this.pbLoadingScreen.TabStop = false;
-            // 
-            // LoadingTimer
-            // 
-            this.LoadingTimer.Interval = 1000;
-            this.LoadingTimer.Tick += new System.EventHandler(this.LoadingTimer_Tick);
-            // 
             // OpenFadeTimer
             // 
             this.OpenFadeTimer.Interval = 10;
             this.OpenFadeTimer.Tick += new System.EventHandler(this.OpenFadeTimer_Tick);
             // 
-            // frmWelcomeMenu
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,15 +114,13 @@ namespace INF164HWAss1
             this.Controls.Add(this.btnInstructions);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnPlay);
-            this.Controls.Add(this.pbLoadingScreen);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "frmWelcomeMenu";
+            this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoadingScreen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,8 +133,6 @@ namespace INF164HWAss1
         private System.Windows.Forms.Button btnInstructions;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Timer CloseFadeTimer;
-        private System.Windows.Forms.PictureBox pbLoadingScreen;
-        private System.Windows.Forms.Timer LoadingTimer;
         private System.Windows.Forms.Timer OpenFadeTimer;
     }
 }
