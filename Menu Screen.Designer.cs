@@ -37,6 +37,7 @@ namespace INF164HWAss1
             this.btnClose = new System.Windows.Forms.Button();
             this.CloseFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.OpenFadeTimer = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -45,7 +46,7 @@ namespace INF164HWAss1
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(46, 93);
+            this.btnPlay.Location = new System.Drawing.Point(96, 95);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(100, 33);
             this.btnPlay.TabIndex = 0;
@@ -57,23 +58,24 @@ namespace INF164HWAss1
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTitle.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblTitle.Location = new System.Drawing.Point(12, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(188, 43);
+            this.lblTitle.Size = new System.Drawing.Size(284, 65);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Tamagotchi";
             // 
             // btnInstructions
             // 
-            this.btnInstructions.BackColor = System.Drawing.Color.Blue;
+            this.btnInstructions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnInstructions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstructions.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInstructions.ForeColor = System.Drawing.Color.White;
-            this.btnInstructions.Location = new System.Drawing.Point(46, 132);
+            this.btnInstructions.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInstructions.ForeColor = System.Drawing.Color.Black;
+            this.btnInstructions.Location = new System.Drawing.Point(89, 155);
             this.btnInstructions.Name = "btnInstructions";
-            this.btnInstructions.Size = new System.Drawing.Size(100, 33);
+            this.btnInstructions.Size = new System.Drawing.Size(122, 42);
             this.btnInstructions.TabIndex = 2;
             this.btnInstructions.Text = "Instructions";
             this.btnInstructions.UseVisualStyleBackColor = false;
@@ -81,13 +83,13 @@ namespace INF164HWAss1
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Blue;
+            this.btnClose.BackColor = System.Drawing.Color.Aqua;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(46, 171);
+            this.btnClose.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(89, 217);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(100, 33);
+            this.btnClose.Size = new System.Drawing.Size(121, 42);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -103,6 +105,20 @@ namespace INF164HWAss1
             this.OpenFadeTimer.Interval = 10;
             this.OpenFadeTimer.Tick += new System.EventHandler(this.OpenFadeTimer_Tick);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(89, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 42);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Play";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,8 +129,9 @@ namespace INF164HWAss1
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnInstructions);
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnPlay);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -134,6 +151,7 @@ namespace INF164HWAss1
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Timer CloseFadeTimer;
         private System.Windows.Forms.Timer OpenFadeTimer;
+        private System.Windows.Forms.Button button1;
     }
 }
 

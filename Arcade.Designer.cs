@@ -44,11 +44,12 @@ namespace INF164HWAss1
             // pbClickMe
             // 
             this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
-            this.pbClickMe.BackgroundImage = global::INF164HWAss1.Properties.Resources.bicMan;
             this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbClickMe.Location = new System.Drawing.Point(829, 523);
+     //       this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
+            this.pbClickMe.Location = new System.Drawing.Point(491, 455);
             this.pbClickMe.Name = "pbClickMe";
-            this.pbClickMe.Size = new System.Drawing.Size(75, 75);
+            this.pbClickMe.Size = new System.Drawing.Size(295, 239);
+            this.pbClickMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbClickMe.TabIndex = 1;
             this.pbClickMe.TabStop = false;
             this.pbClickMe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbClickMe_MouseDown);
@@ -80,7 +81,7 @@ namespace INF164HWAss1
             // 
             // pbHearts
             // 
-            this.pbHearts.BackgroundImage = global::INF164HWAss1.Properties.Resources.heart_3;
+//            this.pbHearts.BackgroundImage = global::INF164HWAss1.Properties.Resources.heart_3;
             this.pbHearts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbHearts.Location = new System.Drawing.Point(491, 12);
             this.pbHearts.Name = "pbHearts";

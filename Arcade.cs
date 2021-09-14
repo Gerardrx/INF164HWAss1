@@ -45,7 +45,7 @@ namespace INF164HWAss1
         }
         private void choosePicture()
         {
-            pbClickMe.BackgroundImage = global::INF164HWAss1.Properties.Resources.bicMan;
+            pbClickMe.BackgroundImage = global::INF164HWAss1.Properties.Resources.bomba;
             ///inside bigger if
             double prob = rand.Next(0, 100);
             if (prob < 10 & coins > 10)
@@ -69,10 +69,10 @@ namespace INF164HWAss1
             if(bomb)
             {
                 hearts--;
-                pbClickMe.BackgroundImage = global::INF164HWAss1.Properties.Resources.bomba1;
+                pbClickMe.BackgroundImage = global::INF164HWAss1.Properties.Resources.bomba;
+                lblBorder.BackColor = Color.Transparent;
 
-                int tempSpeed = speed;
-                
+                GameTimer.Interval = 5000;
 
                 switch (hearts)
                 {
