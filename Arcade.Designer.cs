@@ -45,7 +45,7 @@ namespace INF164HWAss1
             // 
             this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
             this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-     //       this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
+            this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
             this.pbClickMe.Location = new System.Drawing.Point(491, 455);
             this.pbClickMe.Name = "pbClickMe";
             this.pbClickMe.Size = new System.Drawing.Size(295, 239);
@@ -81,8 +81,8 @@ namespace INF164HWAss1
             // 
             // pbHearts
             // 
-//            this.pbHearts.BackgroundImage = global::INF164HWAss1.Properties.Resources.heart_3;
             this.pbHearts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
             this.pbHearts.Location = new System.Drawing.Point(491, 12);
             this.pbHearts.Name = "pbHearts";
             this.pbHearts.Size = new System.Drawing.Size(240, 78);

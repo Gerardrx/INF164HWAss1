@@ -39,9 +39,10 @@ namespace INF164HWAss1
             // pbLoadingScreen
             // 
             this.pbLoadingScreen.Image = global::INF164HWAss1.Properties.Resources.Loading;
-            this.pbLoadingScreen.Location = new System.Drawing.Point(0, -1);
+            this.pbLoadingScreen.Location = new System.Drawing.Point(0, -2);
+            this.pbLoadingScreen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbLoadingScreen.Name = "pbLoadingScreen";
-            this.pbLoadingScreen.Size = new System.Drawing.Size(336, 359);
+            this.pbLoadingScreen.Size = new System.Drawing.Size(504, 552);
             this.pbLoadingScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLoadingScreen.TabIndex = 0;
             this.pbLoadingScreen.TabStop = false;
@@ -53,13 +54,14 @@ namespace INF164HWAss1
             // 
             // frmLoading
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(335, 357);
+            this.ClientSize = new System.Drawing.Size(502, 549);
             this.Controls.Add(this.pbLoadingScreen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmLoading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
