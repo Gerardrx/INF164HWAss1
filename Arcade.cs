@@ -12,52 +12,49 @@ namespace INF164HWAss1
 {
     public partial class Arcade : Form
     {
-        Random rand = new Random();
+        private Random rand = new Random();
         int coins = 0;
+        bool flag = false;
 
         public Arcade()
         {
             InitializeComponent();
         }
 
-        private void Arcade_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             GameTimer.Start();
+            flag = true;
         }
 
         private void movePicture()
         {
-            int x = rand.Next(this.Size.Width - 75);
-            int y = rand.Next(this.Size.Height - 75);
+            int x = rand.Next(75,this.Size.Width - 75);
+            int y = rand.Next(105,this.Size.Height - 75);
 
-            if (x < 0)
-            {
-                x = 0;
-            }
-
-            if (y < 0)
-            {
-                y = 0;
-            }
-
-            pictureBox1.Location = new Point(x, y);
+            pbClickMe.Location = new Point(x, y);
+            lblBorder.Location = new Point(x - 2, y - 2);
         }
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
             movePicture();
+            flag = true;
+            lblBorder.BackColor = Color.Transparent;
         }
 
-        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        private void pbClickMe_MouseDown(object sender, MouseEventArgs e)
         {
-            coins++;
-            lblCoins.Text = "Coins: " + coins;
-            
+            if (flag)
+            {
+                coins++;
+                lblCoins.Text = "Coins: " + coins;
+                flag = false;
+
+                lblBorder.BackColor = Color.Green;
+                
+            }
         }
+
     }
 }
