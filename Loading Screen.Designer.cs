@@ -1,7 +1,7 @@
 ﻿
 namespace INF164HWAss1
 {
-    partial class frmLoadingScreen
+    partial class frmLoading
     {
         /// <summary>
         /// Required designer variable.
@@ -29,40 +29,47 @@ namespace INF164HWAss1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoadingScreen));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoading));
+            this.pbLoadingScreen = new System.Windows.Forms.PictureBox();
+            this.LoadingTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoadingScreen)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pbLoadingScreen
             // 
-            this.pictureBox1.Image = global::INF164HWAss1.Properties.Resources.Loading_Screen;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(336, 359);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbLoadingScreen.Image = global::INF164HWAss1.Properties.Resources.Loading_Screen;
+            this.pbLoadingScreen.Location = new System.Drawing.Point(-1, 0);
+            this.pbLoadingScreen.Name = "pbLoadingScreen";
+            this.pbLoadingScreen.Size = new System.Drawing.Size(336, 359);
+            this.pbLoadingScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLoadingScreen.TabIndex = 0;
+            this.pbLoadingScreen.TabStop = false;
             // 
-            // frmLoadingScreen
+            // LoadingTimer
+            // 
+            this.LoadingTimer.Interval = 1000;
+            this.LoadingTimer.Tick += new System.EventHandler(this.LoadingTimer_Tick);
+            // 
+            // frmLoading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 357);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbLoadingScreen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmLoadingScreen";
+            this.Name = "frmLoading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
-            this.Load += new System.EventHandler(this.frmLoadingScreen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoadingScreen)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbLoadingScreen;
+        private System.Windows.Forms.Timer LoadingTimer;
     }
 }

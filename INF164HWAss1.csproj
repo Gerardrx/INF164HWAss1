@@ -67,11 +67,11 @@
     <Compile Include="Arcade.Designer.cs">
       <DependentUpon>Arcade.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Menu Screen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Menu Screen.Designer.cs">
+      <DependentUpon>Menu Screen.cs</DependentUpon>
     </Compile>
     <Compile Include="Loading Screen.cs">
       <SubType>Form</SubType>
@@ -84,8 +84,8 @@
     <EmbeddedResource Include="Arcade.resx">
       <DependentUpon>Arcade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Menu Screen.resx">
+      <DependentUpon>Menu Screen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading Screen.resx">
       <DependentUpon>Loading Screen.cs</DependentUpon>

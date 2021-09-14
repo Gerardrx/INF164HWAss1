@@ -10,26 +10,20 @@ using System.Windows.Forms;
 
 namespace INF164HWAss1
 {
-    public partial class frmWelcomeMenu : Form
+    public partial class frmMenu : Form
     {
-        public frmWelcomeMenu()
+        public frmMenu()
         {
             InitializeComponent();
 
-            Arcade a = new Arcade();
-            a.Visible = true;
-
-            LoadingTimer.Start();
-            pbLoadingScreen.BringToFront();
-            this.Size = new Size(385, 388);
+            //Fade in form
+            Opacity = 0;
+            OpenFadeTimer.Start();
         }
-
-        int time = 0;
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Arcade a = new Arcade();
-            a.Visible = true;
+            //Create and display Home form
         }
 
         private void btnInstructions_Click(object sender, EventArgs e)
@@ -44,36 +38,25 @@ namespace INF164HWAss1
 
         private void CloseFadeTimer_Tick(object sender, EventArgs e)
         {
-            if(Opacity == 0)
+            //Fade out the form
+            if (Opacity == 0)
             {
                 CloseFadeTimer.Stop();
-                this.Close();
+
+                //Close the program
+                Application.Exit();
             }
             Opacity -= 0.02;
         }
 
-        private void LoadingTimer_Tick(object sender, EventArgs e)
-        {
-            time++;
-            
-            if(time == 4)
-            {
-                pbLoadingScreen.Visible = false;
-                Opacity = 0;
-                this.Size = new Size(1022, 500);
-                StartPosition = FormStartPosition.CenterScreen;
-                LoadingTimer.Stop();
-                OpenFadeTimer.Start();
-            }
-        }
-
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
         {
+            //Fade in the form
             if(Opacity == 1)
             {
                 OpenFadeTimer.Stop();
             }
-            Opacity += 0.1;
+            Opacity += 0.02;
         }
     }
 }
