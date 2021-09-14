@@ -46,7 +46,7 @@ namespace INF164HWAss1
             this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
             this.pbClickMe.BackgroundImage = global::INF164HWAss1.Properties.Resources.bicMan;
             this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbClickMe.Location = new System.Drawing.Point(817, 518);
+            this.pbClickMe.Location = new System.Drawing.Point(829, 523);
             this.pbClickMe.Name = "pbClickMe";
             this.pbClickMe.Size = new System.Drawing.Size(75, 75);
             this.pbClickMe.TabIndex = 1;
@@ -55,7 +55,7 @@ namespace INF164HWAss1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(562, 744);
+            this.button1.Location = new System.Drawing.Point(829, 26);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 51);
             this.button1.TabIndex = 2;
@@ -92,7 +92,7 @@ namespace INF164HWAss1
             // 
             this.lblMultiplier.AutoSize = true;
             this.lblMultiplier.Font = new System.Drawing.Font("Goudy Stout", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMultiplier.Location = new System.Drawing.Point(1029, 24);
+            this.lblMultiplier.Location = new System.Drawing.Point(1017, 24);
             this.lblMultiplier.Name = "lblMultiplier";
             this.lblMultiplier.Size = new System.Drawing.Size(249, 66);
             this.lblMultiplier.TabIndex = 5;
@@ -110,6 +110,7 @@ namespace INF164HWAss1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1290, 879);
             this.Controls.Add(this.lblMultiplier);
             this.Controls.Add(this.pbHearts);
