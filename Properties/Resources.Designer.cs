@@ -63,6 +63,16 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bicMan {
+            get {
+                object obj = ResourceManager.GetObject("bicMan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Loading_Screen {
             get {
                 object obj = ResourceManager.GetObject("Loading_Screen", resourceCulture);

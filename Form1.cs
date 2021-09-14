@@ -16,6 +16,9 @@ namespace INF164HWAss1
         {
             InitializeComponent();
 
+            Arcade a = new Arcade();
+            a.Visible = true;
+
             LoadingTimer.Start();
             pbLoadingScreen.BringToFront();
             this.Size = new Size(385, 388);
@@ -25,7 +28,8 @@ namespace INF164HWAss1
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-
+            Arcade a = new Arcade();
+            a.Visible = true;
         }
 
         private void btnInstructions_Click(object sender, EventArgs e)
