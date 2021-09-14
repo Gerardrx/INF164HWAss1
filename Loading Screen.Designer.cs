@@ -38,8 +38,8 @@ namespace INF164HWAss1
             // 
             // pbLoadingScreen
             // 
-            this.pbLoadingScreen.Image = global::INF164HWAss1.Properties.Resources.Loading_Screen;
-            this.pbLoadingScreen.Location = new System.Drawing.Point(-1, 0);
+            this.pbLoadingScreen.Image = global::INF164HWAss1.Properties.Resources.Loading;
+            this.pbLoadingScreen.Location = new System.Drawing.Point(0, -1);
             this.pbLoadingScreen.Name = "pbLoadingScreen";
             this.pbLoadingScreen.Size = new System.Drawing.Size(336, 359);
             this.pbLoadingScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -55,6 +55,7 @@ namespace INF164HWAss1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(335, 357);
             this.Controls.Add(this.pbLoadingScreen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

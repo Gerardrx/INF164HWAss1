@@ -143,9 +143,9 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Loading_Screen {
+        internal static System.Drawing.Bitmap Loading {
             get {
-                object obj = ResourceManager.GetObject("Loading_Screen", resourceCulture);
+                object obj = ResourceManager.GetObject("Loading", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
