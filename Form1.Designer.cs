@@ -1,7 +1,7 @@
 ﻿
 namespace INF164HWAss1
 {
-    partial class Form1
+    partial class frmWelcomeMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,51 +29,120 @@ namespace INF164HWAss1
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWelcomeMenu));
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnInstructions = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.CloseFadeTimer = new System.Windows.Forms.Timer(this.components);
+            this.pbLoadingScreen = new System.Windows.Forms.PictureBox();
+            this.LoadingTimer = new System.Windows.Forms.Timer(this.components);
+            this.OpenFadeTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoadingScreen)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnPlay
             // 
-            this.button1.Location = new System.Drawing.Point(33, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 55);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "yay";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPlay.BackColor = System.Drawing.Color.Blue;
+            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlay.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.White;
+            this.btnPlay.Location = new System.Drawing.Point(46, 93);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(100, 33);
+            this.btnPlay.TabIndex = 0;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
-            // checkBox1
+            // lblTitle
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(340, 62);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(113, 24);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblTitle.Location = new System.Drawing.Point(12, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(188, 43);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Tamagotchi";
             // 
-            // label1
+            // btnInstructions
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(250, 338);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "efrefef";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.btnInstructions.BackColor = System.Drawing.Color.Blue;
+            this.btnInstructions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInstructions.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInstructions.ForeColor = System.Drawing.Color.White;
+            this.btnInstructions.Location = new System.Drawing.Point(46, 132);
+            this.btnInstructions.Name = "btnInstructions";
+            this.btnInstructions.Size = new System.Drawing.Size(100, 33);
+            this.btnInstructions.TabIndex = 2;
+            this.btnInstructions.Text = "Instructions";
+            this.btnInstructions.UseVisualStyleBackColor = false;
+            this.btnInstructions.Click += new System.EventHandler(this.btnInstructions_Click);
             // 
-            // Form1
+            // btnClose
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.btnClose.BackColor = System.Drawing.Color.Blue;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(46, 171);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(100, 33);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // CloseFadeTimer
+            // 
+            this.CloseFadeTimer.Interval = 10;
+            this.CloseFadeTimer.Tick += new System.EventHandler(this.CloseFadeTimer_Tick);
+            // 
+            // pbLoadingScreen
+            // 
+            this.pbLoadingScreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbLoadingScreen.Image = global::INF164HWAss1.Properties.Resources.Loading_Screen;
+            this.pbLoadingScreen.InitialImage = null;
+            this.pbLoadingScreen.Location = new System.Drawing.Point(-1, 0);
+            this.pbLoadingScreen.Name = "pbLoadingScreen";
+            this.pbLoadingScreen.Size = new System.Drawing.Size(387, 388);
+            this.pbLoadingScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLoadingScreen.TabIndex = 4;
+            this.pbLoadingScreen.TabStop = false;
+            // 
+            // LoadingTimer
+            // 
+            this.LoadingTimer.Interval = 1000;
+            this.LoadingTimer.Tick += new System.EventHandler(this.LoadingTimer_Tick);
+            // 
+            // OpenFadeTimer
+            // 
+            this.OpenFadeTimer.Interval = 10;
+            this.OpenFadeTimer.Tick += new System.EventHandler(this.OpenFadeTimer_Tick);
+            // 
+            // frmWelcomeMenu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 449);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.BackgroundImage = global::INF164HWAss1.Properties.Resources.Menu_Background1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(1022, 500);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnInstructions);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.btnPlay);
+            this.Controls.Add(this.pbLoadingScreen);
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmWelcomeMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menu";
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoadingScreen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,9 +150,14 @@ namespace INF164HWAss1
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button btnInstructions;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Timer CloseFadeTimer;
+        private System.Windows.Forms.PictureBox pbLoadingScreen;
+        private System.Windows.Forms.Timer LoadingTimer;
+        private System.Windows.Forms.Timer OpenFadeTimer;
     }
 }
 
