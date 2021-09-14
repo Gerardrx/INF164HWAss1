@@ -39,6 +39,16 @@ namespace INF164HWAss1
                 frmMenu mm = new frmMenu();
                 mm.Visible = true;
             }
+            else if (time == 1)
+            {
+                //Change the backround colour
+                this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            }
+            else if (time == 2)
+            {
+                //Change the backround colour
+                this.BackColor = System.Drawing.Color.DodgerBlue;
+            }
         }
     }
 }
