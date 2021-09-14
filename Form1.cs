@@ -21,5 +21,10 @@ namespace INF164HWAss1
         {
             //yay
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            ///wowoowowowowow
+        }
     }
 }
