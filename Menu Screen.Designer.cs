@@ -41,7 +41,9 @@ namespace INF164HWAss1
             this.InstructionsFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.HomeFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.pbWelcomeGIF = new System.Windows.Forms.PictureBox();
+            this.pbExtraPic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbWelcomeGIF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExtraPic)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -144,6 +146,17 @@ namespace INF164HWAss1
             this.pbWelcomeGIF.TabIndex = 4;
             this.pbWelcomeGIF.TabStop = false;
             // 
+            // pbExtraPic
+            // 
+            this.pbExtraPic.BackColor = System.Drawing.Color.Transparent;
+            this.pbExtraPic.Image = global::INF164HWAss1.Properties.Resources.MenuExtraPic;
+            this.pbExtraPic.Location = new System.Drawing.Point(51, 296);
+            this.pbExtraPic.Name = "pbExtraPic";
+            this.pbExtraPic.Size = new System.Drawing.Size(232, 192);
+            this.pbExtraPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbExtraPic.TabIndex = 5;
+            this.pbExtraPic.TabStop = false;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +164,7 @@ namespace INF164HWAss1
             this.BackgroundImage = global::INF164HWAss1.Properties.Resources.Menu_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1022, 500);
+            this.Controls.Add(this.pbExtraPic);
             this.Controls.Add(this.pbWelcomeGIF);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnInstructions);
@@ -165,6 +179,7 @@ namespace INF164HWAss1
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pbWelcomeGIF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExtraPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +197,7 @@ namespace INF164HWAss1
         private System.Windows.Forms.Timer InstructionsFadeTimer;
         private System.Windows.Forms.Timer HomeFadeTimer;
         private System.Windows.Forms.PictureBox pbWelcomeGIF;
+        private System.Windows.Forms.PictureBox pbExtraPic;
     }
 }
 

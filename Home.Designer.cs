@@ -94,6 +94,7 @@ namespace INF164HWAss1
             this.btnArcade.TabIndex = 3;
             this.btnArcade.Text = "Arcade";
             this.btnArcade.UseVisualStyleBackColor = true;
+            this.btnArcade.Click += new System.EventHandler(this.btnArcade_Click);
             // 
             // pictureBox1
             // 

@@ -53,5 +53,11 @@ namespace INF164HWAss1
             frmMenu mm = new frmMenu();
             mm.Visible = true;
         }
+
+        private void btnArcade_Click(object sender, EventArgs e)
+        {
+            Arcade a = new Arcade();
+            a.Visible = true;
+        }
     }
 }
