@@ -90,6 +90,9 @@
     <EmbeddedResource Include="Arcade.resx">
       <DependentUpon>Arcade.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Instructions.resx">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu Screen.resx">
       <DependentUpon>Menu Screen.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instructions.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
