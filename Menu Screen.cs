@@ -23,7 +23,7 @@ namespace INF164HWAss1
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            //Create and display Home form
+            HomeFadeTimer.Start();
         }
 
         private void btnInstructions_Click(object sender, EventArgs e)
@@ -63,11 +63,25 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 InstructionsFadeTimer.Stop();
-
                 this.Hide();
 
+                //Create and display Instructions form
                 frmInstructions i = new frmInstructions();
                 i.Visible = true;
+            }
+            Opacity -= 0.03;
+        }
+
+        private void HomeFadeTimer_Tick(object sender, EventArgs e)
+        {
+            if (Opacity == 0)
+            {
+                HomeFadeTimer.Stop();
+                this.Hide();
+
+                //Create and display Home form
+                frmHome h = new frmHome();
+                h.Visible = true;
             }
             Opacity -= 0.03;
         }

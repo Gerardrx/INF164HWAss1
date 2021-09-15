@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace INF164HWAss1
 {
-    public partial class frmInstructions : Form
+    public partial class frmHome : Form
     {
-        public frmInstructions()
+        public frmHome()
         {
             InitializeComponent();
-            
-            //load the instructions text file
-            rtbInstructions.LoadFile("Instructions.rtf");
 
             Opacity = 0;
             OpenFadeTimer.Start();
-        }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            CloseFadeTimer.Start();
+            this.BackColor = ColorTranslator.FromHtml("#66ceef");
         }
 
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
@@ -40,23 +34,24 @@ namespace INF164HWAss1
 
         private void CloseFadeTimer_Tick(object sender, EventArgs e)
         {
-            //Fade out the form
             if (Opacity == 0)
             {
                 CloseFadeTimer.Stop();
-
                 this.Hide();
 
-                //open new menu form
+                //Create and display Instructions form
                 frmMenu mm = new frmMenu();
                 mm.Visible = true;
             }
             Opacity -= 0.03;
         }
 
-        private void frmInstructions_Load(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            this.BackColor = ColorTranslator.FromHtml("#66ceef");
+            this.Hide();
+
+            frmMenu mm = new frmMenu();
+            mm.Visible = true;
         }
     }
 }

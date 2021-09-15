@@ -39,6 +39,7 @@ namespace INF164HWAss1
             this.OpenFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.InstructionsFadeTimer = new System.Windows.Forms.Timer(this.components);
+            this.HomeFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnPlay
@@ -125,6 +126,11 @@ namespace INF164HWAss1
             this.InstructionsFadeTimer.Interval = 10;
             this.InstructionsFadeTimer.Tick += new System.EventHandler(this.InstructionsFadeTimer_Tick);
             // 
+            // HomeFadeTimer
+            // 
+            this.HomeFadeTimer.Interval = 10;
+            this.HomeFadeTimer.Tick += new System.EventHandler(this.HomeFadeTimer_Tick);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,6 +165,7 @@ namespace INF164HWAss1
         private System.Windows.Forms.Timer OpenFadeTimer;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer InstructionsFadeTimer;
+        private System.Windows.Forms.Timer HomeFadeTimer;
     }
 }
 

@@ -124,6 +124,7 @@ namespace INF164HWAss1
             this.Name = "frmInstructions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Instructions";
+            this.Load += new System.EventHandler(this.frmInstructions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbInstructions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
