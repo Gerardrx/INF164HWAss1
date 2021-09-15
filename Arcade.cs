@@ -21,7 +21,7 @@ namespace INF164HWAss1
         int speed = 1000;
         int hearts = 3;
         double prob;
-
+        //
         public Arcade()
         {
             InitializeComponent();
