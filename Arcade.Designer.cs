@@ -30,29 +30,16 @@ namespace INF164HWAss1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pbClickMe = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
             this.lblCoins = new System.Windows.Forms.Label();
-            this.pbHearts = new System.Windows.Forms.PictureBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.lblBorder = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).BeginInit();
+            this.pbHearts = new System.Windows.Forms.PictureBox();
+            this.pbClickMe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbClickMe
-            // 
-            this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
-            this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
-            this.pbClickMe.Location = new System.Drawing.Point(491, 455);
-            this.pbClickMe.Name = "pbClickMe";
-            this.pbClickMe.Size = new System.Drawing.Size(295, 239);
-            this.pbClickMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbClickMe.TabIndex = 1;
-            this.pbClickMe.TabStop = false;
-            this.pbClickMe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbClickMe_MouseDown);
             // 
             // button1
             // 
@@ -79,16 +66,6 @@ namespace INF164HWAss1
             this.lblCoins.TabIndex = 3;
             this.lblCoins.Text = "Coins: 0";
             // 
-            // pbHearts
-            // 
-            this.pbHearts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
-            this.pbHearts.Location = new System.Drawing.Point(491, 12);
-            this.pbHearts.Name = "pbHearts";
-            this.pbHearts.Size = new System.Drawing.Size(240, 78);
-            this.pbHearts.TabIndex = 4;
-            this.pbHearts.TabStop = false;
-            // 
             // lblMultiplier
             // 
             this.lblMultiplier.AutoSize = true;
@@ -107,6 +84,30 @@ namespace INF164HWAss1
             this.lblBorder.Size = new System.Drawing.Size(80, 80);
             this.lblBorder.TabIndex = 6;
             // 
+            // pbHearts
+            // 
+            this.pbHearts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
+            this.pbHearts.Location = new System.Drawing.Point(491, 12);
+            this.pbHearts.Name = "pbHearts";
+            this.pbHearts.Size = new System.Drawing.Size(240, 78);
+            this.pbHearts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHearts.TabIndex = 4;
+            this.pbHearts.TabStop = false;
+            // 
+            // pbClickMe
+            // 
+            this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
+            this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
+            this.pbClickMe.Location = new System.Drawing.Point(676, 426);
+            this.pbClickMe.Name = "pbClickMe";
+            this.pbClickMe.Size = new System.Drawing.Size(300, 300);
+            this.pbClickMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClickMe.TabIndex = 1;
+            this.pbClickMe.TabStop = false;
+            this.pbClickMe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbClickMe_MouseDown);
+            // 
             // Arcade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -121,8 +122,8 @@ namespace INF164HWAss1
             this.Controls.Add(this.lblBorder);
             this.Name = "Arcade";
             this.Text = "Arcade";
-            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
