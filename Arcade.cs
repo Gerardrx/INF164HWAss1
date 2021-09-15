@@ -46,6 +46,7 @@ namespace INF164HWAss1
         private void choosePicture()
         {
             pbClickMe.BackgroundImage = global::INF164HWAss1.Properties.Resources.bomba;
+            //pbClickMe.Size.Width 
             ///inside bigger if
             double prob = rand.Next(0, 100);
             if (prob < 10 & coins > 10)

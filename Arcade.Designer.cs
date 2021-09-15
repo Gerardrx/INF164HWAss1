@@ -30,37 +30,22 @@ namespace INF164HWAss1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pbClickMe = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
             this.lblCoins = new System.Windows.Forms.Label();
-            this.pbHearts = new System.Windows.Forms.PictureBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.lblBorder = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).BeginInit();
+            this.pbHearts = new System.Windows.Forms.PictureBox();
+            this.pbClickMe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbClickMe
-            // 
-            this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
-            this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
-            this.pbClickMe.Location = new System.Drawing.Point(327, 296);
-            this.pbClickMe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pbClickMe.Name = "pbClickMe";
-            this.pbClickMe.Size = new System.Drawing.Size(197, 155);
-            this.pbClickMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbClickMe.TabIndex = 1;
-            this.pbClickMe.TabStop = false;
-            this.pbClickMe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbClickMe_MouseDown);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(553, 17);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(829, 26);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 33);
+            this.button1.Size = new System.Drawing.Size(91, 51);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -75,62 +60,70 @@ namespace INF164HWAss1
             // 
             this.lblCoins.AutoSize = true;
             this.lblCoins.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoins.Location = new System.Drawing.Point(8, 21);
-            this.lblCoins.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCoins.Location = new System.Drawing.Point(12, 33);
             this.lblCoins.Name = "lblCoins";
-            this.lblCoins.Size = new System.Drawing.Size(124, 22);
+            this.lblCoins.Size = new System.Drawing.Size(186, 32);
             this.lblCoins.TabIndex = 3;
             this.lblCoins.Text = "Coins: 0";
-            // 
-            // pbHearts
-            // 
-            this.pbHearts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
-            this.pbHearts.Location = new System.Drawing.Point(327, 8);
-            this.pbHearts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pbHearts.Name = "pbHearts";
-            this.pbHearts.Size = new System.Drawing.Size(160, 51);
-            this.pbHearts.TabIndex = 4;
-            this.pbHearts.TabStop = false;
             // 
             // lblMultiplier
             // 
             this.lblMultiplier.AutoSize = true;
             this.lblMultiplier.Font = new System.Drawing.Font("Goudy Stout", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMultiplier.Location = new System.Drawing.Point(678, 16);
-            this.lblMultiplier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMultiplier.Location = new System.Drawing.Point(1017, 24);
             this.lblMultiplier.Name = "lblMultiplier";
-            this.lblMultiplier.Size = new System.Drawing.Size(165, 44);
+            this.lblMultiplier.Size = new System.Drawing.Size(249, 66);
             this.lblMultiplier.TabIndex = 5;
             this.lblMultiplier.Text = "X1000";
             // 
             // lblBorder
             // 
             this.lblBorder.BackColor = System.Drawing.Color.Lime;
-            this.lblBorder.Location = new System.Drawing.Point(550, 337);
-            this.lblBorder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBorder.Location = new System.Drawing.Point(825, 518);
             this.lblBorder.Name = "lblBorder";
-            this.lblBorder.Size = new System.Drawing.Size(53, 52);
+            this.lblBorder.Size = new System.Drawing.Size(80, 80);
             this.lblBorder.TabIndex = 6;
+            // 
+            // pbHearts
+            // 
+            this.pbHearts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
+            this.pbHearts.Location = new System.Drawing.Point(491, 12);
+            this.pbHearts.Name = "pbHearts";
+            this.pbHearts.Size = new System.Drawing.Size(240, 78);
+            this.pbHearts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHearts.TabIndex = 4;
+            this.pbHearts.TabStop = false;
+            // 
+            // pbClickMe
+            // 
+            this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
+            this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
+            this.pbClickMe.Location = new System.Drawing.Point(676, 426);
+            this.pbClickMe.Name = "pbClickMe";
+            this.pbClickMe.Size = new System.Drawing.Size(300, 300);
+            this.pbClickMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClickMe.TabIndex = 1;
+            this.pbClickMe.TabStop = false;
+            this.pbClickMe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbClickMe_MouseDown);
             // 
             // Arcade
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(860, 571);
+            this.ClientSize = new System.Drawing.Size(1290, 879);
             this.Controls.Add(this.lblMultiplier);
             this.Controls.Add(this.pbHearts);
             this.Controls.Add(this.lblCoins);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pbClickMe);
             this.Controls.Add(this.lblBorder);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Arcade";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arcade";
-            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
