@@ -28,16 +28,20 @@ namespace INF164HWAss1
 
         private void btnInstructions_Click(object sender, EventArgs e)
         {
-            InstructionsFadeTimer.Start();
+            this.Hide();
+
+            Instructions i = new Instructions();
+            i.Visible = true;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            CloseFadeTimer.Start();
+            CloseFadeTimer.Start();            
         }
 
         private void CloseFadeTimer_Tick(object sender, EventArgs e)
         {
+            //Fade out the form
             if (Opacity == 0)
             {
                 CloseFadeTimer.Stop();
@@ -45,7 +49,7 @@ namespace INF164HWAss1
                 //Close the program
                 Application.Exit();
             }
-            Opacity -= 0.03;
+            Opacity -= 0.02;
         }
 
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
@@ -55,21 +59,7 @@ namespace INF164HWAss1
             {
                 OpenFadeTimer.Stop();
             }
-            Opacity += 0.03;
-        }
-
-        private void InstructionsFadeTimer_Tick(object sender, EventArgs e)
-        {
-            if (Opacity == 0)
-            {
-                InstructionsFadeTimer.Stop();
-
-                this.Hide();
-
-                frmInstructions i = new frmInstructions();
-                i.Visible = true;
-            }
-            Opacity -= 0.03;
+            Opacity += 0.02;
         }
     }
 }
