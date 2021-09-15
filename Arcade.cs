@@ -14,14 +14,16 @@ namespace INF164HWAss1
     {
         private Random rand = new Random();
         private Size size = new Size(60, 50);
-        
+        private Size sizeBomb = new Size(230, 200);
+
         int coins = 0;
         bool flag = false;
         bool bomb = false;
+        bool skip = false;
         int speed = 1000;
         int hearts = 3;
         double prob;
-        //
+        
         public Arcade()
         {
             InitializeComponent();
@@ -45,6 +47,7 @@ namespace INF164HWAss1
             pbClickMe.Location = new Point(x, y);
             lblBorder.Location = new Point(x - 2, y - 2);
             choosePicture();
+            skip = true;
         }
         private void choosePicture()
         {
@@ -52,25 +55,32 @@ namespace INF164HWAss1
             //pbClickMe.Size.Width 
             ///inside bigger if
             prob = rand.Next(0, 100);
-            if (prob < 40 & coins > 2)//10%
+            if (prob < 10 & coins > 2)//10%
             {
                 pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba2;
-                bomb = true;
-                prob = prob + 0.5;
+                bomb = true; 
                 pbClickMe.Location = new Point(pbClickMe.Location.X - 65, pbClickMe.Location.Y - 45);
-                Size sizeBomb = new Size(230, 200);
-                pbClickMe.Size = sizeBomb;
-                           
+                pbClickMe.Size = sizeBomb;           
             }
-           
+            prob += 1.5;
+
+
         }
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
-            movePicture();
-            flag = true;
+            if (skip)
+            {
+                skip = false;
+            }
+            else
+            {
+                movePicture();
+                flag = true;
+            }
+
             lblBorder.BackColor = Color.Transparent;
-            pbClickMe.Size = size;
+            //pbClickMe.Size = size;
         }
 
         private void pbClickMe_MouseDown(object sender, MouseEventArgs e)
@@ -78,9 +88,10 @@ namespace INF164HWAss1
             if(bomb)
             {
                 hearts--;
+                coins--;
                 pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
                 lblBorder.BackColor = Color.Transparent;
-
+                skip = true;
 
                 GameTimer.Interval = 10000;
 
@@ -109,7 +120,7 @@ namespace INF164HWAss1
                 flag = false;
 
                 lblBorder.BackColor = Color.Green;
-                speed = speed - 5;
+                speed -= 5;
                 GameTimer.Interval = speed;
                 
             }
