@@ -45,7 +45,7 @@ namespace INF164HWAss1
             // 
             this.button1.Location = new System.Drawing.Point(829, 26);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 51);
+            this.button1.Size = new System.Drawing.Size(90, 51);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@ namespace INF164HWAss1
             // 
             this.lblMultiplier.AutoSize = true;
             this.lblMultiplier.Font = new System.Drawing.Font("Goudy Stout", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMultiplier.Location = new System.Drawing.Point(1017, 24);
+            this.lblMultiplier.Location = new System.Drawing.Point(1029, 24);
             this.lblMultiplier.Name = "lblMultiplier";
             this.lblMultiplier.Size = new System.Drawing.Size(249, 66);
             this.lblMultiplier.TabIndex = 5;
@@ -99,11 +99,11 @@ namespace INF164HWAss1
             // 
             this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
             this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
-            this.pbClickMe.Location = new System.Drawing.Point(676, 426);
+            this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bicMan;
+            this.pbClickMe.Location = new System.Drawing.Point(829, 523);
             this.pbClickMe.Name = "pbClickMe";
-            this.pbClickMe.Size = new System.Drawing.Size(300, 300);
-            this.pbClickMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbClickMe.Size = new System.Drawing.Size(75, 75);
+            this.pbClickMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClickMe.TabIndex = 1;
             this.pbClickMe.TabStop = false;
             this.pbClickMe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbClickMe_MouseDown);
@@ -112,7 +112,7 @@ namespace INF164HWAss1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1290, 879);
             this.Controls.Add(this.lblMultiplier);
             this.Controls.Add(this.pbHearts);

@@ -13,11 +13,14 @@ namespace INF164HWAss1
     public partial class Arcade : Form
     {
         private Random rand = new Random();
+        private Size size = new Size(60, 50);
+        
         int coins = 0;
         bool flag = false;
         bool bomb = false;
         int speed = 1000;
         int hearts = 3;
+        double prob;
 
         public Arcade()
         {
@@ -34,26 +37,30 @@ namespace INF164HWAss1
 
         private void movePicture()
         {
-            choosePicture();
+            pbClickMe.Size = size;
+            //   pbClickMe.Size = size;
             int x = rand.Next(75,this.Size.Width - 75);
             int y = rand.Next(105,this.Size.Height - 75);
 
             pbClickMe.Location = new Point(x, y);
             lblBorder.Location = new Point(x - 2, y - 2);
-
-
+            choosePicture();
         }
         private void choosePicture()
         {
-            pbClickMe.BackgroundImage = global::INF164HWAss1.Properties.Resources.bomba;
+            pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bicMan;
             //pbClickMe.Size.Width 
             ///inside bigger if
-            double prob = rand.Next(0, 100);
-            if (prob < 10 & coins > 10)
+            prob = rand.Next(0, 100);
+            if (prob < 40 & coins > 2)//10%
             {
-                pbClickMe.BackgroundImage = global::INF164HWAss1.Properties.Resources.bomba1;
+                pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba2;
                 bomb = true;
                 prob = prob + 0.5;
+                pbClickMe.Location = new Point(pbClickMe.Location.X - 65, pbClickMe.Location.Y - 45);
+                Size sizeBomb = new Size(230, 200);
+                pbClickMe.Size = sizeBomb;
+                           
             }
            
         }
@@ -63,6 +70,7 @@ namespace INF164HWAss1
             movePicture();
             flag = true;
             lblBorder.BackColor = Color.Transparent;
+            pbClickMe.Size = size;
         }
 
         private void pbClickMe_MouseDown(object sender, MouseEventArgs e)
@@ -70,26 +78,26 @@ namespace INF164HWAss1
             if(bomb)
             {
                 hearts--;
-                pbClickMe.BackgroundImage = global::INF164HWAss1.Properties.Resources.bomba;
+                pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
                 lblBorder.BackColor = Color.Transparent;
 
-                GameTimer.Interval = 5000;
+
+                GameTimer.Interval = 10000;
 
                 switch (hearts)
                 {
                     case 1:
-                        pbHearts.BackgroundImage = global::INF164HWAss1.Properties.Resources.Heart_1;
+                        pbHearts.Image = global::INF164HWAss1.Properties.Resources.Heart_1;
                         break;
                     case 2:
-                        pbHearts.BackgroundImage = global::INF164HWAss1.Properties.Resources.heart_2;
+                        pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_2;
                         break;
                     case 3:
-                        pbHearts.BackgroundImage = global::INF164HWAss1.Properties.Resources.heart_3;
+                        pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
                         break;
                     case 0:
-                        pbHearts.BackgroundImage = global::INF164HWAss1.Properties.Resources.Heart_0;
+                        pbHearts.Image = global::INF164HWAss1.Properties.Resources.Heart_0;
                         break;
-
                 }
                 bomb = false;
             }
