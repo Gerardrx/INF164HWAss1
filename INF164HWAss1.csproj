@@ -179,5 +179,11 @@
   <ItemGroup>
     <None Include="Resources\bomba.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WelcomWave.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nutral face.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
