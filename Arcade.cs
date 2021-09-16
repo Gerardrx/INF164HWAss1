@@ -27,6 +27,10 @@ namespace INF164HWAss1
         public Arcade()
         {
             InitializeComponent();
+
+            Opacity = 0;
+            OpenFadeTimer.Start();
+
             this.BackColor = ColorTranslator.FromHtml("#66ceef");
             choosePicture();
         }
@@ -124,6 +128,34 @@ namespace INF164HWAss1
                 GameTimer.Interval = speed;
                 
             }
+        }
+
+        private void OpenFadeTimer_Tick(object sender, EventArgs e)
+        {
+            if(Opacity == 1)
+            {
+                OpenFadeTimer.Stop();
+            }
+            Opacity += 0.03;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            CloseFadeTimer.Start();
+        }
+
+        private void CloseFadeTimer_Tick(object sender, EventArgs e)
+        {
+            if(Opacity == 0)
+            {
+                CloseFadeTimer.Stop();
+
+                this.Hide();
+
+                frmHome h = new frmHome();
+                h.Visible = true;
+            }
+            Opacity -= 0.03;
         }
     }
 }

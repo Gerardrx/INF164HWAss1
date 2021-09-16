@@ -30,6 +30,7 @@ namespace INF164HWAss1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Arcade));
             this.btnStart = new System.Windows.Forms.Button();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
             this.lblCoins = new System.Windows.Forms.Label();
@@ -37,6 +38,9 @@ namespace INF164HWAss1
             this.lblBorder = new System.Windows.Forms.Label();
             this.pbHearts = new System.Windows.Forms.PictureBox();
             this.pbClickMe = new System.Windows.Forms.PictureBox();
+            this.OpenFadeTimer = new System.Windows.Forms.Timer(this.components);
+            this.CloseFadeTimer = new System.Windows.Forms.Timer(this.components);
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).BeginInit();
             this.SuspendLayout();
@@ -117,20 +121,48 @@ namespace INF164HWAss1
             this.pbClickMe.TabStop = false;
             this.pbClickMe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbClickMe_MouseDown);
             // 
+            // OpenFadeTimer
+            // 
+            this.OpenFadeTimer.Interval = 10;
+            this.OpenFadeTimer.Tick += new System.EventHandler(this.OpenFadeTimer_Tick);
+            // 
+            // CloseFadeTimer
+            // 
+            this.CloseFadeTimer.Interval = 10;
+            this.CloseFadeTimer.Tick += new System.EventHandler(this.CloseFadeTimer_Tick);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(176, 11);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(122, 42);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Arcade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(860, 571);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblMultiplier);
             this.Controls.Add(this.pbHearts);
             this.Controls.Add(this.lblCoins);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.pbClickMe);
             this.Controls.Add(this.lblBorder);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Arcade";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arcade";
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).EndInit();
@@ -148,5 +180,8 @@ namespace INF164HWAss1
         private System.Windows.Forms.PictureBox pbHearts;
         private System.Windows.Forms.Label lblMultiplier;
         private System.Windows.Forms.Label lblBorder;
+        private System.Windows.Forms.Timer OpenFadeTimer;
+        private System.Windows.Forms.Timer CloseFadeTimer;
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -39,7 +39,7 @@ namespace INF164HWAss1
                 CloseFadeTimer.Stop();
                 this.Hide();
 
-                //Create and display Instructions form
+                //Create and display Menu form
                 frmMenu mm = new frmMenu();
                 mm.Visible = true;
             }
@@ -48,16 +48,25 @@ namespace INF164HWAss1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            frmMenu mm = new frmMenu();
-            mm.Visible = true;
+            CloseFadeTimer.Start();
         }
 
         private void btnArcade_Click(object sender, EventArgs e)
         {
-            Arcade a = new Arcade();
-            a.Visible = true;
+            ArcadeFadeTimer.Start();
+        }
+
+        private void ArcadeFadeTimer_Tick(object sender, EventArgs e)
+        {
+            if(Opacity == 0)
+            {
+                ArcadeFadeTimer.Stop();
+                this.Hide();
+
+                Arcade a = new Arcade();
+                a.Visible = true;
+            }
+            Opacity -= 0.03;
         }
     }
 }
