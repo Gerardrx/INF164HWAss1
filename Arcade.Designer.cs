@@ -41,6 +41,7 @@ namespace INF164HWAss1
             this.OpenFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.CloseFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.btnBack = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).BeginInit();
             this.SuspendLayout();
@@ -145,12 +146,27 @@ namespace INF164HWAss1
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(677, 62);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(174, 42);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "CLose tempoary";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Arcade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(860, 571);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblMultiplier);
             this.Controls.Add(this.pbHearts);
@@ -183,5 +199,6 @@ namespace INF164HWAss1
         private System.Windows.Forms.Timer OpenFadeTimer;
         private System.Windows.Forms.Timer CloseFadeTimer;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button button1;
     }
 }

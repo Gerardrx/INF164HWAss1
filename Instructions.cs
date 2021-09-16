@@ -15,13 +15,20 @@ namespace INF164HWAss1
         public frmInstructions()
         {
             InitializeComponent();
-            
-            //load the instructions text file
-            rtbInstructions.LoadFile("Instructions.rtf");
 
             Opacity = 0;
             OpenFadeTimer.Start();
+
+            //load the instructions from rich text file
+            rtbInstructions.LoadFile("Instructions.rtf");
+            InstructionLine = rtbInstructions.Lines;
+            rtbInstructions.Clear();
         }
+
+        //Declare variables
+        int i = 0;
+        string[] InstructionLine;
+        int j = 0;
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -58,5 +65,71 @@ namespace INF164HWAss1
         {
             this.BackColor = ColorTranslator.FromHtml("#66ceef");
         }
+
+        private void rtbInstructions_Click(object sender, EventArgs e)
+        {
+            if (i <= InstructionLine.Length-1)
+            {
+                rtbInstructions.AppendText(InstructionLine[i] + "\n");
+                i++;
+            }
+            else
+            {
+                switch(j)
+                {
+                    case 0:
+                        rtbInstructions.AppendText("Hey, I can't tell you any more!\n");
+                        break;
+
+                    case 1:
+                        rtbInstructions.AppendText("Google it, I don't know.\n");
+                        break;
+
+                    case 2:
+                        rtbInstructions.AppendText("I told you I don't know.\n");
+                        break;
+
+                    case 3:
+                        rtbInstructions.AppendText("I wouldn't do that if I was you.\n");
+                        break;
+
+                    case 4:
+                        rtbInstructions.AppendText("Stop that!\n");
+                        break;
+
+                    case 5:
+                        rtbInstructions.AppendText("-911, what's your emergency?-\n");
+                        break;
+
+                    case 6:
+                        rtbInstructions.AppendText("This person won't stop clicking me\n");
+                        break;
+
+                    case 7:
+                        rtbInstructions.AppendText("-Sir we are sending help, please be patient.\n");
+                        break;
+
+                    case 8:
+                        rtbInstructions.AppendText("The police are on their way!\n");
+                        break;
+
+                    case 9:
+                        rtbInstructions.AppendText("Violet, do you have a vissual?\n");
+                        break;
+
+                    case 10:
+                        rtbInstructions.AppendText("Rodger. Permission to fire?\n");
+                        break;
+
+                    case 11:
+                        rtbInstructions.AppendText("Take out the suspect!\n");
+                        MessageBox.Show("Tango Down", "RIP User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Application.Exit();
+                        break;
+                }
+                j++;
+            }
+        }
     }
 }
+

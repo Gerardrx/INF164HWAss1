@@ -19,6 +19,8 @@ namespace INF164HWAss1
             //Fade in form
             Opacity = 0;
             OpenFadeTimer.Start();
+
+            ClockTimer.Start();
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
@@ -84,6 +86,13 @@ namespace INF164HWAss1
                 h.Visible = true;
             }
             Opacity -= 0.03;
+        }
+
+        private void ClockTimer_Tick(object sender, EventArgs e)
+        {
+            //clock
+            lblTimeA.Text = DateTime.Now.ToString("HH:mm");
+            lblSeconds.Text = DateTime.Now.ToString("ss");
         }
     }
 }

@@ -42,6 +42,9 @@ namespace INF164HWAss1
             this.HomeFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.pbWelcomeGIF = new System.Windows.Forms.PictureBox();
             this.pbExtraPic = new System.Windows.Forms.PictureBox();
+            this.lblSeconds = new System.Windows.Forms.Label();
+            this.lblTimeA = new System.Windows.Forms.Label();
+            this.ClockTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbWelcomeGIF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExtraPic)).BeginInit();
             this.SuspendLayout();
@@ -157,6 +160,37 @@ namespace INF164HWAss1
             this.pbExtraPic.TabIndex = 5;
             this.pbExtraPic.TabStop = false;
             // 
+            // lblSeconds
+            // 
+            this.lblSeconds.AutoSize = true;
+            this.lblSeconds.BackColor = System.Drawing.Color.Transparent;
+            this.lblSeconds.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSeconds.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeconds.ForeColor = System.Drawing.Color.White;
+            this.lblSeconds.Location = new System.Drawing.Point(929, 41);
+            this.lblSeconds.Name = "lblSeconds";
+            this.lblSeconds.Size = new System.Drawing.Size(38, 30);
+            this.lblSeconds.TabIndex = 67;
+            this.lblSeconds.Text = "00";
+            // 
+            // lblTimeA
+            // 
+            this.lblTimeA.AutoSize = true;
+            this.lblTimeA.BackColor = System.Drawing.Color.Transparent;
+            this.lblTimeA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTimeA.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeA.ForeColor = System.Drawing.Color.White;
+            this.lblTimeA.Location = new System.Drawing.Point(832, 26);
+            this.lblTimeA.Name = "lblTimeA";
+            this.lblTimeA.Size = new System.Drawing.Size(102, 45);
+            this.lblTimeA.TabIndex = 66;
+            this.lblTimeA.Text = "00:00";
+            // 
+            // ClockTimer
+            // 
+            this.ClockTimer.Interval = 10;
+            this.ClockTimer.Tick += new System.EventHandler(this.ClockTimer_Tick);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +198,8 @@ namespace INF164HWAss1
             this.BackgroundImage = global::INF164HWAss1.Properties.Resources.Menu_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1022, 500);
+            this.Controls.Add(this.lblSeconds);
+            this.Controls.Add(this.lblTimeA);
             this.Controls.Add(this.pbExtraPic);
             this.Controls.Add(this.pbWelcomeGIF);
             this.Controls.Add(this.btnClose);
@@ -198,6 +234,9 @@ namespace INF164HWAss1
         private System.Windows.Forms.Timer HomeFadeTimer;
         private System.Windows.Forms.PictureBox pbWelcomeGIF;
         private System.Windows.Forms.PictureBox pbExtraPic;
+        private System.Windows.Forms.Label lblSeconds;
+        private System.Windows.Forms.Label lblTimeA;
+        private System.Windows.Forms.Timer ClockTimer;
     }
 }
 
