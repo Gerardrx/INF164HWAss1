@@ -22,7 +22,7 @@ namespace INF164HWAss1
             //load the instructions from rich text file
             rtbInstructions.LoadFile("Instructions.rtf");
             InstructionLine = rtbInstructions.Lines;
-            rtbInstructions.Clear();
+            rtbInstructions.Text = "________Press Space Bar________\n\n";
         }
 
         //Declare variables
@@ -78,56 +78,12 @@ namespace INF164HWAss1
                 switch(j)
                 {
                     case 0:
-                        rtbInstructions.AppendText("Hey, I can't tell you any more!\n");
-                        break;
-
-                    case 1:
-                        rtbInstructions.AppendText("Google it, I don't know.\n");
-                        break;
-
-                    case 2:
-                        rtbInstructions.AppendText("I told you I don't know.\n");
-                        break;
-
-                    case 3:
-                        rtbInstructions.AppendText("I wouldn't do that if I was you.\n");
-                        break;
-
-                    case 4:
-                        rtbInstructions.AppendText("Stop that!\n");
-                        break;
-
-                    case 5:
-                        rtbInstructions.AppendText("-911, what's your emergency?-\n");
-                        break;
-
-                    case 6:
-                        rtbInstructions.AppendText("This person won't stop clicking me\n");
-                        break;
-
-                    case 7:
-                        rtbInstructions.AppendText("-Sir we are sending help, please be patient.\n");
-                        break;
-
-                    case 8:
-                        rtbInstructions.AppendText("The police are on their way!\n");
-                        break;
-
-                    case 9:
-                        rtbInstructions.AppendText("Violet, do you have a vissual?\n");
-                        break;
-
-                    case 10:
-                        rtbInstructions.AppendText("Rodger. Permission to fire?\n");
-                        break;
-
-                    case 11:
                         rtbInstructions.AppendText("Take out the suspect!\n");
-                        MessageBox.Show("Tango Down", "RIP User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        MessageBox.Show("Tango Down, I repeat Tango Down. We got him bois!", "RIP User", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Application.Exit();
                         break;
                 }
-                j++;
             }
         }
     }

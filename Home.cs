@@ -24,7 +24,7 @@ namespace INF164HWAss1
             HappinessBarTimer.Start();
         }
 
-        int mood = 20;
+        int mood = 25;
         int i = 0;
 
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
@@ -116,6 +116,11 @@ namespace INF164HWAss1
                 HappinessBarTimer.Stop();
                 prbHappinessBar.Value = mood;
             }
+        }
+
+        private void btnSleep_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

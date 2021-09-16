@@ -80,6 +80,7 @@ namespace INF164HWAss1
             this.btnSleep.TabIndex = 1;
             this.btnSleep.Text = "Sleep";
             this.btnSleep.UseVisualStyleBackColor = true;
+            this.btnSleep.Click += new System.EventHandler(this.btnSleep_Click);
             // 
             // btnLibrary
             // 
