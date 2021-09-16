@@ -37,12 +37,15 @@ namespace INF164HWAss1
             this.btnSleep = new System.Windows.Forms.Button();
             this.btnLibrary = new System.Windows.Forms.Button();
             this.btnArcade = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.ArcadeFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.SleepFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.LibraryFadeTimer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.prbHappinessBar = new System.Windows.Forms.ProgressBar();
+            this.HappinessBarTimer = new System.Windows.Forms.Timer(this.components);
+            this.pbMood = new System.Windows.Forms.PictureBox();
+            this.lblHappyLevel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMood)).BeginInit();
             this.SuspendLayout();
             // 
             // OpenFadeTimer
@@ -71,7 +74,7 @@ namespace INF164HWAss1
             // 
             this.btnSleep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSleep.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSleep.Location = new System.Drawing.Point(183, 466);
+            this.btnSleep.Location = new System.Drawing.Point(183, 530);
             this.btnSleep.Name = "btnSleep";
             this.btnSleep.Size = new System.Drawing.Size(122, 42);
             this.btnSleep.TabIndex = 1;
@@ -82,7 +85,7 @@ namespace INF164HWAss1
             // 
             this.btnLibrary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibrary.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLibrary.Location = new System.Drawing.Point(399, 466);
+            this.btnLibrary.Location = new System.Drawing.Point(388, 530);
             this.btnLibrary.Name = "btnLibrary";
             this.btnLibrary.Size = new System.Drawing.Size(122, 42);
             this.btnLibrary.TabIndex = 2;
@@ -93,7 +96,7 @@ namespace INF164HWAss1
             // 
             this.btnArcade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArcade.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArcade.Location = new System.Drawing.Point(606, 466);
+            this.btnArcade.Location = new System.Drawing.Point(616, 530);
             this.btnArcade.Name = "btnArcade";
             this.btnArcade.Size = new System.Drawing.Size(122, 42);
             this.btnArcade.TabIndex = 3;
@@ -101,22 +104,13 @@ namespace INF164HWAss1
             this.btnArcade.UseVisualStyleBackColor = true;
             this.btnArcade.Click += new System.EventHandler(this.btnArcade_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::INF164HWAss1.Properties.Resources.Nutral_face;
-            this.pictureBox1.Location = new System.Drawing.Point(229, 82);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(474, 353);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblName
             // 
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblName.AutoSize = true;
             this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblName.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(353, 9);
+            this.lblName.Location = new System.Drawing.Point(336, 9);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(246, 65);
             this.lblName.TabIndex = 5;
@@ -135,14 +129,51 @@ namespace INF164HWAss1
             // 
             this.LibraryFadeTimer.Interval = 10;
             // 
+            // prbHappinessBar
+            // 
+            this.prbHappinessBar.Location = new System.Drawing.Point(216, 476);
+            this.prbHappinessBar.Name = "prbHappinessBar";
+            this.prbHappinessBar.Size = new System.Drawing.Size(474, 31);
+            this.prbHappinessBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.prbHappinessBar.TabIndex = 6;
+            // 
+            // HappinessBarTimer
+            // 
+            this.HappinessBarTimer.Interval = 10;
+            this.HappinessBarTimer.Tick += new System.EventHandler(this.HappinessBarTimer_Tick);
+            // 
+            // pbMood
+            // 
+            this.pbMood.Image = global::INF164HWAss1.Properties.Resources.Nutral_face;
+            this.pbMood.Location = new System.Drawing.Point(216, 83);
+            this.pbMood.Name = "pbMood";
+            this.pbMood.Size = new System.Drawing.Size(474, 353);
+            this.pbMood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMood.TabIndex = 4;
+            this.pbMood.TabStop = false;
+            // 
+            // lblHappyLevel
+            // 
+            this.lblHappyLevel.AutoSize = true;
+            this.lblHappyLevel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.lblHappyLevel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblHappyLevel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHappyLevel.Location = new System.Drawing.Point(366, 439);
+            this.lblHappyLevel.Name = "lblHappyLevel";
+            this.lblHappyLevel.Size = new System.Drawing.Size(174, 30);
+            this.lblHappyLevel.TabIndex = 7;
+            this.lblHappyLevel.Text = "Happiness Meter";
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(979, 686);
+            this.Controls.Add(this.lblHappyLevel);
+            this.Controls.Add(this.prbHappinessBar);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbMood);
             this.Controls.Add(this.btnArcade);
             this.Controls.Add(this.btnLibrary);
             this.Controls.Add(this.btnSleep);
@@ -152,7 +183,7 @@ namespace INF164HWAss1
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMood)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,10 +197,13 @@ namespace INF164HWAss1
         private System.Windows.Forms.Button btnSleep;
         private System.Windows.Forms.Button btnLibrary;
         private System.Windows.Forms.Button btnArcade;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbMood;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Timer ArcadeFadeTimer;
         private System.Windows.Forms.Timer SleepFadeTimer;
         private System.Windows.Forms.Timer LibraryFadeTimer;
+        private System.Windows.Forms.ProgressBar prbHappinessBar;
+        private System.Windows.Forms.Timer HappinessBarTimer;
+        private System.Windows.Forms.Label lblHappyLevel;
     }
 }

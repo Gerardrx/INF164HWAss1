@@ -103,6 +103,16 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Happy_face {
+            get {
+                object obj = ResourceManager.GetObject("Happy_face", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Heart_0 {
             get {
                 object obj = ResourceManager.GetObject("Heart-0", resourceCulture);
@@ -186,6 +196,16 @@ namespace INF164HWAss1.Properties {
         internal static System.Drawing.Bitmap Nutral_face {
             get {
                 object obj = ResourceManager.GetObject("Nutral face", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sad_Face {
+            get {
+                object obj = ResourceManager.GetObject("Sad_Face", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

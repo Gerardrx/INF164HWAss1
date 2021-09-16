@@ -188,5 +188,11 @@
   <ItemGroup>
     <None Include="Resources\MenuExtraPic.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sad Face.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Happy face.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
