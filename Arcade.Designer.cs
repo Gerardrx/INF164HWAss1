@@ -30,7 +30,7 @@ namespace INF164HWAss1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
             this.lblCoins = new System.Windows.Forms.Label();
             this.lblMultiplier = new System.Windows.Forms.Label();
@@ -41,15 +41,19 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnStart
             // 
-            this.button1.Location = new System.Drawing.Point(829, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 51);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnStart.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(539, 11);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(122, 42);
+            this.btnStart.TabIndex = 2;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.button1_Click);
             // 
             // GameTimer
             // 
@@ -59,10 +63,11 @@ namespace INF164HWAss1
             // lblCoins
             // 
             this.lblCoins.AutoSize = true;
-            this.lblCoins.Font = new System.Drawing.Font("Goudy Stout", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoins.Location = new System.Drawing.Point(12, 33);
+            this.lblCoins.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoins.Location = new System.Drawing.Point(11, 9);
+            this.lblCoins.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCoins.Name = "lblCoins";
-            this.lblCoins.Size = new System.Drawing.Size(186, 32);
+            this.lblCoins.Size = new System.Drawing.Size(82, 25);
             this.lblCoins.TabIndex = 3;
             this.lblCoins.Text = "Coins: 0";
             // 
@@ -70,27 +75,30 @@ namespace INF164HWAss1
             // 
             this.lblMultiplier.AutoSize = true;
             this.lblMultiplier.Font = new System.Drawing.Font("Goudy Stout", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMultiplier.Location = new System.Drawing.Point(1029, 24);
+            this.lblMultiplier.Location = new System.Drawing.Point(686, 16);
+            this.lblMultiplier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMultiplier.Name = "lblMultiplier";
-            this.lblMultiplier.Size = new System.Drawing.Size(249, 66);
+            this.lblMultiplier.Size = new System.Drawing.Size(165, 44);
             this.lblMultiplier.TabIndex = 5;
             this.lblMultiplier.Text = "X1000";
             // 
             // lblBorder
             // 
             this.lblBorder.BackColor = System.Drawing.Color.Lime;
-            this.lblBorder.Location = new System.Drawing.Point(825, 518);
+            this.lblBorder.Location = new System.Drawing.Point(550, 337);
+            this.lblBorder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBorder.Name = "lblBorder";
-            this.lblBorder.Size = new System.Drawing.Size(80, 80);
+            this.lblBorder.Size = new System.Drawing.Size(53, 52);
             this.lblBorder.TabIndex = 6;
             // 
             // pbHearts
             // 
             this.pbHearts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
-            this.pbHearts.Location = new System.Drawing.Point(491, 12);
+            this.pbHearts.Location = new System.Drawing.Point(327, 8);
+            this.pbHearts.Margin = new System.Windows.Forms.Padding(2);
             this.pbHearts.Name = "pbHearts";
-            this.pbHearts.Size = new System.Drawing.Size(240, 78);
+            this.pbHearts.Size = new System.Drawing.Size(160, 51);
             this.pbHearts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbHearts.TabIndex = 4;
             this.pbHearts.TabStop = false;
@@ -100,9 +108,10 @@ namespace INF164HWAss1
             this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
             this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bicMan;
-            this.pbClickMe.Location = new System.Drawing.Point(829, 523);
+            this.pbClickMe.Location = new System.Drawing.Point(553, 340);
+            this.pbClickMe.Margin = new System.Windows.Forms.Padding(2);
             this.pbClickMe.Name = "pbClickMe";
-            this.pbClickMe.Size = new System.Drawing.Size(75, 75);
+            this.pbClickMe.Size = new System.Drawing.Size(50, 49);
             this.pbClickMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClickMe.TabIndex = 1;
             this.pbClickMe.TabStop = false;
@@ -110,16 +119,17 @@ namespace INF164HWAss1
             // 
             // Arcade
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1290, 879);
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ClientSize = new System.Drawing.Size(860, 571);
             this.Controls.Add(this.lblMultiplier);
             this.Controls.Add(this.pbHearts);
             this.Controls.Add(this.lblCoins);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.pbClickMe);
             this.Controls.Add(this.lblBorder);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Arcade";
             this.Text = "Arcade";
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).EndInit();
@@ -132,7 +142,7 @@ namespace INF164HWAss1
         #endregion
 
         private System.Windows.Forms.PictureBox pbClickMe;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Timer GameTimer;
         private System.Windows.Forms.Label lblCoins;
         private System.Windows.Forms.PictureBox pbHearts;
