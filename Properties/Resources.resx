@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bicMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bicMan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Instructions" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Instructions.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bicMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bicMan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nutral face" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nutral face.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Heart-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Heart-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,11 +136,20 @@
   <data name="Menu_Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu_Background1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sad_Face" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sad Face.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Happy_face" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Happy face.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuExtraPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuExtraPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Heart-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Heart-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bomba2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bomba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dub_Techno___Selection_016" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dub Techno - Selection 016.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="bomba1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bomba.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,19 +160,25 @@
   <data name="WelcomWave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WelcomWave.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Nutral face" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Nutral face.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Disco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Disco.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DogThing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DogThing.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Instructions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Instructions.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bomba2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bomba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bomba" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bomba.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MenuExtraPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuExtraPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Chick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chick.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Happy_face" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Happy face.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sad_Face" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sad Face.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonSound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

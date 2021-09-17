@@ -45,8 +45,10 @@ namespace INF164HWAss1
             this.lblSeconds = new System.Windows.Forms.Label();
             this.lblTimeA = new System.Windows.Forms.Label();
             this.ClockTimer = new System.Windows.Forms.Timer(this.components);
+            this.pbDogThingGIF = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbWelcomeGIF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExtraPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDogThingGIF)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -153,7 +155,7 @@ namespace INF164HWAss1
             // 
             this.pbExtraPic.BackColor = System.Drawing.Color.Transparent;
             this.pbExtraPic.Image = global::INF164HWAss1.Properties.Resources.MenuExtraPic;
-            this.pbExtraPic.Location = new System.Drawing.Point(51, 296);
+            this.pbExtraPic.Location = new System.Drawing.Point(64, 296);
             this.pbExtraPic.Name = "pbExtraPic";
             this.pbExtraPic.Size = new System.Drawing.Size(232, 192);
             this.pbExtraPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -191,6 +193,17 @@ namespace INF164HWAss1
             this.ClockTimer.Interval = 10;
             this.ClockTimer.Tick += new System.EventHandler(this.ClockTimer_Tick);
             // 
+            // pbDogThingGIF
+            // 
+            this.pbDogThingGIF.BackColor = System.Drawing.Color.Transparent;
+            this.pbDogThingGIF.Image = global::INF164HWAss1.Properties.Resources.DogThing;
+            this.pbDogThingGIF.Location = new System.Drawing.Point(523, 391);
+            this.pbDogThingGIF.Name = "pbDogThingGIF";
+            this.pbDogThingGIF.Size = new System.Drawing.Size(108, 120);
+            this.pbDogThingGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDogThingGIF.TabIndex = 68;
+            this.pbDogThingGIF.TabStop = false;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +211,7 @@ namespace INF164HWAss1
             this.BackgroundImage = global::INF164HWAss1.Properties.Resources.Menu_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1022, 500);
+            this.Controls.Add(this.pbDogThingGIF);
             this.Controls.Add(this.lblSeconds);
             this.Controls.Add(this.lblTimeA);
             this.Controls.Add(this.pbExtraPic);
@@ -216,6 +230,7 @@ namespace INF164HWAss1
             this.Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pbWelcomeGIF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExtraPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDogThingGIF)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,6 +252,7 @@ namespace INF164HWAss1
         private System.Windows.Forms.Label lblSeconds;
         private System.Windows.Forms.Label lblTimeA;
         private System.Windows.Forms.Timer ClockTimer;
+        private System.Windows.Forms.PictureBox pbDogThingGIF;
     }
 }
 

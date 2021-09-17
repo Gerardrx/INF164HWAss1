@@ -20,15 +20,25 @@ namespace INF164HWAss1
 
             Arcade a = new Arcade();
             a.Visible = true;
+
+            //Create player for music
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
+            //Play
+            player.Stream = Properties.Resources.Dub_Techno___Selection_016;
+            player.Play();
         }
 
-        int time = 0;
+        int i = 0;
 
         private void LoadingTimer_Tick(object sender, EventArgs e)
         {
-            time++;
+            i++;
+            
+            if(i <= 75)
+                pgbLoading.Value = i;
 
-            if (time == 3)
+            if (i == 87)
             {
                 LoadingTimer.Stop();
 
@@ -38,13 +48,20 @@ namespace INF164HWAss1
                 //Create a new menu form
                 frmMenu mm = new frmMenu();
                 mm.Visible = true;
+
+                Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.NoneEnabled;
             }
-            else if (time == 1)
+            else if (i == 25)
             {
                 //Change the backround colour
                 this.BackColor = System.Drawing.Color.DeepSkyBlue;
             }
-            else if (time == 2)
+            else if (i == 50)
+            {
+                //Change the backround colour
+                this.BackColor = System.Drawing.Color.DodgerBlue;
+            }
+            else if (i == 75)
             {
                 //Change the backround colour
                 this.BackColor = System.Drawing.Color.DodgerBlue;

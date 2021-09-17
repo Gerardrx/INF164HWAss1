@@ -41,10 +41,12 @@ namespace INF164HWAss1
             this.ArcadeFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.SleepFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.LibraryFadeTimer = new System.Windows.Forms.Timer(this.components);
-            this.prbHappinessBar = new System.Windows.Forms.ProgressBar();
+            this.pgbHappinessBar = new System.Windows.Forms.ProgressBar();
             this.HappinessBarTimer = new System.Windows.Forms.Timer(this.components);
-            this.pbMood = new System.Windows.Forms.PictureBox();
             this.lblHappyLevel = new System.Windows.Forms.Label();
+            this.pbChickGIF = new System.Windows.Forms.PictureBox();
+            this.pbMood = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChickGIF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMood)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +94,7 @@ namespace INF164HWAss1
             this.btnLibrary.TabIndex = 2;
             this.btnLibrary.Text = "library";
             this.btnLibrary.UseVisualStyleBackColor = true;
+            this.btnLibrary.Click += new System.EventHandler(this.btnLibrary_Click);
             // 
             // btnArcade
             // 
@@ -130,28 +133,18 @@ namespace INF164HWAss1
             // 
             this.LibraryFadeTimer.Interval = 10;
             // 
-            // prbHappinessBar
+            // pgbHappinessBar
             // 
-            this.prbHappinessBar.Location = new System.Drawing.Point(216, 476);
-            this.prbHappinessBar.Name = "prbHappinessBar";
-            this.prbHappinessBar.Size = new System.Drawing.Size(474, 31);
-            this.prbHappinessBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.prbHappinessBar.TabIndex = 6;
+            this.pgbHappinessBar.Location = new System.Drawing.Point(216, 476);
+            this.pgbHappinessBar.Name = "pgbHappinessBar";
+            this.pgbHappinessBar.Size = new System.Drawing.Size(474, 31);
+            this.pgbHappinessBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pgbHappinessBar.TabIndex = 6;
             // 
             // HappinessBarTimer
             // 
             this.HappinessBarTimer.Interval = 10;
             this.HappinessBarTimer.Tick += new System.EventHandler(this.HappinessBarTimer_Tick);
-            // 
-            // pbMood
-            // 
-            this.pbMood.Image = global::INF164HWAss1.Properties.Resources.Nutral_face;
-            this.pbMood.Location = new System.Drawing.Point(216, 83);
-            this.pbMood.Name = "pbMood";
-            this.pbMood.Size = new System.Drawing.Size(474, 353);
-            this.pbMood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMood.TabIndex = 4;
-            this.pbMood.TabStop = false;
             // 
             // lblHappyLevel
             // 
@@ -165,14 +158,36 @@ namespace INF164HWAss1
             this.lblHappyLevel.TabIndex = 7;
             this.lblHappyLevel.Text = "Happiness Meter";
             // 
+            // pbChickGIF
+            // 
+            this.pbChickGIF.BackColor = System.Drawing.Color.Transparent;
+            this.pbChickGIF.Image = global::INF164HWAss1.Properties.Resources.Chick;
+            this.pbChickGIF.Location = new System.Drawing.Point(777, 46);
+            this.pbChickGIF.Name = "pbChickGIF";
+            this.pbChickGIF.Size = new System.Drawing.Size(108, 120);
+            this.pbChickGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbChickGIF.TabIndex = 69;
+            this.pbChickGIF.TabStop = false;
+            // 
+            // pbMood
+            // 
+            this.pbMood.Image = global::INF164HWAss1.Properties.Resources.Nutral_face;
+            this.pbMood.Location = new System.Drawing.Point(216, 83);
+            this.pbMood.Name = "pbMood";
+            this.pbMood.Size = new System.Drawing.Size(474, 353);
+            this.pbMood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMood.TabIndex = 4;
+            this.pbMood.TabStop = false;
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(979, 686);
+            this.Controls.Add(this.pbChickGIF);
             this.Controls.Add(this.lblHappyLevel);
-            this.Controls.Add(this.prbHappinessBar);
+            this.Controls.Add(this.pgbHappinessBar);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pbMood);
             this.Controls.Add(this.btnArcade);
@@ -184,6 +199,7 @@ namespace INF164HWAss1
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            ((System.ComponentModel.ISupportInitialize)(this.pbChickGIF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMood)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -203,8 +219,9 @@ namespace INF164HWAss1
         private System.Windows.Forms.Timer ArcadeFadeTimer;
         private System.Windows.Forms.Timer SleepFadeTimer;
         private System.Windows.Forms.Timer LibraryFadeTimer;
-        private System.Windows.Forms.ProgressBar prbHappinessBar;
+        private System.Windows.Forms.ProgressBar pgbHappinessBar;
         private System.Windows.Forms.Timer HappinessBarTimer;
         private System.Windows.Forms.Label lblHappyLevel;
+        private System.Windows.Forms.PictureBox pbChickGIF;
     }
 }

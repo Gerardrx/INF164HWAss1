@@ -24,7 +24,7 @@ namespace INF164HWAss1
             HappinessBarTimer.Start();
         }
 
-        int mood = 25;
+        int mood = 100;
         int i = 0;
 
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
@@ -76,49 +76,54 @@ namespace INF164HWAss1
 
         private void HappinessBarTimer_Tick(object sender, EventArgs e)
         {
-            prbHappinessBar.Value = i;
+            pgbHappinessBar.Value = i;
             i++;
 
             if (i != mood)
             {
                 if (i < 25)
                 {
-                    prbHappinessBar.ForeColor = Color.Red;
+                    pgbHappinessBar.ForeColor = Color.Red;
                     pbMood.Image = global::INF164HWAss1.Properties.Resources.Sad_Face;
                 }
                 else if (i < 50 && i >= 25)
                 {
-                    prbHappinessBar.ForeColor = Color.Orange;
+                    pgbHappinessBar.ForeColor = Color.Orange;
                 }
                 else if (i == 50)
                 {
-                    prbHappinessBar.ForeColor = Color.RoyalBlue;
+                    pgbHappinessBar.ForeColor = Color.RoyalBlue;
                     pbMood.Image = global::INF164HWAss1.Properties.Resources.Nutral_face;
                 }
                 else if (i > 50 && i < 75)
                 {
-                    prbHappinessBar.ForeColor = Color.Yellow;
+                    pgbHappinessBar.ForeColor = Color.Yellow;
                     pbMood.Image = global::INF164HWAss1.Properties.Resources.Happy_face;
                 }
                 else if (i >= 75)
                 {
-                    prbHappinessBar.ForeColor = Color.Green;
+                    pgbHappinessBar.ForeColor = Color.Green;
                 }
             }else if (i == mood)
             {
                 switch(i)
                 {
                     case 50:
-                        prbHappinessBar.ForeColor = Color.RoyalBlue;
+                        pgbHappinessBar.ForeColor = Color.RoyalBlue;
                         pbMood.Image = global::INF164HWAss1.Properties.Resources.Nutral_face;
                         break;
                 }
                 HappinessBarTimer.Stop();
-                prbHappinessBar.Value = mood;
+                pgbHappinessBar.Value = mood;
             }
         }
 
         private void btnSleep_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLibrary_Click(object sender, EventArgs e)
         {
 
         }
