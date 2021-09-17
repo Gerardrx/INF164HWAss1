@@ -198,9 +198,6 @@
     <None Include="Resources\Disco.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Dub Techno - Selection 016.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Dub Techno - Selection 016.wav" />
   </ItemGroup>
   <ItemGroup>
@@ -211,9 +208,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Chick.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buttonSound.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

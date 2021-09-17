@@ -16,6 +16,10 @@ namespace INF164HWAss1
         {
             InitializeComponent();
 
+            btnInstructions.Enabled = false;
+            btnPlay.Enabled = false;
+            btnClose.Enabled = false;
+
             //Fade in form
             Opacity = 0;
             OpenFadeTimer.Start();
@@ -56,6 +60,10 @@ namespace INF164HWAss1
             if(Opacity == 1)
             {
                 OpenFadeTimer.Stop();
+
+                btnInstructions.Enabled = true;
+                btnPlay.Enabled = true;
+                btnClose.Enabled = true;
             }
             Opacity += 0.03;
         }

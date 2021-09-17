@@ -16,6 +16,12 @@ namespace INF164HWAss1
         {
             InitializeComponent();
 
+
+            btnBack.Enabled = false;
+            btnArcade.Enabled = false;
+            btnLibrary.Enabled = false;
+            btnSleep.Enabled = false;
+
             Opacity = 0;
             OpenFadeTimer.Start();
 
@@ -33,6 +39,11 @@ namespace INF164HWAss1
             if (Opacity == 1)
             {
                 OpenFadeTimer.Stop();
+
+                btnBack.Enabled = true;
+                btnArcade.Enabled = true;
+                btnLibrary.Enabled = true;
+                btnSleep.Enabled = true;
             }
             Opacity += 0.03;
         }
