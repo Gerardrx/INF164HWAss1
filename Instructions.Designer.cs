@@ -75,7 +75,7 @@ namespace INF164HWAss1
             this.rtbInstructions.Size = new System.Drawing.Size(423, 460);
             this.rtbInstructions.TabIndex = 3;
             this.rtbInstructions.Text = "";
-            this.rtbInstructions.Click += new System.EventHandler(this.rtbInstructions_Click);
+            this.rtbInstructions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtbInstructions_KeyPress);
             // 
             // OpenFadeTimer
             // 

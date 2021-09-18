@@ -31,6 +31,10 @@ namespace INF164HWAss1
         int i = 0;
         string[] InstructionLine;
         int j = 0;
+        char[] charArr;
+        string line, buffer;
+        bool running = false;
+        int k = 0;
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -69,25 +73,51 @@ namespace INF164HWAss1
             this.BackColor = ColorTranslator.FromHtml("#66ceef");
         }
 
-        private void rtbInstructions_Click(object sender, EventArgs e)
+        private void rtbInstructions_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (i <= InstructionLine.Length-1)
+            if (e.KeyChar == (char)Keys.Space)
             {
-                rtbInstructions.AppendText(InstructionLine[i] + "\n");
-                i++;
-            }
-            else
-            {
-                switch(j)
-                {
-                    case 0:
-                        rtbInstructions.AppendText("Take out the suspect!\n");
+                //Removes the ding when enter is pressed
+                e.Handled = true;
 
-                        MessageBox.Show("Tango Down, I repeat Tango Down. We got him bois!", "RIP User", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Application.Exit();
-                        break;
+                running = true;
+
+                if (i <= InstructionLine.Length - 1)
+                {
+                    if (running == true)
+                    {
+                        WriteLine();
+                        rtbInstructions.AppendText("\n");
+                        i++;
+                    }
+                    WriteLine(s)
+                }
+                else
+                {
+                    switch (j)
+                    {
+                        case 0:
+                            rtbInstructions.AppendText("Take out the suspect!\n");
+
+                            MessageBox.Show("Tango Down, I repeat Tango Down. We got him bois!", "RIP User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Application.Exit();
+                            break;
+                    }
                 }
             }
+        }
+        private void WriteLine()
+        {
+            line = InstructionLine[i];
+            charArr = line.ToCharArray();
+
+            for (k = 0; k < charArr.Length; k++)
+            {
+                buffer = Convert.ToString(charArr[k]);
+                rtbInstructions.AppendText(buffer);
+                Task.Delay(750).Wait(75);
+            }
+            rtbInstructions.Focus();
         }
     }
 }

@@ -142,6 +142,16 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GIfBoigif {
+            get {
+                object obj = ResourceManager.GetObject("GIfBoigif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Happy_face {
             get {
                 object obj = ResourceManager.GetObject("Happy_face", resourceCulture);
@@ -255,6 +265,16 @@ namespace INF164HWAss1.Properties {
         internal static System.Drawing.Bitmap WelcomWave {
             get {
                 object obj = ResourceManager.GetObject("WelcomWave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap XgKCKen {
+            get {
+                object obj = ResourceManager.GetObject("XgKCKen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

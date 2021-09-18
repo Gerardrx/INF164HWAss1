@@ -209,5 +209,11 @@
   <ItemGroup>
     <None Include="Resources\Chick.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XgKCKen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GIfBoigif.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
