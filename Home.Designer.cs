@@ -118,10 +118,12 @@ namespace INF164HWAss1
             // SleepFadeTimer
             // 
             this.SleepFadeTimer.Interval = 10;
+            this.SleepFadeTimer.Tick += new System.EventHandler(this.SleepFadeTimer_Tick);
             // 
             // LibraryFadeTimer
             // 
             this.LibraryFadeTimer.Interval = 10;
+            this.LibraryFadeTimer.Tick += new System.EventHandler(this.LibraryFadeTimer_Tick);
             // 
             // pgbHappinessBar
             // 

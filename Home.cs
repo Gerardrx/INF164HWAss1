@@ -131,12 +131,38 @@ namespace INF164HWAss1
 
         private void btnSleep_Click(object sender, EventArgs e)
         {
-
+            SleepFadeTimer.Start();
         }
 
         private void btnLibrary_Click(object sender, EventArgs e)
         {
+            ArcadeFadeTimer.Start();
+        }
 
+        private void SleepFadeTimer_Tick(object sender, EventArgs e)
+        {
+            if (Opacity == 0)
+            {
+                SleepFadeTimer.Stop();
+                this.Hide();
+
+                frmSleep s = new frmSleep();
+                s.Visible = true;
+            }
+            Opacity -= 0.03;
+        }
+
+        private void LibraryFadeTimer_Tick(object sender, EventArgs e)
+        {
+            if (Opacity == 0)
+            {
+                ArcadeFadeTimer.Stop();
+                this.Hide();
+
+                Arcade a = new Arcade();
+                a.Visible = true;
+            }
+            Opacity -= 0.03;
         }
     }
 }
