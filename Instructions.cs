@@ -24,7 +24,7 @@ namespace INF164HWAss1
             //load the instructions from rich text file
             rtbInstructions.LoadFile("Instructions.rtf");
             InstructionLine = rtbInstructions.Lines;
-            rtbInstructions.Text = "________Press Space Bar________\n\n";
+            rtbInstructions.Text = "______________________Press Space Bar_____________________\n\n";
         }
 
         //Declare variables
@@ -35,6 +35,8 @@ namespace INF164HWAss1
         string line, buffer;
         bool running = false;
         int k = 0;
+        int g = 0;
+        bool completed = false;
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -80,27 +82,36 @@ namespace INF164HWAss1
                 //Removes the ding when enter is pressed
                 e.Handled = true;
 
-                running = true;
+                if(g == 0)
+                {
+                    running = true;
+                    g++;
+                }
+
+                if (completed == true)
+                {
+                    g = 0;
+                }
 
                 if (i <= InstructionLine.Length - 1)
                 {
                     if (running == true)
                     {
+                        completed = false;
+                        running = false;
                         WriteLine();
                         rtbInstructions.AppendText("\n");
                         i++;
                     }
-                    WriteLine(s)
                 }
                 else
                 {
                     switch (j)
                     {
                         case 0:
-                            rtbInstructions.AppendText("Take out the suspect!\n");
+                            rtbInstructions.AppendText("Stop\n");
 
-                            MessageBox.Show("Tango Down, I repeat Tango Down. We got him bois!", "RIP User", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            Application.Exit();
+                            MessageBox.Show("Please leave me alone. :(", "Stop it!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                             break;
                     }
                 }
@@ -116,6 +127,9 @@ namespace INF164HWAss1
                 buffer = Convert.ToString(charArr[k]);
                 rtbInstructions.AppendText(buffer);
                 Task.Delay(750).Wait(75);
+
+                if(k == charArr.Length-1)
+                    completed = true;
             }
             rtbInstructions.Focus();
         }

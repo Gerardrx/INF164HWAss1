@@ -47,7 +47,7 @@ namespace INF164HWAss1
             this.btnBack.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(313, 478);
+            this.btnBack.Location = new System.Drawing.Point(324, 489);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(122, 42);
             this.btnBack.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace INF164HWAss1
             this.lblHeading.BackColor = System.Drawing.Color.Transparent;
             this.lblHeading.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblHeading.Font = new System.Drawing.Font("Roboto", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.Location = new System.Drawing.Point(114, 9);
+            this.lblHeading.Location = new System.Drawing.Point(118, 9);
             this.lblHeading.Name = "lblHeading";
             this.lblHeading.Size = new System.Drawing.Size(211, 48);
             this.lblHeading.TabIndex = 2;
@@ -69,6 +69,9 @@ namespace INF164HWAss1
             // 
             // rtbInstructions
             // 
+            this.rtbInstructions.BackColor = System.Drawing.Color.Black;
+            this.rtbInstructions.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbInstructions.ForeColor = System.Drawing.Color.White;
             this.rtbInstructions.Location = new System.Drawing.Point(12, 60);
             this.rtbInstructions.Name = "rtbInstructions";
             this.rtbInstructions.ReadOnly = true;
@@ -91,7 +94,7 @@ namespace INF164HWAss1
             // 
             this.pbInstructions.BackColor = System.Drawing.Color.Transparent;
             this.pbInstructions.Image = global::INF164HWAss1.Properties.Resources.Instructions;
-            this.pbInstructions.Location = new System.Drawing.Point(331, 9);
+            this.pbInstructions.Location = new System.Drawing.Point(335, 9);
             this.pbInstructions.Name = "pbInstructions";
             this.pbInstructions.Size = new System.Drawing.Size(64, 53);
             this.pbInstructions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,7 +105,7 @@ namespace INF164HWAss1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::INF164HWAss1.Properties.Resources.Instructions;
-            this.pictureBox1.Location = new System.Drawing.Point(44, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 53);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
