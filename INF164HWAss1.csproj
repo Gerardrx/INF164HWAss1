@@ -249,7 +249,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\ChickManWoman.png" />
-    <Content Include="Resources\DogThing.png" />
+    <None Include="Resources\DogNose.png" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

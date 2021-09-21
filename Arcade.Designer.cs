@@ -57,7 +57,7 @@ namespace INF164HWAss1
             this.btnStart.TabIndex = 2;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.button1_Click);
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // GameTimer
             // 
@@ -143,7 +143,7 @@ namespace INF164HWAss1
             // 
             this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
             this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.ChickManWoman;
+            this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.DogNose;
             this.pbClickMe.Location = new System.Drawing.Point(830, 523);
             this.pbClickMe.Name = "pbClickMe";
             this.pbClickMe.Size = new System.Drawing.Size(75, 75);

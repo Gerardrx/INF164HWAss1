@@ -16,14 +16,14 @@ namespace INF164HWAss1
         private Size size = new Size(52, 52);
         private Size sizeBomb = new Size(230, 200);
 
-        int coins = 0;
-        bool flag = false;
-        bool bomb = false;
-        bool skip = false;
-        int speed = 750;
-        int hearts = 3;
-        int round = 0;
-        double prob;
+        private int coins = 0;
+        private bool flag = false;
+        private bool bomb = false;
+        private bool skip = false;
+        private int speed = 750;
+        private int hearts = 3;
+        private int round = 0;
+        private double prob;
         
         public Arcade()
         {
@@ -39,7 +39,7 @@ namespace INF164HWAss1
             lblBorder.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e)
         {
             GameTimer.Start();
             flag = true;
@@ -82,6 +82,9 @@ namespace INF164HWAss1
                     break;
                 case 6:
                     pbClickMe.Image = global::INF164HWAss1.Properties.Resources.ChickManWoman;
+                    break;
+                case 7:
+                    pbClickMe.Image = global::INF164HWAss1.Properties.Resources.DogNose;
                     break;
             }
 
