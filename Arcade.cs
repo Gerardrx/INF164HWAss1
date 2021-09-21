@@ -26,6 +26,7 @@ namespace INF164HWAss1
         private double prob;
         
         public Arcade()
+
         {
             InitializeComponent();
 
