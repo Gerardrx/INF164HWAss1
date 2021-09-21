@@ -200,6 +200,7 @@
     <None Include="Resources\bomba.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\UNISPACE BD.TTF" />
     <None Include="Resources\WelcomWave.gif" />
   </ItemGroup>
   <ItemGroup>

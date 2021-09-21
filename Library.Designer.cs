@@ -41,7 +41,7 @@ namespace INF164HWAss1
             this.btnBack.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnBack.Enabled = false;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(632, 240);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(122, 42);

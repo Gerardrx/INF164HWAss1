@@ -67,6 +67,7 @@ namespace INF164HWAss1
             this.lblHeading.Size = new System.Drawing.Size(272, 44);
             this.lblHeading.TabIndex = 2;
             this.lblHeading.Text = "Instructions";
+            this.lblHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rtbInstructions
             // 

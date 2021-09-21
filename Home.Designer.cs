@@ -77,7 +77,7 @@ namespace INF164HWAss1
             // btnBack
             // 
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(848, 526);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(122, 42);
@@ -90,7 +90,7 @@ namespace INF164HWAss1
             // 
             this.btnSleep.BackColor = System.Drawing.Color.Teal;
             this.btnSleep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSleep.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSleep.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSleep.Location = new System.Drawing.Point(570, 77);
             this.btnSleep.Name = "btnSleep";
             this.btnSleep.Size = new System.Drawing.Size(217, 42);
@@ -103,7 +103,7 @@ namespace INF164HWAss1
             // 
             this.btnLibrary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnLibrary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLibrary.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLibrary.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLibrary.Location = new System.Drawing.Point(570, 217);
             this.btnLibrary.Name = "btnLibrary";
             this.btnLibrary.Size = new System.Drawing.Size(217, 42);
@@ -116,7 +116,7 @@ namespace INF164HWAss1
             // 
             this.btnArcade.BackColor = System.Drawing.Color.Aqua;
             this.btnArcade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnArcade.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArcade.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArcade.Location = new System.Drawing.Point(570, 351);
             this.btnArcade.Name = "btnArcade";
             this.btnArcade.Size = new System.Drawing.Size(217, 42);
@@ -158,13 +158,14 @@ namespace INF164HWAss1
             this.lblHappyLevel.AutoSize = true;
             this.lblHappyLevel.BackColor = System.Drawing.Color.Transparent;
             this.lblHappyLevel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblHappyLevel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHappyLevel.Font = new System.Drawing.Font("Unispace", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHappyLevel.ForeColor = System.Drawing.Color.Black;
-            this.lblHappyLevel.Location = new System.Drawing.Point(197, 429);
+            this.lblHappyLevel.Location = new System.Drawing.Point(184, 429);
             this.lblHappyLevel.Name = "lblHappyLevel";
-            this.lblHappyLevel.Size = new System.Drawing.Size(174, 30);
+            this.lblHappyLevel.Size = new System.Drawing.Size(209, 27);
             this.lblHappyLevel.TabIndex = 7;
             this.lblHappyLevel.Text = "Happiness Meter";
+            this.lblHappyLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbMood
             // 
@@ -194,12 +195,13 @@ namespace INF164HWAss1
             this.lblName.AutoSize = true;
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblName.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(162, 9);
+            this.lblName.Font = new System.Drawing.Font("Unispace", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(159, 9);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(246, 65);
+            this.lblName.Size = new System.Drawing.Size(259, 60);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Mametchi";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbGIF2
             // 
