@@ -83,6 +83,9 @@ namespace INF164HWAss1
                 case 6:
                     pbClickMe.Image = global::INF164HWAss1.Properties.Resources.ChickManWoman;
                     break;
+                case 7:
+                    pbClickMe.Image = global::INF164HWAss1.Properties.Resources.DogNose;
+                    break;
             }
 
             if(round % 3 == 0 && round > 0)
