@@ -28,10 +28,19 @@ namespace INF164HWAss1
             this.BackColor = ColorTranslator.FromHtml("#66ceef");
 
             HappinessBarTimer.Start();
+            SleepBarTimer.Start();
+            LibraryBarTimer.Start();
+            ArcadeBarTimer.Start();
         }
 
-        int mood = 100;
+        int mood = 60;
+        int sleepScore = 50;
+        int arcadeScore = 20;
+        int libraryScore = 75;
         int i = 0;
+        int s = 0;
+        int a = 0;
+        int l = 0;
 
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
         {
@@ -113,9 +122,10 @@ namespace INF164HWAss1
                 }
                 else if (i >= 75)
                 {
-                    pgbHappinessBar.ForeColor = Color.Green;
+                    pgbHappinessBar.ForeColor = Color.FromArgb(0, 192, 0);
                 }
-            }else if (i == mood)
+            }
+            else if (i == mood)
             {
                 switch(i)
                 {
@@ -163,6 +173,129 @@ namespace INF164HWAss1
                 l.Visible = true;
             }
             Opacity -= 0.03;
+        }
+
+        private void SleepBarTimer_Tick(object sender, EventArgs e)
+        {
+            pgbSleep.Value = s;
+            s++;
+
+            if (s != sleepScore)
+            {
+                if (s < 25)
+                {
+                    pgbSleep.ForeColor = Color.Red;
+                }
+                else if (s < 50 && s >= 25)
+                {
+                    pgbSleep.ForeColor = Color.Orange;
+                }
+                else if (s == 50)
+                {
+                    pgbSleep.ForeColor = Color.RoyalBlue;
+                }
+                else if (s > 50 && s < 75)
+                {
+                    pgbSleep.ForeColor = Color.Yellow;
+                }
+                else if (s >= 75)
+                {
+                    pgbSleep.ForeColor = Color.FromArgb(0, 192, 0);
+                }
+            }
+            else if (s == sleepScore)
+            {
+                switch (s)
+                {
+                    case 50:
+                        pgbSleep.ForeColor = Color.RoyalBlue;
+                        break;
+                }
+                SleepBarTimer.Stop();
+                pgbSleep.Value = sleepScore;
+            }
+        }
+
+        private void ArcadeBarTimer_Tick(object sender, EventArgs e)
+        {
+            pgbArcade.Value = a;
+            a++;
+
+            if (a != arcadeScore)
+            {
+                if (a < 25)
+                {
+                    pgbArcade.ForeColor = Color.Red;
+                }
+                else if (a < 50 && a >= 25)
+                {
+                    pgbArcade.ForeColor = Color.Orange;
+                }
+                else if (a == 50)
+                {
+                    pgbArcade.ForeColor = Color.RoyalBlue;
+                }
+                else if (a > 50 && a < 75)
+                {
+                    pgbArcade.ForeColor = Color.Yellow;
+                }
+                else if (a >= 75)
+                {
+                    pgbArcade.ForeColor = Color.FromArgb(0, 192, 0);
+                }
+            }
+            else if (a == arcadeScore)
+            {
+                switch (a)
+                {
+                    case 50:
+                        pgbArcade.ForeColor = Color.RoyalBlue;
+                        break;
+                }
+                ArcadeBarTimer.Stop();
+                pgbArcade.Value = arcadeScore;
+            }
+        }
+
+        private void LibraryBarTimer_Tick(object sender, EventArgs e)
+        {
+            pgbLibrary.Value = l;
+            l++;
+
+            if (l != libraryScore)
+            {
+                if (l < 25)
+                {
+                    pgbLibrary.ForeColor = Color.Red;
+                }
+                else if (l < 50 && l >= 25)
+                {
+                    pgbLibrary.ForeColor = Color.Orange;
+                }
+                else if (l == 50)
+                {
+                    pgbLibrary.ForeColor = Color.RoyalBlue;
+                }
+                else if (l > 50 && l < 75)
+                {
+                    pgbLibrary.ForeColor = Color.Yellow;
+                }
+                else if (l >= 75)
+                {
+                    pgbLibrary.ForeColor = Color.FromArgb(0, 192, 0);
+                }
+            }
+            else if (l == libraryScore)
+            {
+                switch (l)
+                {
+                    case 50:
+                        pgbLibrary.ForeColor = Color.RoyalBlue;
+                        break;
+                }
+                LibraryBarTimer.Stop();
+                pgbLibrary.Value = libraryScore;
+            }
         }
     }
 }
