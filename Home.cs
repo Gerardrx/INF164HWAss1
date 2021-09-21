@@ -136,7 +136,7 @@ namespace INF164HWAss1
 
         private void btnLibrary_Click(object sender, EventArgs e)
         {
-            ArcadeFadeTimer.Start();
+            LibraryFadeTimer.Start();
         }
 
         private void SleepFadeTimer_Tick(object sender, EventArgs e)
@@ -156,11 +156,11 @@ namespace INF164HWAss1
         {
             if (Opacity == 0)
             {
-                ArcadeFadeTimer.Stop();
+                LibraryFadeTimer.Stop();
                 this.Hide();
 
-                Arcade a = new Arcade();
-                a.Visible = true;
+                Library l = new Library();
+                l.Visible = true;
             }
             Opacity -= 0.03;
         }
