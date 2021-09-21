@@ -20,7 +20,7 @@ namespace INF164HWAss1
         bool flag = false;
         bool bomb = false;
         bool skip = false;
-        int speed = 700;
+        int speed = 750;
         int hearts = 3;
         int round = 0;
         double prob;
@@ -119,11 +119,11 @@ namespace INF164HWAss1
                 flag = true;
             }
 
-            pbClickMe.Visible = true;
-            lblBorder.Visible = true;
-
             lblBorder.BackColor = Color.Transparent;
             round++;
+
+            pbClickMe.Visible = true;
+            lblBorder.Visible = true;
         }
 
         private void pbClickMe_MouseDown(object sender, MouseEventArgs e)
