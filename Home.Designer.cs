@@ -196,7 +196,7 @@ namespace INF164HWAss1
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblName.Font = new System.Drawing.Font("Unispace", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(159, 9);
+            this.lblName.Location = new System.Drawing.Point(154, 9);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(259, 60);
             this.lblName.TabIndex = 5;
@@ -218,7 +218,7 @@ namespace INF164HWAss1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::INF164HWAss1.Properties.Resources.PlantBoi;
-            this.pictureBox1.Location = new System.Drawing.Point(95, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(89, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(61, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
