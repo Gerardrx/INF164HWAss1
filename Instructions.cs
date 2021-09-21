@@ -33,10 +33,8 @@ namespace INF164HWAss1
         int j = 0;
         char[] charArr;
         string line, buffer;
-        bool running = false;
         int k = 0;
         int g = 0;
-        bool completed = false;
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -79,29 +77,13 @@ namespace INF164HWAss1
             if (e.KeyChar == (char)Keys.Space)
             {
                 //Removes the ding when enter is pressed
-                e.Handled = true;
-
-                if(g == 0)
-                {
-                    running = true;
-                    g++;
-                }
-
-                if (completed == true)
-                {
-                    g = 0;
-                    completed = false;
-                }
+                e.Handled = true;               
 
                 if (i <= InstructionLine.Length - 1)
                 {
-                    if (running == true)
-                    {
-                        running = false;
-                        WriteLine();
-                        rtbInstructions.AppendText("\n");
-                        i++;
-                    }
+                    WriteLine();
+                    rtbInstructions.AppendText("\n");
+                    i++;
                 }
                 else
                 {
@@ -126,9 +108,6 @@ namespace INF164HWAss1
                 buffer = Convert.ToString(charArr[k]);
                 rtbInstructions.AppendText(buffer);
                 Task.Delay(750).Wait(75);
-
-                if(k == charArr.Length-1)
-                    completed = true;
             }
             rtbInstructions.Focus();
         }
