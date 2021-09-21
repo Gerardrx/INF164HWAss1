@@ -62,7 +62,7 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 CloseFadeTimer.Stop();
-                this.Hide();
+                this.Dispose();
 
                 //Create and display Menu form
                 frmMenu mm = new frmMenu();
@@ -86,7 +86,7 @@ namespace INF164HWAss1
             if(Opacity == 0)
             {
                 ArcadeFadeTimer.Stop();
-                this.Hide();
+                this.Dispose();
 
                 Arcade a = new Arcade();
                 a.Visible = true;
@@ -154,7 +154,7 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 SleepFadeTimer.Stop();
-                this.Hide();
+                this.Dispose();
 
                 frmSleep s = new frmSleep();
                 s.Visible = true;
@@ -167,7 +167,7 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 LibraryFadeTimer.Stop();
-                this.Hide();
+                this.Dispose();
 
                 Library l = new Library();
                 l.Visible = true;

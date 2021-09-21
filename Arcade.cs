@@ -227,7 +227,7 @@ namespace INF164HWAss1
             {
                 CloseFadeTimer.Stop();
 
-                this.Hide();
+                this.Dispose();
 
                 frmHome h = new frmHome();
                 h.Visible = true;

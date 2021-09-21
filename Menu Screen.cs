@@ -73,7 +73,7 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 InstructionsFadeTimer.Stop();
-                this.Hide();
+                this.Dispose();
 
                 //Create and display Instructions form
                 frmInstructions i = new frmInstructions();
@@ -87,7 +87,7 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 HomeFadeTimer.Stop();
-                this.Hide();
+                this.Dispose();
 
                 //Create and display Home form
                 frmHome h = new frmHome();

@@ -237,7 +237,7 @@ namespace INF164HWAss1
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::INF164HWAss1.Properties.Resources.DogThing1;
+            this.pictureBox5.Image = global::INF164HWAss1.Properties.Resources.DogNose;
             this.pictureBox5.Location = new System.Drawing.Point(146, 361);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(53, 65);

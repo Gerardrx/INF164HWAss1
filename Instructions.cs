@@ -60,8 +60,7 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 CloseFadeTimer.Stop();
-
-                this.Hide();
+                this.Dispose();
 
                 //open new menu form
                 frmMenu mm = new frmMenu();

@@ -27,7 +27,7 @@ namespace INF164HWAss1
             //Play
             player.Stream = Properties.Resources.Dub_Techno___Selection_016;
             player.Load();
-            player.Play();
+            //player.Play();
         }
 
         int i = 0;
