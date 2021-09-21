@@ -71,6 +71,7 @@ namespace INF164HWAss1
                 }
             }
         }
+
         private void WriteLine()
         {
             line = InstructionLine[i];
