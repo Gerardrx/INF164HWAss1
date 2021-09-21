@@ -13,16 +13,17 @@ namespace INF164HWAss1
     public partial class Arcade : Form
     {
         private Random rand = new Random();
-        private Size size = new Size(60, 50);
+        private Size size = new Size(52, 52);
         private Size sizeBomb = new Size(230, 200);
 
-        int coins = 0;
-        bool flag = false;
-        bool bomb = false;
-        bool skip = false;
-        int speed = 1000;
-        int hearts = 3;
-        double prob;
+        private int coins = 0;
+        private bool flag = false;
+        private bool bomb = false;
+        private bool skip = false;
+        private int speed = 750;
+        private int hearts = 3;
+        private int round = 0;
+        private double prob;
         
         public Arcade()
         {
@@ -33,9 +34,12 @@ namespace INF164HWAss1
 
             this.BackColor = ColorTranslator.FromHtml("#66ceef");
             choosePicture();
+
+            pbClickMe.Visible = false;
+            lblBorder.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e)
         {
             GameTimer.Start();
             flag = true;
@@ -44,47 +48,85 @@ namespace INF164HWAss1
         private void movePicture()
         {
             pbClickMe.Size = size;
-            //   pbClickMe.Size = size;
             int x = rand.Next(75,this.Size.Width - 75);
             int y = rand.Next(105,this.Size.Height - 75);
 
             pbClickMe.Location = new Point(x, y);
-            lblBorder.Location = new Point(x - 2, y - 2);
+            lblBorder.Location = new Point(x - 1, y - 1);
             choosePicture();
-            skip = true;
+            skip = false;
         }
         private void choosePicture()
         {
-            pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bicMan;
-            //pbClickMe.Size.Width 
-            ///inside bigger if
-            prob = rand.Next(0, 100);
-            if (prob < 10 & coins > 2)//10%
+            int pic = rand.Next(0, 7);
+
+            switch (pic)
             {
-                pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba2;
-                bomb = true; 
-                pbClickMe.Location = new Point(pbClickMe.Location.X - 65, pbClickMe.Location.Y - 45);
-                pbClickMe.Size = sizeBomb;           
+                case 0:
+                    pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bicMan;
+                    break;
+                case 1:
+                    pbClickMe.Image = global::INF164HWAss1.Properties.Resources.toot;
+                    break;
+                case 2:
+                    pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bicLady;
+                    break;
+                case 3:
+                    pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bikeMan;
+                    break;
+                case 4:
+                    pbClickMe.Image = global::INF164HWAss1.Properties.Resources.PlantBoi;
+                    break;
+                case 5:
+                    pbClickMe.Image = global::INF164HWAss1.Properties.Resources.PenguMan;
+                    break;
+                case 6:
+                    pbClickMe.Image = global::INF164HWAss1.Properties.Resources.ChickManWoman;
+                    break;
+                case 7:
+                    pbClickMe.Image = global::INF164HWAss1.Properties.Resources.DogNose;
+                    break;
             }
-            prob += 1.5;
 
-            //
+            if(round % 3 == 0 && round > 0)
+            {
+                prob = rand.Next(0, 100);
+                if (prob <= 50)
+                {
+                    pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba2;
+                    bomb = true;
+                    pbClickMe.Location = new Point(pbClickMe.Location.X - 65, pbClickMe.Location.Y - 45);
+                    pbClickMe.Size = sizeBomb;
+                }
+                prob += 3;
+            }
+            
         }
-
         private void GameTimer_Tick(object sender, EventArgs e)
         {
             if (skip)
             {
+                int duration = 1900 - speed;
+                GameTimer.Interval = duration;
                 skip = false;
             }
             else
             {
+                if (hearts <= 0)
+                {
+                    gameOver();
+                }
+
+                bomb = false;
                 movePicture();
                 flag = true;
             }
 
             lblBorder.BackColor = Color.Transparent;
-            //pbClickMe.Size = size;
+            round++;
+
+            pbClickMe.Visible = true;
+            lblBorder.Visible = true;
         }
 
         private void pbClickMe_MouseDown(object sender, MouseEventArgs e)
@@ -96,19 +138,17 @@ namespace INF164HWAss1
                 pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
                 lblBorder.BackColor = Color.Transparent;
                 skip = true;
-
-                GameTimer.Interval = 10000;
-
+                             
                 switch (hearts)
                 {
-                    case 1:
-                        pbHearts.Image = global::INF164HWAss1.Properties.Resources.Heart_1;
+                    case 3:
+                        pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
                         break;
                     case 2:
                         pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_2;
                         break;
-                    case 3:
-                        pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
+                    case 1:
+                        pbHearts.Image = global::INF164HWAss1.Properties.Resources.Heart_1;
                         break;
                     case 0:
                         pbHearts.Image = global::INF164HWAss1.Properties.Resources.Heart_0;
@@ -124,11 +164,47 @@ namespace INF164HWAss1
                 flag = false;
 
                 lblBorder.BackColor = Color.Green;
-                speed -= 5;
-                GameTimer.Interval = speed;
-                
+                speed -= 3; 
             }
+            GameTimer.Interval = speed;
         }
+
+        private void gameOver()
+        {
+            GameTimer.Enabled = false;
+            lblBorder.Visible = false;
+            pbClickMe.Visible = false;
+
+            MessageBox.Show("Game Over");
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
         {

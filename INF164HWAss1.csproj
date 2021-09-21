@@ -37,6 +37,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -234,19 +236,21 @@
     <None Include="Resources\GIfBoigif.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Instructions1.gif" />
+    <None Include="Resources\toot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bicLady.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bikeMan.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PenguMan.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PlantBoi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ChickManWoman.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\DogThing.png" />
+    <Content Include="Resources\ChickManWoman.png" />
+    <None Include="Resources\DogNose.png" />
+    <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

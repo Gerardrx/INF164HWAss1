@@ -118,85 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Dub_Techno___Selection_016" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dub Techno - Selection 016.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="DogThing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DogThing.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bicMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bicMan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Chick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chick.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="XgKCKen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\XgKCKen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Heart-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Heart-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="heart-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heart-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Heart-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Heart-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Menu_Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu_Background1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sad_Face" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sad Face.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Disco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Disco.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chick.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Happy_face" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Happy face.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GIfBoigif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GIfBoigif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="XgKCKen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XgKCKen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MenuExtraPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuExtraPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bicMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bicMan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Nutral face" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Nutral face.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bicLady" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bicLady.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="heart-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heart-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bomba1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bomba.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bikeMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bikeMan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ChickManWoman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChickManWoman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="heart-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heart-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bomba1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bomba.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PenguMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PenguMan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Disco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Disco.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dub_Techno___Selection_016" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dub Techno - Selection 016.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="PlantBoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlantBoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Instructions" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Instructions.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PenguMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PenguMan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nutral face" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nutral face.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuExtraPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuExtraPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Background1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Heart-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Heart-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WelcomWave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WelcomWave.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Instructions1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Instructions1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="heart-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heart-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bomba2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bomba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DogThing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DogThing.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GIfBoigif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GIfBoigif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bomba" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bomba.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DogThing1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DogThing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Instructions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Instructions.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DogNose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DogNose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
