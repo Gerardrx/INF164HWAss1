@@ -91,13 +91,13 @@ namespace INF164HWAss1
                 if (completed == true)
                 {
                     g = 0;
+                    completed = false;
                 }
 
                 if (i <= InstructionLine.Length - 1)
                 {
                     if (running == true)
                     {
-                        completed = false;
                         running = false;
                         WriteLine();
                         rtbInstructions.AppendText("\n");

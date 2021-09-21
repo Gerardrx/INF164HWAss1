@@ -113,6 +113,16 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChickManWoman {
+            get {
+                object obj = ResourceManager.GetObject("ChickManWoman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Disco {
             get {
                 object obj = ResourceManager.GetObject("Disco", resourceCulture);
@@ -126,6 +136,16 @@ namespace INF164HWAss1.Properties {
         internal static System.Drawing.Bitmap DogThing {
             get {
                 object obj = ResourceManager.GetObject("DogThing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DogThing1 {
+            get {
+                object obj = ResourceManager.GetObject("DogThing1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -212,6 +232,16 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Instructions1 {
+            get {
+                object obj = ResourceManager.GetObject("Instructions1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Loading {
             get {
                 object obj = ResourceManager.GetObject("Loading", resourceCulture);
@@ -245,6 +275,26 @@ namespace INF164HWAss1.Properties {
         internal static System.Drawing.Bitmap Nutral_face {
             get {
                 object obj = ResourceManager.GetObject("Nutral face", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PenguMan {
+            get {
+                object obj = ResourceManager.GetObject("PenguMan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PlantBoi {
+            get {
+                object obj = ResourceManager.GetObject("PlantBoi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
