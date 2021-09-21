@@ -24,7 +24,7 @@ namespace INF164HWAss1
             //load the instructions from rich text file
             rtbInstructions.LoadFile("Instructions.rtf");
             InstructionLine = rtbInstructions.Lines;
-            rtbInstructions.Text = "___________________Press Space Bar___________________\n\n";
+            rtbInstructions.Text = "________________Press Space Bar________________\n";
         }
 
         //Declare variables

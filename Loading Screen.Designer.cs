@@ -41,18 +41,17 @@ namespace INF164HWAss1
             // 
             // LoadingTimer
             // 
-            this.LoadingTimer.Interval = 50;
+            this.LoadingTimer.Interval = 1;
             this.LoadingTimer.Tick += new System.EventHandler(this.LoadingTimer_Tick);
             // 
             // pgbLoading
             // 
             this.pgbLoading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pgbLoading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.pgbLoading.Location = new System.Drawing.Point(70, 526);
-            this.pgbLoading.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pgbLoading.Location = new System.Drawing.Point(47, 342);
             this.pgbLoading.Maximum = 75;
             this.pgbLoading.Name = "pgbLoading";
-            this.pgbLoading.Size = new System.Drawing.Size(396, 35);
+            this.pgbLoading.Size = new System.Drawing.Size(264, 23);
             this.pgbLoading.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pgbLoading.TabIndex = 1;
             // 
@@ -63,10 +62,9 @@ namespace INF164HWAss1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbLoadingScreen.BackColor = System.Drawing.Color.Transparent;
             this.pbLoadingScreen.Image = global::INF164HWAss1.Properties.Resources.Disco;
-            this.pbLoadingScreen.Location = new System.Drawing.Point(152, 162);
-            this.pbLoadingScreen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbLoadingScreen.Location = new System.Drawing.Point(101, 105);
             this.pbLoadingScreen.Name = "pbLoadingScreen";
-            this.pbLoadingScreen.Size = new System.Drawing.Size(224, 252);
+            this.pbLoadingScreen.Size = new System.Drawing.Size(149, 164);
             this.pbLoadingScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLoadingScreen.TabIndex = 0;
             this.pbLoadingScreen.TabStop = false;
@@ -77,26 +75,24 @@ namespace INF164HWAss1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::INF164HWAss1.Properties.Resources.Loading;
-            this.pictureBox1.Location = new System.Drawing.Point(-20, -25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(-13, -16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(555, 586);
+            this.pictureBox1.Size = new System.Drawing.Size(370, 381);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // frmLoading
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(524, 580);
+            this.ClientSize = new System.Drawing.Size(349, 377);
             this.Controls.Add(this.pgbLoading);
             this.Controls.Add(this.pbLoadingScreen);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmLoading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
