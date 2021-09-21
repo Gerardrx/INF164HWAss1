@@ -24,22 +24,110 @@ namespace INF164HWAss1
             //load the instructions from rich text file
             rtbInstructions.LoadFile("Instructions.rtf");
             InstructionLine = rtbInstructions.Lines;
-            rtbInstructions.Text = "______________________Press Space Bar_____________________\n\n";
+            rtbInstructions.Text = "___________________Press Space Bar___________________\n\n";
         }
 
         //Declare variables
         int i = 0;
-        string[] InstructionLine;
-        int j = 0;
-        char[] charArr;
-        string line, buffer;
         int k = 0;
-        int g = 0;
+        string[] InstructionLine;
+        string line;
+        string buffer;
+        char[] charArr;
+        bool typing = false;
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             CloseFadeTimer.Start();
         }
+
+        private void frmInstructions_Load(object sender, EventArgs e)
+        {
+            this.BackColor = ColorTranslator.FromHtml("#66ceef");
+        }
+
+        private void rtbInstructions_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Space)
+            {
+                //Removes the ding when enter is pressed
+                e.Handled = true;
+
+                if (i <= InstructionLine.Length - 1)
+                {
+                    if(typing == false)
+                    {
+                        WriteLine();
+                        rtbInstructions.AppendText("\n");
+                        i++;
+                    }
+                    else
+                    {
+                        TypeTimer.Stop();
+                        rtbInstructions.AppendText(toEnd());
+                        typing = false;
+                    }
+
+                }
+            }
+        }
+        private void WriteLine()
+        {
+            line = InstructionLine[i];
+            charArr = line.ToCharArray();
+
+            TypeTimer.Start();
+            typing = true;
+            k = 0;
+            
+        }
+
+        private void TypeTimer_Tick(object sender, EventArgs e)
+        {
+            if(k < charArr.Length)
+            {
+                buffer = Convert.ToString(charArr[k]);
+                rtbInstructions.AppendText(buffer);
+                rtbInstructions.Focus();
+                k++;
+            }
+            else
+            {
+                TypeTimer.Stop();
+                typing = false;
+            }
+
+        }
+
+        private String toEnd()
+        {
+            string temp = "";
+            for(int j = k; j < charArr.Length; j++)
+            {
+                temp += charArr[j];
+            }
+
+            return temp;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
         {
@@ -65,51 +153,6 @@ namespace INF164HWAss1
                 mm.Visible = true;
             }
             Opacity -= 0.03;
-        }
-
-        private void frmInstructions_Load(object sender, EventArgs e)
-        {
-            this.BackColor = ColorTranslator.FromHtml("#66ceef");
-        }
-
-        private void rtbInstructions_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Space)
-            {
-                //Removes the ding when enter is pressed
-                e.Handled = true;               
-
-                if (i <= InstructionLine.Length - 1)
-                {
-                    WriteLine();
-                    rtbInstructions.AppendText("\n");
-                    i++;
-                }
-                else
-                {
-                    switch (j)
-                    {
-                        case 0:
-                            rtbInstructions.AppendText("Stop\n");
-
-                            MessageBox.Show("Please leave me alone. :(", "Stop it!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                            break;
-                    }
-                }
-            }
-        }
-        private void WriteLine()
-        {
-            line = InstructionLine[i];
-            charArr = line.ToCharArray();
-
-            for (k = 0; k < charArr.Length; k++)
-            {
-                buffer = Convert.ToString(charArr[k]);
-                rtbInstructions.AppendText(buffer);
-                Task.Delay(750).Wait(75);
-            }
-            rtbInstructions.Focus();
         }
     }
 }
