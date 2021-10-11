@@ -250,6 +250,5 @@ namespace INF164HWAss1
             this.Hide();
         }
 
-
     }
 }

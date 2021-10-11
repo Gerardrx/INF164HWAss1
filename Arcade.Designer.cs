@@ -42,7 +42,6 @@ namespace INF164HWAss1
             this.button1 = new System.Windows.Forms.Button();
             this.pbHearts = new System.Windows.Forms.PictureBox();
             this.pbClickMe = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).BeginInit();
             this.SuspendLayout();
@@ -52,9 +51,10 @@ namespace INF164HWAss1
             this.btnStart.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(808, 17);
+            this.btnStart.Location = new System.Drawing.Point(1077, 21);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(183, 65);
+            this.btnStart.Size = new System.Drawing.Size(244, 81);
             this.btnStart.TabIndex = 2;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -69,9 +69,10 @@ namespace INF164HWAss1
             // 
             this.lblCoins.AutoSize = true;
             this.lblCoins.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoins.Location = new System.Drawing.Point(16, 14);
+            this.lblCoins.Location = new System.Drawing.Point(21, 18);
+            this.lblCoins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCoins.Name = "lblCoins";
-            this.lblCoins.Size = new System.Drawing.Size(159, 35);
+            this.lblCoins.Size = new System.Drawing.Size(204, 45);
             this.lblCoins.TabIndex = 3;
             this.lblCoins.Text = "Coins: 0";
             // 
@@ -79,18 +80,20 @@ namespace INF164HWAss1
             // 
             this.lblMultiplier.AutoSize = true;
             this.lblMultiplier.Font = new System.Drawing.Font("Unispace", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMultiplier.Location = new System.Drawing.Point(1098, 22);
+            this.lblMultiplier.Location = new System.Drawing.Point(1464, 28);
+            this.lblMultiplier.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMultiplier.Name = "lblMultiplier";
-            this.lblMultiplier.Size = new System.Drawing.Size(170, 58);
+            this.lblMultiplier.Size = new System.Drawing.Size(228, 77);
             this.lblMultiplier.TabIndex = 5;
             this.lblMultiplier.Text = "X1000";
             // 
             // lblBorder
             // 
             this.lblBorder.BackColor = System.Drawing.Color.Lime;
-            this.lblBorder.Location = new System.Drawing.Point(825, 518);
+            this.lblBorder.Location = new System.Drawing.Point(1100, 648);
+            this.lblBorder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBorder.Name = "lblBorder";
-            this.lblBorder.Size = new System.Drawing.Size(81, 83);
+            this.lblBorder.Size = new System.Drawing.Size(108, 104);
             this.lblBorder.TabIndex = 6;
             // 
             // OpenFadeTimer
@@ -108,9 +111,10 @@ namespace INF164HWAss1
             this.btnBack.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(264, 17);
+            this.btnBack.Location = new System.Drawing.Point(352, 21);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(183, 65);
+            this.btnBack.Size = new System.Drawing.Size(244, 81);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -121,9 +125,10 @@ namespace INF164HWAss1
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1016, 95);
+            this.button1.Location = new System.Drawing.Point(1355, 119);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(261, 65);
+            this.button1.Size = new System.Drawing.Size(348, 81);
             this.button1.TabIndex = 8;
             this.button1.Text = "Close Temporary";
             this.button1.UseVisualStyleBackColor = false;
@@ -133,9 +138,10 @@ namespace INF164HWAss1
             // 
             this.pbHearts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
-            this.pbHearts.Location = new System.Drawing.Point(490, 12);
+            this.pbHearts.Location = new System.Drawing.Point(653, 15);
+            this.pbHearts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbHearts.Name = "pbHearts";
-            this.pbHearts.Size = new System.Drawing.Size(240, 78);
+            this.pbHearts.Size = new System.Drawing.Size(320, 98);
             this.pbHearts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbHearts.TabIndex = 4;
             this.pbHearts.TabStop = false;
@@ -145,28 +151,22 @@ namespace INF164HWAss1
             this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
             this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.DogNose;
-            this.pbClickMe.Location = new System.Drawing.Point(830, 523);
+            this.pbClickMe.Location = new System.Drawing.Point(1107, 654);
+            this.pbClickMe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbClickMe.Name = "pbClickMe";
-            this.pbClickMe.Size = new System.Drawing.Size(75, 75);
+            this.pbClickMe.Size = new System.Drawing.Size(100, 94);
             this.pbClickMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClickMe.TabIndex = 1;
             this.pbClickMe.TabStop = false;
             this.pbClickMe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbClickMe_MouseDown);
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(110, 121);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1290, 878);
-            this.panel1.TabIndex = 10;
-            // 
             // Arcade
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1290, 878);
+            this.ClientSize = new System.Drawing.Size(1720, 1098);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblMultiplier);
@@ -175,10 +175,10 @@ namespace INF164HWAss1
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.pbClickMe);
             this.Controls.Add(this.lblBorder);
-            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Arcade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arcade";
@@ -202,6 +202,5 @@ namespace INF164HWAss1
         private System.Windows.Forms.Timer CloseFadeTimer;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
     }
 }

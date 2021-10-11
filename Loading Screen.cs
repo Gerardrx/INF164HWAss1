@@ -23,6 +23,11 @@ namespace INF164HWAss1
             Arcade a = new Arcade();
             a.Visible = true;
 
+            frmSleep s = new frmSleep();
+            s.Visible = true;
+
+
+
             //Create player for music and play music
             System.Media.SoundPlayer player = new System.Media.SoundPlayer("Dub_Techno___Selection_016.wav");
             player.Play();
