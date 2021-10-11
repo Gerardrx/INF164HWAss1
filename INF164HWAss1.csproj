@@ -251,6 +251,7 @@
   <ItemGroup>
     <Content Include="Resources\ChickManWoman.png" />
     <None Include="Resources\DogNose.png" />
+    <None Include="Resources\piano.gif" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -17,19 +17,20 @@ namespace INF164HWAss1
         private Size sizeBomb = new Size(230, 200);
 
         private int coins = 0;
-        private bool flag = false;
+        private bool nextRound = false;
         private bool bomb = false;
         private bool skip = false;
         private int speed = 750;
         private int hearts = 3;
         private int round = 0;
         private double prob;
-        
+        private bool currentlyAnimating = false;
+        private Bitmap mGif = new Bitmap(global::INF164HWAss1.Properties.Resources.piano);
+
         public Arcade()
 
         {
-            InitializeComponent();
-
+            InitializeComponent();           
             Opacity = 0;
             OpenFadeTimer.Start();
 
@@ -43,14 +44,15 @@ namespace INF164HWAss1
         private void btnStart_Click(object sender, EventArgs e)
         {
             GameTimer.Start();
-            flag = true;
+            nextRound = true;
+            pbClickMe.BackColor = Color.Transparent;
         }
 
         private void movePicture()
         {
             pbClickMe.Size = size;
-            int x = rand.Next(75,this.Size.Width - 75);
-            int y = rand.Next(105,this.Size.Height - 75);
+            int x = rand.Next(75, this.Size.Width - 75);
+            int y = rand.Next(105, this.Size.Height - 75);
 
             pbClickMe.Location = new Point(x, y);
             lblBorder.Location = new Point(x - 1, y - 1);
@@ -59,7 +61,7 @@ namespace INF164HWAss1
         }
         private void choosePicture()
         {
-            int pic = rand.Next(0, 7);
+            int pic = rand.Next(0, 8);
 
             switch (pic)
             {
@@ -89,7 +91,7 @@ namespace INF164HWAss1
                     break;
             }
 
-            if(round % 3 == 0 && round > 0)
+            if (round % 3 == 0 && round > 0)
             {
                 prob = rand.Next(0, 100);
                 if (prob <= 50)
@@ -101,7 +103,7 @@ namespace INF164HWAss1
                 }
                 prob += 3;
             }
-            
+
         }
         private void GameTimer_Tick(object sender, EventArgs e)
         {
@@ -120,7 +122,7 @@ namespace INF164HWAss1
 
                 bomb = false;
                 movePicture();
-                flag = true;
+                nextRound = true;
             }
 
             lblBorder.BackColor = Color.Transparent;
@@ -132,14 +134,14 @@ namespace INF164HWAss1
 
         private void pbClickMe_MouseDown(object sender, MouseEventArgs e)
         {
-            if(bomb)
+            if (bomb)
             {
                 hearts--;
                 coins--;
                 pbClickMe.Image = global::INF164HWAss1.Properties.Resources.bomba;
                 lblBorder.BackColor = Color.Transparent;
                 skip = true;
-                             
+
                 switch (hearts)
                 {
                     case 3:
@@ -158,14 +160,14 @@ namespace INF164HWAss1
                 bomb = false;
             }
 
-            if (flag)
+            if (nextRound)
             {
                 coins++;
                 lblCoins.Text = "Coins: " + coins;
-                flag = false;
+                nextRound = false;
 
                 lblBorder.BackColor = Color.Green;
-                speed -= 3; 
+                speed -= 3;
             }
             GameTimer.Interval = speed;
         }
@@ -177,22 +179,30 @@ namespace INF164HWAss1
             pbClickMe.Visible = false;
 
             MessageBox.Show("Game Over");
+
+        }
+
+ /*        private void AnimateImage()
+        {
+            if (!currentlyAnimating)
+            {
+                ImageAnimator.Animate(mGif, new EventHandler(this.OnFormChanged));
+                currentlyAnimating = true;
+            }
             
         }
 
+        private void OnFormChanged(object o,EventArgs e)
+        {
+            this.Invalidate();
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            AnimateImage();
+            ImageAnimator.UpdateFrames();
+            e.Graphics.DrawImage(this.mGif, new Point(0, 0));
+        }*/
 
 
 
@@ -209,7 +219,7 @@ namespace INF164HWAss1
 
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
         {
-            if(Opacity == 1)
+            if (Opacity == 1)
             {
                 OpenFadeTimer.Stop();
             }
@@ -223,7 +233,7 @@ namespace INF164HWAss1
 
         private void CloseFadeTimer_Tick(object sender, EventArgs e)
         {
-            if(Opacity == 0)
+            if (Opacity == 0)
             {
                 CloseFadeTimer.Stop();
 
@@ -239,5 +249,7 @@ namespace INF164HWAss1
         {
             this.Hide();
         }
+
+
     }
 }
