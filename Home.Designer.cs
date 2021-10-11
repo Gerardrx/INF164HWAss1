@@ -50,12 +50,6 @@ namespace INF164HWAss1
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pgbSleep = new System.Windows.Forms.ProgressBar();
-            this.pgbLibrary = new System.Windows.Forms.ProgressBar();
-            this.pgbArcade = new System.Windows.Forms.ProgressBar();
-            this.SleepBarTimer = new System.Windows.Forms.Timer(this.components);
-            this.ArcadeBarTimer = new System.Windows.Forms.Timer(this.components);
-            this.LibraryBarTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbMood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbChickGIF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGIF2)).BeginInit();
@@ -247,45 +241,6 @@ namespace INF164HWAss1
             this.pictureBox5.TabIndex = 75;
             this.pictureBox5.TabStop = false;
             // 
-            // pgbSleep
-            // 
-            this.pgbSleep.Location = new System.Drawing.Point(570, 125);
-            this.pgbSleep.Name = "pgbSleep";
-            this.pgbSleep.Size = new System.Drawing.Size(217, 31);
-            this.pgbSleep.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pgbSleep.TabIndex = 76;
-            // 
-            // pgbLibrary
-            // 
-            this.pgbLibrary.Location = new System.Drawing.Point(570, 265);
-            this.pgbLibrary.Name = "pgbLibrary";
-            this.pgbLibrary.Size = new System.Drawing.Size(217, 31);
-            this.pgbLibrary.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pgbLibrary.TabIndex = 77;
-            // 
-            // pgbArcade
-            // 
-            this.pgbArcade.Location = new System.Drawing.Point(570, 399);
-            this.pgbArcade.Name = "pgbArcade";
-            this.pgbArcade.Size = new System.Drawing.Size(217, 31);
-            this.pgbArcade.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pgbArcade.TabIndex = 78;
-            // 
-            // SleepBarTimer
-            // 
-            this.SleepBarTimer.Interval = 10;
-            this.SleepBarTimer.Tick += new System.EventHandler(this.SleepBarTimer_Tick);
-            // 
-            // ArcadeBarTimer
-            // 
-            this.ArcadeBarTimer.Interval = 10;
-            this.ArcadeBarTimer.Tick += new System.EventHandler(this.ArcadeBarTimer_Tick);
-            // 
-            // LibraryBarTimer
-            // 
-            this.LibraryBarTimer.Interval = 10;
-            this.LibraryBarTimer.Tick += new System.EventHandler(this.LibraryBarTimer_Tick);
-            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,9 +249,6 @@ namespace INF164HWAss1
             this.BackgroundImage = global::INF164HWAss1.Properties.Resources.XgKCKen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 580);
-            this.Controls.Add(this.pgbArcade);
-            this.Controls.Add(this.pgbLibrary);
-            this.Controls.Add(this.pgbSleep);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -347,11 +299,5 @@ namespace INF164HWAss1
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.ProgressBar pgbSleep;
-        private System.Windows.Forms.ProgressBar pgbLibrary;
-        private System.Windows.Forms.ProgressBar pgbArcade;
-        private System.Windows.Forms.Timer SleepBarTimer;
-        private System.Windows.Forms.Timer ArcadeBarTimer;
-        private System.Windows.Forms.Timer LibraryBarTimer;
     }
 }
