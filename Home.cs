@@ -174,5 +174,12 @@ namespace INF164HWAss1
             }
             Opacity -= 0.03;
         }
+
+        private void btnArcade2_Click(object sender, EventArgs e)
+        {
+            Runner r = new Runner();
+            r.Visible = true;
+
+        }
     }
 }

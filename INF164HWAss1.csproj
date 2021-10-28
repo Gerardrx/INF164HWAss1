@@ -69,6 +69,18 @@
     <Compile Include="Arcade.Designer.cs">
       <DependentUpon>Arcade.cs</DependentUpon>
     </Compile>
+    <Compile Include="Coin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Coin.Designer.cs">
+      <DependentUpon>Coin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ghost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ghost.Designer.cs">
+      <DependentUpon>Ghost.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,13 +111,31 @@
     <Compile Include="Loading Screen.Designer.cs">
       <DependentUpon>Loading Screen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Player.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Player.Designer.cs">
+      <DependentUpon>Player.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Runner.Designer.cs">
+      <DependentUpon>Runner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sleep.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sleep.Designer.cs">
       <DependentUpon>Sleep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wall.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Wall.Designer.cs">
+      <DependentUpon>Wall.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Arcade.resx">
       <DependentUpon>Arcade.cs</DependentUpon>
@@ -129,6 +159,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Runner.resx">
+      <DependentUpon>Runner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sleep.resx">
       <DependentUpon>Sleep.cs</DependentUpon>
@@ -253,6 +286,7 @@
     <None Include="Resources\Tunnel.gif" />
     <None Include="Resources\DogNose.png" />
     <None Include="Resources\piano.gif" />
+    <None Include="Resources\coin.gif" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
