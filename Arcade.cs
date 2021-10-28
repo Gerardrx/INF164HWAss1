@@ -197,7 +197,7 @@ namespace INF164HWAss1
 
         private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-                movePicture();                
+               // movePicture();                
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

@@ -54,7 +54,7 @@ namespace INF164HWAss1
             this.btnStart.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(1118, 224);
+            this.btnStart.Location = new System.Drawing.Point(294, 36);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(163, 52);
             this.btnStart.TabIndex = 2;
@@ -74,7 +74,7 @@ namespace INF164HWAss1
             this.lblCoins.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCoins.Location = new System.Drawing.Point(14, 12);
             this.lblCoins.Name = "lblCoins";
-            this.lblCoins.Size = new System.Drawing.Size(133, 29);
+            this.lblCoins.Size = new System.Drawing.Size(204, 45);
             this.lblCoins.TabIndex = 3;
             this.lblCoins.Text = "Coins: 0";
             // 
@@ -83,9 +83,9 @@ namespace INF164HWAss1
             this.lblMultiplier.AutoSize = true;
             this.lblMultiplier.BackColor = System.Drawing.Color.Transparent;
             this.lblMultiplier.Font = new System.Drawing.Font("Unispace", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMultiplier.Location = new System.Drawing.Point(1314, 17);
+            this.lblMultiplier.Location = new System.Drawing.Point(1241, 13);
             this.lblMultiplier.Name = "lblMultiplier";
-            this.lblMultiplier.Size = new System.Drawing.Size(140, 48);
+            this.lblMultiplier.Size = new System.Drawing.Size(228, 77);
             this.lblMultiplier.TabIndex = 5;
             this.lblMultiplier.Text = "X1000";
             // 
@@ -104,7 +104,7 @@ namespace INF164HWAss1
             this.btnBack.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(235, 13);
+            this.btnBack.Location = new System.Drawing.Point(995, 36);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(163, 52);
             this.btnBack.TabIndex = 7;
@@ -117,7 +117,7 @@ namespace INF164HWAss1
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1165, 112);
+            this.button1.Location = new System.Drawing.Point(1237, 93);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(232, 52);
             this.button1.TabIndex = 8;
