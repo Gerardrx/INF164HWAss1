@@ -15,19 +15,58 @@ namespace INF164HWAss1
         int x;
         int y;
         int coins = 0;
+        bool floor = false;
+        bool jump = false;
+        bool jumping = false;
+
+        bool space = false;
+        bool left = false;
+        bool right = false;
+
 
         Random rand = new Random();
+        Panel BoxCollider = new Panel();
+        Panel SpikeCollider = new Panel();
 
         public Runner()
         {
             InitializeComponent();
+
             gameTimer.Start();
+            x = player1.Location.X;
+            y = player1.Location.Y;
+            Cursor.Hide();
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            moveAllGhosts();
+            movement();
+            moveAllSpikes();
             CheckDeath();
+            fallCheck();
+
+            if (jump)
+            {
+                jumping = true;
+                jumpPlayer();
+            }
+
+
+            checkCollision();
+            if (player1.XForce != 0)
+            {
+                player1.moveHorizontal();
+
+                if(player1.XForce > 0)
+                {
+                    player1.XForce--;
+                }
+                else
+                {
+                    player1.XForce++;
+                }  
+            }
+
         }
 
         private void Runner_KeyDown(object sender, KeyEventArgs e)
@@ -35,54 +74,150 @@ namespace INF164HWAss1
             x = player1.Location.X;
             y = player1.Location.Y;
 
-            if (e.KeyValue == (char)Keys.Up || e.KeyValue == (char)Keys.W)
+          /*if (e.KeyValue == (char)Keys.Up || e.KeyValue == (char)Keys.W)
             {
                 player1.moveUp();
             }
-
             if (e.KeyValue == (char)Keys.Down || e.KeyValue == (char)Keys.S)
             {
                 player1.moveDown();
-            }
+            }*/
 
+            if (e.KeyValue == (char)Keys.Space || e.KeyValue == (char)Keys.Up)
+            {
+                space = true;
+            }
             if (e.KeyValue == (char)Keys.Left || e.KeyValue == (char)Keys.A)
             {
-                player1.moveLeft();
+                left = true;
             }
-
             if (e.KeyValue == (char)Keys.Right || e.KeyValue == (char)Keys.D)
             {
-                player1.moveRight();
+                right = true;
+            }
+            lblControls.Visible = false;
+        }
+
+        private void movement()
+        {
+            if (space && floor && !jumping)
+            {
+                jump = true;
+                player1.YForce = -18;
+            }
+            if (left)
+            {
+                player1.XForce = -5;
+            }
+            if (right)
+            {
+                player1.XForce = +5;
             }
             checkCollision();
         }
 
+        private void Runner_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == (char)Keys.Space || e.KeyValue == (char)Keys.Up)
+            {
+                space = false;
+            }
+            if (e.KeyValue == (char)Keys.Left || e.KeyValue == (char)Keys.A)
+            {
+                left = false;
+            }
+            if (e.KeyValue == (char)Keys.Right || e.KeyValue == (char)Keys.D)
+            {
+                right = false;
+            }
+            if (e.KeyValue == (char)Keys.Escape)
+            {
+                this.Dispose();
+            }
+        }
+
+        private void fallCheck()
+        {
+            if (!jump)
+            {
+                BoxCollider.Size = new Size (player1.Size.Width, player1.Size.Height);
+                BoxCollider.Location = new Point(player1.Location.X, player1.Location.Y + 5);
+                BoxCollider.Visible = false;
+
+                floor = false;
+                foreach (Control w in this.Controls)
+                {
+                    if (w is Wall)
+                    {
+                        if (BoxCollider.Bounds.IntersectsWith(w.Bounds))
+                        {
+                            floor = true;
+                        }
+                    }
+                }
+            }
+            if (!floor)
+            {
+                player1.YForce = 5;
+                player1.fall();
+                checkCollision();
+            }
+
+            player1.Floor = floor;
+        }
+
+        private void jumpPlayer()
+        {
+            if(player1.YForce < 0 && floor)
+            {
+                player1.jump();
+                player1.stopLeft = false;
+                player1.stopRight = false;      
+            }
+            else
+            {
+                jump = false;
+                floor = false;
+                jumping = false;
+            }
+        }
+
         private void checkCollision()
         {
+            x = player1.Location.X;
+            y = player1.Location.Y;
+
+            player1.stopLeft = false;
+            player1.stopRight = false;
+
+            BoxCollider.Size = player1.Size;
+            BoxCollider.Visible = false;
             foreach (Control w in this.Controls)
             {
                 if (w is Wall)
                 {
-                    if (w.Bounds.IntersectsWith(player1.Bounds))
+                    BoxCollider.Size = player1.Size;
+                    BoxCollider.Location = new Point(player1.Location.X - 5, player1.Location.Y - 4); // hitting left
+                    if (BoxCollider.Bounds.IntersectsWith(w.Bounds))
                     {
-                        if (player1.Left < ((PictureBox)w).Left && player1.Direction == 'r')
-                        {
-                            x = ((PictureBox)w).Location.X - player1.Width - 1;
-                        }
-                        else if (player1.Left > ((PictureBox)w).Left && player1.Direction == 'l')
-                        {
-                            x = ((PictureBox)w).Location.X + ((PictureBox)w).Width + 1;
-                        }
+                        player1.stopLeft = true;
+                    }
 
-                        else if (player1.Top < ((PictureBox)w).Top && player1.Direction == 'd')
-                        {
-                            y = ((PictureBox)w).Location.Y - player1.Height - 1;
-                        }
-                        else if (player1.Top > ((PictureBox)w).Top && player1.Direction == 'u')
-                        {
-                            y = ((PictureBox)w).Location.Y + ((PictureBox)w).Height + 1;
-                        }
-                        player1.Location = new Point(x, y);
+                    BoxCollider.Location = new Point(player1.Location.X + 5, player1.Location.Y - 4); //hitting right
+                    if (BoxCollider.Bounds.IntersectsWith(w.Bounds))
+                    {
+                       player1.stopRight = true;
+                    }
+
+                    BoxCollider.Size = new Size(player1.Size.Width -30, player1.Size.Height -30);
+                    BoxCollider.Location = new Point(player1.Location.X + 15, player1.Location.Y -3 ); //hitting head
+                    if (jump && BoxCollider.Bounds.IntersectsWith(w.Bounds))
+                    {
+                        player1.Location = new Point(x, y + 2);
+                        jump = false;
+                        jumping = false;
+                        floor = false;
+                        
                     }
                 }
 
@@ -92,59 +227,78 @@ namespace INF164HWAss1
                     {
                         w.Visible = false;
                         coins++;
-                        //label1.Text = "" + coins;
-
+                        lblCoins.Text = "" + coins;
+                        GenerateCoin((Coin)w);
                         Controls.Remove(w);
-                        GenerateCoin();
+                        lblInstructions.Visible = false;
                     }
-
                 }
             }
         }
 
-        private void moveAllGhosts()
+        private void moveAllSpikes()
         {
-            foreach(Control g in this.Controls)
+            foreach (Control g in this.Controls)
             {
-                if(g is Ghost)
+                if (g is Spike)
                 {
-                    ((Ghost)g).moveGhost();
+                    ((Spike)g).moveSpike();
                 }
             }
         }
 
         private void CheckDeath()
         {
+
             foreach (Control g in this.Controls)
             {
-                if (g is Ghost)
+                if (g is Spike)
+                {
+                    SpikeCollider.Size = new Size(g.Size.Width - 20,g.Size.Height - 20);
+                    SpikeCollider.Location = new Point(g.Location.X + 10, g.Location.Y +10);
+                    SpikeCollider.Visible = false;
+
+                    if (SpikeCollider.Bounds.IntersectsWith(player1.Bounds))
+                    {
+                         GameOver();
+                    }
+                }
+                else if(g is PictureBox && (string) g.Tag == "floorSpike")
                 {
                     if (g.Bounds.IntersectsWith(player1.Bounds))
                     {
-                        gameTimer.Stop();
-                        MessageBox.Show("Game Over");
+                         GameOver();
                     }
                 }
             }
         }
 
-        private void GenerateCoin()
+        private void GameOver()
+        {
+            gameTimer.Stop();
+            MessageBox.Show("Game Over");
+        }
+
+
+        private void GenerateCoin(Coin old)
         {
             Coin c = new Coin();
             Controls.Add(c);
+            c.Size = old.Size;
+            c.SendToBack();
 
-            c.Location = new Point(rand.Next(0, this.Size.Width -50), rand.Next(0, this.Size.Height - 50));
+            c.Location = new Point(rand.Next(20, this.Size.Width - 20), rand.Next(20, this.Size.Height - 20));
             while (checkCoinCollision(c))
             {
-                c.Location = new Point(rand.Next(0, this.Size.Width -50), rand.Next(0, this.Size.Height - 50));
-            }   
+                c.Location = new Point(rand.Next(20, this.Size.Width - 20), rand.Next(20, this.Size.Height - 20));
+            }
         }
 
         private bool checkCoinCollision(Coin c)
         {
             foreach (Control w in this.Controls)
             {
-                if(w is Wall)
+                if (w is Wall ||(w is PictureBox && (string) w.Tag == "floorSpike"))
                 {
                     if (w.Bounds.IntersectsWith(c.Bounds))
                     {
@@ -155,5 +309,118 @@ namespace INF164HWAss1
             return false;
         }
 
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void wall6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wall10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wall21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wall36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Runner_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* private void checkCollision()
+ {
+     foreach (Control w in this.Controls)
+     {
+         if (w is Wall)
+         {
+
+
+
+
+             if (w.Bounds.IntersectsWith(player1.Bounds))
+             {
+                 if (player1.Left < ((PictureBox)w).Left && player1.Direction == 'r')
+                 {
+                     x = ((PictureBox)w).Location.X - player1.Width - 1;
+                 }
+                 else if (player1.Left > ((PictureBox)w).Left && player1.Direction == 'l')
+                 {
+                     x = ((PictureBox)w).Location.X + ((PictureBox)w).Width + 1;
+                 }
+                 else if (player1.Top < ((PictureBox)w).Top && player1.Direction == 'd')
+                 {
+                     y = ((PictureBox)w).Location.Y - player1.Height - 1;
+                     floor = true;
+                 }
+                 else if (player1.Top > ((PictureBox)w).Top && player1.Direction == 'u')
+                 {
+                     y = ((PictureBox)w).Location.Y + ((PictureBox)w).Height + 1;
+                 }
+                 player1.Location = new Point(x, y);
+             }
+         }
+
+         if (w is Coin)
+         {
+             if (player1.Bounds.IntersectsWith(w.Bounds))
+             {
+                 w.Visible = false;
+                 coins++;
+                 //label1.Text = "" + coins;
+
+                 Controls.Remove(w);
+                 GenerateCoin();
+
+
+             }
+
+         }
+     }
+ }*/

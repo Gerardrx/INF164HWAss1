@@ -16,7 +16,6 @@ namespace INF164HWAss1
         {
             InitializeComponent();
             Image = global::INF164HWAss1.Properties.Resources.coin;
-            Size = new Size(32, 32);
             Visible = true;
             SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 

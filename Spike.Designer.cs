@@ -1,7 +1,7 @@
 ﻿
 namespace INF164HWAss1
 {
-    partial class Ghost
+    partial class Spike
     {
         /// <summary>
         /// Required designer variable.

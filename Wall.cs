@@ -15,7 +15,9 @@ namespace INF164HWAss1
         public Wall()
         {
             InitializeComponent();
+            BringToFront();
         }
-
+            
+        
     }
 }

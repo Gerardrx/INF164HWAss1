@@ -75,11 +75,11 @@
     <Compile Include="Coin.Designer.cs">
       <DependentUpon>Coin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ghost.cs">
+    <Compile Include="Spike.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Ghost.Designer.cs">
-      <DependentUpon>Ghost.cs</DependentUpon>
+    <Compile Include="Spike.Designer.cs">
+      <DependentUpon>Spike.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -287,6 +287,23 @@
     <None Include="Resources\DogNose.png" />
     <None Include="Resources\piano.gif" />
     <None Include="Resources\coin.gif" />
+    <None Include="Resources\MaskMan\maskdudeIdleRight.gif" />
+    <None Include="Resources\MaskMan\maskdudeIdleLeft.gif" />
+    <None Include="Resources\MaskMan\maskdudeRunLeft.gif" />
+    <None Include="Resources\MaskMan\maskdudeRunRight.gif" />
+    <None Include="Resources\MaskMan\maskdudeFallLeft.png" />
+    <None Include="Resources\MaskMan\maskdudeFallRight.png" />
+    <None Include="Resources\MaskMan\maskdudeJumpLeft.png" />
+    <None Include="Resources\MaskMan\maskdudeJumpRight.png" />
+    <None Include="Resources\MaskMan\spike.gif" />
+    <None Include="Resources\MaskMan\floorSpike.png" />
+    <None Include="Resources\MaskMan\floorSpikeStrip.png" />
+    <None Include="Resources\MaskMan\floorSpikeStripDown.png" />
+    <None Include="Resources\MaskMan\floorSpikeStripLeft.png" />
+    <None Include="Resources\MaskMan\floorSpikeStripRight.png" />
+    <None Include="Resources\MaskMan\floorSpikeRight.png" />
+    <None Include="Resources\MaskMan\floorSpikeDown.png" />
+    <None Include="Resources\MaskMan\floorSpikeLeft.png" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

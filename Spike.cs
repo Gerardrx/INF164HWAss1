@@ -11,15 +11,16 @@ using System.Drawing.Design;
 
 namespace INF164HWAss1
 {
-    public partial class Ghost : PictureBox
+    public partial class Spike : PictureBox
     {
         private char heading;
         private int minX;
         private int maxX;
         private int minY;
         private int maxY;
+        private int speed;
 
-        public Ghost()
+        public Spike()
         {
             InitializeComponent();
         }
@@ -34,11 +35,12 @@ namespace INF164HWAss1
             {
                 if (value == 'l')
                 {
-                  //  Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                  //Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                    this.Invalidate();
                 }
                 if (value == 'r')
                 {
-                   //Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                  //Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
                 }
                 heading = value;
             }
@@ -80,6 +82,15 @@ namespace INF164HWAss1
             set => maxY = value;
         }
 
+        [Category("Travel")]
+        [Browsable(true)]
+        [Description("Travel Speed")]
+        public int Speed 
+        { 
+            get => speed; 
+            set => speed = value; 
+        }
+
         /*        [Category("Appearance")]
                 [Browsable(true)]
                 [Description("Image when going left")]
@@ -98,13 +109,13 @@ namespace INF164HWAss1
                     set => imageRight = value; 
                 }*/
 
-        public void moveGhost()
+        public void moveSpike()
         {
             if (Heading == 'u')
             {
                 if (Location.Y > MinY)
                 {
-                    Location = new Point(Location.X, Location.Y - 1);
+                    Location = new Point(Location.X, Location.Y - speed);
                 }
                 else
                 {
@@ -115,7 +126,7 @@ namespace INF164HWAss1
             {
                 if (Location.Y < MaxY)
                 {
-                    Location = new Point(Location.X, Location.Y + 1);
+                    Location = new Point(Location.X, Location.Y + speed);
                 }
                 else
                 {
@@ -126,7 +137,7 @@ namespace INF164HWAss1
             {
                 if (Location.X > MinX)
                 {
-                    Location = new Point(Location.X - 1, Location.Y);
+                    Location = new Point(Location.X - speed, Location.Y);
                 }
                 else
                 {
@@ -137,7 +148,7 @@ namespace INF164HWAss1
             {
                 if (Location.X < MaxX)
                 {
-                    Location = new Point(Location.X + 1, Location.Y);
+                    Location = new Point(Location.X + speed, Location.Y);
                 }
                 else
                 {
