@@ -12,30 +12,37 @@ namespace INF164HWAss1
 {
     public partial class Player : PictureBox
     {
+       //private variables
         private char direction;
         private int xForce = 0;
         private int yForce = 0;
         private bool floor = false;
         private bool running = false;
 
+        // public variables set in runner
         public bool stopLeft = false;
         public bool stopRight = false;
 
+
+        ///IMPORTANT if you set a gif over and over it wont play
+        ///a lot of the code here is to prevent it from happening
+        ///ie only setting gif once
 
         public Player()
         {
             InitializeComponent();
         }
 
+        // used to make own properties that are editable in the design view
         [Category("Travel")]
         [Browsable(true)]
         [Description("Direction of travel l r")]
-        public char Direction 
+        public char Direction // direction of travel
         { 
             get => direction;
             set 
             { 
-                if(value == 'l')
+                if(value == 'l')  // if direction change change gif
                 {
                     Image = global::INF164HWAss1.Properties.Resources.maskdudeRunLeft;
                 }
@@ -49,6 +56,7 @@ namespace INF164HWAss1
              
         }
 
+        // if no [###] not editable in design view
         public int XForce 
         { 
             get => xForce;
@@ -57,7 +65,7 @@ namespace INF164HWAss1
                 xForce = value;
                 if(value == 0)
                 {
-                    if(Direction == 'l')
+                    if(Direction == 'l') // change gif
                     {
                         Image = global::INF164HWAss1.Properties.Resources.maskdudeIdleLeft;
                     }
@@ -74,7 +82,7 @@ namespace INF164HWAss1
             } 
         }
 
-        public bool Running 
+        public bool Running // if running change gif
         { 
             get => running;
             set 
@@ -98,7 +106,7 @@ namespace INF164HWAss1
                 
             }
         }
-        public int YForce 
+        public int YForce // same stuff here
         { 
             get => yForce;
             set
@@ -106,7 +114,7 @@ namespace INF164HWAss1
                 yForce = value;
                 if (value == 0)
                 {
-                    if (Direction == 'l')
+                    if (Direction == 'l') // chaneg gif if stopping
                     {
                         Image = global::INF164HWAss1.Properties.Resources.maskdudeIdleLeft;
                     }
@@ -118,19 +126,19 @@ namespace INF164HWAss1
             }
         }
 
-        public bool Floor
+        public bool Floor // bla bla bla again
         {
             get => floor;
             set
             {
 
-                if(floor != value)
+                if(floor != value) // change gif if on ground
                 {
                     floor = value;
 
                     if (value)
                     {
-                        if (running)
+                        if (running) // if running after hitting floor
                         {
                             if (Direction == 'l')
                             {
@@ -141,7 +149,7 @@ namespace INF164HWAss1
                                 Image = global::INF164HWAss1.Properties.Resources.maskdudeRunRight;
                             }
                         }
-                        else 
+                        else //if stopped after hitting floor
                         {
                             if (Direction == 'l')
                             {
@@ -159,6 +167,8 @@ namespace INF164HWAss1
             } 
         }
 
+        /// more fun stuff
+        /// moving player based on xforce amount
         public void moveHorizontal()
         {
             if(XForce < 0 && !stopLeft)
@@ -175,6 +185,7 @@ namespace INF164HWAss1
             }
         }
 
+        //called by method above
         private void moveLeft()
         {
             Location = new Point(Location.X + XForce, Location.Y); //-
@@ -183,6 +194,8 @@ namespace INF164HWAss1
                 Direction = 'l';
             }
         }
+
+        //called by method above
         private void moveRight()
         {
             Location = new Point(Location.X + XForce, Location.Y);//+
@@ -192,11 +205,12 @@ namespace INF164HWAss1
             }
         }
 
+        // just move down 
         public void fall()
         {
             Location = new Point(Location.X, Location.Y + YForce); //+ 5
             YForce += 2;
-            if (Direction == 'l')
+            if (Direction == 'l') // change gif to falling
             {
                 Image = global::INF164HWAss1.Properties.Resources.maskdudeFallLeft;
             }
@@ -205,14 +219,14 @@ namespace INF164HWAss1
                 Image = global::INF164HWAss1.Properties.Resources.maskdudeFallRight;
             }
         }
-        public void jump()
+        public void jump() // move up when jumping
         {
 
             Location = new Point(Location.X , Location.Y + YForce); //-5
                         
             YForce++;
 
-            if (Direction == 'l')
+            if (Direction == 'l') // jump left right gif
             {
                 Image = global::INF164HWAss1.Properties.Resources.maskdudeJumpLeft;
             }

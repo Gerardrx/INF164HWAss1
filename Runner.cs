@@ -15,8 +15,10 @@ namespace INF164HWAss1
 
     public partial class Runner : Form
     {
+        // public variable for home page score
         public int coins = 0;
 
+        //private variables for program
         private int x;
         private int y;
         
@@ -38,26 +40,26 @@ namespace INF164HWAss1
             InitializeComponent();
 
             gameTimer.Start();
-            x = player1.Location.X;
+            x = player1.Location.X; //gets locarion for first time
             y = player1.Location.Y;
             Cursor.Hide();
         }
 
-        private void gameTimer_Tick(object sender, EventArgs e)
+        private void gameTimer_Tick(object sender, EventArgs e) // every milisecond
         {
-            movement();
-            moveAllSpikes();
-            CheckDeath();
-            fallCheck();
+            movement(); // move player
+            moveAllSpikes(); //moves spikes
+            CheckDeath(); // checks for spike death
+            fallCheck(); // checks if floor is under player
 
-            if (jump)
+            if (jump) // if jump command given
             {
                 jumping = true;
                 jumpPlayer();
             }
 
-            checkCollision();
-            if (player1.XForce != 0)
+            checkCollision(); // checks collisions with walls
+            if (player1.XForce != 0) // moves players if has inertia
             {
                 player1.moveHorizontal();
 
@@ -73,7 +75,7 @@ namespace INF164HWAss1
 
         }
 
-        private void Runner_KeyDown(object sender, KeyEventArgs e)
+        private void Runner_KeyDown(object sender, KeyEventArgs e) // key down checker
         {
             x = player1.Location.X;
             y = player1.Location.Y;
@@ -93,9 +95,9 @@ namespace INF164HWAss1
             lblControls.Visible = false;
         }
 
-        private void movement()
+        private void movement() // moves player
         {
-            if (space && floor && !jumping)
+            if (space && floor && !jumping) // if on floor for jump
             {
                 jump = true;
                 player1.YForce = -18;
@@ -108,10 +110,10 @@ namespace INF164HWAss1
             {
                 player1.XForce = +5;
             }
-            checkCollision();
+            checkCollision(); // checks collision with walls
         }
 
-        private void Runner_KeyUp(object sender, KeyEventArgs e)
+        private void Runner_KeyUp(object sender, KeyEventArgs e) // stops movement
         {
             if (e.KeyValue == (char)Keys.Space || e.KeyValue == (char)Keys.Up)
             {
@@ -125,29 +127,30 @@ namespace INF164HWAss1
             {
                 right = false;
             }
-            if (e.KeyValue == (char)Keys.Escape)
+            if (e.KeyValue == (char)Keys.Escape) // exit game
             {
                 Cursor.Show();
                 this.Dispose();
             }
-            if (e.KeyValue == (char)Keys.R)
+            if (e.KeyValue == (char)Keys.R) // restart game
             {
                 Restart();
             }
         }
 
-        private void fallCheck()
+        private void fallCheck() // check if floor is underneath
         {
             if (!jump)
             {
-                BoxCollider.Size = new Size (player1.Size.Width, player1.Size.Height);
+                // box collider is a cool piece of code that moves a panel of same size as player down to check for floor collision
+                BoxCollider.Size = player1.Size;
                 BoxCollider.Location = new Point(player1.Location.X, player1.Location.Y + 5);
                 BoxCollider.Visible = false;
 
                 floor = false;
-                foreach (Control w in this.Controls)
+                foreach (Control w in this.Controls) // for each thing in the form
                 {
-                    if (w is Wall)
+                    if (w is Wall) // is wall / floor
                     {
                         if (BoxCollider.Bounds.IntersectsWith(w.Bounds))
                         {
@@ -156,33 +159,33 @@ namespace INF164HWAss1
                     }
                 }
             }
-            if (!floor)
+            if (!floor) // if no floor fall
             {
                 player1.YForce = 5;
                 player1.fall();
                 checkCollision();
             }
 
-            player1.Floor = floor;
+            player1.Floor = floor; // used for player animation
         }
 
-        private void jumpPlayer()
+        private void jumpPlayer() // jumps player
         {
             if(player1.YForce < 0 && floor)
             {
                 player1.jump();
-                player1.stopLeft = false;
-                player1.stopRight = false;      
+                player1.stopLeft = false; // you can move if next to wall
+                player1.stopRight = false; // same here
             }
-            else
+            else // if at end of jump start fall
             {
-                jump = false;
+                jump = false; 
                 floor = false;
                 jumping = false;
             }
         }
 
-        private void checkCollision()
+        private void checkCollision() // check collision with walls and ceiling
         {
             x = player1.Location.X;
             y = player1.Location.Y;
@@ -196,79 +199,82 @@ namespace INF164HWAss1
             {
                 if (w is Wall)
                 {
-                    BoxCollider.Size = player1.Size;
+                    BoxCollider.Size = player1.Size; // Move panel to left of player to detiremine if there is a wall on the left
                     BoxCollider.Location = new Point(player1.Location.X - 5, player1.Location.Y - 4); // hitting left
                     if (BoxCollider.Bounds.IntersectsWith(w.Bounds))
                     {
-                        player1.stopLeft = true;
+                        player1.stopLeft = true; // cant move left in player code
                     }
 
+                    // Move panel to right of player to detiremine if there is a wall on the right
                     BoxCollider.Location = new Point(player1.Location.X + 5, player1.Location.Y - 4); //hitting right
                     if (BoxCollider.Bounds.IntersectsWith(w.Bounds))
                     {
                        player1.stopRight = true;
                     }
 
+                    // Move panel to up of player to detiremine if there is a ceiling
                     BoxCollider.Size = new Size(player1.Size.Width -30, player1.Size.Height -30);
                     BoxCollider.Location = new Point(player1.Location.X + 15, player1.Location.Y -4 ); //hitting head
                     if (jump && BoxCollider.Bounds.IntersectsWith(w.Bounds))
                     {
-                        player1.Location = new Point(x, y + 3);
+                        player1.Location = new Point(x, y + 3); // keeps from getting stuck in ceiling
                         jump = false;
                         jumping = false;
                         floor = false;
                     }
                 }
 
-                if (w is Coin)
+                if (w is Coin) // if you hit a coin
                 {
                     if (player1.Bounds.IntersectsWith(w.Bounds))
                     {
-                        coins++;
+                        coins++; // more moela
                         lblCoins.Text = "" + coins;
-                        GenerateCoin((Coin)w);
-                        Controls.Remove(w);
-                        lblInstructions.Visible = false;
+                        GenerateCoin((Coin)w); // generates new coin
+                        Controls.Remove(w); // deletes old coin
+                        lblInstructions.Visible = false; // go away
                     }
                 }
             }
         }
 
-        private void moveAllSpikes()
+        private void moveAllSpikes() // moves spikes based on properties set in designer
         {
             foreach (Control g in this.Controls)
             {
                 if (g is Spike)
                 {
-                    ((Spike)g).moveSpike();
+                    ((Spike)g).moveSpike(); // move baba move
                 }
             }
         }
 
-        private void CheckDeath()
+        private void CheckDeath() // see if dead
         {
             SpikeCollider.Visible = false;
             foreach (Control g in this.Controls)
             {
-                if (g is Spike)
+                if (g is Spike) // was g beacuse it used to be ghosts
                 {
-                    SpikeCollider.Size = new Size(g.Size.Width - 50,g.Size.Height - 50);
-                    SpikeCollider.Location = new Point(g.Location.X + 25, g.Location.Y +25);
-                    
+                    //collider for spikes because hitbox to big cant jump over
+                    SpikeCollider.Size = new Size(g.Size.Width - 44,g.Size.Height - 44);
+                    SpikeCollider.Location = new Point(g.Location.X + 22, g.Location.Y +22);
 
                     if (SpikeCollider.Bounds.IntersectsWith(player1.Bounds))
                     {
-                         GameOver();
+                         GameOver(); // die
                     }
                 }
-                else if(g is PictureBox && (string) g.Tag == "floorSpike")
+                else if(g is PictureBox && (string) g.Tag == "floorSpike") // if a floor spike
                 {
+                    //change size of floor spike collider
                     SpikeCollider.Size = new Size(g.Size.Width - 20, g.Size.Height - 4);
                     SpikeCollider.Location = new Point(g.Location.X + 10, g.Location.Y + 4);
 
                     if (SpikeCollider.Bounds.IntersectsWith(player1.Bounds))
                     {
-                         GameOver();
+                         GameOver(); //die
                     }
                 }
             }
@@ -276,14 +282,14 @@ namespace INF164HWAss1
 
         private void GameOver()
         {
-            gameTimer.Stop();
-            pbGameOver.Visible = true;
+            gameTimer.Stop(); // stop everything
+            pbGameOver.Visible = true; // game over screen
             lblRestart.Visible = true;
         }
 
-
         private void Restart()
         {
+            // reset all to original positions
             coins = 0;
             player1.Location = new Point(70, 900);
             lblControls.Visible = true;
@@ -302,29 +308,31 @@ namespace INF164HWAss1
         }
 
 
-        private void GenerateCoin(Coin old)
+        private void GenerateCoin(Coin old) // cool code
         {
+            //new coin same size
             c = new Coin();
             Controls.Add(c);
-            c.Size = old.Size;
-            c.SendToBack();
+            c.Size = old.Size; // used to be different size coins
+            c.SendToBack(); // back so that spikes go over
 
+            // generates random position
             c.Location = new Point(rand.Next(20, this.Size.Width - 20), rand.Next(20, this.Size.Height - 20));
-            while (checkCoinCollision(c))
+            while (checkCoinCollision(c)) // until found a open space
             {
                 c.Location = new Point(rand.Next(20, this.Size.Width - 20), rand.Next(20, this.Size.Height - 20));
             }
         }
 
-        private bool checkCoinCollision(Coin c)
+        private bool checkCoinCollision(Coin c) // for some reason very hard to code
         {
             foreach (Control w in this.Controls)
-            {
+            {// cant collide with walls / floor spikes
                 if (w is Wall || w is NoCoinSpawn ||(w is PictureBox && (string) w.Tag == "floorSpike"))
                 {
                     if (w.Bounds.IntersectsWith(c.Bounds))
                     {
-                        return true;
+                        return true; // if opeing found true
                     }
                 }
             }
@@ -332,6 +340,9 @@ namespace INF164HWAss1
         }
 
     }
+
+    // if your reading this you are very interessted in my code
+    // check player.cs, spike.cs for more insight
 }
 
 

@@ -13,6 +13,7 @@ namespace INF164HWAss1
 {
     public partial class Spike : PictureBox
     {
+        //private variables
         private char heading;
         private int minX;
         private int maxX;
@@ -26,73 +27,68 @@ namespace INF164HWAss1
             SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
         }
 
+        // used to make own properties that are editable in the design view
         [Category("Travel")]
         [Browsable(true)]
         [Description("Direction of travel u d l r")]
-        public char Heading
+        public char Heading // direction of spike movement
         {
             get => heading;
-            set
-            {
-                if (value == 'l')
-                {
-                  //Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
-                    this.Invalidate();
-                }
-                if (value == 'r')
-                {
-                  //Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
-                }
-                heading = value;
-            }
+            set => heading = value;
+            
         }
 
+        // used to make own properties that are editable in the design view
         [Category("Travel")]
         [Browsable(true)]
         [Description("Min X Coordinate")]
-        public int MinX
+        public int MinX // min xcord to travel to
         {
             get => minX;
             set => minX = value;
         }
 
+        // used to make own properties that are editable in the design view
         [Category("Travel")]
         [Browsable(true)]
         [Description("Max X Coordinate")]
-        public int MaxX
+        public int MaxX // max xcord to travel to
         {
             get => maxX;
             set => maxX = value;
         }
 
+        // used to make own properties that are editable in the design view
         [Category("Travel")]
         [Browsable(true)]
         [Description("Min Y Coordinate")]
-        public int MinY
+        public int MinY // min ycord to travel to
         {
             get => minY;
             set => minY = value;
         }
 
+        // used to make own properties that are editable in the design view
         [Category("Travel")]
         [Browsable(true)]
         [Description("Max Y Coordinate")]
-        public int MaxY
+        public int MaxY // max ycord to travel to
         {
             get => maxY;
             set => maxY = value;
         }
 
+        //bla bla bla
         [Category("Travel")]
         [Browsable(true)]
         [Description("Travel Speed")]
-        public int Speed 
+        public int Speed //rate of travel
         { 
             get => speed; 
             set => speed = value; 
         }
 
-        public void moveSpike()
+        public void moveSpike() // move spike based on heading and speed
         {
             if (Heading == 'u')
             {
@@ -139,23 +135,5 @@ namespace INF164HWAss1
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
