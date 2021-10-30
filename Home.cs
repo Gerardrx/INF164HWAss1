@@ -25,14 +25,24 @@ namespace INF164HWAss1
             Opacity = 0;
             OpenFadeTimer.Start();
 
-            this.BackColor = ColorTranslator.FromHtml("#66ceef");
-
             HappinessBarTimer.Start();
+
+            //Tooltips for scores
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(lblCoins, "Total coins");
+
+            System.Windows.Forms.ToolTip ToolTip2 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(lblSleepScore, "Points for sleep");
+
+            System.Windows.Forms.ToolTip ToolTip3 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(lblIntelligenceScore, "Points for intelligence");
+
+            System.Windows.Forms.ToolTip ToolTip4 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(pgbHappinessBar, "Keep Mametchi happy by playing games and reading books.");
         }
 
-        int mood = 60;
+        int mood = 100;
         int i = 0;
-
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -43,7 +53,6 @@ namespace INF164HWAss1
         {
             ArcadeFadeTimer.Start();
         }
-
 
         private void HappinessBarTimer_Tick(object sender, EventArgs e)
         {
@@ -60,6 +69,7 @@ namespace INF164HWAss1
                 else if (i < 50 && i >= 25)
                 {
                     pgbHappinessBar.ForeColor = Color.Orange;
+                    pbMood.Image = global::INF164HWAss1.Properties.Resources.Nutral_face;
                 }
                 else if (i == 50)
                 {
@@ -69,11 +79,12 @@ namespace INF164HWAss1
                 else if (i > 50 && i < 75)
                 {
                     pgbHappinessBar.ForeColor = Color.Yellow;
-                    pbMood.Image = global::INF164HWAss1.Properties.Resources.Happy_face;
+                    pbMood.Image = global::INF164HWAss1.Properties.Resources.Nutral_face;
                 }
                 else if (i >= 75)
                 {
                     pgbHappinessBar.ForeColor = Color.FromArgb(0, 192, 0);
+                    pbMood.Image = global::INF164HWAss1.Properties.Resources.Happy_face;
                 }
             }
             else if (i == mood)
@@ -179,7 +190,6 @@ namespace INF164HWAss1
         {
             Runner r = new Runner();
             r.Visible = true;
-
         }
     }
 }

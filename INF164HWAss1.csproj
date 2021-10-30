@@ -288,6 +288,11 @@
     <None Include="Resources\PenguMan.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Background Moving Pic.gif" />
+    <None Include="Resources\Star.gif" />
+    <None Include="Resources\SmartScore.gif" />
+    <None Include="Resources\SleepScore.gif" />
+    <None Include="Resources\Background Moving Pic1.gif" />
     <Content Include="Resources\ChickManWoman.png" />
     <None Include="Resources\Tunnel.gif" />
     <None Include="Resources\DogNose.png" />
@@ -311,6 +316,7 @@
     <None Include="Resources\MaskMan\floorSpikeDown.png" />
     <None Include="Resources\MaskMan\floorSpikeLeft.png" />
     <None Include="Resources\MaskMan\GameOver.gif" />
+    <None Include="Resources\Pic3.jpg" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
