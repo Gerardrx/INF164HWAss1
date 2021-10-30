@@ -206,7 +206,7 @@ namespace INF164HWAss1
             this.lblControls.ForeColor = System.Drawing.Color.White;
             this.lblControls.Location = new System.Drawing.Point(38, 765);
             this.lblControls.Name = "lblControls";
-            this.lblControls.Size = new System.Drawing.Size(389, 66);
+            this.lblControls.Size = new System.Drawing.Size(206, 32);
             this.lblControls.TabIndex = 30;
             this.lblControls.Text = "Arrows or A/D to move \r\n Up or Space to Jump\r\n";
             // 
@@ -218,7 +218,7 @@ namespace INF164HWAss1
             this.lblInstructions.ForeColor = System.Drawing.Color.White;
             this.lblInstructions.Location = new System.Drawing.Point(837, 956);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(236, 132);
+            this.lblInstructions.Size = new System.Drawing.Size(125, 64);
             this.lblInstructions.TabIndex = 31;
             this.lblInstructions.Text = "Collect coins\r\n  Don\'t die\r\n    Simple\r\n\r\n";
             // 
@@ -231,7 +231,7 @@ namespace INF164HWAss1
             this.lblCoins.Location = new System.Drawing.Point(16, 19);
             this.lblCoins.Name = "lblCoins";
             this.lblCoins.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCoins.Size = new System.Drawing.Size(48, 51);
+            this.lblCoins.Size = new System.Drawing.Size(25, 26);
             this.lblCoins.TabIndex = 52;
             this.lblCoins.Text = "0";
             // 
@@ -837,7 +837,7 @@ namespace INF164HWAss1
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(1804, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 25);
+            this.label1.Size = new System.Drawing.Size(105, 14);
             this.label1.TabIndex = 74;
             this.label1.Text = "Escape to exit";
             // 
@@ -1148,6 +1148,7 @@ namespace INF164HWAss1
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Runner";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Runner";
             this.Load += new System.EventHandler(this.Runner_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Runner_KeyDown);

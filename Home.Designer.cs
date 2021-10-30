@@ -43,19 +43,30 @@ namespace INF164HWAss1
             this.pgbHappinessBar = new System.Windows.Forms.ProgressBar();
             this.HappinessBarTimer = new System.Windows.Forms.Timer(this.components);
             this.lblHappyLevel = new System.Windows.Forms.Label();
-            this.pbMood = new System.Windows.Forms.PictureBox();
-            this.pbChickGIF = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.pbGIF2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnArcade2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMood)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbChickGIF)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGIF2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbBackground = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbGIF2 = new System.Windows.Forms.PictureBox();
+            this.pbChickGIF = new System.Windows.Forms.PictureBox();
+            this.pbMood = new System.Windows.Forms.PictureBox();
+            this.lblCoins = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblIntelligenceScore = new System.Windows.Forms.Label();
+            this.lblSleepScore = new System.Windows.Forms.Label();
+            this.pbBackBottom = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGIF2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChickGIF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,10 +84,10 @@ namespace INF164HWAss1
             // 
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(1131, 647);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(891, 397);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(163, 52);
+            this.btnBack.Size = new System.Drawing.Size(122, 42);
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -84,13 +95,13 @@ namespace INF164HWAss1
             // 
             // btnSleep
             // 
-            this.btnSleep.BackColor = System.Drawing.Color.Teal;
+            this.btnSleep.BackColor = System.Drawing.Color.DarkCyan;
             this.btnSleep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSleep.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSleep.Location = new System.Drawing.Point(760, 95);
-            this.btnSleep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSleep.ForeColor = System.Drawing.Color.White;
+            this.btnSleep.Location = new System.Drawing.Point(792, 123);
             this.btnSleep.Name = "btnSleep";
-            this.btnSleep.Size = new System.Drawing.Size(289, 52);
+            this.btnSleep.Size = new System.Drawing.Size(217, 42);
             this.btnSleep.TabIndex = 1;
             this.btnSleep.Text = "Sleep";
             this.btnSleep.UseVisualStyleBackColor = false;
@@ -98,27 +109,28 @@ namespace INF164HWAss1
             // 
             // btnLibrary
             // 
-            this.btnLibrary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLibrary.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnLibrary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLibrary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibrary.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLibrary.Location = new System.Drawing.Point(760, 267);
-            this.btnLibrary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLibrary.ForeColor = System.Drawing.Color.White;
+            this.btnLibrary.Location = new System.Drawing.Point(792, 32);
             this.btnLibrary.Name = "btnLibrary";
-            this.btnLibrary.Size = new System.Drawing.Size(289, 52);
+            this.btnLibrary.Size = new System.Drawing.Size(217, 42);
             this.btnLibrary.TabIndex = 2;
-            this.btnLibrary.Text = "library";
+            this.btnLibrary.Text = "Library";
             this.btnLibrary.UseVisualStyleBackColor = false;
             this.btnLibrary.Click += new System.EventHandler(this.btnLibrary_Click);
             // 
             // btnArcade
             // 
-            this.btnArcade.BackColor = System.Drawing.Color.Aqua;
+            this.btnArcade.BackColor = System.Drawing.Color.DarkCyan;
             this.btnArcade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArcade.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArcade.Location = new System.Drawing.Point(760, 432);
-            this.btnArcade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnArcade.ForeColor = System.Drawing.Color.White;
+            this.btnArcade.Location = new System.Drawing.Point(792, 210);
             this.btnArcade.Name = "btnArcade";
-            this.btnArcade.Size = new System.Drawing.Size(289, 52);
+            this.btnArcade.Size = new System.Drawing.Size(217, 42);
             this.btnArcade.TabIndex = 3;
             this.btnArcade.Text = "Arcade";
             this.btnArcade.UseVisualStyleBackColor = false;
@@ -141,16 +153,16 @@ namespace INF164HWAss1
             // 
             // pgbHappinessBar
             // 
-            this.pgbHappinessBar.Location = new System.Drawing.Point(59, 569);
-            this.pgbHappinessBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pgbHappinessBar.BackColor = System.Drawing.Color.LightBlue;
+            this.pgbHappinessBar.Location = new System.Drawing.Point(12, 355);
             this.pgbHappinessBar.Name = "pgbHappinessBar";
-            this.pgbHappinessBar.Size = new System.Drawing.Size(632, 38);
+            this.pgbHappinessBar.Size = new System.Drawing.Size(252, 20);
             this.pgbHappinessBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pgbHappinessBar.TabIndex = 6;
             // 
             // HappinessBarTimer
             // 
-            this.HappinessBarTimer.Interval = 10;
+            this.HappinessBarTimer.Interval = 25;
             this.HappinessBarTimer.Tick += new System.EventHandler(this.HappinessBarTimer_Tick);
             // 
             // lblHappyLevel
@@ -158,39 +170,14 @@ namespace INF164HWAss1
             this.lblHappyLevel.AutoSize = true;
             this.lblHappyLevel.BackColor = System.Drawing.Color.Transparent;
             this.lblHappyLevel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblHappyLevel.Font = new System.Drawing.Font("Unispace", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHappyLevel.ForeColor = System.Drawing.Color.Black;
-            this.lblHappyLevel.Location = new System.Drawing.Point(245, 528);
-            this.lblHappyLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHappyLevel.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHappyLevel.ForeColor = System.Drawing.Color.White;
+            this.lblHappyLevel.Location = new System.Drawing.Point(42, 325);
             this.lblHappyLevel.Name = "lblHappyLevel";
-            this.lblHappyLevel.Size = new System.Drawing.Size(414, 52);
+            this.lblHappyLevel.Size = new System.Drawing.Size(192, 25);
             this.lblHappyLevel.TabIndex = 7;
             this.lblHappyLevel.Text = "Happiness Meter";
             this.lblHappyLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pbMood
-            // 
-            this.pbMood.BackColor = System.Drawing.Color.Transparent;
-            this.pbMood.Image = global::INF164HWAss1.Properties.Resources.Nutral_face;
-            this.pbMood.Location = new System.Drawing.Point(59, 95);
-            this.pbMood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pbMood.Name = "pbMood";
-            this.pbMood.Size = new System.Drawing.Size(632, 434);
-            this.pbMood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMood.TabIndex = 4;
-            this.pbMood.TabStop = false;
-            // 
-            // pbChickGIF
-            // 
-            this.pbChickGIF.BackColor = System.Drawing.Color.Transparent;
-            this.pbChickGIF.Image = global::INF164HWAss1.Properties.Resources.Chick;
-            this.pbChickGIF.Location = new System.Drawing.Point(1164, -1);
-            this.pbChickGIF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pbChickGIF.Name = "pbChickGIF";
-            this.pbChickGIF.Size = new System.Drawing.Size(144, 148);
-            this.pbChickGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbChickGIF.TabIndex = 69;
-            this.pbChickGIF.TabStop = false;
             // 
             // lblName
             // 
@@ -199,109 +186,221 @@ namespace INF164HWAss1
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblName.Font = new System.Drawing.Font("Unispace", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(205, 11);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(380, 4);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(523, 117);
+            this.lblName.Size = new System.Drawing.Size(259, 60);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Mametchi";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pbGIF2
-            // 
-            this.pbGIF2.BackColor = System.Drawing.Color.Transparent;
-            this.pbGIF2.Image = global::INF164HWAss1.Properties.Resources.GIfBoigif;
-            this.pbGIF2.Location = new System.Drawing.Point(504, 114);
-            this.pbGIF2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pbGIF2.Name = "pbGIF2";
-            this.pbGIF2.Size = new System.Drawing.Size(111, 101);
-            this.pbGIF2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbGIF2.TabIndex = 70;
-            this.pbGIF2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::INF164HWAss1.Properties.Resources.PlantBoi;
-            this.pictureBox1.Location = new System.Drawing.Point(119, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 81);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 71;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::INF164HWAss1.Properties.Resources.PenguMan;
-            this.pictureBox2.Location = new System.Drawing.Point(491, 442);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(87, 75);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 72;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::INF164HWAss1.Properties.Resources.DogNose;
-            this.pictureBox5.Location = new System.Drawing.Point(195, 444);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(71, 80);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 75;
-            this.pictureBox5.TabStop = false;
-            // 
             // btnArcade2
             // 
-            this.btnArcade2.BackColor = System.Drawing.Color.Aqua;
+            this.btnArcade2.BackColor = System.Drawing.Color.DarkCyan;
             this.btnArcade2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArcade2.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArcade2.Location = new System.Drawing.Point(760, 543);
-            this.btnArcade2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnArcade2.ForeColor = System.Drawing.Color.White;
+            this.btnArcade2.Location = new System.Drawing.Point(792, 295);
             this.btnArcade2.Name = "btnArcade2";
-            this.btnArcade2.Size = new System.Drawing.Size(289, 52);
+            this.btnArcade2.Size = new System.Drawing.Size(217, 42);
             this.btnArcade2.TabIndex = 76;
             this.btnArcade2.Text = "Arcade 2";
             this.btnArcade2.UseVisualStyleBackColor = false;
             this.btnArcade2.Click += new System.EventHandler(this.btnArcade2_Click);
             // 
+            // pbBackground
+            // 
+            this.pbBackground.BackColor = System.Drawing.Color.Transparent;
+            this.pbBackground.Image = global::INF164HWAss1.Properties.Resources.Background_Moving_Pic;
+            this.pbBackground.Location = new System.Drawing.Point(0, -1);
+            this.pbBackground.Name = "pbBackground";
+            this.pbBackground.Size = new System.Drawing.Size(1022, 384);
+            this.pbBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbBackground.TabIndex = 77;
+            this.pbBackground.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::INF164HWAss1.Properties.Resources.maskdudeIdleLeft;
+            this.pictureBox2.Location = new System.Drawing.Point(959, 252);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(41, 47);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 72;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::INF164HWAss1.Properties.Resources.coin;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbGIF2
+            // 
+            this.pbGIF2.BackColor = System.Drawing.Color.Transparent;
+            this.pbGIF2.Image = global::INF164HWAss1.Properties.Resources.GIfBoigif;
+            this.pbGIF2.Location = new System.Drawing.Point(792, 171);
+            this.pbGIF2.Name = "pbGIF2";
+            this.pbGIF2.Size = new System.Drawing.Size(38, 39);
+            this.pbGIF2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbGIF2.TabIndex = 70;
+            this.pbGIF2.TabStop = false;
+            // 
+            // pbChickGIF
+            // 
+            this.pbChickGIF.BackColor = System.Drawing.Color.Transparent;
+            this.pbChickGIF.Image = global::INF164HWAss1.Properties.Resources.Chick;
+            this.pbChickGIF.Location = new System.Drawing.Point(585, 67);
+            this.pbChickGIF.Name = "pbChickGIF";
+            this.pbChickGIF.Size = new System.Drawing.Size(54, 51);
+            this.pbChickGIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbChickGIF.TabIndex = 69;
+            this.pbChickGIF.TabStop = false;
+            // 
+            // pbMood
+            // 
+            this.pbMood.BackColor = System.Drawing.Color.Transparent;
+            this.pbMood.Image = global::INF164HWAss1.Properties.Resources.Nutral_face;
+            this.pbMood.Location = new System.Drawing.Point(409, 92);
+            this.pbMood.Name = "pbMood";
+            this.pbMood.Size = new System.Drawing.Size(197, 254);
+            this.pbMood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMood.TabIndex = 4;
+            this.pbMood.TabStop = false;
+            // 
+            // lblCoins
+            // 
+            this.lblCoins.AutoSize = true;
+            this.lblCoins.BackColor = System.Drawing.Color.Transparent;
+            this.lblCoins.Font = new System.Drawing.Font("Unispace", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoins.ForeColor = System.Drawing.Color.Yellow;
+            this.lblCoins.Location = new System.Drawing.Point(49, 13);
+            this.lblCoins.Name = "lblCoins";
+            this.lblCoins.Size = new System.Drawing.Size(25, 25);
+            this.lblCoins.TabIndex = 78;
+            this.lblCoins.Text = "0";
+            this.lblCoins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::INF164HWAss1.Properties.Resources.SleepScore;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 51);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 34);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 79;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::INF164HWAss1.Properties.Resources.SmartScore;
+            this.pictureBox4.Location = new System.Drawing.Point(9, 90);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(44, 51);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 80;
+            this.pictureBox4.TabStop = false;
+            // 
+            // lblIntelligenceScore
+            // 
+            this.lblIntelligenceScore.AutoSize = true;
+            this.lblIntelligenceScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblIntelligenceScore.Font = new System.Drawing.Font("Unispace", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIntelligenceScore.ForeColor = System.Drawing.Color.Cyan;
+            this.lblIntelligenceScore.Location = new System.Drawing.Point(52, 103);
+            this.lblIntelligenceScore.Name = "lblIntelligenceScore";
+            this.lblIntelligenceScore.Size = new System.Drawing.Size(25, 25);
+            this.lblIntelligenceScore.TabIndex = 81;
+            this.lblIntelligenceScore.Text = "0";
+            this.lblIntelligenceScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSleepScore
+            // 
+            this.lblSleepScore.AutoSize = true;
+            this.lblSleepScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblSleepScore.Font = new System.Drawing.Font("Unispace", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSleepScore.ForeColor = System.Drawing.Color.White;
+            this.lblSleepScore.Location = new System.Drawing.Point(51, 60);
+            this.lblSleepScore.Name = "lblSleepScore";
+            this.lblSleepScore.Size = new System.Drawing.Size(25, 25);
+            this.lblSleepScore.TabIndex = 82;
+            this.lblSleepScore.Tag = "";
+            this.lblSleepScore.Text = "0";
+            this.lblSleepScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pbBackBottom
+            // 
+            this.pbBackBottom.BackColor = System.Drawing.Color.Transparent;
+            this.pbBackBottom.Image = global::INF164HWAss1.Properties.Resources.Pic3;
+            this.pbBackBottom.Location = new System.Drawing.Point(0, 389);
+            this.pbBackBottom.Name = "pbBackBottom";
+            this.pbBackBottom.Size = new System.Drawing.Size(1022, 54);
+            this.pbBackBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbBackBottom.TabIndex = 83;
+            this.pbBackBottom.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::INF164HWAss1.Properties.Resources.Star;
+            this.pictureBox5.Location = new System.Drawing.Point(115, 280);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(43, 42);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 84;
+            this.pictureBox5.TabStop = false;
+            // 
             // frmHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.BackgroundImage = global::INF164HWAss1.Properties.Resources.XgKCKen;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1309, 714);
-            this.Controls.Add(this.btnArcade2);
+            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.BackgroundImage = global::INF164HWAss1.Properties.Resources.Background_Moving_Pic;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1021, 442);
             this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pbGIF2);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.pbBackBottom);
+            this.Controls.Add(this.btnArcade);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.lblSleepScore);
+            this.Controls.Add(this.lblIntelligenceScore);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.lblCoins);
+            this.Controls.Add(this.btnArcade2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pbGIF2);
             this.Controls.Add(this.pbChickGIF);
             this.Controls.Add(this.lblHappyLevel);
             this.Controls.Add(this.pgbHappinessBar);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pbMood);
-            this.Controls.Add(this.btnArcade);
             this.Controls.Add(this.btnLibrary);
             this.Controls.Add(this.btnSleep);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.pbBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            ((System.ComponentModel.ISupportInitialize)(this.pbMood)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbChickGIF)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGIF2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGIF2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChickGIF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackBottom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -328,7 +427,14 @@ namespace INF164HWAss1
         private System.Windows.Forms.PictureBox pbGIF2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnArcade2;
+        private System.Windows.Forms.PictureBox pbBackground;
+        private System.Windows.Forms.Label lblCoins;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lblIntelligenceScore;
+        private System.Windows.Forms.Label lblSleepScore;
+        private System.Windows.Forms.PictureBox pbBackBottom;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
