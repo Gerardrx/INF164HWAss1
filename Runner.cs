@@ -43,6 +43,7 @@ namespace INF164HWAss1
             x = player1.Location.X; //gets locarion for first time
             y = player1.Location.Y;
             Cursor.Hide();
+            this.Location = new Point(0,0);
         }
 
         private void gameTimer_Tick(object sender, EventArgs e) // every milisecond
