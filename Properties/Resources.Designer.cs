@@ -163,6 +163,16 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Custom_Edited___Pokemon_Route_101 {
+            get {
+                object obj = ResourceManager.GetObject("Custom Edited - Pokemon Route 101", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Disco {
             get {
                 object obj = ResourceManager.GetObject("Disco", resourceCulture);
@@ -525,6 +535,86 @@ namespace INF164HWAss1.Properties {
         internal static System.Drawing.Bitmap PlantBoi {
             get {
                 object obj = ResourceManager.GetObject("PlantBoi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resized_Bulbasaur {
+            get {
+                object obj = ResourceManager.GetObject("resized-Bulbasaur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resized_Charmander {
+            get {
+                object obj = ResourceManager.GetObject("resized-Charmander", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resized_Clefairy {
+            get {
+                object obj = ResourceManager.GetObject("resized-Clefairy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resized_Pikachu {
+            get {
+                object obj = ResourceManager.GetObject("resized-Pikachu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resized_Rattata {
+            get {
+                object obj = ResourceManager.GetObject("resized-Rattata", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resized_Squirtle {
+            get {
+                object obj = ResourceManager.GetObject("resized-Squirtle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resized_Vulpix {
+            get {
+                object obj = ResourceManager.GetObject("resized-Vulpix", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resized_Zubat {
+            get {
+                object obj = ResourceManager.GetObject("resized-Zubat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

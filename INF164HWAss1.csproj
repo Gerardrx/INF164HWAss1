@@ -289,6 +289,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background Moving Pic.gif" />
+    <None Include="Resources\resized-Zubat.jpeg" />
+    <None Include="Resources\resized-Vulpix.jpeg" />
+    <None Include="Resources\resized-Squirtle.jpeg" />
+    <None Include="Resources\resized-Rattata.jpeg" />
+    <None Include="Resources\resized-Pikachu.jpeg" />
+    <None Include="Resources\resized-Clefairy.jpeg" />
+    <None Include="Resources\resized-Charmander.jpeg" />
+    <None Include="Resources\resized-Bulbasaur.jpeg" />
     <None Include="Resources\Star.gif" />
     <None Include="Resources\SmartScore.gif" />
     <None Include="Resources\SleepScore.gif" />
@@ -317,6 +325,7 @@
     <None Include="Resources\MaskMan\floorSpikeLeft.png" />
     <None Include="Resources\MaskMan\GameOver.gif" />
     <None Include="Resources\Pic3.jpg" />
+    <None Include="Resources\Custom Edited - Pokemon Route 101.png" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

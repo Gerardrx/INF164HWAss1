@@ -22,15 +22,15 @@ namespace INF164HWAss1
             //Create player for music and play music
             
             
-
+            
             if (!FontInstalled())
             {
                 MessageBox.Show("Unispace font not installed \nPlease install font for program to run properly\nThe .tff file is in debug and Resources");
 
             }
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer("Dub_Techno___Selection_016.wav");
+            //System.Media.SoundPlayer player = new System.Media.SoundPlayer("Dub_Techno___Selection_016.wav");
             LoadingTimer.Start();
-            player.Play();
+            //player.Play();
         }
 
         int i = 0;
