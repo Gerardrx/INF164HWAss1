@@ -127,6 +127,7 @@ namespace INF164HWAss1
             }
             if (e.KeyValue == (char)Keys.Escape)
             {
+                Cursor.Show();
                 this.Dispose();
             }
             if (e.KeyValue == (char)Keys.R)
@@ -330,10 +331,6 @@ namespace INF164HWAss1
             return false;
         }
 
-        private void lblExit_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
     }
 }
 

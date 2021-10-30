@@ -35,6 +35,34 @@ namespace INF164HWAss1
             this.lblControls = new System.Windows.Forms.Label();
             this.lblInstructions = new System.Windows.Forms.Label();
             this.lblCoins = new System.Windows.Forms.Label();
+            this.lblRestart = new System.Windows.Forms.Label();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbGameOver = new System.Windows.Forms.PictureBox();
+            this.noCoinSpawn14 = new INF164HWAss1.NoCoinSpawn();
             this.noCoinSpawn13 = new INF164HWAss1.NoCoinSpawn();
             this.noCoinSpawn12 = new INF164HWAss1.NoCoinSpawn();
             this.noCoinSpawn11 = new INF164HWAss1.NoCoinSpawn();
@@ -46,27 +74,10 @@ namespace INF164HWAss1
             this.noCoinSpawn3 = new INF164HWAss1.NoCoinSpawn();
             this.noCoinSpawn2 = new INF164HWAss1.NoCoinSpawn();
             this.noCoinSpawn1 = new INF164HWAss1.NoCoinSpawn();
-            this.noCoinSpawn8 = new INF164HWAss1.NoCoinSpawn();
-            this.noCoinSpawn9 = new INF164HWAss1.NoCoinSpawn();
-            this.pbGameOver = new System.Windows.Forms.PictureBox();
-            this.lblRestart = new System.Windows.Forms.Label();
             this.wall42 = new INF164HWAss1.Wall();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.wall41 = new INF164HWAss1.Wall();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.wall40 = new INF164HWAss1.Wall();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.wall39 = new INF164HWAss1.Wall();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.wall38 = new INF164HWAss1.Wall();
             this.spike9 = new INF164HWAss1.Spike();
             this.wall37 = new INF164HWAss1.Wall();
@@ -76,10 +87,7 @@ namespace INF164HWAss1
             this.spike8 = new INF164HWAss1.Spike();
             this.wall33 = new INF164HWAss1.Wall();
             this.wall32 = new INF164HWAss1.Wall();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.wall31 = new INF164HWAss1.Wall();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.wall29 = new INF164HWAss1.Wall();
             this.wall30 = new INF164HWAss1.Wall();
             this.wall28 = new INF164HWAss1.Wall();
@@ -87,13 +95,10 @@ namespace INF164HWAss1
             this.wall26 = new INF164HWAss1.Wall();
             this.wall25 = new INF164HWAss1.Wall();
             this.spike7 = new INF164HWAss1.Spike();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.wall24 = new INF164HWAss1.Wall();
             this.wall14 = new INF164HWAss1.Wall();
             this.wall23 = new INF164HWAss1.Wall();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.wall22 = new INF164HWAss1.Wall();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.wall21 = new INF164HWAss1.Wall();
             this.wall20 = new INF164HWAss1.Wall();
             this.wall19 = new INF164HWAss1.Wall();
@@ -107,8 +112,6 @@ namespace INF164HWAss1
             this.spike4 = new INF164HWAss1.Spike();
             this.wall12 = new INF164HWAss1.Wall();
             this.wall11 = new INF164HWAss1.Wall();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.wall3 = new INF164HWAss1.Wall();
             this.wall1 = new INF164HWAss1.Wall();
             this.lblExit = new System.Windows.Forms.Label();
@@ -124,29 +127,38 @@ namespace INF164HWAss1
             this.spike2 = new INF164HWAss1.Spike();
             this.spike1 = new INF164HWAss1.Spike();
             this.coin1 = new INF164HWAss1.Coin();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.noCoinSpawn14 = new INF164HWAss1.NoCoinSpawn();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall42)).BeginInit();
+            this.noCoinSpawn8 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn9 = new INF164HWAss1.NoCoinSpawn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall39)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall41)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall40)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall39)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spike9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall37)).BeginInit();
@@ -156,10 +168,7 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.spike8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall28)).BeginInit();
@@ -167,13 +176,10 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.wall26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spike7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall19)).BeginInit();
@@ -187,8 +193,6 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.spike4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).BeginInit();
             this.wall1.SuspendLayout();
@@ -204,10 +208,6 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.spike2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spike1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -251,6 +251,316 @@ namespace INF164HWAss1
             this.lblCoins.Size = new System.Drawing.Size(48, 51);
             this.lblCoins.TabIndex = 52;
             this.lblCoins.Text = "0";
+            // 
+            // lblRestart
+            // 
+            this.lblRestart.AutoSize = true;
+            this.lblRestart.BackColor = System.Drawing.Color.Transparent;
+            this.lblRestart.Font = new System.Drawing.Font("Unispace", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRestart.ForeColor = System.Drawing.Color.Red;
+            this.lblRestart.Location = new System.Drawing.Point(846, 564);
+            this.lblRestart.Name = "lblRestart";
+            this.lblRestart.Size = new System.Drawing.Size(462, 70);
+            this.lblRestart.TabIndex = 113;
+            this.lblRestart.Text = "R to restart";
+            this.lblRestart.Visible = false;
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
+            this.pictureBox24.Location = new System.Drawing.Point(1838, 183);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(34, 20);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox24.TabIndex = 97;
+            this.pictureBox24.TabStop = false;
+            this.pictureBox24.Tag = "floorSpike";
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
+            this.pictureBox25.Location = new System.Drawing.Point(1611, 274);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(34, 20);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox25.TabIndex = 96;
+            this.pictureBox25.TabStop = false;
+            this.pictureBox25.Tag = "floorSpike";
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
+            this.pictureBox22.Location = new System.Drawing.Point(1871, 183);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(34, 20);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox22.TabIndex = 94;
+            this.pictureBox22.TabStop = false;
+            this.pictureBox22.Tag = "floorSpike";
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
+            this.pictureBox23.Location = new System.Drawing.Point(1577, 274);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(34, 20);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox23.TabIndex = 93;
+            this.pictureBox23.TabStop = false;
+            this.pictureBox23.Tag = "floorSpike";
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripDown;
+            this.pictureBox21.Location = new System.Drawing.Point(753, 335);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(192, 20);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox21.TabIndex = 91;
+            this.pictureBox21.TabStop = false;
+            this.pictureBox21.Tag = "floorSpike";
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::INF164HWAss1.Properties.Resources.floorSpikeLeft;
+            this.pictureBox17.Location = new System.Drawing.Point(1368, 484);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(15, 26);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 89;
+            this.pictureBox17.TabStop = false;
+            this.pictureBox17.Tag = "floorSpike";
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = global::INF164HWAss1.Properties.Resources.floorSpikeRight;
+            this.pictureBox18.Location = new System.Drawing.Point(1403, 484);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(15, 26);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 88;
+            this.pictureBox18.TabStop = false;
+            this.pictureBox18.Tag = "floorSpike";
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown;
+            this.pictureBox19.Location = new System.Drawing.Point(1380, 511);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(26, 15);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.TabIndex = 87;
+            this.pictureBox19.TabStop = false;
+            this.pictureBox19.Tag = "floorSpike";
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::INF164HWAss1.Properties.Resources.floorSpike;
+            this.pictureBox20.Location = new System.Drawing.Point(1381, 472);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(26, 15);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox20.TabIndex = 86;
+            this.pictureBox20.TabStop = false;
+            this.pictureBox20.Tag = "floorSpike";
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::INF164HWAss1.Properties.Resources.floorSpikeLeft;
+            this.pictureBox16.Location = new System.Drawing.Point(1203, 484);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(15, 26);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 84;
+            this.pictureBox16.TabStop = false;
+            this.pictureBox16.Tag = "floorSpike";
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::INF164HWAss1.Properties.Resources.floorSpikeRight;
+            this.pictureBox15.Location = new System.Drawing.Point(1238, 484);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(15, 26);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 83;
+            this.pictureBox15.TabStop = false;
+            this.pictureBox15.Tag = "floorSpike";
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown;
+            this.pictureBox14.Location = new System.Drawing.Point(1215, 511);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(26, 15);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 82;
+            this.pictureBox14.TabStop = false;
+            this.pictureBox14.Tag = "floorSpike";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::INF164HWAss1.Properties.Resources.floorSpike;
+            this.pictureBox13.Location = new System.Drawing.Point(1216, 472);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(26, 15);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 81;
+            this.pictureBox13.TabStop = false;
+            this.pictureBox13.Tag = "floorSpike";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::INF164HWAss1.Properties.Resources.floorSpike;
+            this.pictureBox12.Location = new System.Drawing.Point(1691, 577);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(34, 20);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 71;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Tag = "floorSpike";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::INF164HWAss1.Properties.Resources.floorSpike;
+            this.pictureBox11.Location = new System.Drawing.Point(1657, 577);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(34, 20);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 70;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Tag = "floorSpike";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripDown;
+            this.pictureBox10.Location = new System.Drawing.Point(467, 216);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(192, 20);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 68;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Tag = "floorSpike";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripDown;
+            this.pictureBox9.Location = new System.Drawing.Point(255, 478);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(192, 20);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 59;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Tag = "floorSpike";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripRight;
+            this.pictureBox8.Location = new System.Drawing.Point(433, 202);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(20, 192);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 55;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Tag = "floorSpike";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripLeft;
+            this.pictureBox7.Location = new System.Drawing.Point(254, 271);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(20, 192);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 53;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Tag = "floorSpike";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripDown;
+            this.pictureBox3.Location = new System.Drawing.Point(1212, 727);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(192, 20);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Tag = "floorSpike";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripLeft;
+            this.pictureBox2.Location = new System.Drawing.Point(254, 144);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 192);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "floorSpike";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStrip;
+            this.pictureBox4.Location = new System.Drawing.Point(1715, 1046);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(192, 20);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 35;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Tag = "floorSpike";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStrip;
+            this.pictureBox5.Location = new System.Drawing.Point(1539, 1046);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(192, 20);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 36;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Tag = "floorSpike";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStrip;
+            this.pictureBox6.Location = new System.Drawing.Point(1265, 1046);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(192, 20);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 37;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Tag = "floorSpike";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStrip;
+            this.pictureBox1.Location = new System.Drawing.Point(1088, 1046);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(192, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "floorSpike";
+            // 
+            // pbGameOver
+            // 
+            this.pbGameOver.BackColor = System.Drawing.Color.Transparent;
+            this.pbGameOver.Image = global::INF164HWAss1.Properties.Resources.GameOver;
+            this.pbGameOver.Location = new System.Drawing.Point(188, 53);
+            this.pbGameOver.Name = "pbGameOver";
+            this.pbGameOver.Size = new System.Drawing.Size(1567, 956);
+            this.pbGameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbGameOver.TabIndex = 112;
+            this.pbGameOver.TabStop = false;
+            this.pbGameOver.Visible = false;
+            // 
+            // noCoinSpawn14
+            // 
+            this.noCoinSpawn14.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn14.Location = new System.Drawing.Point(1201, 745);
+            this.noCoinSpawn14.Name = "noCoinSpawn14";
+            this.noCoinSpawn14.Size = new System.Drawing.Size(203, 28);
+            this.noCoinSpawn14.TabIndex = 114;
+            this.noCoinSpawn14.Text = "noCoinSpawn14";
+            this.noCoinSpawn14.Visible = false;
             // 
             // noCoinSpawn13
             // 
@@ -362,51 +672,6 @@ namespace INF164HWAss1
             this.noCoinSpawn1.Text = "noCoinSpawn1";
             this.noCoinSpawn1.Visible = false;
             // 
-            // noCoinSpawn8
-            // 
-            this.noCoinSpawn8.BackColor = System.Drawing.Color.Red;
-            this.noCoinSpawn8.Location = new System.Drawing.Point(16, 733);
-            this.noCoinSpawn8.Name = "noCoinSpawn8";
-            this.noCoinSpawn8.Size = new System.Drawing.Size(69, 82);
-            this.noCoinSpawn8.TabIndex = 106;
-            this.noCoinSpawn8.Text = "noCoinSpawn8";
-            this.noCoinSpawn8.Visible = false;
-            // 
-            // noCoinSpawn9
-            // 
-            this.noCoinSpawn9.BackColor = System.Drawing.Color.Red;
-            this.noCoinSpawn9.Location = new System.Drawing.Point(16, 19);
-            this.noCoinSpawn9.Name = "noCoinSpawn9";
-            this.noCoinSpawn9.Size = new System.Drawing.Size(51, 59);
-            this.noCoinSpawn9.TabIndex = 107;
-            this.noCoinSpawn9.Text = "noCoinSpawn9";
-            this.noCoinSpawn9.Visible = false;
-            // 
-            // pbGameOver
-            // 
-            this.pbGameOver.BackColor = System.Drawing.Color.Transparent;
-            this.pbGameOver.Image = global::INF164HWAss1.Properties.Resources.GameOver1;
-            this.pbGameOver.Location = new System.Drawing.Point(188, 53);
-            this.pbGameOver.Name = "pbGameOver";
-            this.pbGameOver.Size = new System.Drawing.Size(1567, 956);
-            this.pbGameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbGameOver.TabIndex = 112;
-            this.pbGameOver.TabStop = false;
-            this.pbGameOver.Visible = false;
-            // 
-            // lblRestart
-            // 
-            this.lblRestart.AutoSize = true;
-            this.lblRestart.BackColor = System.Drawing.Color.Transparent;
-            this.lblRestart.Font = new System.Drawing.Font("Unispace", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRestart.ForeColor = System.Drawing.Color.Red;
-            this.lblRestart.Location = new System.Drawing.Point(846, 564);
-            this.lblRestart.Name = "lblRestart";
-            this.lblRestart.Size = new System.Drawing.Size(462, 70);
-            this.lblRestart.TabIndex = 113;
-            this.lblRestart.Text = "R to restart";
-            this.lblRestart.Visible = false;
-            // 
             // wall42
             // 
             this.wall42.BackColor = System.Drawing.Color.Turquoise;
@@ -415,50 +680,6 @@ namespace INF164HWAss1
             this.wall42.Size = new System.Drawing.Size(280, 15);
             this.wall42.TabIndex = 98;
             this.wall42.TabStop = false;
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
-            this.pictureBox24.Location = new System.Drawing.Point(1838, 183);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(34, 20);
-            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox24.TabIndex = 97;
-            this.pictureBox24.TabStop = false;
-            this.pictureBox24.Tag = "floorSpike";
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
-            this.pictureBox25.Location = new System.Drawing.Point(1611, 274);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(34, 20);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox25.TabIndex = 96;
-            this.pictureBox25.TabStop = false;
-            this.pictureBox25.Tag = "floorSpike";
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
-            this.pictureBox22.Location = new System.Drawing.Point(1871, 183);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(34, 20);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox22.TabIndex = 94;
-            this.pictureBox22.TabStop = false;
-            this.pictureBox22.Tag = "floorSpike";
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
-            this.pictureBox23.Location = new System.Drawing.Point(1577, 274);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(34, 20);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox23.TabIndex = 93;
-            this.pictureBox23.TabStop = false;
-            this.pictureBox23.Tag = "floorSpike";
             // 
             // wall41
             // 
@@ -469,17 +690,6 @@ namespace INF164HWAss1
             this.wall41.TabIndex = 92;
             this.wall41.TabStop = false;
             // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripDown;
-            this.pictureBox21.Location = new System.Drawing.Point(753, 335);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(192, 20);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox21.TabIndex = 91;
-            this.pictureBox21.TabStop = false;
-            this.pictureBox21.Tag = "floorSpike";
-            // 
             // wall40
             // 
             this.wall40.BackColor = System.Drawing.Color.Turquoise;
@@ -489,50 +699,6 @@ namespace INF164HWAss1
             this.wall40.TabIndex = 90;
             this.wall40.TabStop = false;
             // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = global::INF164HWAss1.Properties.Resources.floorSpikeLeft;
-            this.pictureBox17.Location = new System.Drawing.Point(1368, 484);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(15, 26);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 89;
-            this.pictureBox17.TabStop = false;
-            this.pictureBox17.Tag = "floorSpike";
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = global::INF164HWAss1.Properties.Resources.floorSpikeRight;
-            this.pictureBox18.Location = new System.Drawing.Point(1403, 484);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(15, 26);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 88;
-            this.pictureBox18.TabStop = false;
-            this.pictureBox18.Tag = "floorSpike";
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown;
-            this.pictureBox19.Location = new System.Drawing.Point(1380, 511);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(26, 15);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 87;
-            this.pictureBox19.TabStop = false;
-            this.pictureBox19.Tag = "floorSpike";
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Image = global::INF164HWAss1.Properties.Resources.floorSpike;
-            this.pictureBox20.Location = new System.Drawing.Point(1381, 472);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(26, 15);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 86;
-            this.pictureBox20.TabStop = false;
-            this.pictureBox20.Tag = "floorSpike";
-            // 
             // wall39
             // 
             this.wall39.BackColor = System.Drawing.Color.Turquoise;
@@ -541,50 +707,6 @@ namespace INF164HWAss1
             this.wall39.Size = new System.Drawing.Size(26, 26);
             this.wall39.TabIndex = 85;
             this.wall39.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::INF164HWAss1.Properties.Resources.floorSpikeLeft;
-            this.pictureBox16.Location = new System.Drawing.Point(1203, 484);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(15, 26);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 84;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.Tag = "floorSpike";
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::INF164HWAss1.Properties.Resources.floorSpikeRight;
-            this.pictureBox15.Location = new System.Drawing.Point(1238, 484);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(15, 26);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 83;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Tag = "floorSpike";
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown;
-            this.pictureBox14.Location = new System.Drawing.Point(1215, 511);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(26, 15);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 82;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Tag = "floorSpike";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::INF164HWAss1.Properties.Resources.floorSpike;
-            this.pictureBox13.Location = new System.Drawing.Point(1216, 472);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(26, 15);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 81;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Tag = "floorSpike";
             // 
             // wall38
             // 
@@ -681,28 +803,6 @@ namespace INF164HWAss1
             this.wall32.TabIndex = 72;
             this.wall32.TabStop = false;
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::INF164HWAss1.Properties.Resources.floorSpike;
-            this.pictureBox12.Location = new System.Drawing.Point(1691, 577);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(34, 20);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 71;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Tag = "floorSpike";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::INF164HWAss1.Properties.Resources.floorSpike;
-            this.pictureBox11.Location = new System.Drawing.Point(1657, 577);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(34, 20);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 70;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Tag = "floorSpike";
-            // 
             // wall31
             // 
             this.wall31.BackColor = System.Drawing.Color.Turquoise;
@@ -711,17 +811,6 @@ namespace INF164HWAss1
             this.wall31.Size = new System.Drawing.Size(173, 15);
             this.wall31.TabIndex = 69;
             this.wall31.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripDown;
-            this.pictureBox10.Location = new System.Drawing.Point(467, 216);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(192, 20);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 68;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Tag = "floorSpike";
             // 
             // wall29
             // 
@@ -793,17 +882,6 @@ namespace INF164HWAss1
             this.spike7.TabIndex = 60;
             this.spike7.TabStop = false;
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripDown;
-            this.pictureBox9.Location = new System.Drawing.Point(255, 478);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(192, 20);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 59;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Tag = "floorSpike";
-            // 
             // wall24
             // 
             this.wall24.BackColor = System.Drawing.Color.Turquoise;
@@ -831,17 +909,6 @@ namespace INF164HWAss1
             this.wall23.TabIndex = 56;
             this.wall23.TabStop = false;
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripRight;
-            this.pictureBox8.Location = new System.Drawing.Point(433, 202);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(20, 192);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 55;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Tag = "floorSpike";
-            // 
             // wall22
             // 
             this.wall22.BackColor = System.Drawing.Color.Turquoise;
@@ -850,17 +917,6 @@ namespace INF164HWAss1
             this.wall22.Size = new System.Drawing.Size(15, 192);
             this.wall22.TabIndex = 54;
             this.wall22.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripLeft;
-            this.pictureBox7.Location = new System.Drawing.Point(254, 271);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(20, 192);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 53;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Tag = "floorSpike";
             // 
             // wall21
             // 
@@ -999,28 +1055,6 @@ namespace INF164HWAss1
             this.wall11.Size = new System.Drawing.Size(187, 15);
             this.wall11.TabIndex = 38;
             this.wall11.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripDown;
-            this.pictureBox3.Location = new System.Drawing.Point(1212, 727);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(192, 20);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 34;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Tag = "floorSpike";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripLeft;
-            this.pictureBox2.Location = new System.Drawing.Point(254, 144);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 192);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 33;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "floorSpike";
             // 
             // wall3
             // 
@@ -1184,59 +1218,25 @@ namespace INF164HWAss1
             this.coin1.TabIndex = 7;
             this.coin1.TabStop = false;
             // 
-            // pictureBox4
+            // noCoinSpawn8
             // 
-            this.pictureBox4.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStrip;
-            this.pictureBox4.Location = new System.Drawing.Point(1715, 1046);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(192, 20);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 35;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Tag = "floorSpike";
+            this.noCoinSpawn8.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn8.Location = new System.Drawing.Point(16, 733);
+            this.noCoinSpawn8.Name = "noCoinSpawn8";
+            this.noCoinSpawn8.Size = new System.Drawing.Size(69, 82);
+            this.noCoinSpawn8.TabIndex = 106;
+            this.noCoinSpawn8.Text = "noCoinSpawn8";
+            this.noCoinSpawn8.Visible = false;
             // 
-            // pictureBox5
+            // noCoinSpawn9
             // 
-            this.pictureBox5.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStrip;
-            this.pictureBox5.Location = new System.Drawing.Point(1539, 1046);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(192, 20);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 36;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Tag = "floorSpike";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStrip;
-            this.pictureBox6.Location = new System.Drawing.Point(1265, 1046);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(192, 20);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 37;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Tag = "floorSpike";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStrip;
-            this.pictureBox1.Location = new System.Drawing.Point(1088, 1046);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "floorSpike";
-            // 
-            // noCoinSpawn14
-            // 
-            this.noCoinSpawn14.BackColor = System.Drawing.Color.Red;
-            this.noCoinSpawn14.Location = new System.Drawing.Point(1201, 745);
-            this.noCoinSpawn14.Name = "noCoinSpawn14";
-            this.noCoinSpawn14.Size = new System.Drawing.Size(203, 28);
-            this.noCoinSpawn14.TabIndex = 114;
-            this.noCoinSpawn14.Text = "noCoinSpawn14";
-            this.noCoinSpawn14.Visible = false;
+            this.noCoinSpawn9.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn9.Location = new System.Drawing.Point(16, 19);
+            this.noCoinSpawn9.Name = "noCoinSpawn9";
+            this.noCoinSpawn9.Size = new System.Drawing.Size(51, 59);
+            this.noCoinSpawn9.TabIndex = 107;
+            this.noCoinSpawn9.Text = "noCoinSpawn9";
+            this.noCoinSpawn9.Visible = false;
             // 
             // Runner
             // 
@@ -1348,24 +1348,36 @@ namespace INF164HWAss1
             this.Text = "Runner";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Runner_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Runner_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall39)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall41)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall40)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall39)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spike9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall37)).EndInit();
@@ -1375,10 +1387,7 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.spike8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall28)).EndInit();
@@ -1386,13 +1395,10 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.wall26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spike7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall19)).EndInit();
@@ -1406,8 +1412,6 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.spike4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).EndInit();
             this.wall1.ResumeLayout(false);
@@ -1424,10 +1428,6 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.spike2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spike1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
