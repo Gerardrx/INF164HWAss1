@@ -10,23 +10,28 @@ using System.Windows.Forms;
 
 namespace INF164HWAss1
 {
+
+    //COPYRIGHT Gerard Geldenhuys, Do not Distribute
+
     public partial class Runner : Form
     {
-        int x;
-        int y;
-        int coins = 0;
-        bool floor = false;
-        bool jump = false;
-        bool jumping = false;
+        public int coins = 0;
 
-        bool space = false;
-        bool left = false;
-        bool right = false;
+        private int x;
+        private int y;
+        
+        private bool floor = false;
+        private bool jump = false;
+        private bool jumping = false;
 
+        private bool space = false;
+        private bool left = false;
+        private bool right = false;
 
-        Random rand = new Random();
-        Panel BoxCollider = new Panel();
-        Panel SpikeCollider = new Panel();
+        private Random rand = new Random();
+        private Panel BoxCollider = new Panel();
+        private Panel SpikeCollider = new Panel();
+        private Coin c;
 
         public Runner()
         {
@@ -51,7 +56,6 @@ namespace INF164HWAss1
                 jumpPlayer();
             }
 
-
             checkCollision();
             if (player1.XForce != 0)
             {
@@ -73,15 +77,6 @@ namespace INF164HWAss1
         {
             x = player1.Location.X;
             y = player1.Location.Y;
-
-          /*if (e.KeyValue == (char)Keys.Up || e.KeyValue == (char)Keys.W)
-            {
-                player1.moveUp();
-            }
-            if (e.KeyValue == (char)Keys.Down || e.KeyValue == (char)Keys.S)
-            {
-                player1.moveDown();
-            }*/
 
             if (e.KeyValue == (char)Keys.Space || e.KeyValue == (char)Keys.Up)
             {
@@ -133,6 +128,10 @@ namespace INF164HWAss1
             if (e.KeyValue == (char)Keys.Escape)
             {
                 this.Dispose();
+            }
+            if (e.KeyValue == (char)Keys.R)
+            {
+                Restart();
             }
         }
 
@@ -210,14 +209,13 @@ namespace INF164HWAss1
                     }
 
                     BoxCollider.Size = new Size(player1.Size.Width -30, player1.Size.Height -30);
-                    BoxCollider.Location = new Point(player1.Location.X + 15, player1.Location.Y -3 ); //hitting head
+                    BoxCollider.Location = new Point(player1.Location.X + 15, player1.Location.Y -4 ); //hitting head
                     if (jump && BoxCollider.Bounds.IntersectsWith(w.Bounds))
                     {
-                        player1.Location = new Point(x, y + 2);
+                        player1.Location = new Point(x, y + 3);
                         jump = false;
                         jumping = false;
                         floor = false;
-                        
                     }
                 }
 
@@ -225,7 +223,6 @@ namespace INF164HWAss1
                 {
                     if (player1.Bounds.IntersectsWith(w.Bounds))
                     {
-                        w.Visible = false;
                         coins++;
                         lblCoins.Text = "" + coins;
                         GenerateCoin((Coin)w);
@@ -249,14 +246,14 @@ namespace INF164HWAss1
 
         private void CheckDeath()
         {
-
+            SpikeCollider.Visible = false;
             foreach (Control g in this.Controls)
             {
                 if (g is Spike)
                 {
-                    SpikeCollider.Size = new Size(g.Size.Width - 20,g.Size.Height - 20);
-                    SpikeCollider.Location = new Point(g.Location.X + 10, g.Location.Y +10);
-                    SpikeCollider.Visible = false;
+                    SpikeCollider.Size = new Size(g.Size.Width - 50,g.Size.Height - 50);
+                    SpikeCollider.Location = new Point(g.Location.X + 25, g.Location.Y +25);
+                    
 
                     if (SpikeCollider.Bounds.IntersectsWith(player1.Bounds))
                     {
@@ -265,7 +262,10 @@ namespace INF164HWAss1
                 }
                 else if(g is PictureBox && (string) g.Tag == "floorSpike")
                 {
-                    if (g.Bounds.IntersectsWith(player1.Bounds))
+                    SpikeCollider.Size = new Size(g.Size.Width - 20, g.Size.Height - 4);
+                    SpikeCollider.Location = new Point(g.Location.X + 10, g.Location.Y + 4);
+
+                    if (SpikeCollider.Bounds.IntersectsWith(player1.Bounds))
                     {
                          GameOver();
                     }
@@ -276,13 +276,34 @@ namespace INF164HWAss1
         private void GameOver()
         {
             gameTimer.Stop();
-            MessageBox.Show("Game Over");
+            pbGameOver.Visible = true;
+            lblRestart.Visible = true;
+        }
+
+
+        private void Restart()
+        {
+            coins = 0;
+            player1.Location = new Point(70, 900);
+            lblControls.Visible = true;
+            lblInstructions.Visible = true;
+            gameTimer.Start();
+            left = false;
+            right = false;
+            space = false;
+            jump = false;
+            jumping = false;
+            this.Controls.Add(coin1);
+            this.Controls.Remove(c);
+            lblCoins.Text = "0";
+            pbGameOver.Visible = false;
+            lblRestart.Visible = false;
         }
 
 
         private void GenerateCoin(Coin old)
         {
-            Coin c = new Coin();
+            c = new Coin();
             Controls.Add(c);
             c.Size = old.Size;
             c.SendToBack();
@@ -298,7 +319,7 @@ namespace INF164HWAss1
         {
             foreach (Control w in this.Controls)
             {
-                if (w is Wall ||(w is PictureBox && (string) w.Tag == "floorSpike"))
+                if (w is Wall || w is NoCoinSpawn ||(w is PictureBox && (string) w.Tag == "floorSpike"))
                 {
                     if (w.Bounds.IntersectsWith(c.Bounds))
                     {
@@ -313,114 +334,9 @@ namespace INF164HWAss1
         {
             this.Dispose();
         }
-
-        private void wall6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void wall10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void wall21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void wall36_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Runner_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* private void checkCollision()
- {
-     foreach (Control w in this.Controls)
-     {
-         if (w is Wall)
-         {
-
-
-
-
-             if (w.Bounds.IntersectsWith(player1.Bounds))
-             {
-                 if (player1.Left < ((PictureBox)w).Left && player1.Direction == 'r')
-                 {
-                     x = ((PictureBox)w).Location.X - player1.Width - 1;
-                 }
-                 else if (player1.Left > ((PictureBox)w).Left && player1.Direction == 'l')
-                 {
-                     x = ((PictureBox)w).Location.X + ((PictureBox)w).Width + 1;
-                 }
-                 else if (player1.Top < ((PictureBox)w).Top && player1.Direction == 'd')
-                 {
-                     y = ((PictureBox)w).Location.Y - player1.Height - 1;
-                     floor = true;
-                 }
-                 else if (player1.Top > ((PictureBox)w).Top && player1.Direction == 'u')
-                 {
-                     y = ((PictureBox)w).Location.Y + ((PictureBox)w).Height + 1;
-                 }
-                 player1.Location = new Point(x, y);
-             }
-         }
-
-         if (w is Coin)
-         {
-             if (player1.Bounds.IntersectsWith(w.Bounds))
-             {
-                 w.Visible = false;
-                 coins++;
-                 //label1.Text = "" + coins;
-
-                 Controls.Remove(w);
-                 GenerateCoin();
-
-
-             }
-
-         }
-     }
- }*/
+        

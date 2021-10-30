@@ -75,6 +75,12 @@
     <Compile Include="Coin.Designer.cs">
       <DependentUpon>Coin.cs</DependentUpon>
     </Compile>
+    <Compile Include="NoCoinSpawn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NoCoinSpawn.Designer.cs">
+      <DependentUpon>NoCoinSpawn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Spike.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -304,6 +310,7 @@
     <None Include="Resources\MaskMan\floorSpikeRight.png" />
     <None Include="Resources\MaskMan\floorSpikeDown.png" />
     <None Include="Resources\MaskMan\floorSpikeLeft.png" />
+    <None Include="Resources\MaskMan\GameOver.gif" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

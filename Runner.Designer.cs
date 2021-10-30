@@ -35,6 +35,25 @@ namespace INF164HWAss1
             this.lblControls = new System.Windows.Forms.Label();
             this.lblInstructions = new System.Windows.Forms.Label();
             this.lblCoins = new System.Windows.Forms.Label();
+            this.noCoinSpawn13 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn12 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn11 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn10 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn7 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn6 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn5 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn4 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn3 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn2 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn1 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn8 = new INF164HWAss1.NoCoinSpawn();
+            this.noCoinSpawn9 = new INF164HWAss1.NoCoinSpawn();
+            this.pbGameOver = new System.Windows.Forms.PictureBox();
+            this.lblRestart = new System.Windows.Forms.Label();
+            this.wall42 = new INF164HWAss1.Wall();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.wall41 = new INF164HWAss1.Wall();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
@@ -92,7 +111,7 @@ namespace INF164HWAss1
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.wall3 = new INF164HWAss1.Wall();
             this.wall1 = new INF164HWAss1.Wall();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblExit = new System.Windows.Forms.Label();
             this.wall4 = new INF164HWAss1.Wall();
             this.wall10 = new INF164HWAss1.Wall();
             this.wall6 = new INF164HWAss1.Wall();
@@ -109,10 +128,12 @@ namespace INF164HWAss1
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.wall42 = new INF164HWAss1.Wall();
+            this.noCoinSpawn14 = new INF164HWAss1.NoCoinSpawn();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
@@ -187,10 +208,6 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall42)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -206,9 +223,9 @@ namespace INF164HWAss1
             this.lblControls.ForeColor = System.Drawing.Color.White;
             this.lblControls.Location = new System.Drawing.Point(38, 765);
             this.lblControls.Name = "lblControls";
-            this.lblControls.Size = new System.Drawing.Size(389, 66);
+            this.lblControls.Size = new System.Drawing.Size(389, 99);
             this.lblControls.TabIndex = 30;
-            this.lblControls.Text = "Arrows or A/D to move \r\n Up or Space to Jump\r\n";
+            this.lblControls.Text = "Arrows or A/D to move \r\n Up or Space to Jump\r\n     R to respawn";
             // 
             // lblInstructions
             // 
@@ -216,7 +233,7 @@ namespace INF164HWAss1
             this.lblInstructions.Cursor = System.Windows.Forms.Cursors.Cross;
             this.lblInstructions.Font = new System.Drawing.Font("Unispace", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstructions.ForeColor = System.Drawing.Color.White;
-            this.lblInstructions.Location = new System.Drawing.Point(837, 956);
+            this.lblInstructions.Location = new System.Drawing.Point(799, 948);
             this.lblInstructions.Name = "lblInstructions";
             this.lblInstructions.Size = new System.Drawing.Size(236, 132);
             this.lblInstructions.TabIndex = 31;
@@ -234,6 +251,203 @@ namespace INF164HWAss1
             this.lblCoins.Size = new System.Drawing.Size(48, 51);
             this.lblCoins.TabIndex = 52;
             this.lblCoins.Text = "0";
+            // 
+            // noCoinSpawn13
+            // 
+            this.noCoinSpawn13.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn13.Location = new System.Drawing.Point(1573, 12);
+            this.noCoinSpawn13.Name = "noCoinSpawn13";
+            this.noCoinSpawn13.Size = new System.Drawing.Size(138, 35);
+            this.noCoinSpawn13.TabIndex = 111;
+            this.noCoinSpawn13.Text = "noCoinSpawn13";
+            this.noCoinSpawn13.Visible = false;
+            // 
+            // noCoinSpawn12
+            // 
+            this.noCoinSpawn12.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn12.Location = new System.Drawing.Point(702, 12);
+            this.noCoinSpawn12.Name = "noCoinSpawn12";
+            this.noCoinSpawn12.Size = new System.Drawing.Size(138, 35);
+            this.noCoinSpawn12.TabIndex = 110;
+            this.noCoinSpawn12.Text = "noCoinSpawn12";
+            this.noCoinSpawn12.Visible = false;
+            // 
+            // noCoinSpawn11
+            // 
+            this.noCoinSpawn11.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn11.Location = new System.Drawing.Point(1203, 404);
+            this.noCoinSpawn11.Name = "noCoinSpawn11";
+            this.noCoinSpawn11.Size = new System.Drawing.Size(51, 59);
+            this.noCoinSpawn11.TabIndex = 109;
+            this.noCoinSpawn11.Text = "noCoinSpawn11";
+            this.noCoinSpawn11.Visible = false;
+            // 
+            // noCoinSpawn10
+            // 
+            this.noCoinSpawn10.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn10.Location = new System.Drawing.Point(1368, 404);
+            this.noCoinSpawn10.Name = "noCoinSpawn10";
+            this.noCoinSpawn10.Size = new System.Drawing.Size(51, 59);
+            this.noCoinSpawn10.TabIndex = 108;
+            this.noCoinSpawn10.Text = "noCoinSpawn10";
+            this.noCoinSpawn10.Visible = false;
+            // 
+            // noCoinSpawn7
+            // 
+            this.noCoinSpawn7.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn7.Location = new System.Drawing.Point(1577, 300);
+            this.noCoinSpawn7.Name = "noCoinSpawn7";
+            this.noCoinSpawn7.Size = new System.Drawing.Size(57, 36);
+            this.noCoinSpawn7.TabIndex = 105;
+            this.noCoinSpawn7.Text = "noCoinSpawn7";
+            this.noCoinSpawn7.Visible = false;
+            // 
+            // noCoinSpawn6
+            // 
+            this.noCoinSpawn6.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn6.Location = new System.Drawing.Point(254, 504);
+            this.noCoinSpawn6.Name = "noCoinSpawn6";
+            this.noCoinSpawn6.Size = new System.Drawing.Size(172, 130);
+            this.noCoinSpawn6.TabIndex = 104;
+            this.noCoinSpawn6.Text = "noCoinSpawn6";
+            this.noCoinSpawn6.Visible = false;
+            // 
+            // noCoinSpawn5
+            // 
+            this.noCoinSpawn5.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn5.Location = new System.Drawing.Point(811, 463);
+            this.noCoinSpawn5.Name = "noCoinSpawn5";
+            this.noCoinSpawn5.Size = new System.Drawing.Size(259, 35);
+            this.noCoinSpawn5.TabIndex = 103;
+            this.noCoinSpawn5.Text = "noCoinSpawn5";
+            this.noCoinSpawn5.Visible = false;
+            // 
+            // noCoinSpawn4
+            // 
+            this.noCoinSpawn4.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn4.Location = new System.Drawing.Point(1761, 999);
+            this.noCoinSpawn4.Name = "noCoinSpawn4";
+            this.noCoinSpawn4.Size = new System.Drawing.Size(138, 35);
+            this.noCoinSpawn4.TabIndex = 102;
+            this.noCoinSpawn4.Text = "noCoinSpawn4";
+            this.noCoinSpawn4.Visible = false;
+            // 
+            // noCoinSpawn3
+            // 
+            this.noCoinSpawn3.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn3.Location = new System.Drawing.Point(1852, 728);
+            this.noCoinSpawn3.Name = "noCoinSpawn3";
+            this.noCoinSpawn3.Size = new System.Drawing.Size(51, 59);
+            this.noCoinSpawn3.TabIndex = 101;
+            this.noCoinSpawn3.Text = "noCoinSpawn3";
+            this.noCoinSpawn3.Visible = false;
+            // 
+            // noCoinSpawn2
+            // 
+            this.noCoinSpawn2.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn2.Location = new System.Drawing.Point(1539, 925);
+            this.noCoinSpawn2.Name = "noCoinSpawn2";
+            this.noCoinSpawn2.Size = new System.Drawing.Size(263, 109);
+            this.noCoinSpawn2.TabIndex = 100;
+            this.noCoinSpawn2.Text = "noCoinSpawn2";
+            this.noCoinSpawn2.Visible = false;
+            // 
+            // noCoinSpawn1
+            // 
+            this.noCoinSpawn1.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn1.Location = new System.Drawing.Point(1091, 956);
+            this.noCoinSpawn1.Name = "noCoinSpawn1";
+            this.noCoinSpawn1.Size = new System.Drawing.Size(366, 67);
+            this.noCoinSpawn1.TabIndex = 99;
+            this.noCoinSpawn1.Text = "noCoinSpawn1";
+            this.noCoinSpawn1.Visible = false;
+            // 
+            // noCoinSpawn8
+            // 
+            this.noCoinSpawn8.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn8.Location = new System.Drawing.Point(16, 733);
+            this.noCoinSpawn8.Name = "noCoinSpawn8";
+            this.noCoinSpawn8.Size = new System.Drawing.Size(69, 82);
+            this.noCoinSpawn8.TabIndex = 106;
+            this.noCoinSpawn8.Text = "noCoinSpawn8";
+            this.noCoinSpawn8.Visible = false;
+            // 
+            // noCoinSpawn9
+            // 
+            this.noCoinSpawn9.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn9.Location = new System.Drawing.Point(16, 19);
+            this.noCoinSpawn9.Name = "noCoinSpawn9";
+            this.noCoinSpawn9.Size = new System.Drawing.Size(51, 59);
+            this.noCoinSpawn9.TabIndex = 107;
+            this.noCoinSpawn9.Text = "noCoinSpawn9";
+            this.noCoinSpawn9.Visible = false;
+            // 
+            // pbGameOver
+            // 
+            this.pbGameOver.BackColor = System.Drawing.Color.Transparent;
+            this.pbGameOver.Image = global::INF164HWAss1.Properties.Resources.GameOver1;
+            this.pbGameOver.Location = new System.Drawing.Point(188, 53);
+            this.pbGameOver.Name = "pbGameOver";
+            this.pbGameOver.Size = new System.Drawing.Size(1567, 956);
+            this.pbGameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbGameOver.TabIndex = 112;
+            this.pbGameOver.TabStop = false;
+            this.pbGameOver.Visible = false;
+            // 
+            // lblRestart
+            // 
+            this.lblRestart.AutoSize = true;
+            this.lblRestart.BackColor = System.Drawing.Color.Transparent;
+            this.lblRestart.Font = new System.Drawing.Font("Unispace", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRestart.ForeColor = System.Drawing.Color.Red;
+            this.lblRestart.Location = new System.Drawing.Point(846, 564);
+            this.lblRestart.Name = "lblRestart";
+            this.lblRestart.Size = new System.Drawing.Size(462, 70);
+            this.lblRestart.TabIndex = 113;
+            this.lblRestart.Text = "R to restart";
+            this.lblRestart.Visible = false;
+            // 
+            // wall42
+            // 
+            this.wall42.BackColor = System.Drawing.Color.Turquoise;
+            this.wall42.Location = new System.Drawing.Point(880, 168);
+            this.wall42.Name = "wall42";
+            this.wall42.Size = new System.Drawing.Size(280, 15);
+            this.wall42.TabIndex = 98;
+            this.wall42.TabStop = false;
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
+            this.pictureBox24.Location = new System.Drawing.Point(1838, 183);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(34, 20);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox24.TabIndex = 97;
+            this.pictureBox24.TabStop = false;
+            this.pictureBox24.Tag = "floorSpike";
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
+            this.pictureBox25.Location = new System.Drawing.Point(1611, 274);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(34, 20);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox25.TabIndex = 96;
+            this.pictureBox25.TabStop = false;
+            this.pictureBox25.Tag = "floorSpike";
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
+            this.pictureBox22.Location = new System.Drawing.Point(1871, 183);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(34, 20);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox22.TabIndex = 94;
+            this.pictureBox22.TabStop = false;
+            this.pictureBox22.Tag = "floorSpike";
             // 
             // pictureBox23
             // 
@@ -331,7 +545,7 @@ namespace INF164HWAss1
             // pictureBox16
             // 
             this.pictureBox16.Image = global::INF164HWAss1.Properties.Resources.floorSpikeLeft;
-            this.pictureBox16.Location = new System.Drawing.Point(1229, 484);
+            this.pictureBox16.Location = new System.Drawing.Point(1203, 484);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(15, 26);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -342,7 +556,7 @@ namespace INF164HWAss1
             // pictureBox15
             // 
             this.pictureBox15.Image = global::INF164HWAss1.Properties.Resources.floorSpikeRight;
-            this.pictureBox15.Location = new System.Drawing.Point(1264, 484);
+            this.pictureBox15.Location = new System.Drawing.Point(1238, 484);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(15, 26);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -353,7 +567,7 @@ namespace INF164HWAss1
             // pictureBox14
             // 
             this.pictureBox14.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown;
-            this.pictureBox14.Location = new System.Drawing.Point(1241, 511);
+            this.pictureBox14.Location = new System.Drawing.Point(1215, 511);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(26, 15);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -364,7 +578,7 @@ namespace INF164HWAss1
             // pictureBox13
             // 
             this.pictureBox13.Image = global::INF164HWAss1.Properties.Resources.floorSpike;
-            this.pictureBox13.Location = new System.Drawing.Point(1242, 472);
+            this.pictureBox13.Location = new System.Drawing.Point(1216, 472);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(26, 15);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -375,7 +589,7 @@ namespace INF164HWAss1
             // wall38
             // 
             this.wall38.BackColor = System.Drawing.Color.Turquoise;
-            this.wall38.Location = new System.Drawing.Point(1242, 484);
+            this.wall38.Location = new System.Drawing.Point(1216, 484);
             this.wall38.Name = "wall38";
             this.wall38.Size = new System.Drawing.Size(26, 26);
             this.wall38.TabIndex = 80;
@@ -385,7 +599,7 @@ namespace INF164HWAss1
             // 
             this.spike9.Heading = 'r';
             this.spike9.Image = global::INF164HWAss1.Properties.Resources.spike;
-            this.spike9.Location = new System.Drawing.Point(1314, 336);
+            this.spike9.Location = new System.Drawing.Point(1368, 300);
             this.spike9.MaxX = 1516;
             this.spike9.MaxY = 0;
             this.spike9.MinX = 1314;
@@ -414,7 +628,6 @@ namespace INF164HWAss1
             this.wall36.Size = new System.Drawing.Size(15, 160);
             this.wall36.TabIndex = 77;
             this.wall36.TabStop = false;
-            this.wall36.Click += new System.EventHandler(this.wall36_Click);
             // 
             // wall35
             // 
@@ -502,7 +715,7 @@ namespace INF164HWAss1
             // pictureBox10
             // 
             this.pictureBox10.Image = global::INF164HWAss1.Properties.Resources.floorSpikeStripDown;
-            this.pictureBox10.Location = new System.Drawing.Point(466, 216);
+            this.pictureBox10.Location = new System.Drawing.Point(467, 216);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(192, 20);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -531,7 +744,7 @@ namespace INF164HWAss1
             // wall28
             // 
             this.wall28.BackColor = System.Drawing.Color.Turquoise;
-            this.wall28.Location = new System.Drawing.Point(1511, 508);
+            this.wall28.Location = new System.Drawing.Point(1511, 503);
             this.wall28.Name = "wall28";
             this.wall28.Size = new System.Drawing.Size(145, 15);
             this.wall28.TabIndex = 64;
@@ -549,9 +762,9 @@ namespace INF164HWAss1
             // wall26
             // 
             this.wall26.BackColor = System.Drawing.Color.Turquoise;
-            this.wall26.Location = new System.Drawing.Point(1593, 597);
+            this.wall26.Location = new System.Drawing.Point(1611, 597);
             this.wall26.Name = "wall26";
-            this.wall26.Size = new System.Drawing.Size(327, 15);
+            this.wall26.Size = new System.Drawing.Size(309, 15);
             this.wall26.TabIndex = 62;
             this.wall26.TabStop = false;
             // 
@@ -560,7 +773,7 @@ namespace INF164HWAss1
             this.wall25.BackColor = System.Drawing.Color.Turquoise;
             this.wall25.Location = new System.Drawing.Point(1147, 597);
             this.wall25.Name = "wall25";
-            this.wall25.Size = new System.Drawing.Size(379, 15);
+            this.wall25.Size = new System.Drawing.Size(407, 15);
             this.wall25.TabIndex = 61;
             this.wall25.TabStop = false;
             // 
@@ -568,10 +781,10 @@ namespace INF164HWAss1
             // 
             this.spike7.Heading = 'r';
             this.spike7.Image = global::INF164HWAss1.Properties.Resources.spike;
-            this.spike7.Location = new System.Drawing.Point(460, 65);
+            this.spike7.Location = new System.Drawing.Point(357, 74);
             this.spike7.MaxX = 1830;
             this.spike7.MaxY = 0;
-            this.spike7.MinX = 460;
+            this.spike7.MinX = 360;
             this.spike7.MinY = 0;
             this.spike7.Name = "spike7";
             this.spike7.Size = new System.Drawing.Size(70, 70);
@@ -657,7 +870,6 @@ namespace INF164HWAss1
             this.wall21.Size = new System.Drawing.Size(85, 15);
             this.wall21.TabIndex = 51;
             this.wall21.TabStop = false;
-            this.wall21.Click += new System.EventHandler(this.wall21_Click);
             // 
             // wall20
             // 
@@ -822,24 +1034,24 @@ namespace INF164HWAss1
             // wall1
             // 
             this.wall1.BackColor = System.Drawing.Color.Turquoise;
-            this.wall1.Controls.Add(this.label1);
+            this.wall1.Controls.Add(this.lblExit);
             this.wall1.Location = new System.Drawing.Point(0, 0);
             this.wall1.Name = "wall1";
             this.wall1.Size = new System.Drawing.Size(1920, 15);
             this.wall1.TabIndex = 17;
             this.wall1.TabStop = false;
             // 
-            // label1
+            // lblExit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label1.Font = new System.Drawing.Font("Unispace", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1804, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 25);
-            this.label1.TabIndex = 74;
-            this.label1.Text = "Escape to exit";
+            this.lblExit.AutoSize = true;
+            this.lblExit.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.lblExit.Font = new System.Drawing.Font("Unispace", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExit.ForeColor = System.Drawing.Color.White;
+            this.lblExit.Location = new System.Drawing.Point(1804, 0);
+            this.lblExit.Name = "lblExit";
+            this.lblExit.Size = new System.Drawing.Size(194, 25);
+            this.lblExit.TabIndex = 74;
+            this.lblExit.Text = "Escape to exit";
             // 
             // wall4
             // 
@@ -858,7 +1070,6 @@ namespace INF164HWAss1
             this.wall10.Size = new System.Drawing.Size(158, 15);
             this.wall10.TabIndex = 28;
             this.wall10.TabStop = false;
-            this.wall10.Click += new System.EventHandler(this.wall10_Click);
             // 
             // wall6
             // 
@@ -919,7 +1130,7 @@ namespace INF164HWAss1
             this.player1.Direction = '\0';
             this.player1.Floor = false;
             this.player1.Image = ((System.Drawing.Image)(resources.GetObject("player1.Image")));
-            this.player1.Location = new System.Drawing.Point(69, 902);
+            this.player1.Location = new System.Drawing.Point(70, 900);
             this.player1.Margin = new System.Windows.Forms.Padding(4);
             this.player1.Name = "player1";
             this.player1.Running = false;
@@ -1017,53 +1228,34 @@ namespace INF164HWAss1
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "floorSpike";
             // 
-            // pictureBox22
+            // noCoinSpawn14
             // 
-            this.pictureBox22.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
-            this.pictureBox22.Location = new System.Drawing.Point(1871, 183);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(34, 20);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox22.TabIndex = 94;
-            this.pictureBox22.TabStop = false;
-            this.pictureBox22.Tag = "floorSpike";
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
-            this.pictureBox25.Location = new System.Drawing.Point(1611, 274);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(34, 20);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox25.TabIndex = 96;
-            this.pictureBox25.TabStop = false;
-            this.pictureBox25.Tag = "floorSpike";
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
-            this.pictureBox24.Location = new System.Drawing.Point(1838, 183);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(34, 20);
-            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox24.TabIndex = 97;
-            this.pictureBox24.TabStop = false;
-            this.pictureBox24.Tag = "floorSpike";
-            // 
-            // wall42
-            // 
-            this.wall42.BackColor = System.Drawing.Color.Turquoise;
-            this.wall42.Location = new System.Drawing.Point(880, 168);
-            this.wall42.Name = "wall42";
-            this.wall42.Size = new System.Drawing.Size(280, 15);
-            this.wall42.TabIndex = 98;
-            this.wall42.TabStop = false;
+            this.noCoinSpawn14.BackColor = System.Drawing.Color.Red;
+            this.noCoinSpawn14.Location = new System.Drawing.Point(1201, 745);
+            this.noCoinSpawn14.Name = "noCoinSpawn14";
+            this.noCoinSpawn14.Size = new System.Drawing.Size(203, 28);
+            this.noCoinSpawn14.TabIndex = 114;
+            this.noCoinSpawn14.Text = "noCoinSpawn14";
+            this.noCoinSpawn14.Visible = false;
             // 
             // Runner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.noCoinSpawn14);
+            this.Controls.Add(this.lblRestart);
+            this.Controls.Add(this.noCoinSpawn13);
+            this.Controls.Add(this.noCoinSpawn12);
+            this.Controls.Add(this.noCoinSpawn11);
+            this.Controls.Add(this.noCoinSpawn10);
+            this.Controls.Add(this.noCoinSpawn7);
+            this.Controls.Add(this.noCoinSpawn6);
+            this.Controls.Add(this.noCoinSpawn5);
+            this.Controls.Add(this.noCoinSpawn4);
+            this.Controls.Add(this.noCoinSpawn3);
+            this.Controls.Add(this.noCoinSpawn2);
+            this.Controls.Add(this.noCoinSpawn1);
             this.Controls.Add(this.wall42);
             this.Controls.Add(this.pictureBox24);
             this.Controls.Add(this.pictureBox25);
@@ -1144,14 +1336,23 @@ namespace INF164HWAss1
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.noCoinSpawn8);
+            this.Controls.Add(this.noCoinSpawn9);
+            this.Controls.Add(this.pbGameOver);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Runner";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Runner";
-            this.Load += new System.EventHandler(this.Runner_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Runner_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Runner_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
@@ -1227,10 +1428,6 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall42)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1294,7 +1491,7 @@ namespace INF164HWAss1
         private System.Windows.Forms.PictureBox pictureBox12;
         private Wall wall32;
         private Wall wall33;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblExit;
         private Spike spike8;
         private Wall wall34;
         private Wall wall35;
@@ -1319,5 +1516,21 @@ namespace INF164HWAss1
         private System.Windows.Forms.PictureBox pictureBox25;
         private System.Windows.Forms.PictureBox pictureBox24;
         private Wall wall42;
+        private NoCoinSpawn noCoinSpawn1;
+        private NoCoinSpawn noCoinSpawn2;
+        private NoCoinSpawn noCoinSpawn3;
+        private NoCoinSpawn noCoinSpawn4;
+        private NoCoinSpawn noCoinSpawn5;
+        private NoCoinSpawn noCoinSpawn6;
+        private NoCoinSpawn noCoinSpawn7;
+        private NoCoinSpawn noCoinSpawn8;
+        private NoCoinSpawn noCoinSpawn9;
+        private NoCoinSpawn noCoinSpawn10;
+        private NoCoinSpawn noCoinSpawn11;
+        private NoCoinSpawn noCoinSpawn12;
+        private NoCoinSpawn noCoinSpawn13;
+        private System.Windows.Forms.PictureBox pbGameOver;
+        private System.Windows.Forms.Label lblRestart;
+        private NoCoinSpawn noCoinSpawn14;
     }
 }

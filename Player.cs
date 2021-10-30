@@ -17,6 +17,7 @@ namespace INF164HWAss1
         private int yForce = 0;
         private bool floor = false;
         private bool running = false;
+
         public bool stopLeft = false;
         public bool stopRight = false;
 
@@ -158,8 +159,6 @@ namespace INF164HWAss1
             } 
         }
 
-
-
         public void moveHorizontal()
         {
             if(XForce < 0 && !stopLeft)
@@ -192,14 +191,7 @@ namespace INF164HWAss1
                 Direction = 'r';
             }
         }
-        public void moveUp()
-        {
-            Location = new Point(Location.X, Location.Y - 5);
-            if (direction != 'u')
-            {
-                Direction = 'u';
-            }
-        }
+
         public void fall()
         {
             Location = new Point(Location.X, Location.Y + YForce); //+ 5

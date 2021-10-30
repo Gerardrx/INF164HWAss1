@@ -23,6 +23,7 @@ namespace INF164HWAss1
         public Spike()
         {
             InitializeComponent();
+            SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
         }
 
         [Category("Travel")]
@@ -90,24 +91,6 @@ namespace INF164HWAss1
             get => speed; 
             set => speed = value; 
         }
-
-        /*        [Category("Appearance")]
-                [Browsable(true)]
-                [Description("Image when going left")]
-                public Image ImageLeft 
-                { 
-                    get => imageLeft; 
-                    set => imageLeft = value;
-                }
-
-                [Category("Custom")]
-                [Browsable(true)]
-                [Description("Image when going right")]
-                public Image ImageRight 
-                { 
-                    get => imageRight; 
-                    set => imageRight = value; 
-                }*/
 
         public void moveSpike()
         {

@@ -24,7 +24,7 @@ namespace INF164HWAss1
         private int hearts = 3;
         private int round = 0;
         private double prob;
-        private Bitmap mGif = new Bitmap(global::INF164HWAss1.Properties.Resources.piano);
+        
 
         public Arcade()
 
@@ -146,7 +146,7 @@ namespace INF164HWAss1
 
         private void pbClickMe_MouseDown(object sender, MouseEventArgs e)
         {
-            if (nextRound)
+            if (nextRound )
             {
                 coins++;
                 lblCoins.Text = "Coins: " + coins;
