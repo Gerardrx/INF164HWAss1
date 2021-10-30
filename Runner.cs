@@ -269,9 +269,20 @@ namespace INF164HWAss1
             {
                 if (g is Spike) // was g beacuse it used to be ghosts
                 {
-                    //collider for spikes because hitbox to big cant jump over
-                    SpikeCollider.Size = new Size(g.Size.Width - 44,g.Size.Height - 44);
-                    SpikeCollider.Location = new Point(g.Location.X + 22, g.Location.Y +22);
+                    if(g.Size.Width < 50)
+                    {
+                        //for small spikes
+                        SpikeCollider.Size = new Size(g.Size.Width - 20, g.Size.Height - 20);
+                        SpikeCollider.Location = new Point(g.Location.X + 10, g.Location.Y + 10);
+                    }
+                    else
+                    {
+                        //collider for spikes because hitbox to big cant jump over
+                        SpikeCollider.Size = new Size(g.Size.Width - 44, g.Size.Height - 44);
+                        SpikeCollider.Location = new Point(g.Location.X + 22, g.Location.Y + 22);
+                    }
+                    
+
 
                     if (SpikeCollider.Bounds.IntersectsWith(player1.Bounds))
                     {
