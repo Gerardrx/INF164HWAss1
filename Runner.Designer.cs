@@ -1346,6 +1346,7 @@ namespace INF164HWAss1
             this.Name = "Runner";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Runner";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Runner_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Runner_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
