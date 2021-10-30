@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +18,18 @@ namespace INF164HWAss1
         public frmLoading()
         {
             InitializeComponent();
-
-            LoadingTimer.Start();
-
+            
             //Create player for music and play music
+            
+            
+
+            if (!FontInstalled())
+            {
+                MessageBox.Show("Unispace font not installed \nPlease install font for program to run properly\nThe .tff file is in debug and Resources");
+
+            }
             System.Media.SoundPlayer player = new System.Media.SoundPlayer("Dub_Techno___Selection_016.wav");
+            LoadingTimer.Start();
             player.Play();
         }
 
@@ -61,6 +69,15 @@ namespace INF164HWAss1
             {
                 //Change the backround colour
                 this.BackColor = System.Drawing.Color.DodgerBlue;
+            }
+        }
+
+
+        static bool FontInstalled()
+        {
+            using (var ifc = new InstalledFontCollection())
+            {
+                return ifc.Families.Any(f => f.Name == "Unispace");
             }
         }
     }
