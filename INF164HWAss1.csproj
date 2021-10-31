@@ -69,11 +69,18 @@
     <Compile Include="Arcade.Designer.cs">
       <DependentUpon>Arcade.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookClass.cs" />
     <Compile Include="Coin.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Coin.Designer.cs">
       <DependentUpon>Coin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NoCoinSpawn.cs">
       <SubType>Component</SubType>
@@ -145,6 +152,9 @@
     </Compile>
     <EmbeddedResource Include="Arcade.resx">
       <DependentUpon>Arcade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
