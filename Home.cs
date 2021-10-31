@@ -160,6 +160,7 @@ namespace INF164HWAss1
 
                 frmSleep s = new frmSleep();
                 s.ShowDialog();
+                OpenFadeTimer.Start();
             }
             Opacity -= 0.03;
         }
@@ -172,6 +173,7 @@ namespace INF164HWAss1
 
                 Library l = new Library();
                 l.ShowDialog();
+                OpenFadeTimer.Start();
             }
             Opacity -= 0.03;
         }
@@ -184,8 +186,10 @@ namespace INF164HWAss1
 
                 Arcade a = new Arcade();
                 a.ShowDialog();
+                OpenFadeTimer.Start();
             }
             Opacity -= 0.03;
+            
         }
 
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
@@ -208,7 +212,6 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 CloseFadeTimer.Stop();
-                this.Dispose();
 
                 //Create and display Menu form
                 frmMenu mm = new frmMenu();

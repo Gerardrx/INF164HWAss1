@@ -59,11 +59,7 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 CloseFadeTimer.Stop();
-
                 this.Dispose();
-
-                frmHome h = new frmHome();
-                h.Visible = true;
             }
             Opacity -= 0.03;
         }
