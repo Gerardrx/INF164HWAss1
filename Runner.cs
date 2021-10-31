@@ -37,6 +37,7 @@ namespace INF164HWAss1
             y = player1.Location.Y;
             Cursor.Hide();
             this.Location = new Point(0, 0);
+            pbGameOver.Controls.Add(this.lblRestart);
 
             if (Screen.PrimaryScreen.WorkingArea.Size.Height < 1040 || Screen.PrimaryScreen.WorkingArea.Size.Width < 1920)
             {
@@ -125,6 +126,13 @@ namespace INF164HWAss1
 
         private void Runner_KeyUp(object sender, KeyEventArgs e) // stops movement
         {
+            if(pbGameOver.Visible == true)
+            {
+                if (e.KeyValue == (char)Keys.Space) // restart game
+                {
+                    Restart();
+                }
+            }
             if (e.KeyValue == (char)Keys.Space || e.KeyValue == (char)Keys.Up)
             {
                 space = false;
@@ -136,10 +144,6 @@ namespace INF164HWAss1
             if (e.KeyValue == (char)Keys.Right || e.KeyValue == (char)Keys.D)
             {
                 right = false;
-            }
-            if (e.KeyValue == (char)Keys.R) // restart game
-            {
-                Restart();
             }
         }
 
