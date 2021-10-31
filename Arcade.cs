@@ -47,6 +47,7 @@ namespace INF164HWAss1
             nextRound = true;
             pbClickMe.BackColor = Color.Transparent;
             //this.backgroundWorker1.RunWorkerAsync();
+
         }
 
         private void movePicture()
