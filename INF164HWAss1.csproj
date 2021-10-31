@@ -88,6 +88,7 @@
     <Compile Include="NoCoinSpawn.Designer.cs">
       <DependentUpon>NoCoinSpawn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Save.cs" />
     <Compile Include="Spike.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -1,15 +1,25 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace INF164HWAss1
 {
     public partial class frmHome : Form
     {
+
+        private int coins;
+        private int memory;
+        private int read;
+        private Save save;
+
         public frmHome()
         {
             InitializeComponent();
 
+            ReadDataFromFile();
 
             btnBack.Enabled = false;
             btnArcade.Enabled = false;
@@ -41,6 +51,7 @@ namespace INF164HWAss1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            WriteDataToFile();
             CloseFadeTimer.Start();
         }
 
@@ -107,11 +118,43 @@ namespace INF164HWAss1
         }
 
 
+        public void WriteDataToFile()
+        {
+            save.Book = read;
+            save.Coins = coins;
+            save.Brain = memory;
 
+            FileStream outFile = new FileStream(save + ".bob", FileMode.Create, FileAccess.Write);
+            BinaryFormatter bFormatter = new BinaryFormatter();
+            bFormatter.Serialize(outFile, save);
+            outFile.Close();
+        }
 
+        public void ReadDataFromFile()
+        {
+            try
+            {
+                FileStream inFile = new FileStream(save + ".bob", FileMode.Open, FileAccess.Read);
+                BinaryFormatter bFormatter = new BinaryFormatter();
+                var temp = (int)bFormatter.Deserialize(inFile);
+                foreach (int  myObject in tempList)
+                {
+                    myList.Add(myObject);
+                }
+                save = (Save)bFormatter.Deserialize(inFile);
+                inFile.Close();
 
+            }
+            catch (FileNotFoundException)
+            {
+                save = new Save();
+                MessageBox.Show("o");
+            }
 
-
+            lblCoins.Text = "" + save.Coins;
+            lblIntelligenceScore.Text = "" + save.Brain;
+            lblSleepScore.Text = "" + save.Book;
+        }
 
         private void SleepFadeTimer_Tick(object sender, EventArgs e)
         {
