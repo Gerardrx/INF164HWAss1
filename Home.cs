@@ -157,10 +157,9 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 SleepFadeTimer.Stop();
-                this.Dispose();
 
                 frmSleep s = new frmSleep();
-                s.Visible = true;
+                s.ShowDialog();
             }
             Opacity -= 0.03;
         }
@@ -170,10 +169,9 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 LibraryFadeTimer.Stop();
-                this.Dispose();
 
                 Library l = new Library();
-                l.Visible = true;
+                l.ShowDialog();
             }
             Opacity -= 0.03;
         }
@@ -183,10 +181,9 @@ namespace INF164HWAss1
             if (Opacity == 0)
             {
                 ArcadeFadeTimer.Stop();
-                this.Dispose();
 
                 Arcade a = new Arcade();
-                a.Visible = true;
+                a.ShowDialog();
             }
             Opacity -= 0.03;
         }
