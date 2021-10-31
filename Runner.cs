@@ -127,7 +127,7 @@ namespace INF164HWAss1
         {
             if(pbGameOver.Visible == true)
             {
-                if (e.KeyValue == (char)Keys.R) // restart game
+                if (e.KeyValue == (char)Keys.Space) // restart game
                 {
                     Restart();
                 }
