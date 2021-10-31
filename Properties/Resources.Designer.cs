@@ -133,6 +133,16 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cf4154334c36bc1196b11d729c3a77d4 {
+            get {
+                object obj = ResourceManager.GetObject("cf4154334c36bc1196b11d729c3a77d4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Chick {
             get {
                 object obj = ResourceManager.GetObject("Chick", resourceCulture);
@@ -206,6 +216,26 @@ namespace INF164HWAss1.Properties {
         internal static System.IO.UnmanagedMemoryStream Dub_Techno___Selection_016 {
             get {
                 return ResourceManager.GetStream("Dub_Techno___Selection_016", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ezgif_3_18f8aee5b97c {
+            get {
+                object obj = ResourceManager.GetObject("ezgif-3-18f8aee5b97c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fire {
+            get {
+                object obj = ResourceManager.GetObject("Fire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -502,6 +532,16 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap output_onlinegiftools__1_ {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinegiftools (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PenguMan {
             get {
                 object obj = ResourceManager.GetObject("PenguMan", resourceCulture);
@@ -532,9 +572,29 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pidgion {
+            get {
+                object obj = ResourceManager.GetObject("pidgion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PlantBoi {
             get {
                 object obj = ResourceManager.GetObject("PlantBoi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Poof_Effect {
+            get {
+                object obj = ResourceManager.GetObject("Poof_Effect", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -665,6 +725,16 @@ namespace INF164HWAss1.Properties {
         internal static System.Drawing.Bitmap Star {
             get {
                 object obj = ResourceManager.GetObject("Star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Toaddude {
+            get {
+                object obj = ResourceManager.GetObject("Toaddude", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

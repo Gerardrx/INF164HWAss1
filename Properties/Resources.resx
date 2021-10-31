@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="heart-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heart-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="output-onlinegiftools (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\output-onlinegiftools (1).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="resized-Charmander" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resized-Charmander.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,6 +169,15 @@
   <data name="floorSpikeRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\floorSpikeRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cf4154334c36bc1196b11d729c3a77d4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cf4154334c36bc1196b11d729c3a77d4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resized-Clefairy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resized-Clefairy.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Custom Edited - Pokemon Route 101" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Custom Edited - Pokemon Route 101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bikeMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bikeMan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,8 +187,11 @@
   <data name="resized-Bulbasaur" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resized-Bulbasaur.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="resized-Pikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resized-Pikachu.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tunnel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tunnel.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pidgion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pidgion.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,11 +253,23 @@
   <data name="resized-Zubat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resized-Zubat.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fire.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmartScore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmartScore.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ezgif-3-18f8aee5b97c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ezgif-3-18f8aee5b97c.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Dub_Techno___Selection_016" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dub Techno - Selection 016.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="bicMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bicMan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Poof_Effect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Poof_Effect.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="floorSpike" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\floorSpike.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,11 +277,11 @@
   <data name="Chick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chick.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="resized-Clefairy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resized-Clefairy.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="resized-Pikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resized-Pikachu.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tunnel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tunnel.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Background Moving Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background Moving Pic1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PenguMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PenguMan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,8 +298,8 @@
   <data name="floorSpikeLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\floorSpikeLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SmartScore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SmartScore.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="heart-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heart-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="floorSpikeStripDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\floorSpikeStripDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,16 +328,13 @@
   <data name="GIfBoigif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GIfBoigif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Background Moving Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background Moving Pic1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Instructions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Instructions.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Star" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Custom Edited - Pokemon Route 101" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Custom Edited - Pokemon Route 101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Toaddude" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Toaddude.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

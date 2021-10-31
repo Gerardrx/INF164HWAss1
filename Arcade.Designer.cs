@@ -31,63 +31,44 @@ namespace INF164HWAss1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Arcade));
-            this.btnStart = new System.Windows.Forms.Button();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
-            this.lblCoins = new System.Windows.Forms.Label();
-            this.lblMultiplier = new System.Windows.Forms.Label();
             this.OpenFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.CloseFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.btnBack = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblBorder = new System.Windows.Forms.Label();
-            this.pbClickMe = new System.Windows.Forms.PictureBox();
+            this.lblCoins = new System.Windows.Forms.Label();
+            this.lblHealth = new System.Windows.Forms.Label();
+            this.lblWizz = new System.Windows.Forms.Label();
+            this.gbStart = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.pbSky = new System.Windows.Forms.PictureBox();
+            this.MoveTimer = new System.Windows.Forms.Timer(this.components);
+            this.pbHealthLoss = new System.Windows.Forms.PictureBox();
+            this.pbEvilMan = new System.Windows.Forms.PictureBox();
+            this.pbPoof = new System.Windows.Forms.PictureBox();
+            this.pbCoin = new System.Windows.Forms.PictureBox();
             this.pbHearts = new System.Windows.Forms.PictureBox();
+            this.pbFireBall = new System.Windows.Forms.PictureBox();
             this.pbBackground = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).BeginInit();
+            this.pbClickMe = new System.Windows.Forms.PictureBox();
+            this.gbStart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSky)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHealthLoss)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEvilMan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPoof)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFireBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(294, 36);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(163, 52);
-            this.btnStart.TabIndex = 2;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // GameTimer
             // 
             this.GameTimer.Interval = 1000;
-            this.GameTimer.Tick += new System.EventHandler(this.GameTimer_Tick);
-            // 
-            // lblCoins
-            // 
-            this.lblCoins.AutoSize = true;
-            this.lblCoins.BackColor = System.Drawing.Color.Transparent;
-            this.lblCoins.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoins.Location = new System.Drawing.Point(14, 12);
-            this.lblCoins.Name = "lblCoins";
-            this.lblCoins.Size = new System.Drawing.Size(204, 45);
-            this.lblCoins.TabIndex = 3;
-            this.lblCoins.Text = "Coins: 0";
-            // 
-            // lblMultiplier
-            // 
-            this.lblMultiplier.AutoSize = true;
-            this.lblMultiplier.BackColor = System.Drawing.Color.Transparent;
-            this.lblMultiplier.Font = new System.Drawing.Font("Unispace", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMultiplier.Location = new System.Drawing.Point(1241, 13);
-            this.lblMultiplier.Name = "lblMultiplier";
-            this.lblMultiplier.Size = new System.Drawing.Size(228, 77);
-            this.lblMultiplier.TabIndex = 5;
-            this.lblMultiplier.Text = "X1000";
             // 
             // OpenFadeTimer
             // 
@@ -101,104 +82,284 @@ namespace INF164HWAss1
             // 
             // btnBack
             // 
-            this.btnBack.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnBack.BackColor = System.Drawing.Color.DarkCyan;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(995, 36);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(1094, 462);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(163, 52);
+            this.btnBack.Size = new System.Drawing.Size(98, 33);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // button1
+            // lblCoins
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1237, 93);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 52);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Close Temporary";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.lblCoins.AutoSize = true;
+            this.lblCoins.BackColor = System.Drawing.Color.Transparent;
+            this.lblCoins.Font = new System.Drawing.Font("Unispace", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoins.ForeColor = System.Drawing.Color.Yellow;
+            this.lblCoins.Location = new System.Drawing.Point(48, 17);
+            this.lblCoins.Name = "lblCoins";
+            this.lblCoins.Size = new System.Drawing.Size(25, 25);
+            this.lblCoins.TabIndex = 84;
+            this.lblCoins.Text = "0";
+            this.lblCoins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // backgroundWorker1
+            // lblHealth
             // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            this.lblHealth.AutoSize = true;
+            this.lblHealth.BackColor = System.Drawing.Color.Transparent;
+            this.lblHealth.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHealth.ForeColor = System.Drawing.Color.White;
+            this.lblHealth.Location = new System.Drawing.Point(517, 17);
+            this.lblHealth.Name = "lblHealth";
+            this.lblHealth.Size = new System.Drawing.Size(129, 19);
+            this.lblHealth.TabIndex = 89;
+            this.lblHealth.Text = "Heath Bar ->";
+            this.lblHealth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblBorder
+            // lblWizz
             // 
-            this.lblBorder.BackColor = System.Drawing.Color.Lime;
-            this.lblBorder.Location = new System.Drawing.Point(636, 514);
-            this.lblBorder.Name = "lblBorder";
-            this.lblBorder.Size = new System.Drawing.Size(72, 67);
-            this.lblBorder.TabIndex = 6;
+            this.lblWizz.AutoSize = true;
+            this.lblWizz.BackColor = System.Drawing.Color.Transparent;
+            this.lblWizz.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWizz.ForeColor = System.Drawing.Color.White;
+            this.lblWizz.Location = new System.Drawing.Point(981, 270);
+            this.lblWizz.Name = "lblWizz";
+            this.lblWizz.Size = new System.Drawing.Size(139, 19);
+            this.lblWizz.TabIndex = 90;
+            this.lblWizz.Text = "Crazy Wizzard";
+            this.lblWizz.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pbClickMe
+            // gbStart
             // 
-            this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
-            this.pbClickMe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.ChickManWoman;
-            this.pbClickMe.Location = new System.Drawing.Point(641, 521);
-            this.pbClickMe.Name = "pbClickMe";
-            this.pbClickMe.Size = new System.Drawing.Size(67, 60);
-            this.pbClickMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbClickMe.TabIndex = 1;
-            this.pbClickMe.TabStop = false;
-            this.pbClickMe.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbClickMe_MouseDown);
+            this.gbStart.BackColor = System.Drawing.Color.Black;
+            this.gbStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gbStart.Controls.Add(this.label6);
+            this.gbStart.Controls.Add(this.label5);
+            this.gbStart.Controls.Add(this.label4);
+            this.gbStart.Controls.Add(this.label3);
+            this.gbStart.Controls.Add(this.btnStart);
+            this.gbStart.Controls.Add(this.pbSky);
+            this.gbStart.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbStart.ForeColor = System.Drawing.Color.White;
+            this.gbStart.Location = new System.Drawing.Point(113, 125);
+            this.gbStart.Name = "gbStart";
+            this.gbStart.Size = new System.Drawing.Size(306, 176);
+            this.gbStart.TabIndex = 91;
+            this.gbStart.TabStop = false;
+            this.gbStart.Text = "Arcade";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(10, 98);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(287, 15);
+            this.label6.TabIndex = 95;
+            this.label6.Text = "pop them. Each pop you earn a coin.";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(10, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(295, 15);
+            this.label5.TabIndex = 94;
+            this.label5.Text = "crazy wizzard. Click the pigeons to ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(9, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(271, 15);
+            this.label4.TabIndex = 93;
+            this.label4.Text = "from delivering a message to the ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(10, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(295, 15);
+            this.label3.TabIndex = 92;
+            this.label3.Text = "Help Mametchi stop the evil pigeons ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.Teal;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(110, 128);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(88, 31);
+            this.btnStart.TabIndex = 2;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // pbSky
+            // 
+            this.pbSky.BackColor = System.Drawing.Color.Transparent;
+            this.pbSky.BackgroundImage = global::INF164HWAss1.Properties.Resources.cf4154334c36bc1196b11d729c3a77d4;
+            this.pbSky.Image = global::INF164HWAss1.Properties.Resources.cf4154334c36bc1196b11d729c3a77d4;
+            this.pbSky.Location = new System.Drawing.Point(-9, 116);
+            this.pbSky.Name = "pbSky";
+            this.pbSky.Size = new System.Drawing.Size(329, 119);
+            this.pbSky.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSky.TabIndex = 96;
+            this.pbSky.TabStop = false;
+            // 
+            // pbHealthLoss
+            // 
+            this.pbHealthLoss.BackColor = System.Drawing.Color.Transparent;
+            this.pbHealthLoss.Image = global::INF164HWAss1.Properties.Resources.output_onlinegiftools__1_;
+            this.pbHealthLoss.Location = new System.Drawing.Point(960, 93);
+            this.pbHealthLoss.Name = "pbHealthLoss";
+            this.pbHealthLoss.Size = new System.Drawing.Size(160, 145);
+            this.pbHealthLoss.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHealthLoss.TabIndex = 92;
+            this.pbHealthLoss.TabStop = false;
+            // 
+            // pbEvilMan
+            // 
+            this.pbEvilMan.BackColor = System.Drawing.Color.Transparent;
+            this.pbEvilMan.Image = global::INF164HWAss1.Properties.Resources.Toaddude;
+            this.pbEvilMan.Location = new System.Drawing.Point(1004, 289);
+            this.pbEvilMan.Name = "pbEvilMan";
+            this.pbEvilMan.Size = new System.Drawing.Size(91, 83);
+            this.pbEvilMan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbEvilMan.TabIndex = 88;
+            this.pbEvilMan.TabStop = false;
+            // 
+            // pbPoof
+            // 
+            this.pbPoof.BackColor = System.Drawing.Color.Transparent;
+            this.pbPoof.Image = global::INF164HWAss1.Properties.Resources.Poof_Effect;
+            this.pbPoof.Location = new System.Drawing.Point(820, 159);
+            this.pbPoof.Name = "pbPoof";
+            this.pbPoof.Size = new System.Drawing.Size(97, 79);
+            this.pbPoof.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPoof.TabIndex = 87;
+            this.pbPoof.TabStop = false;
+            // 
+            // pbCoin
+            // 
+            this.pbCoin.BackColor = System.Drawing.Color.Transparent;
+            this.pbCoin.Image = global::INF164HWAss1.Properties.Resources.coin;
+            this.pbCoin.Location = new System.Drawing.Point(10, 8);
+            this.pbCoin.Name = "pbCoin";
+            this.pbCoin.Size = new System.Drawing.Size(39, 39);
+            this.pbCoin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCoin.TabIndex = 83;
+            this.pbCoin.TabStop = false;
             // 
             // pbHearts
             // 
             this.pbHearts.BackColor = System.Drawing.Color.Transparent;
             this.pbHearts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
-            this.pbHearts.Location = new System.Drawing.Point(560, 12);
+            this.pbHearts.Location = new System.Drawing.Point(652, 1);
+            this.pbHearts.Margin = new System.Windows.Forms.Padding(2);
             this.pbHearts.Name = "pbHearts";
-            this.pbHearts.Size = new System.Drawing.Size(322, 98);
+            this.pbHearts.Size = new System.Drawing.Size(151, 52);
             this.pbHearts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbHearts.TabIndex = 4;
             this.pbHearts.TabStop = false;
             // 
+            // pbFireBall
+            // 
+            this.pbFireBall.BackColor = System.Drawing.Color.Transparent;
+            this.pbFireBall.Image = global::INF164HWAss1.Properties.Resources.Fire;
+            this.pbFireBall.Location = new System.Drawing.Point(947, 304);
+            this.pbFireBall.Name = "pbFireBall";
+            this.pbFireBall.Size = new System.Drawing.Size(70, 68);
+            this.pbFireBall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFireBall.TabIndex = 93;
+            this.pbFireBall.TabStop = false;
+            // 
             // pbBackground
             // 
             this.pbBackground.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.pbBackground.Image = global::INF164HWAss1.Properties.Resources.Tunnel;
-            this.pbBackground.Location = new System.Drawing.Point(0, -3);
+            this.pbBackground.Image = global::INF164HWAss1.Properties.Resources.ezgif_3_18f8aee5b97c;
+            this.pbBackground.Location = new System.Drawing.Point(0, 0);
+            this.pbBackground.Margin = new System.Windows.Forms.Padding(2);
             this.pbBackground.Name = "pbBackground";
-            this.pbBackground.Size = new System.Drawing.Size(1510, 1090);
-            this.pbBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBackground.Size = new System.Drawing.Size(1200, 504);
             this.pbBackground.TabIndex = 9;
             this.pbBackground.TabStop = false;
             // 
+            // pbClickMe
+            // 
+            this.pbClickMe.BackColor = System.Drawing.Color.Transparent;
+            this.pbClickMe.Image = global::INF164HWAss1.Properties.Resources.pidgion;
+            this.pbClickMe.Location = new System.Drawing.Point(0, 64);
+            this.pbClickMe.Name = "pbClickMe";
+            this.pbClickMe.Size = new System.Drawing.Size(97, 79);
+            this.pbClickMe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbClickMe.TabIndex = 86;
+            this.pbClickMe.TabStop = false;
+            // 
             // Arcade
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.BackgroundImage = global::INF164HWAss1.Properties.Resources.ezgif_3_18f8aee5b97c;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1500, 1080);
+            this.ClientSize = new System.Drawing.Size(1200, 504);
+            this.Controls.Add(this.pbFireBall);
+            this.Controls.Add(this.pbHealthLoss);
+            this.Controls.Add(this.gbStart);
+            this.Controls.Add(this.lblWizz);
+            this.Controls.Add(this.lblHealth);
+            this.Controls.Add(this.pbEvilMan);
+            this.Controls.Add(this.pbPoof);
             this.Controls.Add(this.pbClickMe);
-            this.Controls.Add(this.lblBorder);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.lblMultiplier);
-            this.Controls.Add(this.pbHearts);
             this.Controls.Add(this.lblCoins);
-            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.pbCoin);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.pbHearts);
             this.Controls.Add(this.pbBackground);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Arcade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arcade";
-            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).EndInit();
+            this.gbStart.ResumeLayout(false);
+            this.gbStart.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSky)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHealthLoss)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEvilMan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPoof)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFireBall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,16 +368,26 @@ namespace INF164HWAss1
         #endregion
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Timer GameTimer;
-        private System.Windows.Forms.Label lblCoins;
         private System.Windows.Forms.PictureBox pbHearts;
-        private System.Windows.Forms.Label lblMultiplier;
         private System.Windows.Forms.Timer OpenFadeTimer;
         private System.Windows.Forms.Timer CloseFadeTimer;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button button1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label lblCoins;
+        private System.Windows.Forms.PictureBox pbCoin;
+        private System.Windows.Forms.PictureBox pbPoof;
+        private System.Windows.Forms.PictureBox pbEvilMan;
+        private System.Windows.Forms.Label lblHealth;
+        private System.Windows.Forms.Label lblWizz;
+        private System.Windows.Forms.GroupBox gbStart;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pbSky;
+        private System.Windows.Forms.Timer MoveTimer;
+        private System.Windows.Forms.PictureBox pbHealthLoss;
+        private System.Windows.Forms.PictureBox pbFireBall;
         private System.Windows.Forms.PictureBox pbBackground;
-        private System.Windows.Forms.Label lblBorder;
         private System.Windows.Forms.PictureBox pbClickMe;
     }
 }

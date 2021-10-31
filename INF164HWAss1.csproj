@@ -289,6 +289,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background Moving Pic.gif" />
+    <None Include="Resources\Toaddude.gif" />
+    <None Include="Resources\Poof_Effect.gif" />
     <None Include="Resources\resized-Zubat.jpeg" />
     <None Include="Resources\resized-Vulpix.jpeg" />
     <None Include="Resources\resized-Squirtle.jpeg" />
@@ -301,6 +303,7 @@
     <None Include="Resources\SmartScore.gif" />
     <None Include="Resources\SleepScore.gif" />
     <None Include="Resources\Background Moving Pic1.gif" />
+    <None Include="Resources\cf4154334c36bc1196b11d729c3a77d4.png" />
     <Content Include="Resources\ChickManWoman.png" />
     <None Include="Resources\Tunnel.gif" />
     <None Include="Resources\DogNose.png" />
@@ -326,6 +329,10 @@
     <None Include="Resources\MaskMan\GameOver.gif" />
     <None Include="Resources\Pic3.jpg" />
     <None Include="Resources\Custom Edited - Pokemon Route 101.png" />
+    <None Include="Resources\Fire.gif" />
+    <None Include="Resources\output-onlinegiftools %281%29.gif" />
+    <None Include="Resources\ezgif-3-18f8aee5b97c.gif" />
+    <None Include="Resources\pidgion.gif" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
