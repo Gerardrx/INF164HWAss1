@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace INF164HWAss1
@@ -24,7 +18,7 @@ namespace INF164HWAss1
             //load the instructions from rich text file
             rtbInstructions.LoadFile("Instructions.rtf");
             InstructionLine = rtbInstructions.Lines;
-            rtbInstructions.Text = "_______________Press Space Bar________________\n";            
+            rtbInstructions.Text = "_______________Press Space Bar________________\n";
         }
 
         //Declare variables
@@ -55,7 +49,7 @@ namespace INF164HWAss1
 
                 if (i <= InstructionLine.Length - 1)
                 {
-                    if(typing == false)
+                    if (typing == false)
                     {
                         WriteLine();
                         rtbInstructions.AppendText("\n");
@@ -80,12 +74,12 @@ namespace INF164HWAss1
             TypeTimer.Start();
             typing = true;
             k = 0;
-            
+
         }
 
         private void TypeTimer_Tick(object sender, EventArgs e)
         {
-            if(k < charArr.Length)
+            if (k < charArr.Length)
             {
                 buffer = Convert.ToString(charArr[k]);
                 rtbInstructions.AppendText(buffer);
@@ -103,7 +97,7 @@ namespace INF164HWAss1
         private String toEnd()
         {
             string temp = "";
-            for(int j = k; j < charArr.Length; j++)
+            for (int j = k; j < charArr.Length; j++)
             {
                 temp += charArr[j];
             }

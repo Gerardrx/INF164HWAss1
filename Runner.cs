@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace INF164HWAss1
@@ -19,7 +13,7 @@ namespace INF164HWAss1
         //private variables for program
         private int x;
         private int y;
-        
+
         private bool floor = false;
         private bool jump = false;
         private bool jumping = false;
@@ -42,9 +36,9 @@ namespace INF164HWAss1
             x = player1.Location.X; //gets locarion for first time
             y = player1.Location.Y;
             Cursor.Hide();
-            this.Location = new Point(0,0);
-            
-            if(Screen.PrimaryScreen.WorkingArea.Size.Height < 1040 || Screen.PrimaryScreen.WorkingArea.Size.Width < 1920)
+            this.Location = new Point(0, 0);
+
+            if (Screen.PrimaryScreen.WorkingArea.Size.Height < 1040 || Screen.PrimaryScreen.WorkingArea.Size.Width < 1920)
             {
                 MessageBox.Show("Your screen resolution is to low to render the game properly" +
                     "\nIf your screen is not 1920x1080 or more you cant play this game" +
@@ -72,14 +66,14 @@ namespace INF164HWAss1
             {
                 player1.moveHorizontal();
 
-                if(player1.XForce > 0)
+                if (player1.XForce > 0)
                 {
                     player1.XForce--; //Move in -x direction
                 }
                 else
                 {
                     player1.XForce++; //Move in +x direction
-                }  
+                }
             }
 
         }
@@ -182,7 +176,7 @@ namespace INF164HWAss1
 
         private void JumpPlayer() // jumps player
         {
-            if(player1.YForce < 0 && floor)
+            if (player1.YForce < 0 && floor)
             {
                 player1.jump();
                 player1.stopLeft = false; // you can move if next to wall
@@ -190,7 +184,7 @@ namespace INF164HWAss1
             }
             else // if at end of jump start fall
             {
-                jump = false; 
+                jump = false;
                 floor = false; // floor false = fall start
                 jumping = false;
             }
@@ -221,12 +215,12 @@ namespace INF164HWAss1
                     BoxCollider.Location = new Point(player1.Location.X + 5, player1.Location.Y - 4); //hitting right
                     if (BoxCollider.Bounds.IntersectsWith(w.Bounds))
                     {
-                       player1.stopRight = true;
+                        player1.stopRight = true;
                     }
 
                     // Move panel to up of player to detiremine if there is a ceiling
-                    BoxCollider.Size = new Size(player1.Size.Width -30, player1.Size.Height -30);
-                    BoxCollider.Location = new Point(player1.Location.X + 15, player1.Location.Y -4 ); //hitting head
+                    BoxCollider.Size = new Size(player1.Size.Width - 30, player1.Size.Height - 30);
+                    BoxCollider.Location = new Point(player1.Location.X + 15, player1.Location.Y - 4); //hitting head
                     if (jump && BoxCollider.Bounds.IntersectsWith(w.Bounds))
                     {
                         player1.Location = new Point(x, y + 3); // keeps from getting stuck in ceiling
@@ -268,7 +262,7 @@ namespace INF164HWAss1
             {
                 if (g is Spike) // was g beacuse it used to be ghosts
                 {
-                    if(g.Size.Width < 50)
+                    if (g.Size.Width < 50)
                     {
                         //for small spikes
                         SpikeCollider.Size = new Size(g.Size.Width - 20, g.Size.Height - 20);
@@ -280,15 +274,15 @@ namespace INF164HWAss1
                         SpikeCollider.Size = new Size(g.Size.Width - 44, g.Size.Height - 44);
                         SpikeCollider.Location = new Point(g.Location.X + 22, g.Location.Y + 22);
                     }
-                    
+
 
 
                     if (SpikeCollider.Bounds.IntersectsWith(player1.Bounds))
                     {
-                         GameOver(); // die
+                        GameOver(); // die
                     }
                 }
-                else if(g is PictureBox && (string) g.Tag == "floorSpike") // if a floor spike beacuse diff size parameters
+                else if (g is PictureBox && (string)g.Tag == "floorSpike") // if a floor spike beacuse diff size parameters
                 {
                     //change size of floor spike collider
                     SpikeCollider.Size = new Size(g.Size.Width - 20, g.Size.Height - 4);
@@ -296,7 +290,7 @@ namespace INF164HWAss1
 
                     if (SpikeCollider.Bounds.IntersectsWith(player1.Bounds))
                     {
-                         GameOver(); //die
+                        GameOver(); //die
                     }
                 }
             }
@@ -349,7 +343,7 @@ namespace INF164HWAss1
         {
             foreach (Control w in this.Controls)
             {// cant collide with walls / floor spikes
-                if (w is Wall || w is NoCoinSpawn ||(w is PictureBox && (string) w.Tag == "floorSpike"))
+                if (w is Wall || w is NoCoinSpawn || (w is PictureBox && (string)w.Tag == "floorSpike"))
                 {
                     if (w.Bounds.IntersectsWith(c.Bounds))
                     {
@@ -367,4 +361,3 @@ namespace INF164HWAss1
 
 
 
-        

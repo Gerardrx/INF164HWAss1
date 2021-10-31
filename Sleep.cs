@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace INF164HWAss1
@@ -144,7 +139,7 @@ namespace INF164HWAss1
             return randNum;
         }
 
-        
+
         //Checks if the tags of the pictureboxes match
         private void checkMatch(PictureBox cBox)
         {
@@ -171,7 +166,7 @@ namespace INF164HWAss1
                     imgPlaceHolder1.Enabled = false;
                     imgPlaceHolder2.Enabled = false;
                 }
-                else 
+                else
                 {
                     delay();//delays the images disappearing after incorrect clicks
                     imgPlaceHolder1.BackgroundImage = null;
@@ -353,7 +348,7 @@ namespace INF164HWAss1
             checkMatch(clickedBox);
         }
 
-       
+
 
         private void pbImg15_Click(object sender, EventArgs e)
         {

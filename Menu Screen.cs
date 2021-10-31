@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace INF164HWAss1
@@ -57,7 +50,7 @@ namespace INF164HWAss1
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
         {
             //Fade in the form
-            if(Opacity == 1)
+            if (Opacity == 1)
             {
                 OpenFadeTimer.Stop();
 

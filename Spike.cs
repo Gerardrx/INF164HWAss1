@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.ComponentModel;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Design;
 
 namespace INF164HWAss1
 {
@@ -35,7 +28,7 @@ namespace INF164HWAss1
         {
             get => heading;
             set => heading = value;
-            
+
         }
 
         // used to make own properties that are editable in the design view
@@ -83,9 +76,9 @@ namespace INF164HWAss1
         [Browsable(true)]
         [Description("Travel Speed")]
         public int Speed //rate of travel
-        { 
-            get => speed; 
-            set => speed = value; 
+        {
+            get => speed;
+            set => speed = value;
         }
 
         public void moveSpike() // move spike based on heading and speed

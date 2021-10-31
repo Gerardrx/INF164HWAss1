@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace INF164HWAss1
@@ -24,12 +19,12 @@ namespace INF164HWAss1
         private int hearts = 3;
         private int round = 0;
         private double prob;
-        
+
 
         public Arcade()
 
         {
-            InitializeComponent();           
+            InitializeComponent();
             Opacity = 0;
             OpenFadeTimer.Start();
 
@@ -111,7 +106,7 @@ namespace INF164HWAss1
             }
 
         }
-        private  void GameTimer_Tick(object sender, EventArgs e)
+        private void GameTimer_Tick(object sender, EventArgs e)
         {
             if (skip)
             {
@@ -146,7 +141,7 @@ namespace INF164HWAss1
 
         private void pbClickMe_MouseDown(object sender, MouseEventArgs e)
         {
-            if (nextRound )
+            if (nextRound)
             {
                 coins++;
                 lblCoins.Text = "Coins: " + coins;
@@ -197,7 +192,7 @@ namespace INF164HWAss1
 
         private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-               // movePicture();                
+            // movePicture();                
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -218,7 +213,7 @@ namespace INF164HWAss1
 
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
         {
-            
+
             if (Opacity == 1)
             {
                 OpenFadeTimer.Stop();

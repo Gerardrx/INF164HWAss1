@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.ComponentModel;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace INF164HWAss1
 {
     public partial class Player : PictureBox
     {
-       //private variables
+        //private variables
         private char direction;
         private int xForce = 0;
         private int yForce = 0;
@@ -38,34 +32,34 @@ namespace INF164HWAss1
         [Browsable(true)]
         [Description("Direction of travel l r")]
         public char Direction // direction of travel
-        { 
+        {
             get => direction;
-            set 
-            { 
-                if(value == 'l')  // if direction change change gif
+            set
+            {
+                if (value == 'l')  // if direction change change gif
                 {
                     Image = global::INF164HWAss1.Properties.Resources.maskdudeRunLeft;
                 }
-                if(value == 'r')
+                if (value == 'r')
                 {
                     Image = global::INF164HWAss1.Properties.Resources.maskdudeRunRight;
                 }
 
-                direction = value; 
+                direction = value;
             }
-             
+
         }
 
         // if no [###] not editable in design view
-        public int XForce 
-        { 
+        public int XForce
+        {
             get => xForce;
-            set 
+            set
             {
                 xForce = value;
-                if(value == 0)
+                if (value == 0)
                 {
-                    if(Direction == 'l') // change gif
+                    if (Direction == 'l') // change gif
                     {
                         Image = global::INF164HWAss1.Properties.Resources.maskdudeIdleLeft;
                     }
@@ -79,15 +73,15 @@ namespace INF164HWAss1
                 {
                     Running = true;
                 }
-            } 
+            }
         }
 
         public bool Running // if running change gif
-        { 
+        {
             get => running;
-            set 
-            { 
-                if(running != value)
+            set
+            {
+                if (running != value)
                 {
                     running = value;
 
@@ -103,11 +97,11 @@ namespace INF164HWAss1
                         }
                     }
                 }
-                
+
             }
         }
         public int YForce // same stuff here
-        { 
+        {
             get => yForce;
             set
             {
@@ -132,7 +126,7 @@ namespace INF164HWAss1
             set
             {
 
-                if(floor != value) // change gif if on ground
+                if (floor != value) // change gif if on ground
                 {
                     floor = value;
 
@@ -164,20 +158,20 @@ namespace INF164HWAss1
                     }
 
                 }
-            } 
+            }
         }
 
         /// more fun stuff
         /// moving player based on xforce amount
         public void moveHorizontal()
         {
-            if(XForce < 0 && !stopLeft)
+            if (XForce < 0 && !stopLeft)
             {
                 moveLeft();
                 stopRight = false;
                 stopLeft = false;
             }
-            else if(XForce > 0 && !stopRight)
+            else if (XForce > 0 && !stopRight)
             {
                 moveRight();
                 stopLeft = false;
@@ -189,7 +183,7 @@ namespace INF164HWAss1
         private void moveLeft()
         {
             Location = new Point(Location.X + XForce, Location.Y); //-
-            if(direction != 'l')
+            if (direction != 'l')
             {
                 Direction = 'l';
             }
@@ -222,8 +216,8 @@ namespace INF164HWAss1
         public void jump() // move up when jumping
         {
 
-            Location = new Point(Location.X , Location.Y + YForce); //-5
-                        
+            Location = new Point(Location.X, Location.Y + YForce); //-5
+
             YForce++;
 
             if (Direction == 'l') // jump left right gif
