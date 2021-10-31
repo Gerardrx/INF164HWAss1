@@ -75,7 +75,7 @@ namespace INF164HWAss1
             this.btnInstructions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInstructions.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInstructions.ForeColor = System.Drawing.Color.White;
-            this.btnInstructions.Location = new System.Drawing.Point(96, 167);
+            this.btnInstructions.Location = new System.Drawing.Point(90, 166);
             this.btnInstructions.Name = "btnInstructions";
             this.btnInstructions.Size = new System.Drawing.Size(150, 42);
             this.btnInstructions.TabIndex = 2;
@@ -89,7 +89,7 @@ namespace INF164HWAss1
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(96, 236);
+            this.btnClose.Location = new System.Drawing.Point(90, 236);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(150, 42);
             this.btnClose.TabIndex = 3;
@@ -113,7 +113,7 @@ namespace INF164HWAss1
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(96, 94);
+            this.btnPlay.Location = new System.Drawing.Point(90, 94);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(150, 42);
             this.btnPlay.TabIndex = 0;

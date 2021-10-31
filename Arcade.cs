@@ -11,6 +11,7 @@ namespace INF164HWAss1
 
         {
             InitializeComponent();
+
             Opacity = 0;
             OpenFadeTimer.Start();
 
@@ -28,7 +29,6 @@ namespace INF164HWAss1
 
 
         }
-
       
         private void gameOver()
         {

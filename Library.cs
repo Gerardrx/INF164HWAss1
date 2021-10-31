@@ -13,11 +13,28 @@ namespace INF164HWAss1
             //OpenFadeTimer.Start();
             Opacity = 0;
         }
+
+        //Create binding list
         BindingList<BookClass> bookList = new BindingList<BookClass>();
 
-        private void label5_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
+            //Close form and show home form
+            CloseFadeTimer.Start();
+        }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            int selectedindex = dgvBookCollection.CurrentRow.Index;
+
+            BookClass objectToedit = bookList[selectedindex];
+            EditForm editform = new EditForm();
+            editform.editobject = objectToedit;
+            editform.ShowDialog();
+
+            objectToedit = editform.editobject;
+
+            bookList[selectedindex] = objectToedit;
         }
 
         private void btnAddToCollection_Click(object sender, EventArgs e)
@@ -28,44 +45,10 @@ namespace INF164HWAss1
             string Genre = cmbxGenre.Text;
             string Cost = txtCost.Text;
 
-
             BookClass myobject = new BookClass(Title, Author, Date, Genre, Cost);
             bookList.Add(myobject);
 
             dgvBookCollection.DataSource = bookList;
-
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            int selectedindex = dgvBookCollection.CurrentRow.Index;
-
-
-            BookClass objectToedit = bookList[selectedindex];
-            EditForm editform = new EditForm();
-            editform.editobject = objectToedit;
-            editform.ShowDialog();
-
-            objectToedit = editform.editobject;
-
-
-            bookList[selectedindex] = objectToedit;
-
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            int selectedindex = dgvBookCollection.CurrentRow.Index;
-
-            string selectedTitle = bookList[selectedindex].Title;
-
-            dgvBookCollection.Rows.RemoveAt(selectedindex);
-
-            bookList.RemoveAt(selectedindex);
-
-            MessageBox.Show(selectedTitle + " has been refunded and removed!");
         }
 
         private void btnBooksPerGenre_Click(object sender, EventArgs e)
@@ -75,7 +58,6 @@ namespace INF164HWAss1
             int mCount = 0;
             int hCount = 0;
             int bCount = 0;
-
 
             for (int i = 0; i < bookList.Count; i++)
             {
@@ -109,12 +91,21 @@ namespace INF164HWAss1
                 "There are " + hCount + " Horror books." + "\n" +
                 "There are " + bCount + " Biography/ Autobiography books.");
         }
-         /*   private void btnBack_Click(object sender, EventArgs e)
+
+        private void btnRefund_Click(object sender, EventArgs e)
         {
-            CloseFadeTimer.Start();
+            int selectedindex = dgvBookCollection.CurrentRow.Index;
+
+            string selectedTitle = bookList[selectedindex].Title;
+
+            dgvBookCollection.Rows.RemoveAt(selectedindex);
+
+            bookList.RemoveAt(selectedindex);
+
+            MessageBox.Show(selectedTitle + " has been refunded and removed!");
         }
 
-        private void OpenFadeTimer_Tick(object sender, EventArgs e)
+        private void OpenFadeTimer_Tick_1(object sender, EventArgs e)
         {
             //Fade in the form
             if (Opacity == 1)
@@ -125,7 +116,7 @@ namespace INF164HWAss1
             Opacity += 0.03;
         }
 
-        private void CloseFadeTimer_Tick(object sender, EventArgs e)
+        private void CloseFadeTimer_Tick_1(object sender, EventArgs e)
         {
             //Fade out the form
             if (Opacity == 0)
@@ -138,6 +129,6 @@ namespace INF164HWAss1
                 h.Visible = true;
             }
             Opacity -= 0.03;
-        }*/
+        }
     }
 }
