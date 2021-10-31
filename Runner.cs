@@ -56,18 +56,18 @@ namespace INF164HWAss1
 
         private void gameTimer_Tick(object sender, EventArgs e) // every milisecond
         {
-            movement(); // move player
-            moveAllSpikes(); //moves spikes
+            Movement(); // move player
+            MoveAllSpikes(); //moves spikes
             CheckDeath(); // checks for spike death
-            fallCheck(); // checks if floor is under player
+            FallCheck(); // checks if floor is under player
 
             if (jump) // if jump command given
             {
                 jumping = true;
-                jumpPlayer();
+                JumpPlayer();
             }
 
-            checkCollision(); // checks collisions with walls
+            CheckCollision(); // checks collisions with walls
             if (player1.XForce != 0) // moves players if has inertia
             {
                 player1.moveHorizontal();
@@ -111,7 +111,7 @@ namespace INF164HWAss1
             }
         }
 
-        private void movement() // moves player
+        private void Movement() // moves player
         {
             if (space && floor && !jumping) // if on floor for jump
             {
@@ -126,7 +126,7 @@ namespace INF164HWAss1
             {
                 player1.XForce = +5;
             }
-            checkCollision(); // checks collision with walls
+            CheckCollision(); // checks collision with walls
         }
 
         private void Runner_KeyUp(object sender, KeyEventArgs e) // stops movement
@@ -149,7 +149,7 @@ namespace INF164HWAss1
             }
         }
 
-        private void fallCheck() // check if floor is underneath
+        private void FallCheck() // check if floor is underneath
         {
             if (!jump)
             {
@@ -174,13 +174,13 @@ namespace INF164HWAss1
             {
                 player1.YForce = 5;
                 player1.fall();
-                checkCollision();
+                CheckCollision();
             }
 
             player1.Floor = floor; // used for player animation
         }
 
-        private void jumpPlayer() // jumps player
+        private void JumpPlayer() // jumps player
         {
             if(player1.YForce < 0 && floor)
             {
@@ -196,7 +196,7 @@ namespace INF164HWAss1
             }
         }
 
-        private void checkCollision() // check collision with walls and ceiling
+        private void CheckCollision() // check collision with walls and ceiling
         {
             x = player1.Location.X;
             y = player1.Location.Y;
@@ -250,7 +250,7 @@ namespace INF164HWAss1
             }
         }
 
-        private void moveAllSpikes() // moves spikes based on properties set in designer
+        private void MoveAllSpikes() // moves spikes based on properties set in designer
         {
             foreach (Control g in this.Controls)
             {
@@ -339,13 +339,13 @@ namespace INF164HWAss1
 
             // generates random position
             c.Location = new Point(rand.Next(20, this.Size.Width - 20), rand.Next(20, this.Size.Height - 20));
-            while (checkCoinCollision(c)) // until found a open space
+            while (CheckCoinCollision(c)) // until found a open space
             {
                 c.Location = new Point(rand.Next(20, this.Size.Width - 20), rand.Next(20, this.Size.Height - 20));
             }
         }
 
-        private bool checkCoinCollision(Coin c) // for some reason very hard to code
+        private bool CheckCoinCollision(Coin c) // for some reason very hard to code
         {
             foreach (Control w in this.Controls)
             {// cant collide with walls / floor spikes
