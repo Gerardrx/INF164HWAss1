@@ -10,7 +10,7 @@ namespace INF164HWAss1
         {
             InitializeComponent();
 
-            //OpenFadeTimer.Start();
+            OpenFadeTimer.Start();
             Opacity = 0;
         }
 

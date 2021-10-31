@@ -25,8 +25,7 @@ namespace INF164HWAss1
         private void btnStart_Click(object sender, EventArgs e)
         {
             GameTimer.Start();
-
-
+            gbStart.Visible = false;
 
         }
       
@@ -36,22 +35,20 @@ namespace INF164HWAss1
             pbClickMe.Visible = false;
 
             MessageBox.Show("Game Over");
-
-        }
-
-        private void OpenFadeTimer_Tick(object sender, EventArgs e)
-        {
-
-            if (Opacity == 1)
-            {
-                OpenFadeTimer.Stop();
-            }
-            Opacity += 0.03;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             CloseFadeTimer.Start();
+        }
+
+        private void OpenFadeTimer_Tick(object sender, EventArgs e)
+        {
+            if (Opacity == 1)
+            {
+                OpenFadeTimer.Stop();
+            }
+            Opacity += 0.03;
         }
 
         private void CloseFadeTimer_Tick(object sender, EventArgs e)
