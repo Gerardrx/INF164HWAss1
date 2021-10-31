@@ -36,6 +36,9 @@ namespace INF164HWAss1
             this.lblInstructions = new System.Windows.Forms.Label();
             this.lblCoins = new System.Windows.Forms.Label();
             this.lblRestart = new System.Windows.Forms.Label();
+            this.pbGameOver = new System.Windows.Forms.PictureBox();
+            this.pbCoin = new System.Windows.Forms.PictureBox();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
@@ -61,7 +64,6 @@ namespace INF164HWAss1
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbGameOver = new System.Windows.Forms.PictureBox();
             this.noCoinSpawn14 = new INF164HWAss1.NoCoinSpawn();
             this.noCoinSpawn13 = new INF164HWAss1.NoCoinSpawn();
             this.noCoinSpawn12 = new INF164HWAss1.NoCoinSpawn();
@@ -129,7 +131,9 @@ namespace INF164HWAss1
             this.coin1 = new INF164HWAss1.Coin();
             this.noCoinSpawn8 = new INF164HWAss1.NoCoinSpawn();
             this.noCoinSpawn9 = new INF164HWAss1.NoCoinSpawn();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
@@ -155,7 +159,6 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall40)).BeginInit();
@@ -209,7 +212,6 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.spike2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spike1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -225,7 +227,7 @@ namespace INF164HWAss1
             this.lblControls.ForeColor = System.Drawing.Color.White;
             this.lblControls.Location = new System.Drawing.Point(38, 765);
             this.lblControls.Name = "lblControls";
-            this.lblControls.Size = new System.Drawing.Size(389, 99);
+            this.lblControls.Size = new System.Drawing.Size(206, 48);
             this.lblControls.TabIndex = 30;
             this.lblControls.Text = "Arrows or A/D to move \r\n Up or Space to Jump\r\n     R to respawn";
             // 
@@ -237,22 +239,22 @@ namespace INF164HWAss1
             this.lblInstructions.ForeColor = System.Drawing.Color.White;
             this.lblInstructions.Location = new System.Drawing.Point(799, 948);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(236, 132);
+            this.lblInstructions.Size = new System.Drawing.Size(125, 64);
             this.lblInstructions.TabIndex = 31;
             this.lblInstructions.Text = "Collect coins\r\n  Don\'t die\r\n    Simple\r\n\r\n";
             // 
             // lblCoins
             // 
             this.lblCoins.AutoSize = true;
-            this.lblCoins.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.lblCoins.Font = new System.Drawing.Font("Unispace", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoins.ForeColor = System.Drawing.Color.White;
-            this.lblCoins.Location = new System.Drawing.Point(16, 19);
+            this.lblCoins.BackColor = System.Drawing.Color.Transparent;
+            this.lblCoins.Font = new System.Drawing.Font("Unispace", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoins.ForeColor = System.Drawing.Color.Yellow;
+            this.lblCoins.Location = new System.Drawing.Point(59, 30);
             this.lblCoins.Name = "lblCoins";
-            this.lblCoins.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCoins.Size = new System.Drawing.Size(48, 51);
-            this.lblCoins.TabIndex = 52;
+            this.lblCoins.Size = new System.Drawing.Size(25, 25);
+            this.lblCoins.TabIndex = 117;
             this.lblCoins.Text = "0";
+            this.lblCoins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRestart
             // 
@@ -260,12 +262,46 @@ namespace INF164HWAss1
             this.lblRestart.BackColor = System.Drawing.Color.Transparent;
             this.lblRestart.Font = new System.Drawing.Font("Unispace", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestart.ForeColor = System.Drawing.Color.Red;
-            this.lblRestart.Location = new System.Drawing.Point(846, 564);
+            this.lblRestart.Location = new System.Drawing.Point(804, 676);
             this.lblRestart.Name = "lblRestart";
-            this.lblRestart.Size = new System.Drawing.Size(462, 70);
-            this.lblRestart.TabIndex = 113;
-            this.lblRestart.Text = "R to restart";
+            this.lblRestart.Size = new System.Drawing.Size(303, 36);
+            this.lblRestart.TabIndex = 118;
+            this.lblRestart.Text = "space to restart";
             this.lblRestart.Visible = false;
+            // 
+            // pbGameOver
+            // 
+            this.pbGameOver.BackColor = System.Drawing.Color.Black;
+            this.pbGameOver.Image = global::INF164HWAss1.Properties.Resources.GamesOver;
+            this.pbGameOver.Location = new System.Drawing.Point(12, 12);
+            this.pbGameOver.Name = "pbGameOver";
+            this.pbGameOver.Size = new System.Drawing.Size(1897, 1054);
+            this.pbGameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbGameOver.TabIndex = 112;
+            this.pbGameOver.TabStop = false;
+            this.pbGameOver.Visible = false;
+            // 
+            // pbCoin
+            // 
+            this.pbCoin.BackColor = System.Drawing.Color.Transparent;
+            this.pbCoin.Image = global::INF164HWAss1.Properties.Resources.coin;
+            this.pbCoin.Location = new System.Drawing.Point(21, 21);
+            this.pbCoin.Name = "pbCoin";
+            this.pbCoin.Size = new System.Drawing.Size(39, 39);
+            this.pbCoin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCoin.TabIndex = 116;
+            this.pbCoin.TabStop = false;
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
+            this.pictureBox26.Location = new System.Drawing.Point(1036, 463);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(34, 20);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox26.TabIndex = 115;
+            this.pictureBox26.TabStop = false;
+            this.pictureBox26.Tag = "floorSpike";
             // 
             // pictureBox24
             // 
@@ -541,18 +577,6 @@ namespace INF164HWAss1
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "floorSpike";
-            // 
-            // pbGameOver
-            // 
-            this.pbGameOver.BackColor = System.Drawing.Color.Transparent;
-            this.pbGameOver.Image = global::INF164HWAss1.Properties.Resources.GameOver;
-            this.pbGameOver.Location = new System.Drawing.Point(188, 53);
-            this.pbGameOver.Name = "pbGameOver";
-            this.pbGameOver.Size = new System.Drawing.Size(1567, 956);
-            this.pbGameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbGameOver.TabIndex = 112;
-            this.pbGameOver.TabStop = false;
-            this.pbGameOver.Visible = false;
             // 
             // noCoinSpawn14
             // 
@@ -1085,7 +1109,7 @@ namespace INF164HWAss1
             this.lblExit.ForeColor = System.Drawing.Color.White;
             this.lblExit.Location = new System.Drawing.Point(1804, 0);
             this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(194, 25);
+            this.lblExit.Size = new System.Drawing.Size(105, 14);
             this.lblExit.TabIndex = 74;
             this.lblExit.Text = "Escape to exit";
             // 
@@ -1240,25 +1264,17 @@ namespace INF164HWAss1
             this.noCoinSpawn9.Text = "noCoinSpawn9";
             this.noCoinSpawn9.Visible = false;
             // 
-            // pictureBox26
-            // 
-            this.pictureBox26.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
-            this.pictureBox26.Location = new System.Drawing.Point(1036, 463);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(34, 20);
-            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox26.TabIndex = 115;
-            this.pictureBox26.TabStop = false;
-            this.pictureBox26.Tag = "floorSpike";
-            // 
             // Runner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.lblRestart);
+            this.Controls.Add(this.pbGameOver);
+            this.Controls.Add(this.lblCoins);
+            this.Controls.Add(this.pbCoin);
             this.Controls.Add(this.pictureBox26);
             this.Controls.Add(this.noCoinSpawn14);
-            this.Controls.Add(this.lblRestart);
             this.Controls.Add(this.noCoinSpawn13);
             this.Controls.Add(this.noCoinSpawn12);
             this.Controls.Add(this.noCoinSpawn11);
@@ -1314,7 +1330,6 @@ namespace INF164HWAss1
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.wall22);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.lblCoins);
             this.Controls.Add(this.wall21);
             this.Controls.Add(this.wall20);
             this.Controls.Add(this.wall19);
@@ -1352,7 +1367,6 @@ namespace INF164HWAss1
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.noCoinSpawn8);
             this.Controls.Add(this.noCoinSpawn9);
-            this.Controls.Add(this.pbGameOver);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1364,6 +1378,9 @@ namespace INF164HWAss1
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Runner_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Runner_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
@@ -1389,7 +1406,6 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall40)).EndInit();
@@ -1444,7 +1460,6 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.spike2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spike1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1487,7 +1502,6 @@ namespace INF164HWAss1
         private Wall wall19;
         private Wall wall20;
         private Wall wall21;
-        private System.Windows.Forms.Label lblCoins;
         private System.Windows.Forms.PictureBox pictureBox7;
         private Wall wall22;
         private System.Windows.Forms.PictureBox pictureBox8;
@@ -1547,8 +1561,10 @@ namespace INF164HWAss1
         private NoCoinSpawn noCoinSpawn12;
         private NoCoinSpawn noCoinSpawn13;
         private System.Windows.Forms.PictureBox pbGameOver;
-        private System.Windows.Forms.Label lblRestart;
         private NoCoinSpawn noCoinSpawn14;
         private System.Windows.Forms.PictureBox pictureBox26;
+        private System.Windows.Forms.Label lblCoins;
+        private System.Windows.Forms.PictureBox pbCoin;
+        private System.Windows.Forms.Label lblRestart;
     }
 }

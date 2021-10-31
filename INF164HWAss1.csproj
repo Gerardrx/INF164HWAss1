@@ -347,6 +347,7 @@
     <None Include="Resources\pidgion.gif" />
     <None Include="Resources\memory.gif" />
     <None Include="Resources\ezgif-7-f90bd2a4dbf9.gif" />
+    <None Include="Resources\GamesOver.gif" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
