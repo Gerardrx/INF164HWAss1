@@ -159,7 +159,9 @@ namespace INF164HWAss1
                 SleepFadeTimer.Stop();
 
                 frmSleep s = new frmSleep();
+                this.Hide();
                 s.ShowDialog();
+                this.Show();
                 OpenFadeTimer.Start();
             }
             Opacity -= 0.03;
@@ -172,7 +174,9 @@ namespace INF164HWAss1
                 LibraryFadeTimer.Stop();
 
                 Library l = new Library();
+                this.Hide();
                 l.ShowDialog();
+                this.Show();
                 OpenFadeTimer.Start();
             }
             Opacity -= 0.03;
@@ -185,7 +189,9 @@ namespace INF164HWAss1
                 ArcadeFadeTimer.Stop();
 
                 Arcade a = new Arcade();
+                this.Hide();
                 a.ShowDialog();
+                this.Show();
                 OpenFadeTimer.Start();
             }
             Opacity -= 0.03;
@@ -211,11 +217,8 @@ namespace INF164HWAss1
         {
             if (Opacity == 0)
             {
+                this.Dispose();
                 CloseFadeTimer.Stop();
-
-                //Create and display Menu form
-                frmMenu mm = new frmMenu();
-                mm.Visible = true;
             }
             Opacity -= 0.03;
         }
@@ -223,8 +226,11 @@ namespace INF164HWAss1
         private void btnArcade2_Click(object sender, EventArgs e)
         {
             Runner r = new Runner();
+            this.Hide();
             r.ShowDialog();
             coins += r.coins;
+            this.Show();
+            
             lblCoins.Text = "" + coins;
         }
     }

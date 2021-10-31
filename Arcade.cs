@@ -7,6 +7,9 @@ namespace INF164HWAss1
 {
     public partial class Arcade : Form
     {
+
+        public int coin;
+
         public Arcade()
 
         {
