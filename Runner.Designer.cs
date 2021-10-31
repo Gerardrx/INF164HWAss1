@@ -227,7 +227,7 @@ namespace INF164HWAss1
             this.lblControls.ForeColor = System.Drawing.Color.White;
             this.lblControls.Location = new System.Drawing.Point(38, 765);
             this.lblControls.Name = "lblControls";
-            this.lblControls.Size = new System.Drawing.Size(206, 48);
+            this.lblControls.Size = new System.Drawing.Size(389, 99);
             this.lblControls.TabIndex = 30;
             this.lblControls.Text = "Arrows or A/D to move \r\n Up or Space to Jump\r\n     R to respawn";
             // 
@@ -239,7 +239,7 @@ namespace INF164HWAss1
             this.lblInstructions.ForeColor = System.Drawing.Color.White;
             this.lblInstructions.Location = new System.Drawing.Point(799, 948);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(125, 64);
+            this.lblInstructions.Size = new System.Drawing.Size(236, 132);
             this.lblInstructions.TabIndex = 31;
             this.lblInstructions.Text = "Collect coins\r\n  Don\'t die\r\n    Simple\r\n\r\n";
             // 
@@ -251,7 +251,7 @@ namespace INF164HWAss1
             this.lblCoins.ForeColor = System.Drawing.Color.Yellow;
             this.lblCoins.Location = new System.Drawing.Point(59, 30);
             this.lblCoins.Name = "lblCoins";
-            this.lblCoins.Size = new System.Drawing.Size(25, 25);
+            this.lblCoins.Size = new System.Drawing.Size(48, 50);
             this.lblCoins.TabIndex = 117;
             this.lblCoins.Text = "0";
             this.lblCoins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -264,7 +264,7 @@ namespace INF164HWAss1
             this.lblRestart.ForeColor = System.Drawing.Color.Red;
             this.lblRestart.Location = new System.Drawing.Point(804, 676);
             this.lblRestart.Name = "lblRestart";
-            this.lblRestart.Size = new System.Drawing.Size(303, 36);
+            this.lblRestart.Size = new System.Drawing.Size(606, 70);
             this.lblRestart.TabIndex = 118;
             this.lblRestart.Text = "space to restart";
             this.lblRestart.Visible = false;
@@ -1109,7 +1109,7 @@ namespace INF164HWAss1
             this.lblExit.ForeColor = System.Drawing.Color.White;
             this.lblExit.Location = new System.Drawing.Point(1804, 0);
             this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(105, 14);
+            this.lblExit.Size = new System.Drawing.Size(194, 25);
             this.lblExit.TabIndex = 74;
             this.lblExit.Text = "Escape to exit";
             // 
@@ -1372,10 +1372,9 @@ namespace INF164HWAss1
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Runner";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Runner";
             this.TopMost = true;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Runner_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Runner_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).EndInit();

@@ -35,8 +35,6 @@ namespace INF164HWAss1
             gameTimer.Start();
             x = player1.Location.X; //gets locarion for first time
             y = player1.Location.Y;
-            Cursor.Hide();
-            this.Location = new Point(0, 0);
             pbGameOver.Controls.Add(this.lblRestart);
 
             if (Screen.PrimaryScreen.WorkingArea.Size.Height < 1040 || Screen.PrimaryScreen.WorkingArea.Size.Width < 1920)
@@ -47,6 +45,7 @@ namespace INF164HWAss1
                     "\nIve tried everything to fix this, but since the game mechanics are" +
                     "\ntied to screen size there is nothing I can do");
             }
+            Cursor.Hide();
         }
 
         private void gameTimer_Tick(object sender, EventArgs e) // every milisecond
@@ -128,7 +127,7 @@ namespace INF164HWAss1
         {
             if(pbGameOver.Visible == true)
             {
-                if (e.KeyValue == (char)Keys.Space) // restart game
+                if (e.KeyValue == (char)Keys.R) // restart game
                 {
                     Restart();
                 }
