@@ -124,7 +124,7 @@ namespace INF164HWAss1
             save.Coins = coins;
             save.Brain = memory;
 
-            FileStream outFile = new FileStream(save + ".bob", FileMode.Create, FileAccess.Write);
+            FileStream outFile = new FileStream("save.ser", FileMode.Create, FileAccess.Write);
             BinaryFormatter bFormatter = new BinaryFormatter();
             bFormatter.Serialize(outFile, save);
             outFile.Close();
@@ -134,21 +134,17 @@ namespace INF164HWAss1
         {
             try
             {
-                FileStream inFile = new FileStream(save + ".bob", FileMode.Open, FileAccess.Read);
+                FileStream inFile = new FileStream("save.ser", FileMode.Open, FileAccess.Read);
                 BinaryFormatter bFormatter = new BinaryFormatter();
-                var temp = (int)bFormatter.Deserialize(inFile);
-                foreach (int  myObject in tempList)
-                {
-                    myList.Add(myObject);
-                }
                 save = (Save)bFormatter.Deserialize(inFile);
+                MessageBox.Show(""+save.Coins);
                 inFile.Close();
 
             }
             catch (FileNotFoundException)
             {
                 save = new Save();
-                MessageBox.Show("o");
+                MessageBox.Show("ok");
             }
 
             lblCoins.Text = "" + save.Coins;
@@ -228,6 +224,7 @@ namespace INF164HWAss1
         {
             Runner r = new Runner();
             r.Visible = true;
+            coins += r.coins;
         }
     }
 }
