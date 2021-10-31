@@ -22,7 +22,7 @@ namespace INF164HWAss1
             try
             {
                 // Create player for music and play music
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer("Dub_Techno___Selection_016.wav");
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(global::INF164HWAss1.Properties.Resources.Dub_Techno___Selection_016);
                 player.Play();
             }
             catch (Exception)
