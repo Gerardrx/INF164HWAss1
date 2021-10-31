@@ -274,7 +274,7 @@ namespace INF164HWAss1
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(34, 20);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox24.TabIndex = 97;
+            this.pictureBox24.TabIndex = 98;
             this.pictureBox24.TabStop = false;
             this.pictureBox24.Tag = "floorSpike";
             // 
