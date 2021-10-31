@@ -21,15 +21,15 @@ namespace INF164HWAss1
 
         Bitmap[] imageArr = new Bitmap[10];
 
-
-
-
         public frmSleep()
         {
             InitializeComponent();
 
             OpenFadeTimer.Start();
             Opacity = 0;
+
+            btnBack.Enabled = false;
+            btnStart.Enabled = false;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -44,6 +44,7 @@ namespace INF164HWAss1
             {
                 OpenFadeTimer.Stop();
                 btnBack.Enabled = true;
+                btnStart.Enabled = true;
             }
             Opacity += 0.03;
         }

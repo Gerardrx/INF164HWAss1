@@ -138,11 +138,11 @@
     <Compile Include="Runner.Designer.cs">
       <DependentUpon>Runner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sleep.cs">
+    <Compile Include="frmMemory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sleep.Designer.cs">
-      <DependentUpon>Sleep.cs</DependentUpon>
+    <Compile Include="frmMemory.Designer.cs">
+      <DependentUpon>frmMemory.cs</DependentUpon>
     </Compile>
     <Compile Include="Wall.cs">
       <SubType>Component</SubType>
@@ -179,8 +179,8 @@
     <EmbeddedResource Include="Runner.resx">
       <DependentUpon>Runner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sleep.resx">
-      <DependentUpon>Sleep.cs</DependentUpon>
+    <EmbeddedResource Include="frmMemory.resx">
+      <DependentUpon>frmMemory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
