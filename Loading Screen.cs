@@ -18,19 +18,24 @@ namespace INF164HWAss1
         public frmLoading()
         {
             InitializeComponent();
-            
-            //Create player for music and play music
-            
-            
-            
+
             if (!FontInstalled())
             {
                 MessageBox.Show("Unispace font not installed \nPlease install font for program to run properly\nThe .tff file is in debug and Resources");
-
             }
-            //System.Media.SoundPlayer player = new System.Media.SoundPlayer("Dub_Techno___Selection_016.wav");
             LoadingTimer.Start();
-            //player.Play();
+
+            try
+            {
+                // Create player for music and play music
+                 System.Media.SoundPlayer player = new System.Media.SoundPlayer("Dub_Techno___Selection_016.wav");
+                 player.Play();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Music file not found" +
+                    "\nplease ensure the .wav song is in the debug folder");
+            }
         }
 
         int i = 0;
@@ -40,7 +45,9 @@ namespace INF164HWAss1
             i++;
             
             if(i <= 75)
+            {
                 pgbLoading.Value = i;
+            }
 
             if (i == 87)
             {

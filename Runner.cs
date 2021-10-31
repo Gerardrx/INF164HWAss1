@@ -10,9 +10,7 @@ using System.Windows.Forms;
 
 namespace INF164HWAss1
 {
-
     //COPYRIGHT Gerard Geldenhuys, Do not Distribute
-
     public partial class Runner : Form
     {
         // public variable for home page score
@@ -39,6 +37,7 @@ namespace INF164HWAss1
         {
             InitializeComponent();
 
+            this.Focus();
             gameTimer.Start();
             x = player1.Location.X; //gets locarion for first time
             y = player1.Location.Y;
@@ -53,7 +52,6 @@ namespace INF164HWAss1
                     "\nIve tried everything to fix this, but since the game mechanics are" +
                     "\ntied to screen size there is nothing I can do");
             }
-            
         }
 
         private void gameTimer_Tick(object sender, EventArgs e) // every milisecond
@@ -76,11 +74,11 @@ namespace INF164HWAss1
 
                 if(player1.XForce > 0)
                 {
-                    player1.XForce--;
+                    player1.XForce--; //Move in -x direction
                 }
                 else
                 {
-                    player1.XForce++;
+                    player1.XForce++; //Move in +x direction
                 }  
             }
 
@@ -107,8 +105,9 @@ namespace INF164HWAss1
 
             if (e.KeyValue == (char)Keys.Escape) // exit game
             {
-                Cursor.Show();
+                this.Focus(); // ensure exit
                 this.Dispose();
+                Cursor.Show();
             }
         }
 
@@ -192,7 +191,7 @@ namespace INF164HWAss1
             else // if at end of jump start fall
             {
                 jump = false; 
-                floor = false;
+                floor = false; // floor false = fall start
                 jumping = false;
             }
         }
@@ -289,7 +288,7 @@ namespace INF164HWAss1
                          GameOver(); // die
                     }
                 }
-                else if(g is PictureBox && (string) g.Tag == "floorSpike") // if a floor spike
+                else if(g is PictureBox && (string) g.Tag == "floorSpike") // if a floor spike beacuse diff size parameters
                 {
                     //change size of floor spike collider
                     SpikeCollider.Size = new Size(g.Size.Width - 20, g.Size.Height - 4);
@@ -330,7 +329,6 @@ namespace INF164HWAss1
             lblRestart.Visible = false;
         }
 
-
         private void GenerateCoin(Coin old) // cool code
         {
             //new coin same size
@@ -361,10 +359,9 @@ namespace INF164HWAss1
             }
             return false;
         }
-
     }
 
-    // if your reading this you are very interessted in my code
+    // if your reading this you are very interested in my code
     // check player.cs, spike.cs for more insight
 }
 

@@ -18,8 +18,6 @@ namespace INF164HWAss1
             Image = global::INF164HWAss1.Properties.Resources.coin;
             Visible = true;
             SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-
-
         }
 
     }

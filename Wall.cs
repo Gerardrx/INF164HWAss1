@@ -15,9 +15,7 @@ namespace INF164HWAss1
         public Wall()
         {
             InitializeComponent();
-            BringToFront();
-        }
-            
-        
+            BringToFront(); // keeps player from overlapping with floor
+        } 
     }
 }
