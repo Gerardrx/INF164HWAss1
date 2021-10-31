@@ -69,7 +69,7 @@ namespace INF164HWAss1
             else if (i == 75)
             {
                 //Change the backround colour
-                this.BackColor = System.Drawing.Color.DodgerBlue;
+                this.BackColor = System.Drawing.Color.SteelBlue;
             }
         }
 

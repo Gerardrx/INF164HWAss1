@@ -300,6 +300,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background Moving Pic.gif" />
+    <None Include="Resources\Snail.gif" />
+    <None Include="Resources\Sword.png" />
     <None Include="Resources\Toaddude1.gif" />
     <None Include="Resources\Toaddude.gif" />
     <None Include="Resources\Poof_Effect.gif" />
@@ -317,6 +319,7 @@
     <None Include="Resources\Background Moving Pic1.gif" />
     <None Include="Resources\cf4154334c36bc1196b11d729c3a77d4.png" />
     <None Include="Resources\BMO.gif" />
+    <None Include="Resources\blueborder.gif" />
     <Content Include="Resources\ChickManWoman.png" />
     <None Include="Resources\Tunnel.gif" />
     <None Include="Resources\DogNose.png" />
@@ -349,6 +352,8 @@
     <None Include="Resources\memory.gif" />
     <None Include="Resources\ezgif-7-f90bd2a4dbf9.gif" />
     <None Include="Resources\GamesOver.gif" />
+    <None Include="Resources\Pengu.gif" />
+    <None Include="Resources\Pengu2.gif" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
