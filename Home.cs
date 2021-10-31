@@ -14,7 +14,7 @@ namespace INF164HWAss1
             btnBack.Enabled = false;
             btnArcade.Enabled = false;
             btnLibrary.Enabled = false;
-            btnSleep.Enabled = false;
+            btnMemory.Enabled = false;
 
             Opacity = 0;
             OpenFadeTimer.Start();
@@ -26,7 +26,7 @@ namespace INF164HWAss1
             ToolTip1.SetToolTip(lblCoins, "Total coins");
 
             System.Windows.Forms.ToolTip ToolTip2 = new System.Windows.Forms.ToolTip();
-            ToolTip1.SetToolTip(lblSleepScore, "Points for sleep");
+            ToolTip1.SetToolTip(lblSleepScore, "Points for memory");
 
             System.Windows.Forms.ToolTip ToolTip3 = new System.Windows.Forms.ToolTip();
             ToolTip1.SetToolTip(lblIntelligenceScore, "Points for intelligence");
@@ -161,7 +161,7 @@ namespace INF164HWAss1
                 btnBack.Enabled = true;
                 btnArcade.Enabled = true;
                 btnLibrary.Enabled = true;
-                btnSleep.Enabled = true;
+                btnMemory.Enabled = true;
             }
             Opacity += 0.03;
         }

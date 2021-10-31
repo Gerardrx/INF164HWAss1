@@ -299,6 +299,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background Moving Pic.gif" />
+    <None Include="Resources\Toaddude1.gif" />
     <None Include="Resources\Toaddude.gif" />
     <None Include="Resources\Poof_Effect.gif" />
     <None Include="Resources\resized-Zubat.jpeg" />
@@ -343,6 +344,8 @@
     <None Include="Resources\output-onlinegiftools %281%29.gif" />
     <None Include="Resources\ezgif-3-18f8aee5b97c.gif" />
     <None Include="Resources\pidgion.gif" />
+    <None Include="Resources\memory.gif" />
+    <None Include="Resources\ezgif-7-f90bd2a4dbf9.gif" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -18,6 +18,16 @@ namespace INF164HWAss1
             OpenFadeTimer.Start();
 
             ClockTimer.Start();
+
+            //Make pb able to use pb as background
+            pbBackground.Controls.Add(this.lblSeconds);
+            pbBackground.Controls.Add(this.lblTitle);
+            pbBackground.Controls.Add(this.lblTimeA);
+            pbBackground.Controls.Add(this.pbDogThingGIF);
+            pbBackground.Controls.Add(this.pbExtraPic);
+            pbBackground.Controls.Add(this.pbWelcomeGIF);
+            pbBackground.Controls.Add(this.pbPic);
+            pbBackground.Controls.Add(this.pbmanbic);
         }
 
         private void btnPlay_Click(object sender, EventArgs e)

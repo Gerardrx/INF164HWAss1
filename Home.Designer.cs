@@ -34,7 +34,7 @@ namespace INF164HWAss1
             this.OpenFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.CloseFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnSleep = new System.Windows.Forms.Button();
+            this.btnMemory = new System.Windows.Forms.Button();
             this.btnLibrary = new System.Windows.Forms.Button();
             this.btnArcade = new System.Windows.Forms.Button();
             this.ArcadeFadeTimer = new System.Windows.Forms.Timer(this.components);
@@ -58,6 +58,8 @@ namespace INF164HWAss1
             this.lblSleepScore = new System.Windows.Forms.Label();
             this.pbBackBottom = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbWizzard = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +70,8 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWizzard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // OpenFadeTimer
@@ -85,27 +89,27 @@ namespace INF164HWAss1
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(891, 397);
+            this.btnBack.Location = new System.Drawing.Point(894, 404);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(122, 42);
+            this.btnBack.Size = new System.Drawing.Size(122, 33);
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnSleep
+            // btnMemory
             // 
-            this.btnSleep.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnSleep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSleep.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSleep.ForeColor = System.Drawing.Color.White;
-            this.btnSleep.Location = new System.Drawing.Point(792, 123);
-            this.btnSleep.Name = "btnSleep";
-            this.btnSleep.Size = new System.Drawing.Size(217, 42);
-            this.btnSleep.TabIndex = 1;
-            this.btnSleep.Text = "Sleep";
-            this.btnSleep.UseVisualStyleBackColor = false;
-            this.btnSleep.Click += new System.EventHandler(this.btnSleep_Click);
+            this.btnMemory.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnMemory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMemory.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMemory.ForeColor = System.Drawing.Color.White;
+            this.btnMemory.Location = new System.Drawing.Point(792, 123);
+            this.btnMemory.Name = "btnMemory";
+            this.btnMemory.Size = new System.Drawing.Size(217, 42);
+            this.btnMemory.TabIndex = 1;
+            this.btnMemory.Text = "Memory";
+            this.btnMemory.UseVisualStyleBackColor = false;
+            this.btnMemory.Click += new System.EventHandler(this.btnSleep_Click);
             // 
             // btnLibrary
             // 
@@ -245,7 +249,7 @@ namespace INF164HWAss1
             // 
             this.pbGIF2.BackColor = System.Drawing.Color.Transparent;
             this.pbGIF2.Image = global::INF164HWAss1.Properties.Resources.GIfBoigif;
-            this.pbGIF2.Location = new System.Drawing.Point(792, 171);
+            this.pbGIF2.Location = new System.Drawing.Point(882, 80);
             this.pbGIF2.Name = "pbGIF2";
             this.pbGIF2.Size = new System.Drawing.Size(38, 39);
             this.pbGIF2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -291,7 +295,7 @@ namespace INF164HWAss1
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::INF164HWAss1.Properties.Resources.SleepScore;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 51);
+            this.pictureBox3.Location = new System.Drawing.Point(85, 256);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(48, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -358,6 +362,28 @@ namespace INF164HWAss1
             this.pictureBox5.TabIndex = 84;
             this.pictureBox5.TabStop = false;
             // 
+            // pbWizzard
+            // 
+            this.pbWizzard.BackColor = System.Drawing.Color.Transparent;
+            this.pbWizzard.Image = global::INF164HWAss1.Properties.Resources.Toaddude;
+            this.pbWizzard.Location = new System.Drawing.Point(792, 162);
+            this.pbWizzard.Name = "pbWizzard";
+            this.pbWizzard.Size = new System.Drawing.Size(55, 56);
+            this.pbWizzard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbWizzard.TabIndex = 85;
+            this.pbWizzard.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = global::INF164HWAss1.Properties.Resources.memory;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 47);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(53, 44);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 86;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,11 +392,14 @@ namespace INF164HWAss1
             this.BackgroundImage = global::INF164HWAss1.Properties.Resources.Background_Moving_Pic;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1021, 442);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.btnMemory);
+            this.Controls.Add(this.btnArcade);
+            this.Controls.Add(this.pbWizzard);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pbGIF2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pbBackBottom);
-            this.Controls.Add(this.btnArcade);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.lblSleepScore);
             this.Controls.Add(this.lblIntelligenceScore);
@@ -385,7 +414,6 @@ namespace INF164HWAss1
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pbMood);
             this.Controls.Add(this.btnLibrary);
-            this.Controls.Add(this.btnSleep);
             this.Controls.Add(this.pbBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -402,6 +430,8 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackBottom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWizzard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,7 +442,7 @@ namespace INF164HWAss1
         private System.Windows.Forms.Timer OpenFadeTimer;
         private System.Windows.Forms.Timer CloseFadeTimer;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnSleep;
+        private System.Windows.Forms.Button btnMemory;
         private System.Windows.Forms.Button btnLibrary;
         private System.Windows.Forms.Button btnArcade;
         private System.Windows.Forms.PictureBox pbMood;
@@ -436,5 +466,7 @@ namespace INF164HWAss1
         private System.Windows.Forms.Label lblSleepScore;
         private System.Windows.Forms.PictureBox pbBackBottom;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pbWizzard;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
