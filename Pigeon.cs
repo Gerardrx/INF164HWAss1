@@ -14,6 +14,7 @@ namespace INF164HWAss1
     { 
         public int speed;
         public bool dead = false;
+        public bool stop = false;
 
         public Pigeon()
         {
@@ -28,7 +29,14 @@ namespace INF164HWAss1
 
         public void movePigeon()
         {
-            Location = new Point(Location.X + speed, Location.Y);
+            if(stop)
+            {
+                Location = new Point(Location.X, Location.Y);
+            }
+            else
+            {
+                Location = new Point(Location.X + speed, Location.Y);
+            }
         }
     }
 }
