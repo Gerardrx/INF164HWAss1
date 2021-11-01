@@ -25,6 +25,7 @@ namespace INF164HWAss1
         public Player()
         {
             InitializeComponent();
+            BackColor = Color.Transparent;
         }
 
         // used to make own properties that are editable in the design view

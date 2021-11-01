@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace INF164HWAss1
 {
@@ -17,10 +18,13 @@ namespace INF164HWAss1
         private bool floor = false;
         private bool jump = false;
         private bool jumping = false;
+        private bool door = false;
 
         private bool space = false;
         private bool left = false;
         private bool right = false;
+        
+
 
         private Random rand = new Random();
         private Panel BoxCollider = new Panel();
@@ -76,6 +80,7 @@ namespace INF164HWAss1
                 }
             }
 
+            collideDoor();
         }
 
         private void Runner_KeyDown(object sender, KeyEventArgs e) // key down checker
@@ -99,6 +104,7 @@ namespace INF164HWAss1
 
             if (e.KeyValue == (char)Keys.Escape) // exit game
             {
+                coins = 0;
                 this.Focus(); // ensure exit
                 this.Dispose();
                 Cursor.Show();
@@ -125,7 +131,7 @@ namespace INF164HWAss1
 
         private void Runner_KeyUp(object sender, KeyEventArgs e) // stops movement
         {
-            if(pbGameOver.Visible == true)
+            if (pbGameOver.Visible == true)
             {
                 if (e.KeyValue == (char)Keys.Space) // restart game
                 {
@@ -143,6 +149,13 @@ namespace INF164HWAss1
             if (e.KeyValue == (char)Keys.Right || e.KeyValue == (char)Keys.D)
             {
                 right = false;
+            }
+            if (door)
+            {
+                if (e.KeyValue == (char)Keys.E)
+                {
+                    returnHome();
+                }
             }
         }
 
@@ -195,6 +208,7 @@ namespace INF164HWAss1
 
         private void CheckCollision() // check collision with walls and ceiling
         {
+
             x = player1.Location.X;
             y = player1.Location.Y;
 
@@ -205,7 +219,7 @@ namespace INF164HWAss1
             BoxCollider.Visible = false;
             foreach (Control w in this.Controls)
             {
-                if (w is Wall)
+                if (w is Wall || (w is PictureBox && (string)w.Tag == "door"))
                 {
                     BoxCollider.Size = player1.Size; // Move panel to left of player to detiremine if there is a wall on the left
                     BoxCollider.Location = new Point(player1.Location.X - 5, player1.Location.Y - 4); // hitting left
@@ -244,6 +258,7 @@ namespace INF164HWAss1
                         lblInstructions.Visible = false; // go away
                     }
                 }
+
             }
         }
 
@@ -278,8 +293,6 @@ namespace INF164HWAss1
                         SpikeCollider.Location = new Point(g.Location.X + 22, g.Location.Y + 22);
                     }
 
-
-
                     if (SpikeCollider.Bounds.IntersectsWith(player1.Bounds))
                     {
                         GameOver(); // die
@@ -299,6 +312,49 @@ namespace INF164HWAss1
             }
         }
 
+        private void collideDoor()
+        {
+            BoxCollider.Size = player1.Size;
+            BoxCollider.Location = new Point(player1.Location.X - 6, player1.Location.Y);
+            if (pbDoor.Bounds.IntersectsWith(BoxCollider.Bounds) && floor)
+            {
+                lblDoor.Visible = true;
+                door = true;
+            }
+            else
+            {
+                lblDoor.Visible = false;
+                door = false;
+            }
+        }
+
+        private void returnHome()
+        {
+            pbDoor.Image = global::INF164HWAss1.Properties.Resources.doorOpenT;
+            pbDoor.Size = new Size(103, 90);
+            pbDoor.BackColor = Color.Transparent;
+            player1.Image = global::INF164HWAss1.Properties.Resources.maskdudeRunLeft;
+            pbDoor.Controls.Add(player1);
+            player1.Location = new Point(60, 36);
+            gameTimer.Stop();
+            endTimer.Start();
+        }
+
+        private int exitCount = 50;
+        private void endTimer_Tick(object sender, EventArgs e)
+        {
+            if (exitCount != 0)
+            {
+                player1.Location = new Point(player1.Location.X - 1, player1.Location.Y);
+                exitCount--;
+
+                if (exitCount == 0)
+                {
+                    this.Dispose();
+                }
+            }
+        }
+
         private void GameOver()
         {
             gameTimer.Stop(); // stop everything
@@ -310,7 +366,7 @@ namespace INF164HWAss1
         {
             // reset all to original positions
             coins = 0;
-            player1.Location = new Point(70, 900);
+            player1.Location = new Point(130, 965);
             lblControls.Visible = true;
             lblInstructions.Visible = true;
             gameTimer.Start();
