@@ -49,6 +49,13 @@ namespace INF164HWAss1
             bookList.Add(myobject);
 
             dgvBookCollection.DataSource = bookList;
+
+            txtTitle.Clear();
+            txtAuthor.Clear();          
+            dateTimePicker.ResetText();
+            cmbxGenre.ResetText();
+            txtCost.Clear();
+
         }
 
         private void btnBooksPerGenre_Click(object sender, EventArgs e)
@@ -98,9 +105,12 @@ namespace INF164HWAss1
 
             string selectedTitle = bookList[selectedindex].Title;
 
-            dgvBookCollection.Rows.RemoveAt(selectedindex);
 
-            bookList.RemoveAt(selectedindex);
+            foreach (DataGridViewCell oneCell in dgvBookCollection.SelectedCells)
+            {
+                if (oneCell.Selected)
+                    dgvBookCollection.Rows.RemoveAt(oneCell.RowIndex);
+            }
 
             MessageBox.Show(selectedTitle + " has been refunded and removed!");
         }
