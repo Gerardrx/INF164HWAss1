@@ -178,7 +178,7 @@ namespace INF164HWAss1
                 this.Hide();
                 l.ShowDialog();
                 ReadDataFromFile();
-                this.read = this.read + l.bookCount;
+                this.read = l.bookCount;
                 this.Show();
                 OpenFadeTimer.Start();
                 UpdateScore();
@@ -247,8 +247,8 @@ namespace INF164HWAss1
         private void UpdateScore()
         {
             lblCoins.Text = "" + coins;
-            lblIntelligenceScore.Text = "" + memory;
-            lblSleepScore.Text = "" + read;
+            lblIntelligenceScore.Text = "" + read;
+            lblSleepScore.Text = "" + memory;
         }
     }
 }
