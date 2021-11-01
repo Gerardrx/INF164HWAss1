@@ -311,11 +311,11 @@ namespace INF164HWAss1
             // 
             this.lblT.AutoSize = true;
             this.lblT.BackColor = System.Drawing.Color.Transparent;
-            this.lblT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblT.ForeColor = System.Drawing.Color.Black;
-            this.lblT.Location = new System.Drawing.Point(765, 64);
+            this.lblT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblT.ForeColor = System.Drawing.Color.White;
+            this.lblT.Location = new System.Drawing.Point(765, 61);
             this.lblT.Name = "lblT";
-            this.lblT.Size = new System.Drawing.Size(52, 20);
+            this.lblT.Size = new System.Drawing.Size(63, 24);
             this.lblT.TabIndex = 4;
             this.lblT.Text = "Time:";
             // 
@@ -323,16 +323,16 @@ namespace INF164HWAss1
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTime.Location = new System.Drawing.Point(847, 64);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(44, 20);
+            this.lblTime.Size = new System.Drawing.Size(49, 24);
             this.lblTime.TabIndex = 5;
             this.lblTime.Text = "0:00";
             // 
             // startTimer
             // 
-            this.startTimer.Interval = 1000;
             this.startTimer.Tick += new System.EventHandler(this.startTimer_Tick);
             // 
             // gameTimer

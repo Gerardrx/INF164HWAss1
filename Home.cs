@@ -177,8 +177,11 @@ namespace INF164HWAss1
                 Library l = new Library();
                 this.Hide();
                 l.ShowDialog();
+                ReadDataFromFile();
+                this.read = this.read + l.bookCount;
                 this.Show();
                 OpenFadeTimer.Start();
+                UpdateScore();
             }
             Opacity -= 0.03;
         }
