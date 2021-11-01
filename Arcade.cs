@@ -16,12 +16,12 @@ namespace INF164HWAss1
         private bool shoot = false;
         private bool shooting = false;
         private int buffTime;
-        private int x;
-        private int y;
         private Panel boxCol = new Panel();
         private Random rand = new Random();
         private int timePoof = 0;
+        private int timePoof2 = 0;
         private int timeWiz = 0;
+        private int hearts = 3;
 
 
         public Arcade()
@@ -54,11 +54,14 @@ namespace INF164HWAss1
             lblCoins.Text = "" + coin;
             checkWizzPigeonCollisions();
             removePoof();
+            removePoof2();
             MoveFireball();
             checkCollisions();
             MovePigeons();
             Movement();
             WizzWall();
+            health();
+            checkPigeonColWall();
 
             if (wizzard1.YForce != 0)
             {
@@ -97,6 +100,47 @@ namespace INF164HWAss1
         private void PoofTimer_Tick(object sender, EventArgs e)
         {
             timePoof++;
+            timePoof2++;
+        }
+
+        private void checkPigeonColWall()
+        {
+            foreach (Control p in pbBackground.Controls)
+            {
+                if (p is Pigeon)
+                {
+                    foreach (Control w in this.Controls)
+                    {
+                        if (w is Wall)
+                        {
+                            if (p.Bounds.IntersectsWith(wall3.Bounds))
+                            {
+                                ((Pigeon)p).Image = global::INF164HWAss1.Properties.Resources.Poof_Effect;
+                                ((Pigeon)p).dead = true;
+                                ((Pigeon)p).stop = true;
+                                PoofTimer.Start();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void removePoof2()
+        {
+            if (timePoof2 == 1)
+            {
+                foreach (Control p in pbBackground.Controls)
+                {
+                    if (p is Pigeon && ((Pigeon)p).dead)
+                    {
+                        p.Dispose();
+                        PoofTimer.Stop();
+                        timePoof2 = 0;
+                        coin--;
+                    }
+                }
+            }
         }
 
         private void removePoof()
@@ -154,8 +198,6 @@ namespace INF164HWAss1
                             {
                                 ((Pigeon)p).Image = global::INF164HWAss1.Properties.Resources.Poof_Effect;
                                 ((Pigeon)p).dead = true;
-                                x = f.Location.X;
-                                y = f.Location.Y;
                                 f.Dispose();
                                 PoofTimer.Start();
                                 coin++;
@@ -180,9 +222,33 @@ namespace INF164HWAss1
 
         private void restWiz()
         {
-            wizzard1.SizeMode = PictureBoxSizeMode.CenterImage;
-            wizzard1.Size = new Size(61, 62);
-            wizzard1.Image = global::INF164HWAss1.Properties.Resources.Toaddude;
+            if(hearts != 0)
+            {
+                wizzard1.SizeMode = PictureBoxSizeMode.CenterImage;
+                wizzard1.Size = new Size(61, 62);
+                wizzard1.Image = global::INF164HWAss1.Properties.Resources.Toaddude;
+            }
+            else
+            {
+                wizzard1.Hide();
+            }
+        }
+
+        private void health()
+        {
+            if(hearts == 2)
+            {
+                pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_2;
+            }
+            else if(hearts == 1)
+            {
+                pbHearts.Image = global::INF164HWAss1.Properties.Resources.Heart_1;
+            }
+            else if (hearts == 0)
+            {
+                pbHearts.Image = global::INF164HWAss1.Properties.Resources.Heart_0;
+                gameOver();
+            }
         }
 
         private void checkWizzPigeonCollisions()
@@ -199,6 +265,12 @@ namespace INF164HWAss1
                         ((Pigeon)p).dead = true;
                         p.Dispose();
                         WizzardTimer.Start();
+                        hearts--;
+
+                        if (coin != 0)
+                        {
+                            coin--;
+                        }
                     }
                 }
             }
@@ -347,19 +419,7 @@ namespace INF164HWAss1
             lblStartPress.Visible = false;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //*******************************************************************
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
         {
             if (Opacity == 1)
