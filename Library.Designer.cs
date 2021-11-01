@@ -35,7 +35,6 @@ namespace INF164HWAss1
             this.btnAddToCollection = new System.Windows.Forms.Button();
             this.cmbxGenre = new System.Windows.Forms.ComboBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.txtCost = new System.Windows.Forms.TextBox();
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,17 +50,19 @@ namespace INF164HWAss1
             this.dgvBookCollection = new System.Windows.Forms.DataGridView();
             this.OpenFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.CloseFadeTimer = new System.Windows.Forms.Timer(this.components);
+            this.nudCost = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookCollection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCost)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nudCost);
             this.groupBox1.Controls.Add(this.btnAddToCollection);
             this.groupBox1.Controls.Add(this.cmbxGenre);
             this.groupBox1.Controls.Add(this.dateTimePicker);
-            this.groupBox1.Controls.Add(this.txtCost);
             this.groupBox1.Controls.Add(this.txtAuthor);
             this.groupBox1.Controls.Add(this.txtTitle);
             this.groupBox1.Controls.Add(this.label5);
@@ -70,11 +71,11 @@ namespace INF164HWAss1
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(28, 22);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(42, 34);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(767, 250);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Size = new System.Drawing.Size(1150, 391);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Purchase New Book";
@@ -82,10 +83,10 @@ namespace INF164HWAss1
             // btnAddToCollection
             // 
             this.btnAddToCollection.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnAddToCollection.Location = new System.Drawing.Point(395, 210);
-            this.btnAddToCollection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddToCollection.Location = new System.Drawing.Point(592, 328);
+            this.btnAddToCollection.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAddToCollection.Name = "btnAddToCollection";
-            this.btnAddToCollection.Size = new System.Drawing.Size(337, 28);
+            this.btnAddToCollection.Size = new System.Drawing.Size(506, 44);
             this.btnAddToCollection.TabIndex = 10;
             this.btnAddToCollection.Text = "Add to collection ";
             this.btnAddToCollection.UseVisualStyleBackColor = false;
@@ -100,88 +101,85 @@ namespace INF164HWAss1
             "Mystery",
             "Horror",
             "Biography/ Autobiography"});
-            this.cmbxGenre.Location = new System.Drawing.Point(395, 140);
-            this.cmbxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbxGenre.Location = new System.Drawing.Point(592, 219);
+            this.cmbxGenre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbxGenre.Name = "cmbxGenre";
-            this.cmbxGenre.Size = new System.Drawing.Size(339, 24);
+            this.cmbxGenre.Size = new System.Drawing.Size(506, 33);
             this.cmbxGenre.TabIndex = 9;
             // 
             // dateTimePicker
             // 
             this.dateTimePicker.CalendarMonthBackground = System.Drawing.Color.DeepSkyBlue;
             this.dateTimePicker.CalendarTitleBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.dateTimePicker.Location = new System.Drawing.Point(395, 103);
-            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker.Location = new System.Drawing.Point(592, 161);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(339, 22);
+            this.dateTimePicker.Size = new System.Drawing.Size(506, 31);
             this.dateTimePicker.TabIndex = 8;
-            // 
-            // txtCost
-            // 
-            this.txtCost.Location = new System.Drawing.Point(395, 177);
-            this.txtCost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCost.Name = "txtCost";
-            this.txtCost.Size = new System.Drawing.Size(339, 22);
-            this.txtCost.TabIndex = 7;
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(395, 69);
-            this.txtAuthor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAuthor.Location = new System.Drawing.Point(592, 108);
+            this.txtAuthor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(339, 22);
+            this.txtAuthor.Size = new System.Drawing.Size(506, 31);
             this.txtAuthor.TabIndex = 6;
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(395, 33);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTitle.Location = new System.Drawing.Point(592, 52);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(339, 22);
+            this.txtTitle.Size = new System.Drawing.Size(506, 31);
             this.txtTitle.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 180);
+            this.label5.Location = new System.Drawing.Point(38, 281);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 17);
+            this.label5.Size = new System.Drawing.Size(111, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "Book Cost";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 143);
+            this.label4.Location = new System.Drawing.Point(38, 223);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 17);
+            this.label4.Size = new System.Drawing.Size(71, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Genre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 107);
+            this.label3.Location = new System.Drawing.Point(38, 167);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 17);
+            this.label3.Size = new System.Drawing.Size(158, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Published Date";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 71);
+            this.label2.Location = new System.Drawing.Point(38, 111);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.Size = new System.Drawing.Size(75, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Author";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 36);
+            this.label1.Location = new System.Drawing.Point(38, 56);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 17);
+            this.label1.Size = new System.Drawing.Size(53, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Title";
             // 
@@ -192,11 +190,11 @@ namespace INF164HWAss1
             this.groupBox2.Controls.Add(this.btnBack);
             this.groupBox2.Controls.Add(this.btnEdit);
             this.groupBox2.Controls.Add(this.dgvBookCollection);
-            this.groupBox2.Location = new System.Drawing.Point(31, 287);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(46, 448);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(761, 385);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox2.Size = new System.Drawing.Size(1142, 602);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Book Collection";
@@ -204,10 +202,10 @@ namespace INF164HWAss1
             // btnBooksPerGenre
             // 
             this.btnBooksPerGenre.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnBooksPerGenre.Location = new System.Drawing.Point(424, 337);
-            this.btnBooksPerGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBooksPerGenre.Location = new System.Drawing.Point(636, 527);
+            this.btnBooksPerGenre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBooksPerGenre.Name = "btnBooksPerGenre";
-            this.btnBooksPerGenre.Size = new System.Drawing.Size(257, 26);
+            this.btnBooksPerGenre.Size = new System.Drawing.Size(386, 41);
             this.btnBooksPerGenre.TabIndex = 4;
             this.btnBooksPerGenre.Text = "Number of Books Per Genre";
             this.btnBooksPerGenre.UseVisualStyleBackColor = false;
@@ -216,10 +214,10 @@ namespace INF164HWAss1
             // btnRefund
             // 
             this.btnRefund.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnRefund.Location = new System.Drawing.Point(424, 267);
-            this.btnRefund.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefund.Location = new System.Drawing.Point(636, 417);
+            this.btnRefund.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRefund.Name = "btnRefund";
-            this.btnRefund.Size = new System.Drawing.Size(257, 26);
+            this.btnRefund.Size = new System.Drawing.Size(386, 41);
             this.btnRefund.TabIndex = 3;
             this.btnRefund.Text = "Refund Book Entry";
             this.btnRefund.UseVisualStyleBackColor = false;
@@ -228,10 +226,10 @@ namespace INF164HWAss1
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnBack.Location = new System.Drawing.Point(67, 337);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Location = new System.Drawing.Point(100, 527);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(257, 26);
+            this.btnBack.Size = new System.Drawing.Size(386, 41);
             this.btnBack.TabIndex = 2;
             this.btnBack.Text = "Return to Home ";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -240,10 +238,10 @@ namespace INF164HWAss1
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnEdit.Location = new System.Drawing.Point(67, 267);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Location = new System.Drawing.Point(100, 417);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(257, 26);
+            this.btnEdit.Size = new System.Drawing.Size(386, 41);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edit Book Entry";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -255,12 +253,12 @@ namespace INF164HWAss1
             this.dgvBookCollection.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             this.dgvBookCollection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBookCollection.GridColor = System.Drawing.Color.Cyan;
-            this.dgvBookCollection.Location = new System.Drawing.Point(9, 25);
-            this.dgvBookCollection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvBookCollection.Location = new System.Drawing.Point(14, 39);
+            this.dgvBookCollection.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvBookCollection.Name = "dgvBookCollection";
             this.dgvBookCollection.RowHeadersWidth = 62;
             this.dgvBookCollection.RowTemplate.Height = 28;
-            this.dgvBookCollection.Size = new System.Drawing.Size(737, 224);
+            this.dgvBookCollection.Size = new System.Drawing.Size(1106, 350);
             this.dgvBookCollection.TabIndex = 0;
             // 
             // OpenFadeTimer
@@ -273,17 +271,25 @@ namespace INF164HWAss1
             this.CloseFadeTimer.Interval = 10;
             this.CloseFadeTimer.Tick += new System.EventHandler(this.CloseFadeTimer_Tick_1);
             // 
+            // nudCost
+            // 
+            this.nudCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudCost.Location = new System.Drawing.Point(592, 275);
+            this.nudCost.Name = "nudCost";
+            this.nudCost.Size = new System.Drawing.Size(506, 35);
+            this.nudCost.TabIndex = 11;
+            // 
             // Library
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cyan;
-            this.ClientSize = new System.Drawing.Size(836, 702);
+            this.ClientSize = new System.Drawing.Size(1254, 1097);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Library";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library";
@@ -291,6 +297,7 @@ namespace INF164HWAss1
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookCollection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCost)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,12 +317,12 @@ namespace INF164HWAss1
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.TextBox txtCost;
         private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.ComboBox cmbxGenre;
         private System.Windows.Forms.Button btnAddToCollection;
         private System.Windows.Forms.Timer OpenFadeTimer;
         private System.Windows.Forms.Timer CloseFadeTimer;
+        private System.Windows.Forms.NumericUpDown nudCost;
     }
 }

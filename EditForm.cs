@@ -25,7 +25,7 @@ namespace INF164HWAss1
             txtAuthor.Text = editobject.Author;
             dateTimePicker.Text = editobject.Date;
             cmbxGenre.Text = editobject.Genre;
-            txtPrice.Text = editobject.Cost;
+            nudEditCost.Value = editobject.Cost;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace INF164HWAss1
             editobject.Author = txtAuthor.Text;
             editobject.Date = dateTimePicker.Text;
             editobject.Genre = cmbxGenre.Text;
-            editobject.Cost = txtPrice.Text;
+            editobject.Cost = (int) nudEditCost.Value;
 
             this.Close();
         }
