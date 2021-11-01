@@ -151,6 +151,12 @@
     <Compile Include="Wall.Designer.cs">
       <DependentUpon>Wall.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wizzard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Wizzard.Designer.cs">
+      <DependentUpon>Wizzard.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Arcade.resx">
       <DependentUpon>Arcade.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,6 +360,7 @@
     <None Include="Resources\GamesOver.gif" />
     <None Include="Resources\Pengu.gif" />
     <None Include="Resources\Pengu2.gif" />
+    <None Include="Resources\output-onlinepngtools %281%29.png" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
