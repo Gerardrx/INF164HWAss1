@@ -10,11 +10,11 @@ namespace INF164HWAss1
     public partial class frmHome : Form
     {
 
-        private int coins;
-        private int memory;
-        private int read;
+        private int coins = 0;
+        private int memory = 0;
+        private int read = 0;
         private Save save;
-        private int mood;
+        private int mood = 1;
 
         public frmHome()
         {
@@ -32,7 +32,7 @@ namespace INF164HWAss1
             OpenFadeTimer.Start();
 
             UpdateScore();
-            
+
 
             HappinessBarTimer.Start();
 
@@ -50,7 +50,7 @@ namespace INF164HWAss1
             ToolTip1.SetToolTip(pgbHappinessBar, "Keep Mametchi happy by playing games and reading books.");
         }
 
-        
+
         int i = 0;
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -68,6 +68,11 @@ namespace INF164HWAss1
         {
             pgbHappinessBar.Value = i;
             i++;
+
+            if (i == 100)
+            {
+                HappinessBarTimer.Stop();
+            }
 
             if (i != mood)
             {
@@ -142,7 +147,6 @@ namespace INF164HWAss1
                 BinaryFormatter bFormatter = new BinaryFormatter();
                 save = (Save)bFormatter.Deserialize(inFile);
                 inFile.Close();
-
             }
             catch (FileNotFoundException)
             {
@@ -164,8 +168,10 @@ namespace INF164HWAss1
                 frmSleep s = new frmSleep();
                 this.Hide();
                 s.ShowDialog();
+                this.memory = s.sleepScore;
                 this.Show();
                 OpenFadeTimer.Start();
+                UpdateScore();
             }
             Opacity -= 0.03;
         }
@@ -205,7 +211,7 @@ namespace INF164HWAss1
                 UpdateScore();
             }
             Opacity -= 0.03;
-            
+
         }
 
         private void OpenFadeTimer_Tick(object sender, EventArgs e)
@@ -245,9 +251,10 @@ namespace INF164HWAss1
             UpdateScore();
         }
 
-
         private void UpdateScore()
         {
+            HappinessBarTimer.Start();
+            i = 0;
             mood = read + coins + memory;
             lblCoins.Text = "" + coins;
             lblIntelligenceScore.Text = "" + read;
