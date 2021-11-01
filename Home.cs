@@ -14,6 +14,7 @@ namespace INF164HWAss1
         private int memory;
         private int read;
         private Save save;
+        private int mood;
 
         public frmHome()
         {
@@ -31,6 +32,7 @@ namespace INF164HWAss1
             OpenFadeTimer.Start();
 
             UpdateScore();
+            
 
             HappinessBarTimer.Start();
 
@@ -48,7 +50,7 @@ namespace INF164HWAss1
             ToolTip1.SetToolTip(pgbHappinessBar, "Keep Mametchi happy by playing games and reading books.");
         }
 
-        int mood = 100;
+        
         int i = 0;
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -246,6 +248,7 @@ namespace INF164HWAss1
 
         private void UpdateScore()
         {
+            mood = read + coins + memory;
             lblCoins.Text = "" + coins;
             lblIntelligenceScore.Text = "" + read;
             lblSleepScore.Text = "" + memory;
