@@ -318,6 +318,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background Moving Pic.gif" />
+    <None Include="Resources\Press Startgif.gif" />
     <None Include="Resources\Space bar.png" />
     <None Include="Resources\Snail.gif" />
     <None Include="Resources\Sword.png" />

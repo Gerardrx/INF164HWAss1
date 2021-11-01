@@ -21,6 +21,7 @@ namespace INF164HWAss1
         private Panel boxCol = new Panel();
         private Random rand = new Random();
         private int timePoof = 0;
+        private int timeWiz = 0;
 
 
         public Arcade()
@@ -44,12 +45,14 @@ namespace INF164HWAss1
             pbBackground.Controls.Add(this.pbHearts);
             pbBackground.Controls.Add(this.lblCoins);
             pbBackground.Controls.Add(this.lblControls1);
+            pbBackground.Controls.Add(this.pbPressStart);
+            pbPressStart.Controls.Add(this.lblStartPress);
         }
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
             lblCoins.Text = "" + coin;
-
+            checkWizzPigeonCollisions();
             removePoof();
             MoveFireball();
             checkCollisions();
@@ -163,6 +166,44 @@ namespace INF164HWAss1
             }
         }
 
+        private void WizzardTimer_Tick(object sender, EventArgs e)
+        {
+            timeWiz++;
+
+            if(timeWiz == 40)
+            {
+                timeWiz = 0;
+                WizzardTimer.Stop();
+                restWiz();
+            }
+        }
+
+        private void restWiz()
+        {
+            wizzard1.SizeMode = PictureBoxSizeMode.CenterImage;
+            wizzard1.Size = new Size(61, 62);
+            wizzard1.Image = global::INF164HWAss1.Properties.Resources.Toaddude;
+        }
+
+        private void checkWizzPigeonCollisions()
+        {
+            foreach (Control p in pbBackground.Controls)
+            {
+                if (p is Pigeon)
+                {
+                    if (p.Bounds.IntersectsWith(wizzard1.Bounds))
+                    {
+                        wizzard1.SizeMode = PictureBoxSizeMode.Zoom;
+                        wizzard1.Size = new Size(77, 71);
+                        wizzard1.Image = global::INF164HWAss1.Properties.Resources.Poof_Effect;
+                        ((Pigeon)p).dead = true;
+                        p.Dispose();
+                        WizzardTimer.Start();
+                    }
+                }
+            }
+        }
+
         private void WizzWall()
         {
             foreach (Control w in this.Controls)
@@ -246,16 +287,20 @@ namespace INF164HWAss1
         {
             if(e.KeyCode == Keys.Space)
             {
-                if (lblControls2.Visible == true)
+                if (pbPressStart.Visible == true)
                 {
-                    lblControls2.Visible = false;
-                    pbKeys2.Visible = false;
+                    Start();
                 }
-                
-                if (!shooting)
+                else if (!shooting)
                 {
                     shoot = true;
                     shooting = true;
+
+                    if (lblControls2.Visible == true)
+                    {
+                        lblControls2.Visible = false;
+                        pbKeys2.Visible = false;
+                    }
                 }
             }
             if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
@@ -268,20 +313,10 @@ namespace INF164HWAss1
                 down = false;
                 wizzard1.YForce = 0;
             }
-        }
-
-        private void btnBack_Click(object sender, EventArgs e) //return to home form
-        {
-            CloseFadeTimer.Start();
-        }
-
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            //start game timer
-            GameTimer.Start();
-            SpawnTimer.Start();
-            gbStart.Visible = false;
-
+            if(e.KeyCode == Keys.Escape)
+            {
+                CloseFadeTimer.Start();
+            }
         }
 
         private void gameOver()
@@ -297,6 +332,20 @@ namespace INF164HWAss1
             SpawnPigeon();
         }
 
+        private void Start()
+        {
+            //start game timer
+            GameTimer.Start();
+            SpawnTimer.Start();
+
+            pbKeys1.Visible = true;
+            pbKeys2.Visible = true;
+            lblControls1.Visible = true;
+            lblWizz.Visible = true;
+            lblControls2.Visible = true;
+            pbPressStart.Visible = false;
+            lblStartPress.Visible = false;
+        }
 
 
 

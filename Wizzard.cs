@@ -22,6 +22,8 @@ namespace INF164HWAss1
         public Wizzard()
         {
             InitializeComponent();
+
+            Image = global::INF164HWAss1.Properties.Resources.Toaddude;
         }
 
         public int YForce

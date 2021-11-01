@@ -34,13 +34,8 @@ namespace INF164HWAss1
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
             this.OpenFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.CloseFadeTimer = new System.Windows.Forms.Timer(this.components);
-            this.btnBack = new System.Windows.Forms.Button();
             this.lblCoins = new System.Windows.Forms.Label();
             this.lblWizz = new System.Windows.Forms.Label();
-            this.gbStart = new System.Windows.Forms.GroupBox();
-            this.lblStartText = new System.Windows.Forms.Label();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.pbSky = new System.Windows.Forms.PictureBox();
             this.MoveTimer = new System.Windows.Forms.Timer(this.components);
             this.pbHealthLoss = new System.Windows.Forms.PictureBox();
             this.pbCoin = new System.Windows.Forms.PictureBox();
@@ -53,18 +48,21 @@ namespace INF164HWAss1
             this.pbKeys2 = new System.Windows.Forms.PictureBox();
             this.lblControls2 = new System.Windows.Forms.Label();
             this.pgbBufferTime = new System.Windows.Forms.ProgressBar();
+            this.PoofTimer = new System.Windows.Forms.Timer(this.components);
+            this.pbPressStart = new System.Windows.Forms.PictureBox();
+            this.lblStartPress = new System.Windows.Forms.Label();
             this.wizzard1 = new INF164HWAss1.Wizzard();
             this.wall2 = new INF164HWAss1.Wall();
             this.wall1 = new INF164HWAss1.Wall();
-            this.PoofTimer = new System.Windows.Forms.Timer(this.components);
-            this.gbStart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSky)).BeginInit();
+            this.lblEcape = new System.Windows.Forms.Label();
+            this.WizzardTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthLoss)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKeys1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKeys2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPressStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wizzard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).BeginInit();
@@ -84,21 +82,6 @@ namespace INF164HWAss1
             // 
             this.CloseFadeTimer.Interval = 10;
             this.CloseFadeTimer.Tick += new System.EventHandler(this.CloseFadeTimer_Tick);
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(1091, 456);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(98, 33);
-            this.btnBack.TabIndex = 7;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblCoins
             // 
@@ -125,61 +108,7 @@ namespace INF164HWAss1
             this.lblWizz.TabIndex = 90;
             this.lblWizz.Text = "Crazy Wizzard";
             this.lblWizz.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // gbStart
-            // 
-            this.gbStart.BackColor = System.Drawing.Color.Black;
-            this.gbStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gbStart.Controls.Add(this.lblStartText);
-            this.gbStart.Controls.Add(this.btnStart);
-            this.gbStart.Controls.Add(this.pbSky);
-            this.gbStart.Font = new System.Drawing.Font("Unispace", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbStart.ForeColor = System.Drawing.Color.White;
-            this.gbStart.Location = new System.Drawing.Point(113, 125);
-            this.gbStart.Name = "gbStart";
-            this.gbStart.Size = new System.Drawing.Size(306, 176);
-            this.gbStart.TabIndex = 91;
-            this.gbStart.TabStop = false;
-            this.gbStart.Text = "Arcade";
-            // 
-            // lblStartText
-            // 
-            this.lblStartText.AutoSize = true;
-            this.lblStartText.BackColor = System.Drawing.Color.Transparent;
-            this.lblStartText.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartText.ForeColor = System.Drawing.Color.White;
-            this.lblStartText.Location = new System.Drawing.Point(10, 26);
-            this.lblStartText.Name = "lblStartText";
-            this.lblStartText.Size = new System.Drawing.Size(295, 15);
-            this.lblStartText.TabIndex = 92;
-            this.lblStartText.Text = "Help Mametchi stop the evil pigeons ";
-            this.lblStartText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.Teal;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(110, 128);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(88, 31);
-            this.btnStart.TabIndex = 2;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // pbSky
-            // 
-            this.pbSky.BackColor = System.Drawing.Color.Transparent;
-            this.pbSky.BackgroundImage = global::INF164HWAss1.Properties.Resources.cf4154334c36bc1196b11d729c3a77d4;
-            this.pbSky.Image = global::INF164HWAss1.Properties.Resources.cf4154334c36bc1196b11d729c3a77d4;
-            this.pbSky.Location = new System.Drawing.Point(-9, 116);
-            this.pbSky.Name = "pbSky";
-            this.pbSky.Size = new System.Drawing.Size(329, 119);
-            this.pbSky.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSky.TabIndex = 96;
-            this.pbSky.TabStop = false;
+            this.lblWizz.Visible = false;
             // 
             // MoveTimer
             // 
@@ -189,9 +118,9 @@ namespace INF164HWAss1
             // 
             this.pbHealthLoss.BackColor = System.Drawing.Color.Transparent;
             this.pbHealthLoss.Image = global::INF164HWAss1.Properties.Resources.output_onlinegiftools__1_;
-            this.pbHealthLoss.Location = new System.Drawing.Point(203, 356);
+            this.pbHealthLoss.Location = new System.Drawing.Point(1110, 252);
             this.pbHealthLoss.Name = "pbHealthLoss";
-            this.pbHealthLoss.Size = new System.Drawing.Size(160, 145);
+            this.pbHealthLoss.Size = new System.Drawing.Size(90, 91);
             this.pbHealthLoss.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbHealthLoss.TabIndex = 92;
             this.pbHealthLoss.TabStop = false;
@@ -241,6 +170,7 @@ namespace INF164HWAss1
             this.pbKeys1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbKeys1.TabIndex = 96;
             this.pbKeys1.TabStop = false;
+            this.pbKeys1.Visible = false;
             // 
             // SpawnTimer
             // 
@@ -265,17 +195,19 @@ namespace INF164HWAss1
             this.lblControls1.TabIndex = 99;
             this.lblControls1.Text = "Arrows or W/S\r\n to move wizzard\r\n\r\n";
             this.lblControls1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblControls1.Visible = false;
             // 
             // pbKeys2
             // 
             this.pbKeys2.BackColor = System.Drawing.Color.Transparent;
             this.pbKeys2.Image = global::INF164HWAss1.Properties.Resources.Space_bar;
-            this.pbKeys2.Location = new System.Drawing.Point(781, 383);
+            this.pbKeys2.Location = new System.Drawing.Point(812, 400);
             this.pbKeys2.Name = "pbKeys2";
-            this.pbKeys2.Size = new System.Drawing.Size(192, 46);
+            this.pbKeys2.Size = new System.Drawing.Size(128, 31);
             this.pbKeys2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbKeys2.TabIndex = 100;
             this.pbKeys2.TabStop = false;
+            this.pbKeys2.Visible = false;
             // 
             // lblControls2
             // 
@@ -290,6 +222,7 @@ namespace INF164HWAss1
             this.lblControls2.TabIndex = 101;
             this.lblControls2.Text = "Space or Left to\r\n shoot fireball\r\n\r\n";
             this.lblControls2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblControls2.Visible = false;
             // 
             // pgbBufferTime
             // 
@@ -300,6 +233,36 @@ namespace INF164HWAss1
             this.pgbBufferTime.Size = new System.Drawing.Size(258, 10);
             this.pgbBufferTime.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pgbBufferTime.TabIndex = 102;
+            // 
+            // PoofTimer
+            // 
+            this.PoofTimer.Interval = 1000;
+            this.PoofTimer.Tick += new System.EventHandler(this.PoofTimer_Tick);
+            // 
+            // pbPressStart
+            // 
+            this.pbPressStart.BackColor = System.Drawing.Color.Transparent;
+            this.pbPressStart.Image = global::INF164HWAss1.Properties.Resources.Press_Startgif;
+            this.pbPressStart.Location = new System.Drawing.Point(326, 45);
+            this.pbPressStart.Name = "pbPressStart";
+            this.pbPressStart.Size = new System.Drawing.Size(536, 384);
+            this.pbPressStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPressStart.TabIndex = 103;
+            this.pbPressStart.TabStop = false;
+            // 
+            // lblStartPress
+            // 
+            this.lblStartPress.AutoSize = true;
+            this.lblStartPress.BackColor = System.Drawing.Color.Transparent;
+            this.lblStartPress.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.lblStartPress.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartPress.ForeColor = System.Drawing.Color.White;
+            this.lblStartPress.Location = new System.Drawing.Point(526, 100);
+            this.lblStartPress.Name = "lblStartPress";
+            this.lblStartPress.Size = new System.Drawing.Size(142, 23);
+            this.lblStartPress.TabIndex = 105;
+            this.lblStartPress.Text = "Press space";
+            this.lblStartPress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // wizzard1
             // 
@@ -329,10 +292,24 @@ namespace INF164HWAss1
             this.wall1.TabIndex = 97;
             this.wall1.TabStop = false;
             // 
-            // PoofTimer
+            // lblEcape
             // 
-            this.PoofTimer.Interval = 1000;
-            this.PoofTimer.Tick += new System.EventHandler(this.PoofTimer_Tick);
+            this.lblEcape.AutoSize = true;
+            this.lblEcape.BackColor = System.Drawing.Color.Transparent;
+            this.lblEcape.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.lblEcape.Font = new System.Drawing.Font("Unispace", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEcape.ForeColor = System.Drawing.Color.White;
+            this.lblEcape.Location = new System.Drawing.Point(1003, 483);
+            this.lblEcape.Name = "lblEcape";
+            this.lblEcape.Size = new System.Drawing.Size(188, 18);
+            this.lblEcape.TabIndex = 106;
+            this.lblEcape.Text = "Press escape to exit";
+            this.lblEcape.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // WizzardTimer
+            // 
+            this.WizzardTimer.Interval = 10;
+            this.WizzardTimer.Tick += new System.EventHandler(this.WizzardTimer_Tick);
             // 
             // Arcade
             // 
@@ -342,18 +319,19 @@ namespace INF164HWAss1
             this.BackgroundImage = global::INF164HWAss1.Properties.Resources.ezgif_3_18f8aee5b97c;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 504);
+            this.Controls.Add(this.wizzard1);
+            this.Controls.Add(this.lblWizz);
+            this.Controls.Add(this.lblEcape);
+            this.Controls.Add(this.lblStartPress);
+            this.Controls.Add(this.pbPressStart);
             this.Controls.Add(this.pgbBufferTime);
             this.Controls.Add(this.lblControls2);
             this.Controls.Add(this.pbKeys2);
             this.Controls.Add(this.lblControls1);
-            this.Controls.Add(this.wizzard1);
             this.Controls.Add(this.pbKeys1);
             this.Controls.Add(this.pbHealthLoss);
-            this.Controls.Add(this.gbStart);
-            this.Controls.Add(this.lblWizz);
             this.Controls.Add(this.lblCoins);
             this.Controls.Add(this.pbCoin);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pbHearts);
             this.Controls.Add(this.pbBackground);
             this.Controls.Add(this.wall2);
@@ -367,15 +345,13 @@ namespace INF164HWAss1
             this.Text = "Arcade";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Arcade_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Arcade_KeyUp);
-            this.gbStart.ResumeLayout(false);
-            this.gbStart.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSky)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthLoss)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKeys1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKeys2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPressStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wizzard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).EndInit();
@@ -385,18 +361,13 @@ namespace INF164HWAss1
         }
 
         #endregion
-        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Timer GameTimer;
         private System.Windows.Forms.PictureBox pbHearts;
         private System.Windows.Forms.Timer OpenFadeTimer;
         private System.Windows.Forms.Timer CloseFadeTimer;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblCoins;
         private System.Windows.Forms.PictureBox pbCoin;
         private System.Windows.Forms.Label lblWizz;
-        private System.Windows.Forms.GroupBox gbStart;
-        private System.Windows.Forms.Label lblStartText;
-        private System.Windows.Forms.PictureBox pbSky;
         private System.Windows.Forms.Timer MoveTimer;
         private System.Windows.Forms.PictureBox pbHealthLoss;
         private System.Windows.Forms.PictureBox pbBackground;
@@ -411,5 +382,9 @@ namespace INF164HWAss1
         private System.Windows.Forms.Label lblControls2;
         private System.Windows.Forms.ProgressBar pgbBufferTime;
         private System.Windows.Forms.Timer PoofTimer;
+        private System.Windows.Forms.PictureBox pbPressStart;
+        private System.Windows.Forms.Label lblStartPress;
+        private System.Windows.Forms.Label lblEcape;
+        private System.Windows.Forms.Timer WizzardTimer;
     }
 }
