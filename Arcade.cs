@@ -34,12 +34,15 @@ namespace INF164HWAss1
 
             boxCol.Visible = false;
 
+            pgbBufferTime.ForeColor = Color.Red;
+            pgbBufferTime.Value = 100;
+
             pbBackground.Controls.Add(this.pbCoin);
-            pbBackground.Controls.Add(this.pbKeys);
+            pbBackground.Controls.Add(this.pbKeys1);
             pbBackground.Controls.Add(this.wizzard1);
             pbBackground.Controls.Add(this.pbHearts);
             pbBackground.Controls.Add(this.lblCoins);
-            pbBackground.Controls.Add(this.lblControls);
+            pbBackground.Controls.Add(this.lblControls1);
         }
 
         private void GameTimer_Tick(object sender, EventArgs e)
@@ -98,10 +101,14 @@ namespace INF164HWAss1
         private void FireballTimer_Tick(object sender, EventArgs e)
         {
             buffTime++;
-            if(buffTime == 10)
+            pgbBufferTime.Value = buffTime;
+
+            if (buffTime == 100)
             {
-                shooting = true;
+                shooting = false;
+                pgbBufferTime.Value = pgbBufferTime.Maximum;
                 buffTime = 0;
+                FireballTimer.Stop();
             }
         }
 
@@ -123,12 +130,12 @@ namespace INF164HWAss1
         private void SpawnPigeon()
         {
             Pigeon p = new Pigeon();
-            p.Location = new Point(0, rand.Next(45, 385));
+            p.Location = new Point(0, rand.Next(45, 313));
             p.speed = rand.Next(1, 4);
 
             while (checkSpawn(p))
             {
-                p.Location = new Point(0, rand.Next(37, 385));
+                p.Location = new Point(0, rand.Next(37, 322));
             }
             pbBackground.Controls.Add(p);
         }
@@ -185,20 +192,32 @@ namespace INF164HWAss1
         {
             if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
+                if(lblControls1.Visible == true)
+                {
+                    lblWizz.Visible = false;
+                    lblControls1.Visible = false;
+                }
+                pbKeys1.Visible = false;
                 up = true;
             }
             if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
             {
                 down = true;
             }
-            lblControls.Visible = false;
+            
         }
 
         private void Arcade_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Space || e.KeyCode == Keys.Left)
+            if(e.KeyCode == Keys.Space)
             {
-                if(!shooting)
+                if (lblControls2.Visible == true)
+                {
+                    lblControls2.Visible = false;
+                    pbKeys2.Visible = false;
+                }
+                
+                if (!shooting)
                 {
                     shoot = true;
                     shooting = true;

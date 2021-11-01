@@ -248,8 +248,8 @@ namespace INF164HWAss1
             // pbGIF2
             // 
             this.pbGIF2.BackColor = System.Drawing.Color.Transparent;
-            this.pbGIF2.Image = global::INF164HWAss1.Properties.Resources.GIfBoigif;
-            this.pbGIF2.Location = new System.Drawing.Point(882, 80);
+            this.pbGIF2.Image = global::INF164HWAss1.Properties.Resources.BMO;
+            this.pbGIF2.Location = new System.Drawing.Point(894, 85);
             this.pbGIF2.Name = "pbGIF2";
             this.pbGIF2.Size = new System.Drawing.Size(38, 39);
             this.pbGIF2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

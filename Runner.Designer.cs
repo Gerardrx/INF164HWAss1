@@ -233,7 +233,7 @@ namespace INF164HWAss1
             this.lblControls.ForeColor = System.Drawing.Color.White;
             this.lblControls.Location = new System.Drawing.Point(38, 765);
             this.lblControls.Name = "lblControls";
-            this.lblControls.Size = new System.Drawing.Size(389, 66);
+            this.lblControls.Size = new System.Drawing.Size(206, 32);
             this.lblControls.TabIndex = 30;
             this.lblControls.Text = "Arrows or A/D to move \r\n Up or Space to Jump\r\n";
             // 
@@ -245,7 +245,7 @@ namespace INF164HWAss1
             this.lblInstructions.ForeColor = System.Drawing.Color.White;
             this.lblInstructions.Location = new System.Drawing.Point(799, 948);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(236, 132);
+            this.lblInstructions.Size = new System.Drawing.Size(125, 64);
             this.lblInstructions.TabIndex = 31;
             this.lblInstructions.Text = "Collect coins\r\n  Don\'t die\r\n    Simple\r\n\r\n";
             // 
@@ -257,7 +257,7 @@ namespace INF164HWAss1
             this.lblCoins.ForeColor = System.Drawing.Color.Yellow;
             this.lblCoins.Location = new System.Drawing.Point(59, 30);
             this.lblCoins.Name = "lblCoins";
-            this.lblCoins.Size = new System.Drawing.Size(48, 50);
+            this.lblCoins.Size = new System.Drawing.Size(25, 25);
             this.lblCoins.TabIndex = 117;
             this.lblCoins.Text = "0";
             this.lblCoins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -270,7 +270,7 @@ namespace INF164HWAss1
             this.lblRestart.ForeColor = System.Drawing.Color.Red;
             this.lblRestart.Location = new System.Drawing.Point(607, 779);
             this.lblRestart.Name = "lblRestart";
-            this.lblRestart.Size = new System.Drawing.Size(1362, 280);
+            this.lblRestart.Size = new System.Drawing.Size(681, 144);
             this.lblRestart.TabIndex = 118;
             this.lblRestart.Text = "          space to restart\r\n\r\nyou loose all your coins when you die\r\n     go home" +
     " to save your coins";
@@ -284,7 +284,7 @@ namespace INF164HWAss1
             this.lblDoor.ForeColor = System.Drawing.Color.White;
             this.lblDoor.Location = new System.Drawing.Point(21, 900);
             this.lblDoor.Name = "lblDoor";
-            this.lblDoor.Size = new System.Drawing.Size(155, 50);
+            this.lblDoor.Size = new System.Drawing.Size(84, 28);
             this.lblDoor.TabIndex = 121;
             this.lblDoor.Text = "Press E to\r\nReturn Home\r\n";
             this.lblDoor.Visible = false;
@@ -1150,7 +1150,7 @@ namespace INF164HWAss1
             this.lblExit.ForeColor = System.Drawing.Color.White;
             this.lblExit.Location = new System.Drawing.Point(1804, 0);
             this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(194, 25);
+            this.lblExit.Size = new System.Drawing.Size(105, 14);
             this.lblExit.TabIndex = 74;
             this.lblExit.Text = "Escape to exit";
             // 
