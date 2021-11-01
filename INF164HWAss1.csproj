@@ -361,6 +361,10 @@
     <None Include="Resources\Pengu.gif" />
     <None Include="Resources\Pengu2.gif" />
     <None Include="Resources\output-onlinepngtools %281%29.png" />
+    <None Include="Resources\MaskMan\door.gif" />
+    <None Include="Resources\MaskMan\doorClose.jpeg" />
+    <None Include="Resources\MaskMan\doorOpen.jpeg" />
+    <None Include="Resources\MaskMan\doorOpenT.png" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
