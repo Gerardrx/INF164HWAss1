@@ -43,32 +43,31 @@ namespace INF164HWAss1
             this.pbSky = new System.Windows.Forms.PictureBox();
             this.MoveTimer = new System.Windows.Forms.Timer(this.components);
             this.pbHealthLoss = new System.Windows.Forms.PictureBox();
-            this.pbPoof = new System.Windows.Forms.PictureBox();
             this.pbCoin = new System.Windows.Forms.PictureBox();
             this.pbHearts = new System.Windows.Forms.PictureBox();
             this.pbBackground = new System.Windows.Forms.PictureBox();
             this.pbKeys1 = new System.Windows.Forms.PictureBox();
             this.SpawnTimer = new System.Windows.Forms.Timer(this.components);
             this.FireballTimer = new System.Windows.Forms.Timer(this.components);
-            this.wizzard1 = new INF164HWAss1.Wizzard();
-            this.wall2 = new INF164HWAss1.Wall();
-            this.wall1 = new INF164HWAss1.Wall();
             this.lblControls1 = new System.Windows.Forms.Label();
             this.pbKeys2 = new System.Windows.Forms.PictureBox();
             this.lblControls2 = new System.Windows.Forms.Label();
             this.pgbBufferTime = new System.Windows.Forms.ProgressBar();
+            this.wizzard1 = new INF164HWAss1.Wizzard();
+            this.wall2 = new INF164HWAss1.Wall();
+            this.wall1 = new INF164HWAss1.Wall();
+            this.PoofTimer = new System.Windows.Forms.Timer(this.components);
             this.gbStart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSky)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthLoss)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPoof)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKeys1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKeys2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wizzard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbKeys2)).BeginInit();
             this.SuspendLayout();
             // 
             // GameTimer
@@ -190,23 +189,12 @@ namespace INF164HWAss1
             // 
             this.pbHealthLoss.BackColor = System.Drawing.Color.Transparent;
             this.pbHealthLoss.Image = global::INF164HWAss1.Properties.Resources.output_onlinegiftools__1_;
-            this.pbHealthLoss.Location = new System.Drawing.Point(223, 347);
+            this.pbHealthLoss.Location = new System.Drawing.Point(203, 356);
             this.pbHealthLoss.Name = "pbHealthLoss";
             this.pbHealthLoss.Size = new System.Drawing.Size(160, 145);
             this.pbHealthLoss.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbHealthLoss.TabIndex = 92;
             this.pbHealthLoss.TabStop = false;
-            // 
-            // pbPoof
-            // 
-            this.pbPoof.BackColor = System.Drawing.Color.Transparent;
-            this.pbPoof.Image = global::INF164HWAss1.Properties.Resources.Poof_Effect;
-            this.pbPoof.Location = new System.Drawing.Point(389, 385);
-            this.pbPoof.Name = "pbPoof";
-            this.pbPoof.Size = new System.Drawing.Size(97, 79);
-            this.pbPoof.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPoof.TabIndex = 87;
-            this.pbPoof.TabStop = false;
             // 
             // pbCoin
             // 
@@ -264,34 +252,6 @@ namespace INF164HWAss1
             this.FireballTimer.Interval = 10;
             this.FireballTimer.Tick += new System.EventHandler(this.FireballTimer_Tick);
             // 
-            // wizzard1
-            // 
-            this.wizzard1.BackColor = System.Drawing.Color.Transparent;
-            this.wizzard1.Image = global::INF164HWAss1.Properties.Resources.Toaddude;
-            this.wizzard1.Location = new System.Drawing.Point(1023, 322);
-            this.wizzard1.Name = "wizzard1";
-            this.wizzard1.Size = new System.Drawing.Size(61, 62);
-            this.wizzard1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.wizzard1.TabIndex = 94;
-            this.wizzard1.TabStop = false;
-            this.wizzard1.YForce = 0;
-            // 
-            // wall2
-            // 
-            this.wall2.Location = new System.Drawing.Point(947, 385);
-            this.wall2.Name = "wall2";
-            this.wall2.Size = new System.Drawing.Size(208, 10);
-            this.wall2.TabIndex = 98;
-            this.wall2.TabStop = false;
-            // 
-            // wall1
-            // 
-            this.wall1.Location = new System.Drawing.Point(947, 45);
-            this.wall1.Name = "wall1";
-            this.wall1.Size = new System.Drawing.Size(208, 10);
-            this.wall1.TabIndex = 97;
-            this.wall1.TabStop = false;
-            // 
             // lblControls1
             // 
             this.lblControls1.AutoSize = true;
@@ -341,6 +301,39 @@ namespace INF164HWAss1
             this.pgbBufferTime.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pgbBufferTime.TabIndex = 102;
             // 
+            // wizzard1
+            // 
+            this.wizzard1.BackColor = System.Drawing.Color.Transparent;
+            this.wizzard1.Image = global::INF164HWAss1.Properties.Resources.Toaddude;
+            this.wizzard1.Location = new System.Drawing.Point(1023, 322);
+            this.wizzard1.Name = "wizzard1";
+            this.wizzard1.Size = new System.Drawing.Size(61, 62);
+            this.wizzard1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.wizzard1.TabIndex = 94;
+            this.wizzard1.TabStop = false;
+            this.wizzard1.YForce = 0;
+            // 
+            // wall2
+            // 
+            this.wall2.Location = new System.Drawing.Point(947, 385);
+            this.wall2.Name = "wall2";
+            this.wall2.Size = new System.Drawing.Size(208, 10);
+            this.wall2.TabIndex = 98;
+            this.wall2.TabStop = false;
+            // 
+            // wall1
+            // 
+            this.wall1.Location = new System.Drawing.Point(947, 45);
+            this.wall1.Name = "wall1";
+            this.wall1.Size = new System.Drawing.Size(208, 10);
+            this.wall1.TabIndex = 97;
+            this.wall1.TabStop = false;
+            // 
+            // PoofTimer
+            // 
+            this.PoofTimer.Interval = 1000;
+            this.PoofTimer.Tick += new System.EventHandler(this.PoofTimer_Tick);
+            // 
             // Arcade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -358,7 +351,6 @@ namespace INF164HWAss1
             this.Controls.Add(this.pbHealthLoss);
             this.Controls.Add(this.gbStart);
             this.Controls.Add(this.lblWizz);
-            this.Controls.Add(this.pbPoof);
             this.Controls.Add(this.lblCoins);
             this.Controls.Add(this.pbCoin);
             this.Controls.Add(this.btnBack);
@@ -379,15 +371,14 @@ namespace INF164HWAss1
             this.gbStart.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSky)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthLoss)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPoof)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKeys1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKeys2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wizzard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbKeys2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,7 +393,6 @@ namespace INF164HWAss1
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblCoins;
         private System.Windows.Forms.PictureBox pbCoin;
-        private System.Windows.Forms.PictureBox pbPoof;
         private System.Windows.Forms.Label lblWizz;
         private System.Windows.Forms.GroupBox gbStart;
         private System.Windows.Forms.Label lblStartText;
@@ -420,5 +410,6 @@ namespace INF164HWAss1
         private System.Windows.Forms.PictureBox pbKeys2;
         private System.Windows.Forms.Label lblControls2;
         private System.Windows.Forms.ProgressBar pgbBufferTime;
+        private System.Windows.Forms.Timer PoofTimer;
     }
 }

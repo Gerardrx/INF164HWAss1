@@ -13,6 +13,7 @@ namespace INF164HWAss1
     public partial class Pigeon : PictureBox
     { 
         public int speed;
+        public bool dead = false;
 
         public Pigeon()
         {

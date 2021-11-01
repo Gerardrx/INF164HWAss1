@@ -20,6 +20,7 @@ namespace INF164HWAss1
         private int y;
         private Panel boxCol = new Panel();
         private Random rand = new Random();
+        private int timePoof = 0;
 
 
         public Arcade()
@@ -47,7 +48,11 @@ namespace INF164HWAss1
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
+            lblCoins.Text = "" + coin;
+
+            removePoof();
             MoveFireball();
+            checkCollisions();
             MovePigeons();
             Movement();
             WizzWall();
@@ -57,12 +62,11 @@ namespace INF164HWAss1
                 wizzard1.moveVertical();
             }
 
-            if(shoot && shooting && buffTime == 0)
+            if (shoot && shooting && buffTime == 0)
             {
                 shoot = false;
                 SpawnFireball();
             }
-
         }
 
         private void Movement()
@@ -87,6 +91,27 @@ namespace INF164HWAss1
             pbBackground.Controls.Add(f);
         }
 
+        private void PoofTimer_Tick(object sender, EventArgs e)
+        {
+            timePoof++;
+        }
+
+        private void removePoof()
+        {
+            if (timePoof == 1)
+            {
+                foreach (Control p in pbBackground.Controls)
+                {
+                    if (p is Pigeon && ((Pigeon)p).dead)
+                    {
+                        p.Dispose();
+                        PoofTimer.Stop();
+                        timePoof = 0;
+                    }
+                }
+            }
+        }
+
         private void MoveFireball()
         {
             foreach(Control f in pbBackground.Controls)
@@ -106,25 +131,58 @@ namespace INF164HWAss1
             if (buffTime == 100)
             {
                 shooting = false;
-                pgbBufferTime.Value = pgbBufferTime.Maximum;
+                pgbBufferTime.Value = buffTime;
                 buffTime = 0;
                 FireballTimer.Stop();
             }
         }
 
-        private bool checkCollisions(Fireball n, Pigeon i)
+        private void checkCollisions()
         {
             foreach(Control f in pbBackground.Controls)
             {
                 if (f is Fireball)
                 {
-                    if (f.Bounds.IntersectsWith(i.Bounds))
+                    foreach (Control p in pbBackground.Controls)
                     {
-                        return true;
+                        if (p is Pigeon)
+                        {
+                            if (f.Bounds.IntersectsWith(p.Bounds))
+                            {
+                                ((Pigeon)p).Image = global::INF164HWAss1.Properties.Resources.Poof_Effect;
+                                ((Pigeon)p).dead = true;
+                                x = f.Location.X;
+                                y = f.Location.Y;
+                                f.Dispose();
+                                PoofTimer.Start();
+                                coin++;
+                            }
+                        }
                     }
                 }
             }
-            return false;
+        }
+
+        private void WizzWall()
+        {
+            foreach (Control w in this.Controls)
+            {
+                if (w is Wall)
+                {
+                    boxCol.Size = wizzard1.Size;
+                    boxCol.Location = new Point(wizzard1.Location.X, wizzard1.Location.Y - 2);
+                    if (w.Bounds.IntersectsWith(boxCol.Bounds))
+                    {
+                        wizzard1.stopUp = true;
+                    }
+                    boxCol.Size = wizzard1.Size;
+                    boxCol.Location = new Point(wizzard1.Location.X, wizzard1.Location.Y + 2);
+                    if (w.Bounds.IntersectsWith(boxCol.Bounds))
+                    {
+                        wizzard1.stopDown = true;
+                    }
+                }
+            }
         }
 
         private void SpawnPigeon()
@@ -166,28 +224,6 @@ namespace INF164HWAss1
             }
         }
 
-        private void WizzWall()
-        {
-            foreach (Control w in this.Controls)
-            {
-                if (w is Wall)
-                {
-                    boxCol.Size = wizzard1.Size;
-                    boxCol.Location = new Point(wizzard1.Location.X, wizzard1.Location.Y - 2);
-                    if (w.Bounds.IntersectsWith(boxCol.Bounds))
-                    {
-                        wizzard1.stopUp = true;
-                    }
-                    boxCol.Size = wizzard1.Size;
-                    boxCol.Location = new Point(wizzard1.Location.X, wizzard1.Location.Y + 2);
-                    if (w.Bounds.IntersectsWith(boxCol.Bounds))
-                    {
-                        wizzard1.stopDown = true;
-                    }
-                }
-            }
-        }
-
         private void Arcade_KeyDown(object sender, KeyEventArgs e) //check for key down
         {
             if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
@@ -204,7 +240,6 @@ namespace INF164HWAss1
             {
                 down = true;
             }
-            
         }
 
         private void Arcade_KeyUp(object sender, KeyEventArgs e)
