@@ -226,9 +226,11 @@ namespace INF164HWAss1
         private void btnArcade2_Click(object sender, EventArgs e)
         {
             Runner r = new Runner();
+            WriteDataToFile();
             this.Hide();
             r.ShowDialog();
-            coins += r.coins;
+            ReadDataFromFile();
+            this.coins = this.coins + r.coins;
             this.Show();
             
             lblCoins.Text = "" + coins;

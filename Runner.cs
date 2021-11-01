@@ -12,8 +12,6 @@ namespace INF164HWAss1
         public int coins = 0;
 
         //private variables for program
-        private int x;
-        private int y;
 
         private bool floor = false;
         private bool jump = false;
@@ -37,8 +35,6 @@ namespace INF164HWAss1
 
             this.Focus();
             gameTimer.Start();
-            x = player1.Location.X; //gets locarion for first time
-            y = player1.Location.Y;
             pbGameOver.Controls.Add(this.lblRestart);
 
             if (Screen.PrimaryScreen.WorkingArea.Size.Height < 1040 || Screen.PrimaryScreen.WorkingArea.Size.Width < 1920)
@@ -85,9 +81,6 @@ namespace INF164HWAss1
 
         private void Runner_KeyDown(object sender, KeyEventArgs e) // key down checker
         {
-            x = player1.Location.X;
-            y = player1.Location.Y;
-
             if (e.KeyValue == (char)Keys.Space || e.KeyValue == (char)Keys.Up)
             {
                 space = true;
@@ -208,10 +201,6 @@ namespace INF164HWAss1
 
         private void CheckCollision() // check collision with walls and ceiling
         {
-
-            x = player1.Location.X;
-            y = player1.Location.Y;
-
             player1.stopLeft = false;
             player1.stopRight = false;
 
@@ -240,7 +229,7 @@ namespace INF164HWAss1
                     BoxCollider.Location = new Point(player1.Location.X + 15, player1.Location.Y - 4); //hitting head
                     if (jump && BoxCollider.Bounds.IntersectsWith(w.Bounds))
                     {
-                        player1.Location = new Point(x, y + 3); // keeps from getting stuck in ceiling
+                        player1.Location = new Point(player1.Location.X, player1.Location.Y + 3); // keeps from getting stuck in ceiling
                         jump = false;
                         jumping = false;
                         floor = false;
@@ -350,6 +339,7 @@ namespace INF164HWAss1
 
                 if (exitCount == 0)
                 {
+                    Cursor.Show();
                     this.Dispose();
                 }
             }
