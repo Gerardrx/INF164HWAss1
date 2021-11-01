@@ -17,6 +17,7 @@ namespace INF164HWAss1
         private bool shooting = false;
         private int buffTime;
         private Panel boxCol = new Panel();
+        private Panel boxCol2 = new Panel();
         private Random rand = new Random();
         private int timePoof = 0;
         private int timePoof2 = 0;
@@ -100,7 +101,6 @@ namespace INF164HWAss1
         private void PoofTimer_Tick(object sender, EventArgs e)
         {
             timePoof++;
-            timePoof2++;
         }
 
         private void checkPigeonColWall()
@@ -113,12 +113,13 @@ namespace INF164HWAss1
                     {
                         if (w is Wall)
                         {
-                            if (p.Bounds.IntersectsWith(wall3.Bounds))
+                            boxCol2.Size = p.Size;
+                            boxCol2.Location = new Point(p.Location.X + 4, p.Location.Y);
+                            if (boxCol2.Bounds.IntersectsWith(wall3.Bounds))
                             {
-                                ((Pigeon)p).Image = global::INF164HWAss1.Properties.Resources.Poof_Effect;
                                 ((Pigeon)p).dead = true;
-                                ((Pigeon)p).stop = true;
-                                PoofTimer.Start();
+                                ((Pigeon)p).Stop = true;
+                                PoofTimer2.Start();
                             }
                         }
                     }
@@ -128,16 +129,22 @@ namespace INF164HWAss1
 
         private void removePoof2()
         {
-            if (timePoof2 == 1)
+            if (timePoof2 == 27)
             {
                 foreach (Control p in pbBackground.Controls)
                 {
                     if (p is Pigeon && ((Pigeon)p).dead)
                     {
                         p.Dispose();
-                        PoofTimer.Stop();
+                        PoofTimer2.Stop();
                         timePoof2 = 0;
-                        coin--;
+
+                        hearts--;
+
+                        if(coin != 0)
+                        {
+                            coin--;
+                        }
                     }
                 }
             }
@@ -208,6 +215,11 @@ namespace INF164HWAss1
             }
         }
 
+        private void PoofTimer2_Tick(object sender, EventArgs e)
+        {
+            timePoof2++;
+        }
+
         private void WizzardTimer_Tick(object sender, EventArgs e)
         {
             timeWiz++;
@@ -227,6 +239,8 @@ namespace INF164HWAss1
                 wizzard1.SizeMode = PictureBoxSizeMode.CenterImage;
                 wizzard1.Size = new Size(61, 62);
                 wizzard1.Image = global::INF164HWAss1.Properties.Resources.Toaddude;
+                wizzard1.stopDown = false;
+                wizzard1.stopUp = false;
             }
             else
             {

@@ -14,7 +14,7 @@ namespace INF164HWAss1
     { 
         public int speed;
         public bool dead = false;
-        public bool stop = false;
+        private bool stop = false;
 
         public Pigeon()
         {
@@ -27,13 +27,23 @@ namespace INF164HWAss1
             BackColor = Color.Transparent;
         }
 
+        public bool Stop 
+        { 
+            get => stop;
+
+            set 
+            {
+                if(stop != value)
+                {
+                    Image = global::INF164HWAss1.Properties.Resources.Poof_Effect;
+                }
+                stop = value;
+            }
+        }
+
         public void movePigeon()
         {
-            if(stop)
-            {
-                Location = new Point(Location.X, Location.Y);
-            }
-            else
+            if(!stop)
             {
                 Location = new Point(Location.X + speed, Location.Y);
             }

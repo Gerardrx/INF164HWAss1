@@ -51,11 +51,12 @@ namespace INF164HWAss1
             this.PoofTimer = new System.Windows.Forms.Timer(this.components);
             this.pbPressStart = new System.Windows.Forms.PictureBox();
             this.lblStartPress = new System.Windows.Forms.Label();
+            this.lblEcape = new System.Windows.Forms.Label();
+            this.WizzardTimer = new System.Windows.Forms.Timer(this.components);
+            this.PoofTimer2 = new System.Windows.Forms.Timer(this.components);
             this.wizzard1 = new INF164HWAss1.Wizzard();
             this.wall2 = new INF164HWAss1.Wall();
             this.wall1 = new INF164HWAss1.Wall();
-            this.lblEcape = new System.Windows.Forms.Label();
-            this.WizzardTimer = new System.Windows.Forms.Timer(this.components);
             this.wall3 = new INF164HWAss1.Wall();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthLoss)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).BeginInit();
@@ -120,7 +121,7 @@ namespace INF164HWAss1
             // 
             this.pbHealthLoss.BackColor = System.Drawing.Color.Transparent;
             this.pbHealthLoss.Image = global::INF164HWAss1.Properties.Resources.output_onlinegiftools__1_;
-            this.pbHealthLoss.Location = new System.Drawing.Point(1110, 252);
+            this.pbHealthLoss.Location = new System.Drawing.Point(206, 371);
             this.pbHealthLoss.Name = "pbHealthLoss";
             this.pbHealthLoss.Size = new System.Drawing.Size(90, 91);
             this.pbHealthLoss.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -266,6 +267,30 @@ namespace INF164HWAss1
             this.lblStartPress.Text = "Press space";
             this.lblStartPress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblEcape
+            // 
+            this.lblEcape.AutoSize = true;
+            this.lblEcape.BackColor = System.Drawing.Color.Transparent;
+            this.lblEcape.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.lblEcape.Font = new System.Drawing.Font("Unispace", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEcape.ForeColor = System.Drawing.Color.White;
+            this.lblEcape.Location = new System.Drawing.Point(1003, 483);
+            this.lblEcape.Name = "lblEcape";
+            this.lblEcape.Size = new System.Drawing.Size(188, 18);
+            this.lblEcape.TabIndex = 106;
+            this.lblEcape.Text = "Press escape to exit";
+            this.lblEcape.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // WizzardTimer
+            // 
+            this.WizzardTimer.Interval = 10;
+            this.WizzardTimer.Tick += new System.EventHandler(this.WizzardTimer_Tick);
+            // 
+            // PoofTimer2
+            // 
+            this.PoofTimer2.Interval = 10;
+            this.PoofTimer2.Tick += new System.EventHandler(this.PoofTimer2_Tick);
+            // 
             // wizzard1
             // 
             this.wizzard1.BackColor = System.Drawing.Color.Transparent;
@@ -293,25 +318,6 @@ namespace INF164HWAss1
             this.wall1.Size = new System.Drawing.Size(208, 10);
             this.wall1.TabIndex = 97;
             this.wall1.TabStop = false;
-            // 
-            // lblEcape
-            // 
-            this.lblEcape.AutoSize = true;
-            this.lblEcape.BackColor = System.Drawing.Color.Transparent;
-            this.lblEcape.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.lblEcape.Font = new System.Drawing.Font("Unispace", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEcape.ForeColor = System.Drawing.Color.White;
-            this.lblEcape.Location = new System.Drawing.Point(1003, 483);
-            this.lblEcape.Name = "lblEcape";
-            this.lblEcape.Size = new System.Drawing.Size(188, 18);
-            this.lblEcape.TabIndex = 106;
-            this.lblEcape.Text = "Press escape to exit";
-            this.lblEcape.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // WizzardTimer
-            // 
-            this.WizzardTimer.Interval = 10;
-            this.WizzardTimer.Tick += new System.EventHandler(this.WizzardTimer_Tick);
             // 
             // wall3
             // 
@@ -400,5 +406,6 @@ namespace INF164HWAss1
         private System.Windows.Forms.Label lblEcape;
         private System.Windows.Forms.Timer WizzardTimer;
         private Wall wall3;
+        private System.Windows.Forms.Timer PoofTimer2;
     }
 }
