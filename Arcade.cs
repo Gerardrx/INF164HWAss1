@@ -14,8 +14,12 @@ namespace INF164HWAss1
         private bool up = false;
         private bool down = false;
         private bool shoot = false;
+        private bool shooting = false;
+        private int buffTime;
         private int x;
         private int y;
+        private Panel boxCol = new Panel();
+        private Random rand = new Random();
 
 
         public Arcade()
@@ -28,56 +32,153 @@ namespace INF164HWAss1
             Opacity = 0;
             OpenFadeTimer.Start();
 
-            pbClickMe.Visible = false;
+            boxCol.Visible = false;
 
-            //blControls.Text = "hhi\n";
-
+            pbBackground.Controls.Add(this.pbCoin);
+            pbBackground.Controls.Add(this.pbKeys);
             pbBackground.Controls.Add(this.wizzard1);
-            pbBackground.Controls.Add(this.pbClickMe);
             pbBackground.Controls.Add(this.pbHearts);
             pbBackground.Controls.Add(this.lblCoins);
+            pbBackground.Controls.Add(this.lblControls);
+        }
+
+        private void GameTimer_Tick(object sender, EventArgs e)
+        {
+            MoveFireball();
+            MovePigeons();
+            Movement();
+            WizzWall();
+
+            if (wizzard1.YForce != 0)
+            {
+                wizzard1.moveVertical();
+            }
+
+            if(shoot && shooting && buffTime == 0)
+            {
+                shoot = false;
+                SpawnFireball();
+            }
+
         }
 
         private void Movement()
         {
             if (up)
             {
-                wizzard1.YForce = -1; //move wizzard up
+                wizzard1.YForce = -2; //move wizzard up
             }
             else if(down)
             {
-                wizzard1.YForce = 1; //move wizzard down
+                wizzard1.YForce = 2;//move wizzard down
             }
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private void SpawnFireball()
         {
-            //start game timer
-            GameTimer.Start();
-            gbStart.Visible = false;
-            
-        }
-      
-        private void gameOver() 
-        {
-            GameTimer.Stop();
-            pbClickMe.Visible = false;
+            FireballTimer.Start();
 
-            MessageBox.Show("Game Over");
+            Fireball f = new Fireball();
+            f.Location = new Point(wizzard1.Location.X - 40, wizzard1.Location.Y);
+            f.speed = 3;
+            pbBackground.Controls.Add(f);
         }
 
-        private void btnBack_Click(object sender, EventArgs e) //return to home form
+        private void MoveFireball()
         {
-            CloseFadeTimer.Start();
+            foreach(Control f in pbBackground.Controls)
+            {
+                if (f is Fireball)
+                {
+                    ((Fireball)f).moveFireball();
+                }
+            }
         }
 
-        private void CheckCollision() //check collision with form bounds
+        private void FireballTimer_Tick(object sender, EventArgs e)
         {
-            //get location of wizzard
-            x = wizzard1.Location.X;
-            y = wizzard1.Location.Y;
+            buffTime++;
+            if(buffTime == 10)
+            {
+                shooting = true;
+                buffTime = 0;
+            }
+        }
 
+        private bool checkCollisions(Fireball n, Pigeon i)
+        {
+            foreach(Control f in pbBackground.Controls)
+            {
+                if (f is Fireball)
+                {
+                    if (f.Bounds.IntersectsWith(i.Bounds))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
 
+        private void SpawnPigeon()
+        {
+            Pigeon p = new Pigeon();
+            p.Location = new Point(0, rand.Next(45, 385));
+            p.speed = rand.Next(1, 4);
+
+            while (checkSpawn(p))
+            {
+                p.Location = new Point(0, rand.Next(37, 385));
+            }
+            pbBackground.Controls.Add(p);
+        }
+
+        private bool checkSpawn(Pigeon n)
+        {
+            foreach(Control p in pbBackground.Controls)
+            {
+                if(p is Pigeon)
+                {
+                    if(p.Bounds.IntersectsWith(n.Bounds))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        private void MovePigeons()
+        {
+            foreach(Control p in pbBackground.Controls)
+            {
+                if(p is Pigeon)
+                {
+                    ((Pigeon)p).movePigeon();
+                }
+            }
+        }
+
+        private void WizzWall()
+        {
+            foreach (Control w in this.Controls)
+            {
+                if (w is Wall)
+                {
+                    boxCol.Size = wizzard1.Size;
+                    boxCol.Location = new Point(wizzard1.Location.X, wizzard1.Location.Y - 2);
+                    if (w.Bounds.IntersectsWith(boxCol.Bounds))
+                    {
+                        wizzard1.stopUp = true;
+                    }
+                    boxCol.Size = wizzard1.Size;
+                    boxCol.Location = new Point(wizzard1.Location.X, wizzard1.Location.Y + 2);
+                    if (w.Bounds.IntersectsWith(boxCol.Bounds))
+                    {
+                        wizzard1.stopDown = true;
+                    }
+                }
+            }
         }
 
         private void Arcade_KeyDown(object sender, KeyEventArgs e) //check for key down
@@ -95,6 +196,14 @@ namespace INF164HWAss1
 
         private void Arcade_KeyUp(object sender, KeyEventArgs e)
         {
+            if(e.KeyCode == Keys.Space || e.KeyCode == Keys.Left)
+            {
+                if(!shooting)
+                {
+                    shoot = true;
+                    shooting = true;
+                }
+            }
             if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
                 up = false;
@@ -107,18 +216,35 @@ namespace INF164HWAss1
             }
         }
 
-        private void GameTimer_Tick(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e) //return to home form
         {
-            Movement();
-            CheckCollision();
-
-            if(wizzard1.YForce != 0)
-            {
-                wizzard1.moveVertical();
-            }
+            CloseFadeTimer.Start();
         }
 
-       
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            //start game timer
+            GameTimer.Start();
+            SpawnTimer.Start();
+            gbStart.Visible = false;
+
+        }
+
+        private void gameOver()
+        {
+            GameTimer.Stop();
+            FireballTimer.Stop();
+
+            MessageBox.Show("Game Over");
+        }
+
+        private void SpawnTimer_Tick(object sender, EventArgs e)
+        {
+            SpawnPigeon();
+        }
+
+
+
 
 
 

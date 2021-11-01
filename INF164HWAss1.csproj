@@ -82,11 +82,23 @@
     <Compile Include="EditForm.Designer.cs">
       <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fireball.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball.Designer.cs">
+      <DependentUpon>Fireball.cs</DependentUpon>
+    </Compile>
     <Compile Include="NoCoinSpawn.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="NoCoinSpawn.Designer.cs">
       <DependentUpon>NoCoinSpawn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pigeon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pigeon.Designer.cs">
+      <DependentUpon>Pigeon.cs</DependentUpon>
     </Compile>
     <Compile Include="Save.cs" />
     <Compile Include="Spike.cs">
@@ -326,6 +338,9 @@
     <None Include="Resources\cf4154334c36bc1196b11d729c3a77d4.png" />
     <None Include="Resources\BMO.gif" />
     <None Include="Resources\blueborder.gif" />
+    <None Include="Resources\Bird1.gif" />
+    <None Include="Resources\Bird2.gif" />
+    <None Include="Resources\Bird3.gif" />
     <Content Include="Resources\ChickManWoman.png" />
     <None Include="Resources\Tunnel.gif" />
     <None Include="Resources\DogNose.png" />
