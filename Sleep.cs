@@ -170,11 +170,11 @@ namespace INF164HWAss1
                     delay();//delays the images disappearing after incorrect clicks
                     if (imgPlaceHolder1 != null)
                     {
-                        imgPlaceHolder1.BackgroundImage = null;
+                       imgPlaceHolder1.BackgroundImage = null;
                     }
                     if (imgPlaceHolder2 != null)
                     {
-                        imgPlaceHolder2.BackgroundImage = null;
+                       imgPlaceHolder2.BackgroundImage = null;
                     }
                 }
                 imgPlaceHolder1 = null;
