@@ -12,6 +12,10 @@ namespace INF164HWAss1
 {
     public partial class Wizzard : PictureBox
     {
+        //public variables
+        public bool stopUp = false;
+        public bool stopDown = false;
+
         //private variables
         private int yForce = 0;
 
@@ -41,12 +45,16 @@ namespace INF164HWAss1
 
         public void moveVertical()
         {
-            if(yForce > 0)
+            if(yForce > 0 && !stopDown)
             {
+                stopDown = false;
+                stopUp = false;
                 moveDown();
             }
-            if(yForce < 0)
+            if(yForce < 0 && !stopUp)
             {
+                stopDown = false;
+                stopUp = false;
                 moveUp();
             }
         }
