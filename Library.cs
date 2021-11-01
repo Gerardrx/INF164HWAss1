@@ -1,18 +1,33 @@
 ﻿using System;
 using System.ComponentModel;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace INF164HWAss1
 {
     public partial class Library : Form
     {
+        public int bookCount;
+
+        private string title;
+        private string author;
+        private string date;
+        private string genre;
+        private int cost;
+
         public Library()
         {
             InitializeComponent();
 
             OpenFadeTimer.Start();
             Opacity = 0;
+            ReadDataFromFile(bookList);
+            dgvBookCollection.DataSource = bookList;
+            bookCount = dgvBookCollection.Rows.Count;
         }
+
+        
 
         //Create binding list
         BindingList<BookClass> bookList = new BindingList<BookClass>();
@@ -20,42 +35,75 @@ namespace INF164HWAss1
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             //Close form and show home form
+            bookCount = dgvBookCollection.Rows.Count;
+            WriteDataToFile(bookList);
             CloseFadeTimer.Start();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            int selectedindex = dgvBookCollection.CurrentRow.Index;
+            if (dgvBookCollection.Rows.Count > 0)
+            {
+                int selectedindex = dgvBookCollection.CurrentRow.Index;
 
-            BookClass objectToedit = bookList[selectedindex];
-            EditForm editform = new EditForm();
-            editform.editobject = objectToedit;
-            editform.ShowDialog();
+                BookClass objectToedit = bookList[selectedindex];
+                EditForm editform = new EditForm();
+                editform.editobject = objectToedit;
+                editform.ShowDialog();
 
-            objectToedit = editform.editobject;
+                objectToedit = editform.editobject;
 
-            bookList[selectedindex] = objectToedit;
+                bookList[selectedindex] = objectToedit;
+            }
         }
 
         private void btnAddToCollection_Click(object sender, EventArgs e)
         {
-            string Title = txtTitle.Text;
-            string Author = txtAuthor.Text;
-            string Date = dateTimePicker.Text;
-            string Genre = cmbxGenre.Text;
-            string Cost = txtCost.Text;
+            title = txtTitle.Text;
+            author = txtAuthor.Text;
+            date = dateTimePicker.Text;
+            genre = cmbxGenre.Text;
+            cost = (int)nudCost.Value;
 
-            BookClass myobject = new BookClass(Title, Author, Date, Genre, Cost);
-            bookList.Add(myobject);
+            if (checkempty())
+            {
+                BookClass myobject = new BookClass(title, author, date, genre, cost);
+                bookList.Add(myobject);
 
-            dgvBookCollection.DataSource = bookList;
+                dgvBookCollection.DataSource = bookList;
 
-            txtTitle.Clear();
-            txtAuthor.Clear();          
-            dateTimePicker.ResetText();
-            cmbxGenre.ResetText();
-            txtCost.Clear();
+                txtTitle.Clear();
+                txtAuthor.Clear();
+                dateTimePicker.ResetText();
+                cmbxGenre.ResetText();
+                nudCost.Value = 0;
+            }
+        }
 
+        private bool checkempty()
+        {
+            bool flag = true;
+            string temp = "";
+            if (title.Length < 2)
+            {
+                temp += "Title needs to be longer than 2 characters\n";
+                flag = false;
+            }
+            if (author.Length < 2)
+            {
+                temp += "Author needs to be longer than 2 characters\n";
+                flag = false;
+            }
+            if (cmbxGenre.SelectedIndex == -1)
+            {
+                temp += "Please select genre\n";
+                flag = false;
+            }
+            if (!flag)
+            {
+                MessageBox.Show(temp);
+            } 
+            return flag;
         }
 
         private void btnBooksPerGenre_Click(object sender, EventArgs e)
@@ -101,18 +149,44 @@ namespace INF164HWAss1
 
         private void btnRefund_Click(object sender, EventArgs e)
         {
-            int selectedindex = dgvBookCollection.CurrentRow.Index;
-
-            string selectedTitle = bookList[selectedindex].Title;
-
-
-            foreach (DataGridViewCell oneCell in dgvBookCollection.SelectedCells)
+            if (dgvBookCollection.Rows.Count > 0)
             {
-                if (oneCell.Selected)
-                    dgvBookCollection.Rows.RemoveAt(oneCell.RowIndex);
-            }
+                int selectedindex = dgvBookCollection.CurrentRow.Index;
+                string selectedTitle = bookList[selectedindex].Title;
 
-            MessageBox.Show(selectedTitle + " has been refunded and removed!");
+                dgvBookCollection.Rows.RemoveAt(selectedindex);
+                MessageBox.Show(selectedTitle + " has been refunded and removed!");
+            }
+        }
+
+
+        public void WriteDataToFile(BindingList<BookClass> myList)
+        {
+            FileStream outFile = new FileStream("booklist.ser", FileMode.Create, FileAccess.Write);
+            BinaryFormatter bFormatter = new BinaryFormatter();
+            bFormatter.Serialize(outFile, myList);
+            outFile.Close();
+
+        }
+
+        public void ReadDataFromFile(BindingList<BookClass> myList)
+        {
+            try
+            {
+                FileStream inFile = new FileStream( "booklist.ser", FileMode.Open, FileAccess.Read);
+                BinaryFormatter bFormatter = new BinaryFormatter();
+                myList.Clear();
+                var tempList = (BindingList<BookClass>)bFormatter.Deserialize(inFile);
+                foreach (BookClass myObject in tempList)
+                {
+                    myList.Add(myObject);
+                }
+                inFile.Close();
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("The data file could not be found");
+            }
         }
 
         private void OpenFadeTimer_Tick_1(object sender, EventArgs e)

@@ -34,7 +34,6 @@ namespace INF164HWAss1
             this.btnEdit = new System.Windows.Forms.Button();
             this.cmbxGenre = new System.Windows.Forms.ComboBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -42,15 +41,17 @@ namespace INF164HWAss1
             this.lblDate = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.nudEditCost = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEditCost)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nudEditCost);
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.cmbxGenre);
             this.groupBox1.Controls.Add(this.dateTimePicker);
-            this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.txtAuthor);
             this.groupBox1.Controls.Add(this.txtTitle);
             this.groupBox1.Controls.Add(this.lblPrice);
@@ -58,11 +59,11 @@ namespace INF164HWAss1
             this.groupBox1.Controls.Add(this.lblDate);
             this.groupBox1.Controls.Add(this.lblAuthor);
             this.groupBox1.Controls.Add(this.lblTitle);
-            this.groupBox1.Location = new System.Drawing.Point(16, 23);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(32, 44);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(641, 241);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1282, 463);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit Book Information";
@@ -70,10 +71,10 @@ namespace INF164HWAss1
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnEdit.Location = new System.Drawing.Point(387, 203);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEdit.Location = new System.Drawing.Point(774, 390);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(238, 25);
+            this.btnEdit.Size = new System.Drawing.Size(476, 48);
             this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Edit Entry";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -88,108 +89,109 @@ namespace INF164HWAss1
             "Mystery",
             "Horror",
             "Biography/ Autobiography"});
-            this.cmbxGenre.Location = new System.Drawing.Point(387, 140);
-            this.cmbxGenre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbxGenre.Location = new System.Drawing.Point(774, 269);
+            this.cmbxGenre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbxGenre.Name = "cmbxGenre";
-            this.cmbxGenre.Size = new System.Drawing.Size(240, 21);
+            this.cmbxGenre.Size = new System.Drawing.Size(476, 33);
             this.cmbxGenre.TabIndex = 9;
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(387, 106);
-            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker.Location = new System.Drawing.Point(774, 204);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(240, 20);
+            this.dateTimePicker.Size = new System.Drawing.Size(476, 31);
             this.dateTimePicker.TabIndex = 8;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(387, 173);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(240, 20);
-            this.txtPrice.TabIndex = 7;
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(387, 73);
-            this.txtAuthor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAuthor.Location = new System.Drawing.Point(774, 140);
+            this.txtAuthor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(240, 20);
+            this.txtAuthor.Size = new System.Drawing.Size(476, 31);
             this.txtAuthor.TabIndex = 6;
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(387, 39);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTitle.Location = new System.Drawing.Point(774, 75);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(240, 20);
+            this.txtTitle.Size = new System.Drawing.Size(476, 31);
             this.txtTitle.TabIndex = 5;
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(43, 175);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrice.Location = new System.Drawing.Point(86, 337);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(31, 13);
+            this.lblPrice.Size = new System.Drawing.Size(61, 25);
             this.lblPrice.TabIndex = 4;
             this.lblPrice.Text = "Price";
             // 
             // lblGenre
             // 
             this.lblGenre.AutoSize = true;
-            this.lblGenre.Location = new System.Drawing.Point(43, 142);
-            this.lblGenre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGenre.Location = new System.Drawing.Point(86, 273);
+            this.lblGenre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(36, 13);
+            this.lblGenre.Size = new System.Drawing.Size(71, 25);
             this.lblGenre.TabIndex = 3;
             this.lblGenre.Text = "Genre";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(43, 109);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDate.Location = new System.Drawing.Point(86, 210);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(30, 13);
+            this.lblDate.Size = new System.Drawing.Size(57, 25);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Date";
             // 
             // lblAuthor
             // 
             this.lblAuthor.AutoSize = true;
-            this.lblAuthor.Location = new System.Drawing.Point(43, 75);
-            this.lblAuthor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAuthor.Location = new System.Drawing.Point(86, 144);
+            this.lblAuthor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(38, 13);
+            this.lblAuthor.Size = new System.Drawing.Size(75, 25);
             this.lblAuthor.TabIndex = 1;
             this.lblAuthor.Text = "Author";
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(43, 41);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Location = new System.Drawing.Point(86, 79);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(27, 13);
+            this.lblTitle.Size = new System.Drawing.Size(53, 25);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Title";
             // 
+            // nudEditCost
+            // 
+            this.nudEditCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudEditCost.Location = new System.Drawing.Point(774, 331);
+            this.nudEditCost.Name = "nudEditCost";
+            this.nudEditCost.Size = new System.Drawing.Size(476, 35);
+            this.nudEditCost.TabIndex = 11;
+            // 
             // EditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cyan;
-            this.ClientSize = new System.Drawing.Size(683, 292);
+            this.ClientSize = new System.Drawing.Size(1366, 562);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EditForm";
             this.Text = "Edit Entry";
             this.Load += new System.EventHandler(this.EditForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEditCost)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,10 +206,9 @@ namespace INF164HWAss1
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ComboBox cmbxGenre;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Button btnEdit;
-
+        private System.Windows.Forms.NumericUpDown nudEditCost;
     }
 }
