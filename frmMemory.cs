@@ -10,7 +10,6 @@ namespace INF164HWAss1
         int placeHolder1 = 0, placeHolder2 = 0;
         int ss = 0, ms = 0;
         int startTime = 0;
-        int gameTime = 0;
         int correctCounter = 0;
 
         Random rand = new Random();
@@ -166,8 +165,10 @@ namespace INF164HWAss1
                 else
                 {
                     delay();//delays the images disappearing after incorrect clicks
-                    imgPlaceHolder1.BackgroundImage = null;
-                    imgPlaceHolder2.BackgroundImage = null;
+                    if(imgPlaceHolder1 != null)
+                        imgPlaceHolder1.BackgroundImage = null;
+                    if (imgPlaceHolder2 != null)
+                        imgPlaceHolder2.BackgroundImage = null;
                 }
                 imgPlaceHolder1 = null;
                 imgPlaceHolder2 = null;
@@ -183,7 +184,7 @@ namespace INF164HWAss1
         }
         private void btnStart_Click(object sender, EventArgs e)
         {
-            gameTime = 0;
+            
             //Shows the images contained in each picturebox
             tlpIcons.Controls[0].BackgroundImage = imageArr[Convert.ToInt32(pbImg1.Tag)];
             tlpIcons.Controls[1].BackgroundImage = imageArr[Convert.ToInt32(pbImg2.Tag)];
@@ -204,6 +205,7 @@ namespace INF164HWAss1
             tlpIcons.Controls[15].BackgroundImage = imageArr[Convert.ToInt32(pbImg16.Tag)];
             #endregion //enclosed in region to reduce clutter 
             startTimer.Enabled = true;
+            btnStart.Enabled = false;
         }
 
         private void startTimer_Tick(object sender, EventArgs e)
