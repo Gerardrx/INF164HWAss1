@@ -366,7 +366,7 @@ namespace INF164HWAss1
         {
             // reset all to original positions
             coins = 0;
-            player1.Location = new Point(70, 900);
+            player1.Location = new Point(130, 965);
             lblControls.Visible = true;
             lblInstructions.Visible = true;
             gameTimer.Start();

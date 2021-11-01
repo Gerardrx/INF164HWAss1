@@ -1232,7 +1232,7 @@ namespace INF164HWAss1
             this.player1.Direction = '\0';
             this.player1.Floor = false;
             this.player1.Image = ((System.Drawing.Image)(resources.GetObject("player1.Image")));
-            this.player1.Location = new System.Drawing.Point(240, 860);
+            this.player1.Location = new System.Drawing.Point(130, 965);
             this.player1.Margin = new System.Windows.Forms.Padding(4);
             this.player1.Name = "player1";
             this.player1.Running = false;
