@@ -301,7 +301,7 @@ namespace INF164HWAss1
             // 
             this.pbBackground.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pbBackground.Image = global::INF164HWAss1.Properties.Resources.ezgif_3_18f8aee5b97c;
-            this.pbBackground.Location = new System.Drawing.Point(0, 1);
+            this.pbBackground.Location = new System.Drawing.Point(0, 52);
             this.pbBackground.Margin = new System.Windows.Forms.Padding(2);
             this.pbBackground.Name = "pbBackground";
             this.pbBackground.Size = new System.Drawing.Size(1200, 504);
@@ -357,8 +357,8 @@ namespace INF164HWAss1
             // 
             // Arcade
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.BackgroundImage = global::INF164HWAss1.Properties.Resources.ezgif_3_18f8aee5b97c;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
