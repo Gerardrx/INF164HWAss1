@@ -8,9 +8,11 @@ namespace INF164HWAss1
     public partial class frmSleep : Form
     {
         int placeHolder1 = 0, placeHolder2 = 0;
-        int ss = 0, ms = 0;
+        int ss = 4, ms = 6;
         int startTime = 0;
         int correctCounter = 0;
+        int incorrectGuesses = 0;
+        public int sleepScore = 10;
 
         Random rand = new Random();
         PictureBox imgPlaceHolder1, imgPlaceHolder2;
@@ -169,6 +171,8 @@ namespace INF164HWAss1
                         imgPlaceHolder1.BackgroundImage = null;
                     if (imgPlaceHolder2 != null)
                         imgPlaceHolder2.BackgroundImage = null;
+                    incorrectGuesses++;
+                    
                 }
                 imgPlaceHolder1 = null;
                 imgPlaceHolder2 = null;
@@ -178,8 +182,10 @@ namespace INF164HWAss1
             {
                 gameTimer.Enabled = false;
                 MessageBox.Show("Congratulations! you win");
+                calculateScore();
 
             }
+
 
         }
         private void btnStart_Click(object sender, EventArgs e)
@@ -210,28 +216,38 @@ namespace INF164HWAss1
 
         private void startTimer_Tick(object sender, EventArgs e)
         {
-            startTime++;
-
-            if (startTime == 4)
+            
+            ms--;
+            if (ms == 0)
             {
-                startTimer.Enabled = false;
-                gameTimer.Enabled = true;
+                ms = 6;
+                ss--;
 
-                for (int i = 0; i < 16; i++) //Resets all images and enables pictureboxes
+                if (ss == 0)
                 {
-                    tlpIcons.Controls[i].BackgroundImage = null;
-                    tlpIcons.Controls[i].Enabled = true;
+                    startTimer.Enabled = false;
+                    gameTimer.Enabled = true;
+                    lblTime.Visible = false;
+                    for (int i = 0; i < 16; i++) //Resets all images and enables pictureboxes
+                    {
+                        tlpIcons.Controls[i].BackgroundImage = null;
+                        tlpIcons.Controls[i].Enabled = true;
+                    }
                 }
             }
+
+            lblTime.Text = ss + ":" + ms;
+
+            
         }
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             //Handles the milliseconds and seconds contained within the label for time
-            ms++;
-            if (ms == 10)
+            ms--;
+            if (ms == 0)
             {
                 ms = 0;
-                ss++;
+                ss--;
             }
 
             lblTime.Text = ss + ":" + ms;
@@ -246,6 +262,28 @@ namespace INF164HWAss1
 
             while (delayTimer.Enabled)
                 Application.DoEvents();
+        }
+
+        private void calculateScore()
+        {
+            switch (incorrectGuesses)
+            {
+                case int n when (n == 0):
+                    sleepScore = 5;
+                    break;
+                case int n when (n > 0 && n < 3):
+                    sleepScore = 4;
+                    break;
+                case int n when (n > 2 && n < 7):
+                    sleepScore = 3;
+                    break;
+                case int n when (n > 6 && n < 15):
+                    sleepScore = 2;
+                    break;
+                case int n when (n >= 15):
+                    sleepScore = 9;
+                    break;
+            }
         }
 
         /*All click events show the image contained in each picturebox, and sends a reference of the picturebox to 
