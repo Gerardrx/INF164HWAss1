@@ -136,7 +136,7 @@ namespace INF164HWAss1
             this.btnArcade.Name = "btnArcade";
             this.btnArcade.Size = new System.Drawing.Size(217, 42);
             this.btnArcade.TabIndex = 3;
-            this.btnArcade.Text = "Arcade";
+            this.btnArcade.Text = "Defence";
             this.btnArcade.UseVisualStyleBackColor = false;
             this.btnArcade.Click += new System.EventHandler(this.btnArcade_Click);
             // 
@@ -208,7 +208,7 @@ namespace INF164HWAss1
             this.btnArcade2.Name = "btnArcade2";
             this.btnArcade2.Size = new System.Drawing.Size(217, 42);
             this.btnArcade2.TabIndex = 76;
-            this.btnArcade2.Text = "Arcade 2";
+            this.btnArcade2.Text = "Arcade";
             this.btnArcade2.UseVisualStyleBackColor = false;
             this.btnArcade2.Click += new System.EventHandler(this.btnArcade2_Click);
             // 

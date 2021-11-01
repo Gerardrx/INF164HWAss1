@@ -7,8 +7,6 @@ namespace INF164HWAss1
 {
     public partial class frmLoading : Form
     {
-        //50 timer
-
         public frmLoading()
         {
             InitializeComponent();
