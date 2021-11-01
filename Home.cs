@@ -30,6 +30,8 @@ namespace INF164HWAss1
             Opacity = 0;
             OpenFadeTimer.Start();
 
+            UpdateScore();
+
             HappinessBarTimer.Start();
 
             //Tooltips for scores
@@ -137,19 +139,18 @@ namespace INF164HWAss1
                 FileStream inFile = new FileStream("save.ser", FileMode.Open, FileAccess.Read);
                 BinaryFormatter bFormatter = new BinaryFormatter();
                 save = (Save)bFormatter.Deserialize(inFile);
-                MessageBox.Show(""+save.Coins);
                 inFile.Close();
 
             }
             catch (FileNotFoundException)
             {
                 save = new Save();
-                MessageBox.Show("ok");
+                MessageBox.Show("save not found");
             }
 
-            lblCoins.Text = "" + save.Coins;
-            lblIntelligenceScore.Text = "" + save.Brain;
-            lblSleepScore.Text = "" + save.Book;
+            coins = save.Coins;
+            memory = save.Brain;
+            read = save.Book;
         }
 
         private void SleepFadeTimer_Tick(object sender, EventArgs e)
@@ -190,9 +191,13 @@ namespace INF164HWAss1
 
                 Arcade a = new Arcade();
                 this.Hide();
+                WriteDataToFile();
                 a.ShowDialog();
+                ReadDataFromFile();
+                this.coins = this.coins + a.coin;
                 this.Show();
                 OpenFadeTimer.Start();
+                UpdateScore();
             }
             Opacity -= 0.03;
             
@@ -232,8 +237,15 @@ namespace INF164HWAss1
             ReadDataFromFile();
             this.coins = this.coins + r.coins;
             this.Show();
-            
+            UpdateScore();
+        }
+
+
+        private void UpdateScore()
+        {
             lblCoins.Text = "" + coins;
+            lblIntelligenceScore.Text = "" + memory;
+            lblSleepScore.Text = "" + read;
         }
     }
 }
