@@ -23,7 +23,7 @@ namespace INF164HWAss1
         {
             InitializeComponent();
 
-            //start game timer
+            this.KeyPreview = true;
 
             Opacity = 0;
             OpenFadeTimer.Start();
@@ -32,6 +32,7 @@ namespace INF164HWAss1
 
             //blControls.Text = "hhi\n";
 
+            pbBackground.Controls.Add(this.wizzard1);
             pbBackground.Controls.Add(this.pbClickMe);
             pbBackground.Controls.Add(this.pbHearts);
             pbBackground.Controls.Add(this.lblCoins);
@@ -41,16 +42,17 @@ namespace INF164HWAss1
         {
             if (up)
             {
-                wizzard1.YForce = -5;
+                wizzard1.YForce = -1; //move wizzard up
             }
             else if(down)
             {
-                wizzard1.YForce = 5;
+                wizzard1.YForce = 1; //move wizzard down
             }
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            //start game timer
             GameTimer.Start();
             gbStart.Visible = false;
             
@@ -71,6 +73,7 @@ namespace INF164HWAss1
 
         private void CheckCollision() //check collision with form bounds
         {
+            //get location of wizzard
             x = wizzard1.Location.X;
             y = wizzard1.Location.Y;
 
@@ -79,11 +82,11 @@ namespace INF164HWAss1
 
         private void Arcade_KeyDown(object sender, KeyEventArgs e) //check for key down
         {
-            if (e.KeyValue == (char)Keys.Up || e.KeyValue == (char)Keys.W)
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
                 up = true;
             }
-            if (e.KeyValue == (char)Keys.Down || e.KeyValue == (char)Keys.S)
+            if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
             {
                 down = true;
             }
@@ -92,13 +95,15 @@ namespace INF164HWAss1
 
         private void Arcade_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue == (char)Keys.Up || e.KeyValue == (char)Keys.W)
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
                 up = false;
+                wizzard1.YForce = 0;
             }
-            if (e.KeyValue == (char)Keys.Down || e.KeyValue == (char)Keys.S)
+            if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
             {
                 down = false;
+                wizzard1.YForce = 0;
             }
         }
 

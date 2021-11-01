@@ -360,6 +360,7 @@
     <None Include="Resources\GamesOver.gif" />
     <None Include="Resources\Pengu.gif" />
     <None Include="Resources\Pengu2.gif" />
+    <None Include="Resources\output-onlinepngtools %281%29.png" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -31,12 +31,12 @@ namespace INF164HWAss1
 
         private void moveUp() // move up
         {
-            Location = new Point(Location.X, Location.Y + YForce);
+            Location = new Point(Location.X, Location.Y + yForce);
         }
 
         private void moveDown() // move down
         {
-            Location = new Point(Location.X, Location.Y + YForce);
+            Location = new Point(Location.X, Location.Y + yForce);
         }
 
         public void moveVertical()

@@ -55,6 +55,7 @@ namespace INF164HWAss1
             this.pbClickMe = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.lblControls = new System.Windows.Forms.Label();
+            this.pbKey = new System.Windows.Forms.PictureBox();
             this.wizzard1 = new INF164HWAss1.Wizzard();
             this.gbStart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSky)).BeginInit();
@@ -65,12 +66,13 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pbFireBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wizzard1)).BeginInit();
             this.SuspendLayout();
             // 
             // GameTimer
             // 
-            this.GameTimer.Interval = 1000;
+            this.GameTimer.Interval = 1;
             this.GameTimer.Tick += new System.EventHandler(this.GameTimer_Tick);
             // 
             // OpenFadeTimer
@@ -242,7 +244,7 @@ namespace INF164HWAss1
             // 
             this.pbHealthLoss.BackColor = System.Drawing.Color.Transparent;
             this.pbHealthLoss.Image = global::INF164HWAss1.Properties.Resources.output_onlinegiftools__1_;
-            this.pbHealthLoss.Location = new System.Drawing.Point(960, 93);
+            this.pbHealthLoss.Location = new System.Drawing.Point(629, 267);
             this.pbHealthLoss.Name = "pbHealthLoss";
             this.pbHealthLoss.Size = new System.Drawing.Size(160, 145);
             this.pbHealthLoss.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -299,7 +301,7 @@ namespace INF164HWAss1
             // 
             this.pbBackground.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pbBackground.Image = global::INF164HWAss1.Properties.Resources.ezgif_3_18f8aee5b97c;
-            this.pbBackground.Location = new System.Drawing.Point(0, 29);
+            this.pbBackground.Location = new System.Drawing.Point(0, 1);
             this.pbBackground.Margin = new System.Windows.Forms.Padding(2);
             this.pbBackground.Name = "pbBackground";
             this.pbBackground.Size = new System.Drawing.Size(1200, 504);
@@ -330,6 +332,17 @@ namespace INF164HWAss1
             this.lblControls.Text = "Controls";
             this.lblControls.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pbKey
+            // 
+            this.pbKey.BackColor = System.Drawing.Color.Transparent;
+            this.pbKey.Image = global::INF164HWAss1.Properties.Resources.output_onlinepngtools__1_;
+            this.pbKey.Location = new System.Drawing.Point(820, 378);
+            this.pbKey.Name = "pbKey";
+            this.pbKey.Size = new System.Drawing.Size(129, 105);
+            this.pbKey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbKey.TabIndex = 96;
+            this.pbKey.TabStop = false;
+            // 
             // wizzard1
             // 
             this.wizzard1.BackColor = System.Drawing.Color.Transparent;
@@ -350,6 +363,7 @@ namespace INF164HWAss1
             this.BackgroundImage = global::INF164HWAss1.Properties.Resources.ezgif_3_18f8aee5b97c;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 504);
+            this.Controls.Add(this.pbKey);
             this.Controls.Add(this.lblControls);
             this.Controls.Add(this.wizzard1);
             this.Controls.Add(this.pbFireBall);
@@ -383,6 +397,7 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pbFireBall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClickMe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbKey)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wizzard1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -415,5 +430,6 @@ namespace INF164HWAss1
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Wizzard wizzard1;
         private System.Windows.Forms.Label lblControls;
+        private System.Windows.Forms.PictureBox pbKey;
     }
 }
