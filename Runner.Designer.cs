@@ -1173,9 +1173,9 @@ namespace INF164HWAss1
             // wall10
             // 
             this.wall10.BackColor = System.Drawing.Color.Turquoise;
-            this.wall10.Location = new System.Drawing.Point(1224, 935);
+            this.wall10.Location = new System.Drawing.Point(1212, 935);
             this.wall10.Name = "wall10";
-            this.wall10.Size = new System.Drawing.Size(158, 15);
+            this.wall10.Size = new System.Drawing.Size(170, 15);
             this.wall10.TabIndex = 28;
             this.wall10.TabStop = false;
             // 
