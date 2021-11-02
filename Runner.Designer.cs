@@ -66,6 +66,9 @@ namespace INF164HWAss1
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbDoor = new System.Windows.Forms.PictureBox();
+            this.endTimer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.wallDoor = new INF164HWAss1.Wall();
             this.noCoinSpawn14 = new INF164HWAss1.NoCoinSpawn();
             this.noCoinSpawn13 = new INF164HWAss1.NoCoinSpawn();
@@ -134,7 +137,6 @@ namespace INF164HWAss1
             this.coin1 = new INF164HWAss1.Coin();
             this.noCoinSpawn8 = new INF164HWAss1.NoCoinSpawn();
             this.noCoinSpawn9 = new INF164HWAss1.NoCoinSpawn();
-            this.endTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbGameOver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -164,6 +166,8 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDoor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wallDoor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall41)).BeginInit();
@@ -233,7 +237,7 @@ namespace INF164HWAss1
             this.lblControls.ForeColor = System.Drawing.Color.White;
             this.lblControls.Location = new System.Drawing.Point(38, 765);
             this.lblControls.Name = "lblControls";
-            this.lblControls.Size = new System.Drawing.Size(206, 32);
+            this.lblControls.Size = new System.Drawing.Size(229, 40);
             this.lblControls.TabIndex = 30;
             this.lblControls.Text = "Arrows or A/D to move \r\n Up or Space to Jump\r\n";
             // 
@@ -245,7 +249,7 @@ namespace INF164HWAss1
             this.lblInstructions.ForeColor = System.Drawing.Color.White;
             this.lblInstructions.Location = new System.Drawing.Point(799, 948);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(125, 64);
+            this.lblInstructions.Size = new System.Drawing.Size(139, 80);
             this.lblInstructions.TabIndex = 31;
             this.lblInstructions.Text = "Collect coins\r\n  Don\'t die\r\n    Simple\r\n\r\n";
             // 
@@ -257,7 +261,7 @@ namespace INF164HWAss1
             this.lblCoins.ForeColor = System.Drawing.Color.Yellow;
             this.lblCoins.Location = new System.Drawing.Point(59, 30);
             this.lblCoins.Name = "lblCoins";
-            this.lblCoins.Size = new System.Drawing.Size(25, 25);
+            this.lblCoins.Size = new System.Drawing.Size(32, 33);
             this.lblCoins.TabIndex = 117;
             this.lblCoins.Text = "0";
             this.lblCoins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -268,9 +272,9 @@ namespace INF164HWAss1
             this.lblRestart.BackColor = System.Drawing.Color.Transparent;
             this.lblRestart.Font = new System.Drawing.Font("Unispace", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestart.ForeColor = System.Drawing.Color.Red;
-            this.lblRestart.Location = new System.Drawing.Point(607, 779);
+            this.lblRestart.Location = new System.Drawing.Point(1863, 1046);
             this.lblRestart.Name = "lblRestart";
-            this.lblRestart.Size = new System.Drawing.Size(681, 144);
+            this.lblRestart.Size = new System.Drawing.Size(871, 176);
             this.lblRestart.TabIndex = 118;
             this.lblRestart.Text = "          space to restart\r\n\r\nyou loose all your coins when you die\r\n     go home" +
     " to save your coins";
@@ -284,7 +288,7 @@ namespace INF164HWAss1
             this.lblDoor.ForeColor = System.Drawing.Color.White;
             this.lblDoor.Location = new System.Drawing.Point(21, 900);
             this.lblDoor.Name = "lblDoor";
-            this.lblDoor.Size = new System.Drawing.Size(84, 28);
+            this.lblDoor.Size = new System.Drawing.Size(107, 32);
             this.lblDoor.TabIndex = 121;
             this.lblDoor.Text = "Press E to\r\nReturn Home\r\n";
             this.lblDoor.Visible = false;
@@ -293,7 +297,7 @@ namespace INF164HWAss1
             // 
             this.pbGameOver.BackColor = System.Drawing.Color.Black;
             this.pbGameOver.Image = global::INF164HWAss1.Properties.Resources.GamesOver;
-            this.pbGameOver.Location = new System.Drawing.Point(12, 12);
+            this.pbGameOver.Location = new System.Drawing.Point(1808, 1011);
             this.pbGameOver.Name = "pbGameOver";
             this.pbGameOver.Size = new System.Drawing.Size(1897, 1054);
             this.pbGameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -609,6 +613,33 @@ namespace INF164HWAss1
             this.pbDoor.TabStop = false;
             this.pbDoor.Tag = "door";
             // 
+            // endTimer
+            // 
+            this.endTimer.Interval = 2;
+            this.endTimer.Tick += new System.EventHandler(this.endTimer_Tick);
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox27.Location = new System.Drawing.Point(84, 597);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(94, 1);
+            this.pictureBox27.TabIndex = 122;
+            this.pictureBox27.TabStop = false;
+            this.pictureBox27.Tag = "spikeBounce";
+            this.pictureBox27.Visible = false;
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox28.Location = new System.Drawing.Point(615, 587);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(47, 5);
+            this.pictureBox28.TabIndex = 123;
+            this.pictureBox28.TabStop = false;
+            this.pictureBox28.Tag = "spikeBounce";
+            this.pictureBox28.Visible = false;
+            // 
             // wallDoor
             // 
             this.wallDoor.BackColor = System.Drawing.Color.White;
@@ -789,10 +820,6 @@ namespace INF164HWAss1
             this.spike9.Heading = 'r';
             this.spike9.Image = global::INF164HWAss1.Properties.Resources.spike;
             this.spike9.Location = new System.Drawing.Point(1368, 305);
-            this.spike9.MaxX = 1516;
-            this.spike9.MaxY = 0;
-            this.spike9.MinX = 1314;
-            this.spike9.MinY = 0;
             this.spike9.Name = "spike9";
             this.spike9.Size = new System.Drawing.Size(40, 40);
             this.spike9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -841,10 +868,6 @@ namespace INF164HWAss1
             this.spike8.Heading = 'd';
             this.spike8.Image = global::INF164HWAss1.Properties.Resources.spike;
             this.spike8.Location = new System.Drawing.Point(618, 255);
-            this.spike8.MaxX = 0;
-            this.spike8.MaxY = 575;
-            this.spike8.MinX = 0;
-            this.spike8.MinY = 255;
             this.spike8.Name = "spike8";
             this.spike8.Size = new System.Drawing.Size(40, 40);
             this.spike8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -938,10 +961,6 @@ namespace INF164HWAss1
             this.spike7.Heading = 'r';
             this.spike7.Image = global::INF164HWAss1.Properties.Resources.spike;
             this.spike7.Location = new System.Drawing.Point(357, 74);
-            this.spike7.MaxX = 1830;
-            this.spike7.MaxY = 0;
-            this.spike7.MinX = 360;
-            this.spike7.MinY = 0;
             this.spike7.Name = "spike7";
             this.spike7.Size = new System.Drawing.Size(70, 70);
             this.spike7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1034,11 +1053,7 @@ namespace INF164HWAss1
             // 
             this.spike6.Heading = 'u';
             this.spike6.Image = global::INF164HWAss1.Properties.Resources.spike;
-            this.spike6.Location = new System.Drawing.Point(96, 542);
-            this.spike6.MaxX = 0;
-            this.spike6.MaxY = 535;
-            this.spike6.MinX = 0;
-            this.spike6.MinY = 20;
+            this.spike6.Location = new System.Drawing.Point(96, 456);
             this.spike6.Name = "spike6";
             this.spike6.Size = new System.Drawing.Size(70, 70);
             this.spike6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1077,11 +1092,7 @@ namespace INF164HWAss1
             // 
             this.spike5.Heading = 'r';
             this.spike5.Image = global::INF164HWAss1.Properties.Resources.spike;
-            this.spike5.Location = new System.Drawing.Point(20, 635);
-            this.spike5.MaxX = 890;
-            this.spike5.MaxY = 0;
-            this.spike5.MinX = 20;
-            this.spike5.MinY = 0;
+            this.spike5.Location = new System.Drawing.Point(185, 628);
             this.spike5.Name = "spike5";
             this.spike5.Size = new System.Drawing.Size(70, 70);
             this.spike5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1094,10 +1105,6 @@ namespace INF164HWAss1
             this.spike4.Heading = 'd';
             this.spike4.Image = global::INF164HWAss1.Properties.Resources.spike;
             this.spike4.Location = new System.Drawing.Point(1120, 733);
-            this.spike4.MaxX = 0;
-            this.spike4.MaxY = 970;
-            this.spike4.MinX = 0;
-            this.spike4.MinY = 740;
             this.spike4.Name = "spike4";
             this.spike4.Size = new System.Drawing.Size(40, 40);
             this.spike4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1150,7 +1157,7 @@ namespace INF164HWAss1
             this.lblExit.ForeColor = System.Drawing.Color.White;
             this.lblExit.Location = new System.Drawing.Point(1804, 0);
             this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(105, 14);
+            this.lblExit.Size = new System.Drawing.Size(134, 16);
             this.lblExit.TabIndex = 74;
             this.lblExit.Text = "Escape to exit";
             // 
@@ -1248,10 +1255,6 @@ namespace INF164HWAss1
             this.spike2.Heading = 'd';
             this.spike2.Image = global::INF164HWAss1.Properties.Resources.spike;
             this.spike2.Location = new System.Drawing.Point(535, 745);
-            this.spike2.MaxX = 0;
-            this.spike2.MaxY = 980;
-            this.spike2.MinX = 0;
-            this.spike2.MinY = 745;
             this.spike2.Name = "spike2";
             this.spike2.Size = new System.Drawing.Size(70, 70);
             this.spike2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1263,11 +1266,7 @@ namespace INF164HWAss1
             // 
             this.spike1.Heading = 'l';
             this.spike1.Image = global::INF164HWAss1.Properties.Resources.spike;
-            this.spike1.Location = new System.Drawing.Point(1830, 635);
-            this.spike1.MaxX = 1830;
-            this.spike1.MaxY = 0;
-            this.spike1.MinX = 960;
-            this.spike1.MinY = 0;
+            this.spike1.Location = new System.Drawing.Point(1830, 628);
             this.spike1.Name = "spike1";
             this.spike1.Size = new System.Drawing.Size(70, 70);
             this.spike1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1306,16 +1305,13 @@ namespace INF164HWAss1
             this.noCoinSpawn9.Text = "noCoinSpawn9";
             this.noCoinSpawn9.Visible = false;
             // 
-            // endTimer
-            // 
-            this.endTimer.Interval = 2;
-            this.endTimer.Tick += new System.EventHandler(this.endTimer_Tick);
-            // 
             // Runner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.pictureBox28);
+            this.Controls.Add(this.pictureBox27);
             this.Controls.Add(this.lblRestart);
             this.Controls.Add(this.pbGameOver);
             this.Controls.Add(this.lblDoor);
@@ -1457,6 +1453,8 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDoor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wallDoor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall41)).EndInit();
@@ -1622,5 +1620,7 @@ namespace INF164HWAss1
         private Wall wallDoor;
         private System.Windows.Forms.Label lblDoor;
         private System.Windows.Forms.Timer endTimer;
+        private System.Windows.Forms.PictureBox pictureBox27;
+        private System.Windows.Forms.PictureBox pictureBox28;
     }
 }

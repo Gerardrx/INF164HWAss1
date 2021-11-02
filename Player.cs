@@ -190,7 +190,7 @@ namespace INF164HWAss1
             }
         }
 
-        //called by method above
+        //called by method above above
         private void moveRight()
         {
             Location = new Point(Location.X + XForce, Location.Y);//+

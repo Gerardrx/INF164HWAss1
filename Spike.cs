@@ -8,10 +8,6 @@ namespace INF164HWAss1
     {
         //private variables
         private char heading;
-        private int minX;
-        private int maxX;
-        private int minY;
-        private int maxY;
         private int speed;
 
         public Spike()
@@ -34,46 +30,6 @@ namespace INF164HWAss1
         // used to make own properties that are editable in the design view
         [Category("Travel")]
         [Browsable(true)]
-        [Description("Min X Coordinate")]
-        public int MinX // min xcord to travel to
-        {
-            get => minX;
-            set => minX = value;
-        }
-
-        // used to make own properties that are editable in the design view
-        [Category("Travel")]
-        [Browsable(true)]
-        [Description("Max X Coordinate")]
-        public int MaxX // max xcord to travel to
-        {
-            get => maxX;
-            set => maxX = value;
-        }
-
-        // used to make own properties that are editable in the design view
-        [Category("Travel")]
-        [Browsable(true)]
-        [Description("Min Y Coordinate")]
-        public int MinY // min ycord to travel to
-        {
-            get => minY;
-            set => minY = value;
-        }
-
-        // used to make own properties that are editable in the design view
-        [Category("Travel")]
-        [Browsable(true)]
-        [Description("Max Y Coordinate")]
-        public int MaxY // max ycord to travel to
-        {
-            get => maxY;
-            set => maxY = value;
-        }
-
-        //bla bla bla
-        [Category("Travel")]
-        [Browsable(true)]
         [Description("Travel Speed")]
         public int Speed //rate of travel
         {
@@ -83,49 +39,13 @@ namespace INF164HWAss1
 
         public void moveSpike() // move spike based on heading and speed
         {
-            if (Heading == 'u')
+            if (heading == 'u' || heading == 'd')
             {
-                if (Location.Y > MinY)
-                {
-                    Location = new Point(Location.X, Location.Y - speed);
-                }
-                else
-                {
-                    Heading = 'd';
-                }
+                Location = new Point(Location.X, Location.Y + speed);
             }
-            else if (Heading == 'd')
+            else if (heading == 'l' || heading == 'r')
             {
-                if (Location.Y < MaxY)
-                {
-                    Location = new Point(Location.X, Location.Y + speed);
-                }
-                else
-                {
-                    Heading = 'u';
-                }
-            }
-            else if (Heading == 'l')
-            {
-                if (Location.X > MinX)
-                {
-                    Location = new Point(Location.X - speed, Location.Y);
-                }
-                else
-                {
-                    Heading = 'r';
-                }
-            }
-            else if (Heading == 'r')
-            {
-                if (Location.X < MaxX)
-                {
-                    Location = new Point(Location.X + speed, Location.Y);
-                }
-                else
-                {
-                    Heading = 'l';
-                }
+                Location = new Point(Location.X + speed, Location.Y);
             }
         }
     }
