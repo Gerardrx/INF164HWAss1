@@ -54,10 +54,12 @@ namespace INF164HWAss1
             this.lblEcape = new System.Windows.Forms.Label();
             this.WizzardTimer = new System.Windows.Forms.Timer(this.components);
             this.PoofTimer2 = new System.Windows.Forms.Timer(this.components);
+            this.wizzard1 = new INF164HWAss1.Wizzard();
             this.wall2 = new INF164HWAss1.Wall();
             this.wall1 = new INF164HWAss1.Wall();
             this.wall3 = new INF164HWAss1.Wall();
-            this.wizzard1 = new INF164HWAss1.Wizzard();
+            this.wall4 = new INF164HWAss1.Wall();
+            this.LevelChangeTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthLoss)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).BeginInit();
@@ -65,10 +67,11 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pbKeys1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKeys2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPressStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wizzard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wizzard1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall4)).BeginInit();
             this.SuspendLayout();
             // 
             // GameTimer
@@ -288,8 +291,20 @@ namespace INF164HWAss1
             // 
             // PoofTimer2
             // 
-            this.PoofTimer2.Interval = 10;
+            this.PoofTimer2.Interval = 1000;
             this.PoofTimer2.Tick += new System.EventHandler(this.PoofTimer2_Tick);
+            // 
+            // wizzard1
+            // 
+            this.wizzard1.BackColor = System.Drawing.Color.Transparent;
+            this.wizzard1.Image = global::INF164HWAss1.Properties.Resources.Wizzard;
+            this.wizzard1.Location = new System.Drawing.Point(1023, 322);
+            this.wizzard1.Name = "wizzard1";
+            this.wizzard1.Size = new System.Drawing.Size(61, 62);
+            this.wizzard1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.wizzard1.TabIndex = 94;
+            this.wizzard1.TabStop = false;
+            this.wizzard1.YForce = 0;
             // 
             // wall2
             // 
@@ -316,17 +331,18 @@ namespace INF164HWAss1
             this.wall3.TabIndex = 107;
             this.wall3.TabStop = false;
             // 
-            // wizzard1
+            // wall4
             // 
-            this.wizzard1.BackColor = System.Drawing.Color.Transparent;
-            this.wizzard1.Image = global::INF164HWAss1.Properties.Resources.Toaddude;
-            this.wizzard1.Location = new System.Drawing.Point(1023, 322);
-            this.wizzard1.Name = "wizzard1";
-            this.wizzard1.Size = new System.Drawing.Size(61, 62);
-            this.wizzard1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.wizzard1.TabIndex = 94;
-            this.wizzard1.TabStop = false;
-            this.wizzard1.YForce = 0;
+            this.wall4.Location = new System.Drawing.Point(53, 46);
+            this.wall4.Name = "wall4";
+            this.wall4.Size = new System.Drawing.Size(10, 338);
+            this.wall4.TabIndex = 108;
+            this.wall4.TabStop = false;
+            // 
+            // LevelChangeTimer
+            // 
+            this.LevelChangeTimer.Interval = 1000;
+            this.LevelChangeTimer.Tick += new System.EventHandler(this.LevelChangeTimer_Tick);
             // 
             // Arcade
             // 
@@ -354,6 +370,7 @@ namespace INF164HWAss1
             this.Controls.Add(this.wall2);
             this.Controls.Add(this.wall1);
             this.Controls.Add(this.wall3);
+            this.Controls.Add(this.wall4);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -370,10 +387,11 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.pbKeys1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbKeys2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPressStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wizzard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wizzard1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,5 +425,7 @@ namespace INF164HWAss1
         private System.Windows.Forms.Timer WizzardTimer;
         private Wall wall3;
         private System.Windows.Forms.Timer PoofTimer2;
+        private Wall wall4;
+        private System.Windows.Forms.Timer LevelChangeTimer;
     }
 }

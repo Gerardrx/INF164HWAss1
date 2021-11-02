@@ -22,8 +22,10 @@ namespace INF164HWAss1
         private int timePoof2 = 0;
         private int timeWiz = 0;
         private int hearts = 3;
+        private int time = 0;
         private Panel boxCol = new Panel();
         private Panel boxCol2 = new Panel();
+        private Panel boxCol3 = new Panel();
         private Random rand = new Random();
 
         public Arcade()
@@ -71,17 +73,18 @@ namespace INF164HWAss1
             lblCoins.Text = "" + coin;
 
             //Call methods
-            checkWizzPigeonCollisions();
-            removePoof();
-            removePoof2();
             MoveFireball();
-            checkCollisionsFirePigeon();
             MovePigeons();
             WizMovement();
             WizzWall();
-            health();
+            checkWizzPigeonCollisions();
             checkPigeonColWall();
-
+            checkFireballWallCollisions();
+            checkCollisionsFirePigeon();
+            health();
+            removePoof();
+            removePoof2();
+ 
             //stop wizzard movment 
             if (wizzard1.YForce != 0)
             {
@@ -159,15 +162,18 @@ namespace INF164HWAss1
         //Pigeon methods ************************************************
         private void SpawnPigeon() //create pigeons
         {
-            Pigeon p = new Pigeon();
-            p.Location = new Point(0, rand.Next(45, 313));
-            p.speed = rand.Next(1, 4);
-
-            while (checkSpawn(p)) //check for other pigeons spawn collision
+            if(time < 5)
             {
-                p.Location = new Point(0, rand.Next(37, 322));
+                Pigeon p = new Pigeon();
+                p.Location = new Point(0, rand.Next(45, 313));
+                p.speed = rand.Next(1, 2);
+
+                while (checkSpawn(p)) //check for other pigeons spawn collision
+                {
+                    p.Location = new Point(0, rand.Next(37, 322));
+                }
+                pbBackground.Controls.Add(p);
             }
-            pbBackground.Controls.Add(p);
         }
 
         private void MovePigeons() //move towards wizzard
@@ -184,6 +190,11 @@ namespace INF164HWAss1
         private void SpawnTimer_Tick(object sender, EventArgs e)
         {
             SpawnPigeon(); //timer interval sets amount spawned
+        }
+
+        private void LevelChangeTimer_Tick(object sender, EventArgs e)
+        {
+
         }
 
         //FireBall methods ***********************************************
@@ -311,6 +322,28 @@ namespace INF164HWAss1
             }
         }
 
+        private void checkFireballWallCollisions() //check for col of fireball and wall
+        {
+            foreach (Control f in pbBackground.Controls)
+            {
+                if (f is Fireball)
+                {
+                    foreach (Control w in this.Controls)
+                    {
+                        if (w is Wall)
+                        {
+                            boxCol3.Size = f.Size;
+                            boxCol3.Location = new Point(f.Location.X + 4, f.Location.Y);
+                            if (boxCol3.Bounds.IntersectsWith(wall4.Bounds))
+                            {
+                                f.Dispose();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         private void WizzWall() //set movemnt area of wizzard
         {
             foreach (Control w in this.Controls)
@@ -377,7 +410,7 @@ namespace INF164HWAss1
 
         private void removePoof2() //pigeon and wall
         {
-            if (timePoof2 == 25)
+            if (timePoof2 == 1)
             {
                 foreach (Control p in pbBackground.Controls)
                 {
