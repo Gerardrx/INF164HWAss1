@@ -55,7 +55,6 @@ namespace INF164HWAss1
             this.lblT = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.startTimer = new System.Windows.Forms.Timer(this.components);
-            this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.delayTimer = new System.Windows.Forms.Timer(this.components);
             this.tlpIcons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImg1)).BeginInit();
@@ -335,10 +334,6 @@ namespace INF164HWAss1
             // 
             this.startTimer.Tick += new System.EventHandler(this.startTimer_Tick);
             // 
-            // gameTimer
-            // 
-            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
-            // 
             // delayTimer
             // 
             this.delayTimer.Interval = 500;
@@ -408,7 +403,6 @@ namespace INF164HWAss1
         private System.Windows.Forms.Label lblT;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer startTimer;
-        private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Timer delayTimer;
     }
 }

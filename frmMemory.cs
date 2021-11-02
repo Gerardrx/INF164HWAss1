@@ -9,7 +9,6 @@ namespace INF164HWAss1
     {
         int placeHolder1 = 0, placeHolder2 = 0;
         int ss = 4, ms = 6;
-        int startTime = 0;
         int correctCounter = 0;
         int incorrectGuesses = 0;
         public int memoryScore = 10;
@@ -63,6 +62,7 @@ namespace INF164HWAss1
 
         private void frmSleep_Load(object sender, EventArgs e)
         {
+            correctCounter = 0;
             //Assigns an image to each index of the array
             imageArr[0] = Properties.Resources.resized_Bulbasaur;
             imageArr[1] = Properties.Resources.resized_Charmander;
@@ -180,11 +180,9 @@ namespace INF164HWAss1
 
             if (correctCounter == 8)
             {
-                gameTimer.Enabled = false;
                 MessageBox.Show("Congratulations! you finished with " + incorrectGuesses + 
                     " incorrect guesses!");
                 calculateScore();
-
             }
 
 
@@ -221,14 +219,10 @@ namespace INF164HWAss1
             ms--;
             if (ms == 0)
             {
-                ms = 6;
-                ss--;
-
-                if (ss == 0)
+                if (ss == 0 && ms == 0)
                 {
-                    ms = 0;
                     startTimer.Enabled = false;
-                    gameTimer.Enabled = true;
+                    
                     lblTime.Visible = false;
                     for (int i = 0; i < 16; i++) //Resets all images and enables pictureboxes
                     {
@@ -236,25 +230,18 @@ namespace INF164HWAss1
                         tlpIcons.Controls[i].Enabled = true;
                     }
                 }
+
+                ms = 6;
+                ss--;
+
+                
             }
 
             lblTime.Text = ss + ":" + ms;
 
             
         }
-        private void gameTimer_Tick(object sender, EventArgs e)
-        {
-            //Handles the milliseconds and seconds contained within the label for time
-            ms--;
-            if (ms == 0)
-            {
-                ms = 0;
-                ss--;
-            }
-
-            lblTime.Text = ss + ":" + ms;
-
-        }
+        
 
         private void delay()//Delays everything by a certain number of milliseconds
         {
