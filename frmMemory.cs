@@ -12,7 +12,7 @@ namespace INF164HWAss1
         int startTime = 0;
         int correctCounter = 0;
         int incorrectGuesses = 0;
-        public int sleepScore = 10;
+        public int memoryScore = 10;
 
         Random rand = new Random();
         PictureBox imgPlaceHolder1, imgPlaceHolder2;
@@ -181,7 +181,8 @@ namespace INF164HWAss1
             if (correctCounter == 8)
             {
                 gameTimer.Enabled = false;
-                MessageBox.Show("Congratulations! you win");
+                MessageBox.Show("Congratulations! you finished with " + incorrectGuesses + 
+                    " incorrect guesses!");
                 calculateScore();
 
             }
@@ -225,6 +226,7 @@ namespace INF164HWAss1
 
                 if (ss == 0)
                 {
+                    ms = 0;
                     startTimer.Enabled = false;
                     gameTimer.Enabled = true;
                     lblTime.Visible = false;
@@ -264,24 +266,27 @@ namespace INF164HWAss1
                 Application.DoEvents();
         }
 
-        private void calculateScore()
+        private void calculateScore()//Calculates the game score
         {
             switch (incorrectGuesses)
             {
                 case int n when (n == 0):
-                    sleepScore = 5;
+                    memoryScore = 10;
                     break;
                 case int n when (n > 0 && n < 3):
-                    sleepScore = 4;
+                    memoryScore = 9;
                     break;
                 case int n when (n > 2 && n < 7):
-                    sleepScore = 3;
+                    memoryScore = 8;
                     break;
                 case int n when (n > 6 && n < 15):
-                    sleepScore = 2;
+                    memoryScore = 7;
                     break;
-                case int n when (n >= 15):
-                    sleepScore = 9;
+                case int n when (n >= 15 && n <26):
+                    memoryScore = 6;
+                    break;
+                case int n when (n > 26):
+                    memoryScore = 5;
                     break;
             }
         }

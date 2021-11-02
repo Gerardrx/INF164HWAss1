@@ -168,7 +168,7 @@ namespace INF164HWAss1
                 frmSleep s = new frmSleep();
                 this.Hide();
                 s.ShowDialog();
-                this.memory = s.sleepScore;
+                this.memory = s.memoryScore;
                 this.Show();
                 OpenFadeTimer.Start();
                 UpdateScore();
