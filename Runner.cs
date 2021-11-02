@@ -39,9 +39,11 @@ namespace INF164HWAss1
 
             if (Screen.PrimaryScreen.WorkingArea.Size.Height < 1040 || Screen.PrimaryScreen.WorkingArea.Size.Width < 1920)
             {
-                MessageBox.Show("Your screen resolution is to low to render the game properly" +
+                MessageBox.Show("Your screen resolution is to low to render the game properly or your scale is more than 100%" +
                     "\nIf your screen is not 1920x1080 or more you cant play this game" +
-                    "\nPlease use a different monitor or have someone else grade this part of the game" +
+                    "\nIf your screen is 1920x1080 and you are seeing this message" +
+                    "\nset your scale to 100% in widows display settings"+
+                    "\nElse please use a different monitor or have someone else grade this part of the game" +
                     "\nIve tried everything to fix this, but since the game mechanics are" +
                     "\ntied to screen size there is nothing I can do");
             }
@@ -251,7 +253,7 @@ namespace INF164HWAss1
             }
         }
 
-        private void BounceSpikes()
+        private void BounceSpikes() // bounce turn around spike
         {
             foreach (Control s in this.Controls)
             {
@@ -265,7 +267,7 @@ namespace INF164HWAss1
                             {
                                 if (w.Bounds.IntersectsWith(s.Bounds))
                                 {
-                                    ((Spike)s).Speed = -((Spike)s).Speed;
+                                    ((Spike)s).Speed = -((Spike)s).Speed; //see
                                 }
                             }
                         }
@@ -328,7 +330,7 @@ namespace INF164HWAss1
         private void collideDoor()
         {
             BoxCollider.Size = player1.Size;
-            BoxCollider.Location = new Point(player1.Location.X - 6, player1.Location.Y);
+            BoxCollider.Location = new Point(player1.Location.X - 6, player1.Location.Y); 
             if (pbDoor.Bounds.IntersectsWith(BoxCollider.Bounds) && floor)
             {
                 lblDoor.Visible = true;

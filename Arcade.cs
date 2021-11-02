@@ -483,6 +483,11 @@ namespace INF164HWAss1
                     {
                         return true;
                     }
+
+                    if(n.speed > ((Pigeon)p).speed && p.Location.Y - p.Height < n.Location.Y && p.Location.Y + p.Width > n.Location.Y )
+                    {
+                        return true;
+                    }
                 }
             }
             return false;
@@ -513,6 +518,7 @@ namespace INF164HWAss1
                     }
                 }
             }
+            timePoof = 0;
         }
 
         private void removePoof2() //pigeon and wall
@@ -530,6 +536,7 @@ namespace INF164HWAss1
                     }
                 }
             }
+            timePoof2 = 0;
         }
 
         //Key register methods ***************************************************************
