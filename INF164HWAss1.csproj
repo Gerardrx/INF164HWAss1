@@ -353,6 +353,9 @@
     <None Include="Resources\Bird1.gif" />
     <None Include="Resources\Bird2.gif" />
     <None Include="Resources\Bird3.gif" />
+    <None Include="Resources\BirdEasy.gif" />
+    <None Include="Resources\BirdMed.gif" />
+    <None Include="Resources\BirdHard.gif" />
     <Content Include="Resources\ChickManWoman.png" />
     <None Include="Resources\Tunnel.gif" />
     <None Include="Resources\DogNose.png" />

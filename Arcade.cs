@@ -23,10 +23,12 @@ namespace INF164HWAss1
         private int timeWiz = 0;
         private int hearts = 3;
         private int time = 0;
+        private int switchTo = 0;
         private Panel boxCol = new Panel();
         private Panel boxCol2 = new Panel();
         private Panel boxCol3 = new Panel();
         private Random rand = new Random();
+        private Random rand2 = new Random();
 
         public Arcade()
         {
@@ -104,8 +106,9 @@ namespace INF164HWAss1
             //start game timer
             GameTimer.Start();
             SpawnTimer.Start();
+            LevelChangeTimer.Start();
 
-            if(!GameOver)
+            if (!GameOver)
             {
                 //Display Controls
                 pbKeys1.Visible = true;
@@ -162,11 +165,11 @@ namespace INF164HWAss1
         //Pigeon methods ************************************************
         private void SpawnPigeon() //create pigeons
         {
-            if(time < 5)
+            if (time <= 15)
             {
                 Pigeon p = new Pigeon();
-                p.Location = new Point(0, rand.Next(45, 313));
-                p.speed = rand.Next(1, 2);
+                p.Location = new Point(0, rand.Next(45, 310));
+                p.speed = 1;
 
                 while (checkSpawn(p)) //check for other pigeons spawn collision
                 {
@@ -174,6 +177,110 @@ namespace INF164HWAss1
                 }
                 pbBackground.Controls.Add(p);
             }
+            else if (time > 15 && time <= 25)
+            {
+                switchTo = rand2.Next(1, 2);
+
+                if (switchTo == 1)
+                {
+                    Pigeon p = new Pigeon();
+                    p.Location = new Point(0, rand.Next(45, 310));
+                    p.speed = rand.Next(1, 2);
+
+                    while (checkSpawn(p)) //check for other pigeons spawn collision
+                    {
+                        p.Location = new Point(0, rand.Next(37, 322));
+                    }
+                    pbBackground.Controls.Add(p);
+                }
+                else
+                {
+                    Pigeon p = new Pigeon();
+                    p.Location = new Point(0, rand.Next(45, 310));
+                    p.speed = rand.Next(2, 3);
+                    p.Image = global::INF164HWAss1.Properties.Resources.BirdEasy;
+
+                    while (checkSpawn(p)) //check for other pigeons spawn collision
+                    {
+                        p.Location = new Point(0, rand.Next(37, 322));
+                    }
+                    pbBackground.Controls.Add(p);
+                }
+            }
+            else if (time > 25 && time <= 35)
+            {
+                switchTo = rand2.Next(1, 3);
+
+                if (switchTo == 1)
+                {
+                    Pigeon p = new Pigeon();
+                    p.Location = new Point(0, rand.Next(45, 310));
+                    p.speed = rand.Next(2, 3);
+
+                    while (checkSpawn(p)) //check for other pigeons spawn collision
+                    {
+                        p.Location = new Point(0, rand.Next(37, 322));
+                    }
+                    pbBackground.Controls.Add(p);
+                }
+                else if (switchTo == 2)
+                {
+                    Pigeon p = new Pigeon();
+                    p.Location = new Point(0, rand.Next(45, 310));
+                    p.speed = rand.Next(3, 4);
+                    p.Image = global::INF164HWAss1.Properties.Resources.BirdEasy;
+
+                    while (checkSpawn(p)) //check for other pigeons spawn collision
+                    {
+                        p.Location = new Point(0, rand.Next(37, 322));
+                    }
+                    pbBackground.Controls.Add(p);
+                }
+                else
+                {
+                    Pigeon p = new Pigeon();
+                    p.Location = new Point(0, rand.Next(45, 310));
+                    p.speed = 4;
+                    p.Image = global::INF164HWAss1.Properties.Resources.BirdMed;
+
+                    while (checkSpawn(p)) //check for other pigeons spawn collision
+                    {
+                        p.Location = new Point(0, rand.Next(37, 322));
+                    }
+                    pbBackground.Controls.Add(p);
+                }
+            }
+            else
+            {
+                switchTo = rand2.Next(2, 3);
+                
+                if (switchTo == 2)
+                {
+                    Pigeon p = new Pigeon();
+                    p.Location = new Point(0, rand.Next(45, 310));
+                    p.speed = rand.Next(3, 4);
+                    p.Image = global::INF164HWAss1.Properties.Resources.BirdMed;
+
+                    while (checkSpawn(p)) //check for other pigeons spawn collision
+                    {
+                        p.Location = new Point(0, rand.Next(37, 322));
+                    }
+                    pbBackground.Controls.Add(p);
+                }
+                else
+                {
+                    Pigeon p = new Pigeon();
+                    p.Location = new Point(0, rand.Next(45, 310));
+                    p.speed = rand.Next(5, 7);
+                    p.Image = global::INF164HWAss1.Properties.Resources.BirdHard;
+
+                    while (checkSpawn(p)) //check for other pigeons spawn collision
+                    {
+                        p.Location = new Point(0, rand.Next(37, 322));
+                    }
+                    pbBackground.Controls.Add(p);
+                }
+            } 
         }
 
         private void MovePigeons() //move towards wizzard
@@ -194,7 +301,7 @@ namespace INF164HWAss1
 
         private void LevelChangeTimer_Tick(object sender, EventArgs e)
         {
-
+            time++;
         }
 
         //FireBall methods ***********************************************
@@ -505,6 +612,7 @@ namespace INF164HWAss1
             pbPressStart.Visible = true;
             lblStartPress.Visible = true;
             hearts = 3;
+            time = 0;
             pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
 
             foreach (Control p in pbBackground.Controls)
@@ -532,6 +640,7 @@ namespace INF164HWAss1
             GameTimer.Stop();
             FireballTimer.Stop();
             SpawnTimer.Stop();
+            LevelChangeTimer.Stop();
 
             GameOverArcade g = new GameOverArcade();
             g.Show();

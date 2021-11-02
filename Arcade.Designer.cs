@@ -37,7 +37,6 @@ namespace INF164HWAss1
             this.lblCoins = new System.Windows.Forms.Label();
             this.lblWizz = new System.Windows.Forms.Label();
             this.MoveTimer = new System.Windows.Forms.Timer(this.components);
-            this.pbHealthLoss = new System.Windows.Forms.PictureBox();
             this.pbCoin = new System.Windows.Forms.PictureBox();
             this.pbHearts = new System.Windows.Forms.PictureBox();
             this.pbBackground = new System.Windows.Forms.PictureBox();
@@ -54,13 +53,12 @@ namespace INF164HWAss1
             this.lblEcape = new System.Windows.Forms.Label();
             this.WizzardTimer = new System.Windows.Forms.Timer(this.components);
             this.PoofTimer2 = new System.Windows.Forms.Timer(this.components);
+            this.LevelChangeTimer = new System.Windows.Forms.Timer(this.components);
             this.wizzard1 = new INF164HWAss1.Wizzard();
             this.wall2 = new INF164HWAss1.Wall();
             this.wall1 = new INF164HWAss1.Wall();
             this.wall3 = new INF164HWAss1.Wall();
             this.wall4 = new INF164HWAss1.Wall();
-            this.LevelChangeTimer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pbHealthLoss)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
@@ -120,17 +118,6 @@ namespace INF164HWAss1
             // 
             this.MoveTimer.Interval = 10;
             // 
-            // pbHealthLoss
-            // 
-            this.pbHealthLoss.BackColor = System.Drawing.Color.Transparent;
-            this.pbHealthLoss.Image = global::INF164HWAss1.Properties.Resources.output_onlinegiftools__1_;
-            this.pbHealthLoss.Location = new System.Drawing.Point(206, 371);
-            this.pbHealthLoss.Name = "pbHealthLoss";
-            this.pbHealthLoss.Size = new System.Drawing.Size(90, 91);
-            this.pbHealthLoss.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbHealthLoss.TabIndex = 92;
-            this.pbHealthLoss.TabStop = false;
-            // 
             // pbCoin
             // 
             this.pbCoin.BackColor = System.Drawing.Color.Transparent;
@@ -180,7 +167,7 @@ namespace INF164HWAss1
             // 
             // SpawnTimer
             // 
-            this.SpawnTimer.Interval = 5000;
+            this.SpawnTimer.Interval = 3000;
             this.SpawnTimer.Tick += new System.EventHandler(this.SpawnTimer_Tick);
             // 
             // FireballTimer
@@ -294,6 +281,11 @@ namespace INF164HWAss1
             this.PoofTimer2.Interval = 1000;
             this.PoofTimer2.Tick += new System.EventHandler(this.PoofTimer2_Tick);
             // 
+            // LevelChangeTimer
+            // 
+            this.LevelChangeTimer.Interval = 1000;
+            this.LevelChangeTimer.Tick += new System.EventHandler(this.LevelChangeTimer_Tick);
+            // 
             // wizzard1
             // 
             this.wizzard1.BackColor = System.Drawing.Color.Transparent;
@@ -339,11 +331,6 @@ namespace INF164HWAss1
             this.wall4.TabIndex = 108;
             this.wall4.TabStop = false;
             // 
-            // LevelChangeTimer
-            // 
-            this.LevelChangeTimer.Interval = 1000;
-            this.LevelChangeTimer.Tick += new System.EventHandler(this.LevelChangeTimer_Tick);
-            // 
             // Arcade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -362,7 +349,6 @@ namespace INF164HWAss1
             this.Controls.Add(this.pbKeys2);
             this.Controls.Add(this.lblControls1);
             this.Controls.Add(this.pbKeys1);
-            this.Controls.Add(this.pbHealthLoss);
             this.Controls.Add(this.lblCoins);
             this.Controls.Add(this.pbCoin);
             this.Controls.Add(this.pbHearts);
@@ -380,7 +366,6 @@ namespace INF164HWAss1
             this.Text = "Arcade";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Arcade_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Arcade_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.pbHealthLoss)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).EndInit();
@@ -406,7 +391,6 @@ namespace INF164HWAss1
         private System.Windows.Forms.PictureBox pbCoin;
         private System.Windows.Forms.Label lblWizz;
         private System.Windows.Forms.Timer MoveTimer;
-        private System.Windows.Forms.PictureBox pbHealthLoss;
         private System.Windows.Forms.PictureBox pbBackground;
         private Wizzard wizzard1;
         private System.Windows.Forms.PictureBox pbKeys1;
