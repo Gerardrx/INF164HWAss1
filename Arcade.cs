@@ -179,7 +179,7 @@ namespace INF164HWAss1
             }
             else if (time > 15 && time <= 25)
             {
-                switchTo = rand2.Next(1, 2);
+                switchTo = rand2.Next(1, 3);
 
                 if (switchTo == 1)
                 {
@@ -209,7 +209,7 @@ namespace INF164HWAss1
             }
             else if (time > 25 && time <= 35)
             {
-                switchTo = rand2.Next(1, 3);
+                switchTo = rand2.Next(1, 4);
 
                 if (switchTo == 1)
                 {
@@ -252,7 +252,7 @@ namespace INF164HWAss1
             }
             else
             {
-                switchTo = rand2.Next(2, 3);
+                switchTo = rand2.Next(2, 4);
                 
                 if (switchTo == 2)
                 {
