@@ -272,7 +272,7 @@ namespace INF164HWAss1
             this.lblRestart.BackColor = System.Drawing.Color.Transparent;
             this.lblRestart.Font = new System.Drawing.Font("Unispace", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestart.ForeColor = System.Drawing.Color.Red;
-            this.lblRestart.Location = new System.Drawing.Point(1863, 1046);
+            this.lblRestart.Location = new System.Drawing.Point(611, 720);
             this.lblRestart.Name = "lblRestart";
             this.lblRestart.Size = new System.Drawing.Size(871, 176);
             this.lblRestart.TabIndex = 118;
@@ -297,7 +297,7 @@ namespace INF164HWAss1
             // 
             this.pbGameOver.BackColor = System.Drawing.Color.Black;
             this.pbGameOver.Image = global::INF164HWAss1.Properties.Resources.GamesOver;
-            this.pbGameOver.Location = new System.Drawing.Point(1808, 1011);
+            this.pbGameOver.Location = new System.Drawing.Point(12, 12);
             this.pbGameOver.Name = "pbGameOver";
             this.pbGameOver.Size = new System.Drawing.Size(1897, 1054);
             this.pbGameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -319,7 +319,7 @@ namespace INF164HWAss1
             // pictureBox26
             // 
             this.pictureBox26.Image = global::INF164HWAss1.Properties.Resources.floorSpikeDown1;
-            this.pictureBox26.Location = new System.Drawing.Point(1036, 463);
+            this.pictureBox26.Location = new System.Drawing.Point(1051, 463);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(34, 20);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -725,7 +725,7 @@ namespace INF164HWAss1
             this.noCoinSpawn5.BackColor = System.Drawing.Color.Red;
             this.noCoinSpawn5.Location = new System.Drawing.Point(811, 463);
             this.noCoinSpawn5.Name = "noCoinSpawn5";
-            this.noCoinSpawn5.Size = new System.Drawing.Size(224, 35);
+            this.noCoinSpawn5.Size = new System.Drawing.Size(241, 35);
             this.noCoinSpawn5.TabIndex = 103;
             this.noCoinSpawn5.Text = "noCoinSpawn5";
             this.noCoinSpawn5.Visible = false;
@@ -784,7 +784,7 @@ namespace INF164HWAss1
             this.wall41.BackColor = System.Drawing.Color.Turquoise;
             this.wall41.Location = new System.Drawing.Point(1070, 412);
             this.wall41.Name = "wall41";
-            this.wall41.Size = new System.Drawing.Size(15, 86);
+            this.wall41.Size = new System.Drawing.Size(15, 51);
             this.wall41.TabIndex = 92;
             this.wall41.TabStop = false;
             // 
@@ -1045,7 +1045,7 @@ namespace INF164HWAss1
             this.wall17.BackColor = System.Drawing.Color.Turquoise;
             this.wall17.Location = new System.Drawing.Point(0, 280);
             this.wall17.Name = "wall17";
-            this.wall17.Size = new System.Drawing.Size(85, 15);
+            this.wall17.Size = new System.Drawing.Size(91, 15);
             this.wall17.TabIndex = 47;
             this.wall17.TabStop = false;
             // 
@@ -1053,7 +1053,7 @@ namespace INF164HWAss1
             // 
             this.spike6.Heading = 'u';
             this.spike6.Image = global::INF164HWAss1.Properties.Resources.spike;
-            this.spike6.Location = new System.Drawing.Point(96, 456);
+            this.spike6.Location = new System.Drawing.Point(96, 388);
             this.spike6.Name = "spike6";
             this.spike6.Size = new System.Drawing.Size(70, 70);
             this.spike6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1193,7 +1193,7 @@ namespace INF164HWAss1
             this.wall5.BackColor = System.Drawing.Color.Turquoise;
             this.wall5.Location = new System.Drawing.Point(0, 712);
             this.wall5.Name = "wall5";
-            this.wall5.Size = new System.Drawing.Size(850, 15);
+            this.wall5.Size = new System.Drawing.Size(897, 15);
             this.wall5.TabIndex = 21;
             this.wall5.TabStop = false;
             // 
@@ -1310,8 +1310,6 @@ namespace INF164HWAss1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.pictureBox28);
-            this.Controls.Add(this.pictureBox27);
             this.Controls.Add(this.lblRestart);
             this.Controls.Add(this.pbGameOver);
             this.Controls.Add(this.lblDoor);
@@ -1413,6 +1411,8 @@ namespace INF164HWAss1
             this.Controls.Add(this.noCoinSpawn8);
             this.Controls.Add(this.noCoinSpawn9);
             this.Controls.Add(this.pbDoor);
+            this.Controls.Add(this.pictureBox28);
+            this.Controls.Add(this.pictureBox27);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
