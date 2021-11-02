@@ -481,6 +481,14 @@ namespace INF164HWAss1
                     p.Dispose();
                 }
             }
+
+            foreach (Control f in pbBackground.Controls)
+            {
+                if (f is Fireball)
+                {
+                    f.Dispose();
+                }
+            }
         }
 
         private void gameOver() //end of game
