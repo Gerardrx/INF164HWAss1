@@ -15,8 +15,8 @@ namespace INF164HWAss1
         private bool down = false;
         private bool shoot = false;
         private bool shooting = false;
-        private bool enter = false;
         private bool why = false;
+        private bool GameOver = false;
         private int buffTime;
         private int timePoof = 0;
         private int timePoof2 = 0;
@@ -102,12 +102,15 @@ namespace INF164HWAss1
             GameTimer.Start();
             SpawnTimer.Start();
 
-            //Display Controls
-            pbKeys1.Visible = true;
-            pbKeys2.Visible = true;
-            lblControls1.Visible = true;
-            lblWizz.Visible = true;
-            lblControls2.Visible = true;
+            if(!GameOver)
+            {
+                //Display Controls
+                pbKeys1.Visible = true;
+                pbKeys2.Visible = true;
+                lblControls1.Visible = true;
+                lblWizz.Visible = true;
+                lblControls2.Visible = true;
+            }
             pbPressStart.Visible = false;
             lblStartPress.Visible = false;
         }
@@ -302,11 +305,6 @@ namespace INF164HWAss1
                             p.Dispose();
                             WizzardTimer.Start();
                             hearts--;
-
-                            if (coin != 0) //no negative coins
-                            {
-                                coin--;
-                            }
                         }
                     }
                 }
@@ -389,11 +387,6 @@ namespace INF164HWAss1
                         PoofTimer2.Stop();
                         timePoof2 = 0;
                         why = false;
-
-                        if(coin != 0)
-                        {
-                            coin--;
-                        }
                     }
                 }
             }
@@ -448,10 +441,6 @@ namespace INF164HWAss1
                 down = false;
                 wizzard1.YForce = 0;
             }
-            if (e.KeyCode == Keys.Enter)
-            {
-                enter = true;
-            }
             if (e.KeyCode == Keys.Escape)
             {
                 CloseFadeTimer.Start();
@@ -480,16 +469,33 @@ namespace INF164HWAss1
         private void restart() //restart game
         {
             // reset all to original positions
-            wizzard1.Location = new Point(1023, 322);
+            pbPressStart.Visible = true;
+            lblStartPress.Visible = true;
+            hearts = 3;
+            pbHearts.Image = global::INF164HWAss1.Properties.Resources.heart_3;
+
+            foreach (Control p in pbBackground.Controls)
+            {
+                if (p is Pigeon)
+                {
+                    p.Dispose();
+                }
+            }
         }
 
         private void gameOver() //end of game
         {
+            GameOver = true;
+            restart();
+
             GameTimer.Stop();
             FireballTimer.Stop();
+            SpawnTimer.Stop();
 
             GameOverArcade g = new GameOverArcade();
             g.Show();
+            g.coins = coin;
+            g.updateCoin();
         }
 
         //*******************************************************************
