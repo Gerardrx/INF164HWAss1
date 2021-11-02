@@ -251,7 +251,7 @@ namespace INF164HWAss1
             }
         }
 
-        private void BounceSpikes()
+        private void BounceSpikes() // bounce turn around spike
         {
             foreach (Control s in this.Controls)
             {
@@ -265,7 +265,7 @@ namespace INF164HWAss1
                             {
                                 if (w.Bounds.IntersectsWith(s.Bounds))
                                 {
-                                    ((Spike)s).Speed = -((Spike)s).Speed;
+                                    ((Spike)s).Speed = -((Spike)s).Speed; //see
                                 }
                             }
                         }
@@ -328,7 +328,7 @@ namespace INF164HWAss1
         private void collideDoor()
         {
             BoxCollider.Size = player1.Size;
-            BoxCollider.Location = new Point(player1.Location.X - 6, player1.Location.Y);
+            BoxCollider.Location = new Point(player1.Location.X - 6, player1.Location.Y); 
             if (pbDoor.Bounds.IntersectsWith(BoxCollider.Bounds) && floor)
             {
                 lblDoor.Visible = true;
