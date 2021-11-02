@@ -15,15 +15,16 @@ namespace INF164HWAss1
         public int speed;
         public bool dead = false;
         private bool stop = false;
+        private Random rand = new Random();
 
         public Pigeon()
         {
             InitializeComponent();
 
-            Image = global::INF164HWAss1.Properties.Resources.pidgion;
+            Image = global::INF164HWAss1.Properties.Resources.Pigeon;
             Visible = true;
             SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            Size = new Size(77, 71);
+            Size = new Size(60, 61);
             BackColor = Color.Transparent;
         }
 

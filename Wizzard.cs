@@ -23,7 +23,7 @@ namespace INF164HWAss1
         {
             InitializeComponent();
 
-            Image = global::INF164HWAss1.Properties.Resources.Toaddude;
+            Image = global::INF164HWAss1.Properties.Resources.Wizzard;
         }
 
         public int YForce

@@ -327,6 +327,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background Moving Pic.gif" />
+    <None Include="Resources\Wizzard.gif" />
     <None Include="Resources\Press Startgif.gif" />
     <None Include="Resources\Space bar.png" />
     <None Include="Resources\Snail.gif" />
@@ -394,6 +395,8 @@
     <None Include="Resources\GameOverWiz.gif" />
     <None Include="Resources\OverGame.gif" />
     <None Include="Resources\GameOverWiz1.gif" />
+    <None Include="Resources\Pigeon.gif" />
+    <None Include="Resources\Fireballgif.gif" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

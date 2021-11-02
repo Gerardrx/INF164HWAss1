@@ -18,10 +18,10 @@ namespace INF164HWAss1
         {
             InitializeComponent();
 
-            Image = global::INF164HWAss1.Properties.Resources.Fire;
+            Image = global::INF164HWAss1.Properties.Resources.Fireballgif;
             Visible = true;
-            SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            Size = new Size(59, 62);
+            SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            Size = new Size(50, 39);
             BackColor = Color.Transparent;
         }
 
