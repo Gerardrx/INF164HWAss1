@@ -365,7 +365,7 @@ namespace INF164HWAss1
             // pbWizzard
             // 
             this.pbWizzard.BackColor = System.Drawing.Color.Transparent;
-            this.pbWizzard.Image = global::INF164HWAss1.Properties.Resources.Toaddude;
+            this.pbWizzard.Image = global::INF164HWAss1.Properties.Resources.Wizzard;
             this.pbWizzard.Location = new System.Drawing.Point(792, 162);
             this.pbWizzard.Name = "pbWizzard";
             this.pbWizzard.Size = new System.Drawing.Size(55, 56);

@@ -152,7 +152,7 @@ namespace INF164HWAss1
             {
                 wizzard1.SizeMode = PictureBoxSizeMode.CenterImage;
                 wizzard1.Size = new Size(61, 62);
-                wizzard1.Image = global::INF164HWAss1.Properties.Resources.Toaddude;
+                wizzard1.Image = global::INF164HWAss1.Properties.Resources.Wizzard;
                 wizzard1.stopDown = false;
                 wizzard1.stopUp = false;
             }

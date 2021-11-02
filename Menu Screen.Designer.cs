@@ -165,7 +165,7 @@ namespace INF164HWAss1
             // pbPic
             // 
             this.pbPic.BackColor = System.Drawing.Color.Transparent;
-            this.pbPic.Image = global::INF164HWAss1.Properties.Resources.Toaddude1;
+            this.pbPic.Image = global::INF164HWAss1.Properties.Resources.Wizzard;
             this.pbPic.Location = new System.Drawing.Point(497, 388);
             this.pbPic.Name = "pbPic";
             this.pbPic.Size = new System.Drawing.Size(75, 64);

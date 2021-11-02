@@ -18,7 +18,7 @@ namespace INF164HWAss1
         {
             InitializeComponent();
 
-            Image = global::INF164HWAss1.Properties.Resources.Fireballgif;
+            Image = global::INF164HWAss1.Properties.Resources.Fire;
             Visible = true;
             SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             Size = new Size(50, 39);

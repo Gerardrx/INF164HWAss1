@@ -73,66 +73,6 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bicLady {
-            get {
-                object obj = ResourceManager.GetObject("bicLady", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bicMan {
-            get {
-                object obj = ResourceManager.GetObject("bicMan", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bikeMan {
-            get {
-                object obj = ResourceManager.GetObject("bikeMan", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Bird1 {
-            get {
-                object obj = ResourceManager.GetObject("Bird1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Bird2 {
-            get {
-                object obj = ResourceManager.GetObject("Bird2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Bird3 {
-            get {
-                object obj = ResourceManager.GetObject("Bird3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap BirdEasy {
             get {
                 object obj = ResourceManager.GetObject("BirdEasy", resourceCulture);
@@ -183,36 +123,6 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bomba {
-            get {
-                object obj = ResourceManager.GetObject("bomba", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bomba1 {
-            get {
-                object obj = ResourceManager.GetObject("bomba1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bomba2 {
-            get {
-                object obj = ResourceManager.GetObject("bomba2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Book {
             get {
                 object obj = ResourceManager.GetObject("Book", resourceCulture);
@@ -233,29 +143,9 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cf4154334c36bc1196b11d729c3a77d4 {
-            get {
-                object obj = ResourceManager.GetObject("cf4154334c36bc1196b11d729c3a77d4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Chick {
             get {
                 object obj = ResourceManager.GetObject("Chick", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ChickManWoman {
-            get {
-                object obj = ResourceManager.GetObject("ChickManWoman", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,26 +166,6 @@ namespace INF164HWAss1.Properties {
         internal static System.Drawing.Bitmap Custom_Edited___Pokemon_Route_101 {
             get {
                 object obj = ResourceManager.GetObject("Custom Edited - Pokemon Route 101", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Disco {
-            get {
-                object obj = ResourceManager.GetObject("Disco", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap DogNose {
-            get {
-                object obj = ResourceManager.GetObject("DogNose", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -402,16 +272,6 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Fireballgif {
-            get {
-                object obj = ResourceManager.GetObject("Fireballgif", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap floorSpike {
             get {
                 object obj = ResourceManager.GetObject("floorSpike", resourceCulture);
@@ -502,26 +362,6 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap GameOver {
-            get {
-                object obj = ResourceManager.GetObject("GameOver", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap GameOverWiz {
-            get {
-                object obj = ResourceManager.GetObject("GameOverWiz", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap GameOverWiz1 {
             get {
                 object obj = ResourceManager.GetObject("GameOverWiz1", resourceCulture);
@@ -535,16 +375,6 @@ namespace INF164HWAss1.Properties {
         internal static System.Drawing.Bitmap GamesOver {
             get {
                 object obj = ResourceManager.GetObject("GamesOver", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap GIfBoigif {
-            get {
-                object obj = ResourceManager.GetObject("GIfBoigif", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -605,16 +435,6 @@ namespace INF164HWAss1.Properties {
         internal static System.Drawing.Bitmap Instructions {
             get {
                 object obj = ResourceManager.GetObject("Instructions", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Loading {
-            get {
-                object obj = ResourceManager.GetObject("Loading", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -712,16 +532,6 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Menu_Background1 {
-            get {
-                object obj = ResourceManager.GetObject("Menu_Background1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap MenuExtraPic {
             get {
                 object obj = ResourceManager.GetObject("MenuExtraPic", resourceCulture);
@@ -772,16 +582,6 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap OverGame {
-            get {
-                object obj = ResourceManager.GetObject("OverGame", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Pengu {
             get {
                 object obj = ResourceManager.GetObject("Pengu", resourceCulture);
@@ -802,26 +602,6 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PenguMan {
-            get {
-                object obj = ResourceManager.GetObject("PenguMan", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap piano {
-            get {
-                object obj = ResourceManager.GetObject("piano", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Pic3 {
             get {
                 object obj = ResourceManager.GetObject("Pic3", resourceCulture);
@@ -832,29 +612,9 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pidgion {
-            get {
-                object obj = ResourceManager.GetObject("pidgion", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Pigeon {
             get {
                 object obj = ResourceManager.GetObject("Pigeon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PlantBoi {
-            get {
-                object obj = ResourceManager.GetObject("PlantBoi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1032,49 +792,9 @@ namespace INF164HWAss1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Sword {
-            get {
-                object obj = ResourceManager.GetObject("Sword", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Toaddude {
-            get {
-                object obj = ResourceManager.GetObject("Toaddude", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Toaddude1 {
-            get {
-                object obj = ResourceManager.GetObject("Toaddude1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap toot {
             get {
                 object obj = ResourceManager.GetObject("toot", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Tunnel {
-            get {
-                object obj = ResourceManager.GetObject("Tunnel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
