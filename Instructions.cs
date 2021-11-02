@@ -6,6 +6,16 @@ namespace INF164HWAss1
 {
     public partial class frmInstructions : Form
     {
+
+        //private variables
+        private int i = 0;
+        private int k = 0;
+        private string[] InstructionLine;
+        private string line;
+        private string buffer;
+        private char[] charArr;
+        private bool typing = false;
+
         public frmInstructions()
         {
             InitializeComponent();
@@ -20,15 +30,6 @@ namespace INF164HWAss1
             InstructionLine = rtbInstructions.Lines;
             rtbInstructions.Text = "_______________Press Space Bar________________\n";
         }
-
-        //Declare variables
-        int i = 0;
-        int k = 0;
-        string[] InstructionLine;
-        string line;
-        string buffer;
-        char[] charArr;
-        bool typing = false;
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -77,7 +78,7 @@ namespace INF164HWAss1
 
         }
 
-        private void TypeTimer_Tick(object sender, EventArgs e)
+        private void TypeTimer_Tick(object sender, EventArgs e) //type out words from txt file
         {
             if (k < charArr.Length)
             {
@@ -94,7 +95,7 @@ namespace INF164HWAss1
 
         }
 
-        private String toEnd()
+        private String toEnd() //if press then jump to end of line
         {
             string temp = "";
             for (int j = k; j < charArr.Length; j++)

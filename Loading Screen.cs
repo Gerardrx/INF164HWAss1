@@ -72,7 +72,7 @@ namespace INF164HWAss1
             }
         }
 
-        static bool FontInstalled()
+        static bool FontInstalled() //check if font is installed
         {
             using (var ifc = new InstalledFontCollection())
             {
