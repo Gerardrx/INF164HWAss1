@@ -13,7 +13,7 @@ namespace INF164HWAss1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Arcade());
+            Application.Run(new frmLoading());
         }
     }
 }

@@ -16,6 +16,13 @@ namespace INF164HWAss1
         public EditForm()
         {
             InitializeComponent();
+
+            pbBook.Controls.Add(this.lblAuthor);
+            pbBook.Controls.Add(this.lblDate);
+            pbBook.Controls.Add(this.lblGenre);
+            pbBook.Controls.Add(this.lblHeading);
+            pbBook.Controls.Add(this.lblPrice);
+            pbBook.Controls.Add(this.lblTitle);
         }
         public BookClass editobject;
 

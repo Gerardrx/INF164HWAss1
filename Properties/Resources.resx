@@ -133,14 +133,14 @@
   <data name="bomba" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bomba.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="doorOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaskMan\doorOpen.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="piano" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\piano.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DogNose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DogNose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="resized-Pikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resized-Pikachu.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="floorSpikeStrip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\floorSpikeStrip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,9 +172,6 @@
   <data name="Heart-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Heart-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="heart-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heart-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="heart-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heart-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -198,6 +195,9 @@
   </data>
   <data name="Bird3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bird3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resized-Clefairy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resized-Clefairy.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Custom Edited - Pokemon Route 101" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Custom Edited - Pokemon Route 101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,9 +235,6 @@
   <data name="maskdudeJumpRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\maskdudeJumpRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BirdMed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BirdMed.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="floorSpikeStripLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\floorSpikeStripLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -250,8 +247,8 @@
   <data name="maskdudeJumpLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\maskdudeJumpLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="resized-Squirtle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resized-Squirtle.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="floorSpikeDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\floorSpikeDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -267,6 +264,9 @@
   </data>
   <data name="floorSpikeDown1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\floorSpikeDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bicLady" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bicLady.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pic3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pic3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,6 +295,12 @@
   <data name="Fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fire.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SmartScore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmartScore.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ezgif-3-18f8aee5b97c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ezgif-3-18f8aee5b97c.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Dub_Techno___Selection_016" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dub Techno - Selection 016.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -310,9 +316,6 @@
   <data name="floorSpike" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\floorSpike.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GIfBoigif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bird3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="GameOverWiz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GameOverWiz.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -322,11 +325,8 @@
   <data name="Fireballgif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fireballgif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OverGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OverGame.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="resized-Clefairy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resized-Clefairy.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="resized-Pikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resized-Pikachu.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blueborder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blueborder.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,8 +343,8 @@
   <data name="GameOver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\GameOver.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bicLady" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bicLady.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="resized-Squirtle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resized-Squirtle.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WelcomWave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WelcomWave.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -352,8 +352,8 @@
   <data name="floorSpikeLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaskMan\floorSpikeLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SmartScore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SmartScore.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="heart-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heart-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BMO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BMO.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -388,6 +388,9 @@
   <data name="bomba1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bomba.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BookShelf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BookShelf.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Snail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Snail.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -400,23 +403,29 @@
   <data name="Toaddude" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Toaddude.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BirdHard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BirdHard.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="resized-Rattata" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resized-Rattata.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="output-onlinepngtools (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\output-onlinepngtools (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doorOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MaskMan\doorOpen.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Instructions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Instructions.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ezgif-3-18f8aee5b97c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ezgif-3-18f8aee5b97c.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="OverGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OverGame.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GIfBoigif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bird3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Background Moving Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background Moving Pic1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Instructions" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Instructions.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BirdMed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BirdMed.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pengu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pengu.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -424,7 +433,7 @@
   <data name="Star" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Star.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BirdHard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BirdHard.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="output-onlinepngtools (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\output-onlinepngtools (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

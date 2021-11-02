@@ -356,6 +356,8 @@
     <None Include="Resources\BirdEasy.gif" />
     <None Include="Resources\BirdMed.gif" />
     <None Include="Resources\BirdHard.gif" />
+    <None Include="Resources\Book.png" />
+    <None Include="Resources\BookShelf.jpg" />
     <Content Include="Resources\ChickManWoman.png" />
     <None Include="Resources\Tunnel.gif" />
     <None Include="Resources\DogNose.png" />
@@ -400,6 +402,7 @@
     <None Include="Resources\GameOverWiz1.gif" />
     <None Include="Resources\Pigeon.gif" />
     <None Include="Resources\Fireballgif.gif" />
+    <None Include="Resources\output-onlinepngtools %282%29.png" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

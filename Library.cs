@@ -25,6 +25,21 @@ namespace INF164HWAss1
             ReadDataFromFile(bookList);
             dgvBookCollection.DataSource = bookList;
             bookCount = dgvBookCollection.Rows.Count;
+
+            pbBook.Controls.Add(this.lblHeading);
+            pbBook.Controls.Add(this.lblTitle);
+            pbBook.Controls.Add(this.lblAuthor);
+            pbBook.Controls.Add(this.lblDate);
+            pbBook.Controls.Add(this.lblGenre);
+            pbBook.Controls.Add(this.lblCost);
+            pbBook.Controls.Add(this.btnAddToCollection);
+            pbBook.Controls.Add(this.btnBack);
+            pbBook.Controls.Add(this.btnEdit);
+            pbBook.Controls.Add(this.btnRefund);
+            pbBook.Controls.Add(this.btnBooksPerGenre);
+            pbBook.Controls.Add(this.dgvBookCollection);
+
+            dgvBookCollection.ForeColor = System.Drawing.Color.Black;
         }
 
         

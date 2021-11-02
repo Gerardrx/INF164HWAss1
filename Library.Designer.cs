@@ -31,18 +31,17 @@ namespace INF164HWAss1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Library));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAddToCollection = new System.Windows.Forms.Button();
+            this.nudCost = new System.Windows.Forms.NumericUpDown();
             this.cmbxGenre = new System.Windows.Forms.ComboBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.txtTitle = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblCost = new System.Windows.Forms.Label();
+            this.lblGenre = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblAuthor = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.btnBooksPerGenre = new System.Windows.Forms.Button();
             this.btnRefund = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
@@ -50,50 +49,37 @@ namespace INF164HWAss1
             this.dgvBookCollection = new System.Windows.Forms.DataGridView();
             this.OpenFadeTimer = new System.Windows.Forms.Timer(this.components);
             this.CloseFadeTimer = new System.Windows.Forms.Timer(this.components);
-            this.nudCost = new System.Windows.Forms.NumericUpDown();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBookCollection)).BeginInit();
+            this.pbBook = new System.Windows.Forms.PictureBox();
+            this.lblHeading = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookCollection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBook)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.nudCost);
-            this.groupBox1.Controls.Add(this.btnAddToCollection);
-            this.groupBox1.Controls.Add(this.cmbxGenre);
-            this.groupBox1.Controls.Add(this.dateTimePicker);
-            this.groupBox1.Controls.Add(this.txtAuthor);
-            this.groupBox1.Controls.Add(this.txtTitle);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(42, 34);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Size = new System.Drawing.Size(1150, 391);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Purchase New Book";
             // 
             // btnAddToCollection
             // 
             this.btnAddToCollection.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnAddToCollection.Location = new System.Drawing.Point(592, 328);
-            this.btnAddToCollection.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAddToCollection.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddToCollection.ForeColor = System.Drawing.Color.Black;
+            this.btnAddToCollection.Location = new System.Drawing.Point(152, 288);
             this.btnAddToCollection.Name = "btnAddToCollection";
-            this.btnAddToCollection.Size = new System.Drawing.Size(506, 44);
+            this.btnAddToCollection.Size = new System.Drawing.Size(332, 27);
             this.btnAddToCollection.TabIndex = 10;
             this.btnAddToCollection.Text = "Add to collection ";
             this.btnAddToCollection.UseVisualStyleBackColor = false;
             this.btnAddToCollection.Click += new System.EventHandler(this.btnAddToCollection_Click);
             // 
+            // nudCost
+            // 
+            this.nudCost.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudCost.Location = new System.Drawing.Point(309, 235);
+            this.nudCost.Name = "nudCost";
+            this.nudCost.Size = new System.Drawing.Size(61, 23);
+            this.nudCost.TabIndex = 11;
+            // 
             // cmbxGenre
             // 
+            this.cmbxGenre.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxGenre.FormattingEnabled = true;
             this.cmbxGenre.Items.AddRange(new object[] {
             "Romance",
@@ -101,111 +87,105 @@ namespace INF164HWAss1
             "Mystery",
             "Horror",
             "Biography/ Autobiography"});
-            this.cmbxGenre.Location = new System.Drawing.Point(592, 219);
-            this.cmbxGenre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbxGenre.Location = new System.Drawing.Point(309, 198);
             this.cmbxGenre.Name = "cmbxGenre";
-            this.cmbxGenre.Size = new System.Drawing.Size(506, 33);
+            this.cmbxGenre.Size = new System.Drawing.Size(175, 23);
             this.cmbxGenre.TabIndex = 9;
             // 
             // dateTimePicker
             // 
             this.dateTimePicker.CalendarMonthBackground = System.Drawing.Color.DeepSkyBlue;
             this.dateTimePicker.CalendarTitleBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.dateTimePicker.Location = new System.Drawing.Point(592, 161);
-            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dateTimePicker.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Location = new System.Drawing.Point(309, 159);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(506, 31);
+            this.dateTimePicker.Size = new System.Drawing.Size(175, 23);
             this.dateTimePicker.TabIndex = 8;
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(592, 108);
-            this.txtAuthor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtAuthor.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAuthor.Location = new System.Drawing.Point(309, 120);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(506, 31);
+            this.txtAuthor.Size = new System.Drawing.Size(175, 23);
             this.txtAuthor.TabIndex = 6;
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(592, 52);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtTitle.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.Location = new System.Drawing.Point(309, 77);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(506, 31);
+            this.txtTitle.Size = new System.Drawing.Size(175, 23);
             this.txtTitle.TabIndex = 5;
             // 
-            // label5
+            // lblCost
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 281);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Book Cost";
+            this.lblCost.AutoSize = true;
+            this.lblCost.BackColor = System.Drawing.Color.Transparent;
+            this.lblCost.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCost.ForeColor = System.Drawing.Color.Black;
+            this.lblCost.Location = new System.Drawing.Point(157, 239);
+            this.lblCost.Name = "lblCost";
+            this.lblCost.Size = new System.Drawing.Size(79, 15);
+            this.lblCost.TabIndex = 4;
+            this.lblCost.Text = "Book Cost";
             // 
-            // label4
+            // lblGenre
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 223);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Genre";
+            this.lblGenre.AutoSize = true;
+            this.lblGenre.BackColor = System.Drawing.Color.Transparent;
+            this.lblGenre.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenre.ForeColor = System.Drawing.Color.Black;
+            this.lblGenre.Location = new System.Drawing.Point(157, 201);
+            this.lblGenre.Name = "lblGenre";
+            this.lblGenre.Size = new System.Drawing.Size(47, 15);
+            this.lblGenre.TabIndex = 3;
+            this.lblGenre.Text = "Genre";
             // 
-            // label3
+            // lblDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 167);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Published Date";
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.Black;
+            this.lblDate.Location = new System.Drawing.Point(157, 165);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(119, 15);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "Published Date";
             // 
-            // label2
+            // lblAuthor
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 111);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Author";
+            this.lblAuthor.AutoSize = true;
+            this.lblAuthor.BackColor = System.Drawing.Color.Transparent;
+            this.lblAuthor.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAuthor.ForeColor = System.Drawing.Color.Black;
+            this.lblAuthor.Location = new System.Drawing.Point(157, 123);
+            this.lblAuthor.Name = "lblAuthor";
+            this.lblAuthor.Size = new System.Drawing.Size(55, 15);
+            this.lblAuthor.TabIndex = 1;
+            this.lblAuthor.Text = "Author";
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 56);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Title";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnBooksPerGenre);
-            this.groupBox2.Controls.Add(this.btnRefund);
-            this.groupBox2.Controls.Add(this.btnBack);
-            this.groupBox2.Controls.Add(this.btnEdit);
-            this.groupBox2.Controls.Add(this.dgvBookCollection);
-            this.groupBox2.Location = new System.Drawing.Point(46, 448);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox2.Size = new System.Drawing.Size(1142, 602);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Book Collection";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblTitle.Location = new System.Drawing.Point(157, 80);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(47, 15);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Title";
             // 
             // btnBooksPerGenre
             // 
             this.btnBooksPerGenre.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnBooksPerGenre.Location = new System.Drawing.Point(636, 527);
-            this.btnBooksPerGenre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnBooksPerGenre.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBooksPerGenre.ForeColor = System.Drawing.Color.Black;
+            this.btnBooksPerGenre.Location = new System.Drawing.Point(560, 240);
             this.btnBooksPerGenre.Name = "btnBooksPerGenre";
-            this.btnBooksPerGenre.Size = new System.Drawing.Size(386, 41);
+            this.btnBooksPerGenre.Size = new System.Drawing.Size(257, 25);
             this.btnBooksPerGenre.TabIndex = 4;
             this.btnBooksPerGenre.Text = "Number of Books Per Genre";
             this.btnBooksPerGenre.UseVisualStyleBackColor = false;
@@ -214,10 +194,11 @@ namespace INF164HWAss1
             // btnRefund
             // 
             this.btnRefund.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnRefund.Location = new System.Drawing.Point(636, 417);
-            this.btnRefund.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnRefund.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefund.ForeColor = System.Drawing.Color.Black;
+            this.btnRefund.Location = new System.Drawing.Point(560, 186);
             this.btnRefund.Name = "btnRefund";
-            this.btnRefund.Size = new System.Drawing.Size(386, 41);
+            this.btnRefund.Size = new System.Drawing.Size(257, 25);
             this.btnRefund.TabIndex = 3;
             this.btnRefund.Text = "Refund Book Entry";
             this.btnRefund.UseVisualStyleBackColor = false;
@@ -226,10 +207,11 @@ namespace INF164HWAss1
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnBack.Location = new System.Drawing.Point(100, 527);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnBack.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.Black;
+            this.btnBack.Location = new System.Drawing.Point(560, 129);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(386, 41);
+            this.btnBack.Size = new System.Drawing.Size(257, 25);
             this.btnBack.TabIndex = 2;
             this.btnBack.Text = "Return to Home ";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -238,10 +220,11 @@ namespace INF164HWAss1
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnEdit.Location = new System.Drawing.Point(100, 417);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnEdit.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit.Location = new System.Drawing.Point(560, 75);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(386, 41);
+            this.btnEdit.Size = new System.Drawing.Size(257, 25);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edit Book Entry";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -250,15 +233,15 @@ namespace INF164HWAss1
             // dgvBookCollection
             // 
             this.dgvBookCollection.AllowUserToAddRows = false;
+            this.dgvBookCollection.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBookCollection.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             this.dgvBookCollection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBookCollection.GridColor = System.Drawing.Color.Cyan;
-            this.dgvBookCollection.Location = new System.Drawing.Point(14, 39);
-            this.dgvBookCollection.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvBookCollection.GridColor = System.Drawing.Color.Black;
+            this.dgvBookCollection.Location = new System.Drawing.Point(152, 333);
             this.dgvBookCollection.Name = "dgvBookCollection";
             this.dgvBookCollection.RowHeadersWidth = 62;
             this.dgvBookCollection.RowTemplate.Height = 28;
-            this.dgvBookCollection.Size = new System.Drawing.Size(1106, 350);
+            this.dgvBookCollection.Size = new System.Drawing.Size(703, 210);
             this.dgvBookCollection.TabIndex = 0;
             // 
             // OpenFadeTimer
@@ -271,46 +254,75 @@ namespace INF164HWAss1
             this.CloseFadeTimer.Interval = 10;
             this.CloseFadeTimer.Tick += new System.EventHandler(this.CloseFadeTimer_Tick_1);
             // 
-            // nudCost
+            // pbBook
             // 
-            this.nudCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudCost.Location = new System.Drawing.Point(592, 275);
-            this.nudCost.Name = "nudCost";
-            this.nudCost.Size = new System.Drawing.Size(506, 35);
-            this.nudCost.TabIndex = 11;
+            this.pbBook.BackColor = System.Drawing.Color.Transparent;
+            this.pbBook.Image = global::INF164HWAss1.Properties.Resources.Book;
+            this.pbBook.Location = new System.Drawing.Point(-1, 0);
+            this.pbBook.Name = "pbBook";
+            this.pbBook.Size = new System.Drawing.Size(1008, 672);
+            this.pbBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBook.TabIndex = 2;
+            this.pbBook.TabStop = false;
+            // 
+            // lblHeading
+            // 
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeading.Font = new System.Drawing.Font("Unispace", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.ForeColor = System.Drawing.Color.Black;
+            this.lblHeading.Location = new System.Drawing.Point(149, 36);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(161, 18);
+            this.lblHeading.TabIndex = 12;
+            this.lblHeading.Text = "Purchase New Book";
             // 
             // Library
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cyan;
-            this.ClientSize = new System.Drawing.Size(1254, 1097);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.BackgroundImage = global::INF164HWAss1.Properties.Resources.Pic3;
+            this.ClientSize = new System.Drawing.Size(1006, 669);
+            this.Controls.Add(this.btnRefund);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnBooksPerGenre);
+            this.Controls.Add(this.dgvBookCollection);
+            this.Controls.Add(this.btnAddToCollection);
+            this.Controls.Add(this.lblHeading);
+            this.Controls.Add(this.nudCost);
+            this.Controls.Add(this.cmbxGenre);
+            this.Controls.Add(this.dateTimePicker);
+            this.Controls.Add(this.txtAuthor);
+            this.Controls.Add(this.lblCost);
+            this.Controls.Add(this.lblGenre);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblAuthor);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.pbBook);
+            this.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Library";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBookCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookCollection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBook)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblCost;
+        private System.Windows.Forms.Label lblGenre;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblAuthor;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.DataGridView dgvBookCollection;
         private System.Windows.Forms.Button btnBooksPerGenre;
         private System.Windows.Forms.Button btnRefund;
@@ -324,5 +336,7 @@ namespace INF164HWAss1
         private System.Windows.Forms.Timer OpenFadeTimer;
         private System.Windows.Forms.Timer CloseFadeTimer;
         private System.Windows.Forms.NumericUpDown nudCost;
+        private System.Windows.Forms.PictureBox pbBook;
+        private System.Windows.Forms.Label lblHeading;
     }
 }

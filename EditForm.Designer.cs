@@ -30,7 +30,7 @@ namespace INF164HWAss1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nudEditCost = new System.Windows.Forms.NumericUpDown();
             this.btnEdit = new System.Windows.Forms.Button();
             this.cmbxGenre = new System.Windows.Forms.ComboBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -41,40 +41,29 @@ namespace INF164HWAss1
             this.lblDate = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.nudEditCost = new System.Windows.Forms.NumericUpDown();
-            this.groupBox1.SuspendLayout();
+            this.lblHeading = new System.Windows.Forms.Label();
+            this.pbBook = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudEditCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBook)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // nudEditCost
             // 
-            this.groupBox1.Controls.Add(this.nudEditCost);
-            this.groupBox1.Controls.Add(this.btnEdit);
-            this.groupBox1.Controls.Add(this.cmbxGenre);
-            this.groupBox1.Controls.Add(this.dateTimePicker);
-            this.groupBox1.Controls.Add(this.txtAuthor);
-            this.groupBox1.Controls.Add(this.txtTitle);
-            this.groupBox1.Controls.Add(this.lblPrice);
-            this.groupBox1.Controls.Add(this.lblGenre);
-            this.groupBox1.Controls.Add(this.lblDate);
-            this.groupBox1.Controls.Add(this.lblAuthor);
-            this.groupBox1.Controls.Add(this.lblTitle);
-            this.groupBox1.Location = new System.Drawing.Point(32, 44);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1282, 463);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Edit Book Information";
+            this.nudEditCost.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudEditCost.Location = new System.Drawing.Point(401, 222);
+            this.nudEditCost.Margin = new System.Windows.Forms.Padding(2);
+            this.nudEditCost.Name = "nudEditCost";
+            this.nudEditCost.Size = new System.Drawing.Size(238, 23);
+            this.nudEditCost.TabIndex = 11;
             // 
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnEdit.Location = new System.Drawing.Point(774, 390);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(401, 253);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(476, 48);
+            this.btnEdit.Size = new System.Drawing.Size(238, 25);
             this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Edit Entry";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -82,6 +71,7 @@ namespace INF164HWAss1
             // 
             // cmbxGenre
             // 
+            this.cmbxGenre.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbxGenre.FormattingEnabled = true;
             this.cmbxGenre.Items.AddRange(new object[] {
             "Romance",
@@ -89,116 +79,163 @@ namespace INF164HWAss1
             "Mystery",
             "Horror",
             "Biography/ Autobiography"});
-            this.cmbxGenre.Location = new System.Drawing.Point(774, 269);
-            this.cmbxGenre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbxGenre.Location = new System.Drawing.Point(401, 190);
+            this.cmbxGenre.Margin = new System.Windows.Forms.Padding(2);
             this.cmbxGenre.Name = "cmbxGenre";
-            this.cmbxGenre.Size = new System.Drawing.Size(476, 33);
+            this.cmbxGenre.Size = new System.Drawing.Size(240, 23);
             this.cmbxGenre.TabIndex = 9;
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(774, 204);
-            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Location = new System.Drawing.Point(401, 156);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(476, 31);
+            this.dateTimePicker.Size = new System.Drawing.Size(240, 23);
             this.dateTimePicker.TabIndex = 8;
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(774, 140);
-            this.txtAuthor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAuthor.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAuthor.Location = new System.Drawing.Point(401, 123);
+            this.txtAuthor.Margin = new System.Windows.Forms.Padding(2);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(476, 31);
+            this.txtAuthor.Size = new System.Drawing.Size(240, 23);
             this.txtAuthor.TabIndex = 6;
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(774, 75);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTitle.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.Location = new System.Drawing.Point(401, 89);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(476, 31);
+            this.txtTitle.Size = new System.Drawing.Size(240, 23);
             this.txtTitle.TabIndex = 5;
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(86, 337);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrice.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.White;
+            this.lblPrice.Location = new System.Drawing.Point(127, 230);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(61, 25);
+            this.lblPrice.Size = new System.Drawing.Size(47, 15);
             this.lblPrice.TabIndex = 4;
             this.lblPrice.Text = "Price";
             // 
             // lblGenre
             // 
             this.lblGenre.AutoSize = true;
-            this.lblGenre.Location = new System.Drawing.Point(86, 273);
-            this.lblGenre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGenre.BackColor = System.Drawing.Color.Transparent;
+            this.lblGenre.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenre.ForeColor = System.Drawing.Color.White;
+            this.lblGenre.Location = new System.Drawing.Point(127, 197);
+            this.lblGenre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(71, 25);
+            this.lblGenre.Size = new System.Drawing.Size(47, 15);
             this.lblGenre.TabIndex = 3;
             this.lblGenre.Text = "Genre";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(86, 210);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(127, 164);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(57, 25);
+            this.lblDate.Size = new System.Drawing.Size(39, 15);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Date";
             // 
             // lblAuthor
             // 
             this.lblAuthor.AutoSize = true;
-            this.lblAuthor.Location = new System.Drawing.Point(86, 144);
-            this.lblAuthor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAuthor.BackColor = System.Drawing.Color.Transparent;
+            this.lblAuthor.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAuthor.ForeColor = System.Drawing.Color.White;
+            this.lblAuthor.Location = new System.Drawing.Point(127, 130);
+            this.lblAuthor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(75, 25);
+            this.lblAuthor.Size = new System.Drawing.Size(55, 15);
             this.lblAuthor.TabIndex = 1;
             this.lblAuthor.Text = "Author";
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(86, 79);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(127, 96);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(53, 25);
+            this.lblTitle.Size = new System.Drawing.Size(47, 15);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Title";
             // 
-            // nudEditCost
+            // lblHeading
             // 
-            this.nudEditCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudEditCost.Location = new System.Drawing.Point(774, 331);
-            this.nudEditCost.Name = "nudEditCost";
-            this.nudEditCost.Size = new System.Drawing.Size(476, 35);
-            this.nudEditCost.TabIndex = 11;
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeading.Font = new System.Drawing.Font("Unispace", 9.749999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.ForeColor = System.Drawing.Color.White;
+            this.lblHeading.Location = new System.Drawing.Point(85, 70);
+            this.lblHeading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(175, 15);
+            this.lblHeading.TabIndex = 12;
+            this.lblHeading.Text = "Edit Book Infromation";
+            // 
+            // pbBook
+            // 
+            this.pbBook.BackColor = System.Drawing.Color.Transparent;
+            this.pbBook.Image = global::INF164HWAss1.Properties.Resources.output_onlinepngtools__2_;
+            this.pbBook.Location = new System.Drawing.Point(0, -2);
+            this.pbBook.Name = "pbBook";
+            this.pbBook.Size = new System.Drawing.Size(396, 370);
+            this.pbBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBook.TabIndex = 13;
+            this.pbBook.TabStop = false;
             // 
             // EditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cyan;
-            this.ClientSize = new System.Drawing.Size(1366, 562);
-            this.Controls.Add(this.groupBox1);
+            this.BackgroundImage = global::INF164HWAss1.Properties.Resources.BookShelf;
+            this.ClientSize = new System.Drawing.Size(660, 355);
+            this.Controls.Add(this.nudEditCost);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.lblHeading);
+            this.Controls.Add(this.cmbxGenre);
+            this.Controls.Add(this.dateTimePicker);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.txtAuthor);
+            this.Controls.Add(this.lblAuthor);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.lblGenre);
+            this.Controls.Add(this.pbBook);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Entry";
             this.Load += new System.EventHandler(this.EditForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEditCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBook)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblGenre;
         private System.Windows.Forms.Label lblDate;
@@ -210,5 +247,7 @@ namespace INF164HWAss1
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.NumericUpDown nudEditCost;
+        private System.Windows.Forms.Label lblHeading;
+        private System.Windows.Forms.PictureBox pbBook;
     }
 }
