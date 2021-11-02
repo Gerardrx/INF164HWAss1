@@ -98,7 +98,7 @@ namespace INF164HWAss1
             // 
             // OpenFadeTimer
             // 
-            this.OpenFadeTimer.Interval = 10;
+            this.OpenFadeTimer.Interval = 5;
             this.OpenFadeTimer.Tick += new System.EventHandler(this.OpenFadeTimer_Tick);
             // 
             // CloseFadeTimer

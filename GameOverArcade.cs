@@ -12,8 +12,8 @@ namespace INF164HWAss1
 {
     public partial class GameOverArcade : Form
     {
-        //Private variables
-        private int coins;
+        //public variables
+        public int coins;
 
         public GameOverArcade()
         {
@@ -22,13 +22,17 @@ namespace INF164HWAss1
             Opacity = 0;
             OpenFadeTimer.Start();
 
-            this.Controls.Add(this.pbBackground);
             pbBackground.Controls.Add(this.lblGameover);
             pbBackground.Controls.Add(this.lblGameOverCoins);
             pbBackground.Controls.Add(this.pbGameOverCoins);
         }
 
-        private void GameOverArcade_KeyUp(object sender, KeyEventArgs e)
+        public void updateCoin() //get coin value from arcade
+        {
+            lblGameOverCoins.Text = "" + coins;
+        }
+
+        private void GameOverArcade_KeyUp(object sender, KeyEventArgs e) // key registration
         {
             if (e.KeyCode == Keys.Enter)
             {

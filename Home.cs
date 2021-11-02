@@ -9,12 +9,13 @@ namespace INF164HWAss1
 {
     public partial class frmHome : Form
     {
-
+        //private variables
         private int coins = 0;
         private int memory = 0;
         private int read = 0;
         private Save save;
         private int mood = 1;
+        private int i = 0;
 
         public frmHome()
         {
@@ -33,7 +34,6 @@ namespace INF164HWAss1
 
             UpdateScore();
 
-
             HappinessBarTimer.Start();
 
             //Tooltips for scores
@@ -50,12 +50,9 @@ namespace INF164HWAss1
             ToolTip1.SetToolTip(pgbHappinessBar, "Keep Mametchi happy by playing games and reading books.");
         }
 
-
-        int i = 0;
-
         private void btnBack_Click(object sender, EventArgs e)
         {
-            WriteDataToFile();
+            WriteDataToFile(); //save
             CloseFadeTimer.Start();
         }
 
@@ -64,7 +61,7 @@ namespace INF164HWAss1
             ArcadeFadeTimer.Start();
         }
 
-        private void HappinessBarTimer_Tick(object sender, EventArgs e)
+        private void HappinessBarTimer_Tick(object sender, EventArgs e) //set happyness picture by value
         {
             pgbHappinessBar.Value = i;
             i++;
@@ -127,7 +124,7 @@ namespace INF164HWAss1
         }
 
 
-        public void WriteDataToFile()
+        public void WriteDataToFile() //save scores
         {
             save.Book = read;
             save.Coins = coins;
@@ -139,7 +136,7 @@ namespace INF164HWAss1
             outFile.Close();
         }
 
-        public void ReadDataFromFile()
+        public void ReadDataFromFile() //read scores
         {
             try
             {
@@ -214,31 +211,6 @@ namespace INF164HWAss1
 
         }
 
-        private void OpenFadeTimer_Tick(object sender, EventArgs e)
-        {
-            //Fade in the form
-            if (Opacity == 1)
-            {
-                OpenFadeTimer.Stop();
-                btnArcade2.Enabled = true;
-                btnBack.Enabled = true;
-                btnArcade.Enabled = true;
-                btnLibrary.Enabled = true;
-                btnMemory.Enabled = true;
-            }
-            Opacity += 0.03;
-        }
-
-        private void CloseFadeTimer_Tick(object sender, EventArgs e)
-        {
-            if (Opacity == 0)
-            {
-                this.Dispose();
-                CloseFadeTimer.Stop();
-            }
-            Opacity -= 0.03;
-        }
-
         private void btnArcade2_Click(object sender, EventArgs e)
         {
             Runner r = new Runner();
@@ -259,6 +231,32 @@ namespace INF164HWAss1
             lblCoins.Text = "" + coins;
             lblIntelligenceScore.Text = "" + read;
             lblSleepScore.Text = "" + memory;
+        }
+
+        //***************************************************************************************
+        private void OpenFadeTimer_Tick(object sender, EventArgs e) //fade in 
+        {
+            //Fade in the form
+            if (Opacity == 1)
+            {
+                OpenFadeTimer.Stop();
+                btnArcade2.Enabled = true;
+                btnBack.Enabled = true;
+                btnArcade.Enabled = true;
+                btnLibrary.Enabled = true;
+                btnMemory.Enabled = true;
+            }
+            Opacity += 0.03;
+        }
+
+        private void CloseFadeTimer_Tick(object sender, EventArgs e) //fade out
+        {
+            if (Opacity == 0)
+            {
+                this.Dispose();
+                CloseFadeTimer.Stop();
+            }
+            Opacity -= 0.03;
         }
     }
 }

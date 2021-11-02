@@ -30,14 +30,14 @@ namespace INF164HWAss1
             pbBackground.Controls.Add(this.pbmanbic);
         }
 
-        private void btnPlay_Click(object sender, EventArgs e)
+        private void btnPlay_Click(object sender, EventArgs e) //go to home screen
         {
             HomeFadeTimer.Start();
         }
 
-        private void btnInstructions_Click(object sender, EventArgs e)
+        private void btnInstructions_Click(object sender, EventArgs e) //go to instructions screen
         {
-            InstructionsFadeTimer.Start();
+            InstructionsFadeTimer.Start(); 
         }
 
         private void btnClose_Click(object sender, EventArgs e)
