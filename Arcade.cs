@@ -16,6 +16,7 @@ namespace INF164HWAss1
         private bool shoot = false;
         private bool shooting = false;
         private bool enter = false;
+        private bool why = false;
         private int buffTime;
         private int timePoof = 0;
         private int timePoof2 = 0;
@@ -233,6 +234,12 @@ namespace INF164HWAss1
                             boxCol2.Location = new Point(p.Location.X + 4, p.Location.Y);
                             if (boxCol2.Bounds.IntersectsWith(wall3.Bounds))
                             {
+                                if(!why)
+                                {
+                                    hearts--;
+                                    why = true;
+                                }
+
                                 ((Pigeon)p).dead = true;
                                 ((Pigeon)p).Stop = true;
                                 PoofTimer2.Start();
@@ -255,11 +262,18 @@ namespace INF164HWAss1
                         {
                             if (f.Bounds.IntersectsWith(p.Bounds))
                             {
-                                ((Pigeon)p).Image = global::INF164HWAss1.Properties.Resources.Poof_Effect;
-                                ((Pigeon)p).dead = true;
-                                f.Dispose();
-                                PoofTimer.Start(); // create a poof effect
-                                coin++;
+                                if(!((Pigeon)p).dead)
+                                {
+                                    ((Pigeon)p).Image = global::INF164HWAss1.Properties.Resources.Poof_Effect;
+                                    ((Pigeon)p).dead = true;
+                                    f.Dispose();
+                                    PoofTimer.Start(); //create a poof effect
+                                    coin++;
+                                }
+                                else
+                                {
+                                    p.Dispose();
+                                }
                             }
                         }
                     }
@@ -365,7 +379,7 @@ namespace INF164HWAss1
 
         private void removePoof2() //pigeon and wall
         {
-            if (timePoof2 == 27)
+            if (timePoof2 == 25)
             {
                 foreach (Control p in pbBackground.Controls)
                 {
@@ -374,8 +388,7 @@ namespace INF164HWAss1
                         p.Dispose();
                         PoofTimer2.Stop();
                         timePoof2 = 0;
-
-                        hearts--;
+                        why = false;
 
                         if(coin != 0)
                         {
@@ -460,7 +473,7 @@ namespace INF164HWAss1
             else if (hearts == 0)
             {
                 pbHearts.Image = global::INF164HWAss1.Properties.Resources.Heart_0;
-                //gameOver();
+                gameOver();
             }
         }
 
@@ -474,6 +487,9 @@ namespace INF164HWAss1
         {
             GameTimer.Stop();
             FireballTimer.Stop();
+
+            GameOverArcade g = new GameOverArcade();
+            g.Show();
         }
 
         //*******************************************************************
