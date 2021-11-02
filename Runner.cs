@@ -251,15 +251,39 @@ namespace INF164HWAss1
             }
         }
 
+        private void BounceSpikes()
+        {
+            foreach (Control s in this.Controls)
+            {
+                if (s is Spike)
+                {
+                    foreach (Control w in this.Controls)
+                    {
+                        if (w is Wall || (w is PictureBox && (string)w.Tag == "spikeBounce") || w is Spike)
+                        {
+                            if (!w.Equals(s))
+                            {
+                                if (w.Bounds.IntersectsWith(s.Bounds))
+                                {
+                                    ((Spike)s).Speed = -((Spike)s).Speed;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         private void MoveAllSpikes() // moves spikes based on properties set in designer
         {
             foreach (Control g in this.Controls)
             {
                 if (g is Spike)
                 {
-                    ((Spike)g).moveSpike(); // move baba move
+                    ((Spike)g).moveSpike(); // move baba move                    
                 }
             }
+            BounceSpikes();
         }
 
         private void CheckDeath() // see if dead
