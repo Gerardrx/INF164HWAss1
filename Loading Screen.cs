@@ -7,6 +7,9 @@ namespace INF164HWAss1
 {
     public partial class frmLoading : Form
     {
+        //private variables
+        private int i = 0;
+
         public frmLoading()
         {
             InitializeComponent();
@@ -29,8 +32,6 @@ namespace INF164HWAss1
                     "\nplease ensure the .wav song is in the debug folder");
             }
         }
-
-        int i = 0;
 
         private void LoadingTimer_Tick(object sender, EventArgs e)
         {

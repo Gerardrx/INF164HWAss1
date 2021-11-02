@@ -88,6 +88,12 @@
     <Compile Include="Fireball.Designer.cs">
       <DependentUpon>Fireball.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameOverArcade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOverArcade.Designer.cs">
+      <DependentUpon>GameOverArcade.cs</DependentUpon>
+    </Compile>
     <Compile Include="NoCoinSpawn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOverArcade.resx">
+      <DependentUpon>GameOverArcade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

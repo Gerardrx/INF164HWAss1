@@ -11,9 +11,9 @@ namespace INF164HWAss1
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLoading());
+            Application.Run(new GameOverArcade());
         }
     }
 }
