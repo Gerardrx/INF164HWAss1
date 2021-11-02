@@ -58,6 +58,10 @@ namespace INF164HWAss1
             this.wall2 = new INF164HWAss1.Wall();
             this.wall1 = new INF164HWAss1.Wall();
             this.wall3 = new INF164HWAss1.Wall();
+            this.pbGameover = new System.Windows.Forms.PictureBox();
+            this.lblGameover = new System.Windows.Forms.Label();
+            this.lblGameOverCoins = new System.Windows.Forms.Label();
+            this.pbGameOverCoins = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthLoss)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHearts)).BeginInit();
@@ -69,6 +73,8 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameOverCoins)).BeginInit();
             this.SuspendLayout();
             // 
             // GameTimer
@@ -328,6 +334,57 @@ namespace INF164HWAss1
             this.wall3.TabIndex = 107;
             this.wall3.TabStop = false;
             // 
+            // pbGameover
+            // 
+            this.pbGameover.BackColor = System.Drawing.Color.Transparent;
+            this.pbGameover.Image = global::INF164HWAss1.Properties.Resources.GameOverWiz1;
+            this.pbGameover.Location = new System.Drawing.Point(0, 0);
+            this.pbGameover.Name = "pbGameover";
+            this.pbGameover.Size = new System.Drawing.Size(1200, 505);
+            this.pbGameover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbGameover.TabIndex = 108;
+            this.pbGameover.TabStop = false;
+            this.pbGameover.Visible = false;
+            // 
+            // lblGameover
+            // 
+            this.lblGameover.AutoSize = true;
+            this.lblGameover.BackColor = System.Drawing.Color.Transparent;
+            this.lblGameover.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameover.ForeColor = System.Drawing.Color.White;
+            this.lblGameover.Location = new System.Drawing.Point(482, 432);
+            this.lblGameover.Name = "lblGameover";
+            this.lblGameover.Size = new System.Drawing.Size(229, 19);
+            this.lblGameover.TabIndex = 109;
+            this.lblGameover.Text = "Press Enter to restart";
+            this.lblGameover.Visible = false;
+            // 
+            // lblGameOverCoins
+            // 
+            this.lblGameOverCoins.AutoSize = true;
+            this.lblGameOverCoins.BackColor = System.Drawing.Color.Transparent;
+            this.lblGameOverCoins.Font = new System.Drawing.Font("Unispace", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOverCoins.ForeColor = System.Drawing.Color.Yellow;
+            this.lblGameOverCoins.Location = new System.Drawing.Point(599, 384);
+            this.lblGameOverCoins.Name = "lblGameOverCoins";
+            this.lblGameOverCoins.Size = new System.Drawing.Size(25, 25);
+            this.lblGameOverCoins.TabIndex = 112;
+            this.lblGameOverCoins.Text = "0";
+            this.lblGameOverCoins.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblGameOverCoins.Visible = false;
+            // 
+            // pbGameOverCoins
+            // 
+            this.pbGameOverCoins.BackColor = System.Drawing.Color.Transparent;
+            this.pbGameOverCoins.Image = global::INF164HWAss1.Properties.Resources.coin;
+            this.pbGameOverCoins.Location = new System.Drawing.Point(561, 375);
+            this.pbGameOverCoins.Name = "pbGameOverCoins";
+            this.pbGameOverCoins.Size = new System.Drawing.Size(39, 39);
+            this.pbGameOverCoins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbGameOverCoins.TabIndex = 111;
+            this.pbGameOverCoins.TabStop = false;
+            this.pbGameOverCoins.Visible = false;
+            // 
             // Arcade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -354,6 +411,10 @@ namespace INF164HWAss1
             this.Controls.Add(this.wall2);
             this.Controls.Add(this.wall1);
             this.Controls.Add(this.wall3);
+            this.Controls.Add(this.lblGameOverCoins);
+            this.Controls.Add(this.pbGameOverCoins);
+            this.Controls.Add(this.lblGameover);
+            this.Controls.Add(this.pbGameover);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -374,6 +435,8 @@ namespace INF164HWAss1
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGameOverCoins)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,5 +470,9 @@ namespace INF164HWAss1
         private System.Windows.Forms.Timer WizzardTimer;
         private Wall wall3;
         private System.Windows.Forms.Timer PoofTimer2;
+        private System.Windows.Forms.PictureBox pbGameover;
+        private System.Windows.Forms.Label lblGameover;
+        private System.Windows.Forms.Label lblGameOverCoins;
+        private System.Windows.Forms.PictureBox pbGameOverCoins;
     }
 }

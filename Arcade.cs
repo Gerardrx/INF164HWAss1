@@ -48,6 +48,10 @@ namespace INF164HWAss1
             pbBackground.Controls.Add(this.lblControls1);
             pbBackground.Controls.Add(this.pbPressStart);
             pbPressStart.Controls.Add(this.lblStartPress);
+
+            pbGameover.Controls.Add(this.lblGameOverCoins);
+            pbGameover.Controls.Add(this.pbGameOverCoins);
+            pbGameover.Controls.Add(this.lblGameover);
         }
 
         private void GameTimer_Tick(object sender, EventArgs e)
@@ -399,10 +403,28 @@ namespace INF164HWAss1
                 down = false;
                 wizzard1.YForce = 0;
             }
-            if(e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Enter)
+            {
+                restart();
+            }
+            if (e.KeyCode == Keys.Escape)
             {
                 CloseFadeTimer.Start();
             }
+        }
+
+        private void restart()
+        {
+            pbGameover.Visible = false;
+            pbGameOverCoins.Visible = false;
+            lblGameOverCoins.Visible = false;
+            lblGameover.Visible = false;
+
+            pbGameover.SendToBack();
+            pbGameOverCoins.SendToBack();
+            lblGameover.SendToBack();
+            lblGameOverCoins.SendToBack();
+
         }
 
         private void gameOver()
@@ -410,7 +432,16 @@ namespace INF164HWAss1
             GameTimer.Stop();
             FireballTimer.Stop();
 
-            MessageBox.Show("Game Over");
+            pbGameover.Visible = true;
+            pbGameOverCoins.Visible = true;
+            lblGameOverCoins.Visible = true;
+            lblGameover.Visible = true;
+
+            pbGameover.BringToFront();
+            pbGameOverCoins.BringToFront();
+            lblGameover.BringToFront();
+            lblGameOverCoins.BringToFront();
+            lblGameOverCoins.Text = "" + coin;
         }
 
         private void SpawnTimer_Tick(object sender, EventArgs e)

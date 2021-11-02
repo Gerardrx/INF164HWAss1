@@ -382,6 +382,9 @@
     <None Include="Resources\MaskMan\doorClose.jpeg" />
     <None Include="Resources\MaskMan\doorOpen.jpeg" />
     <None Include="Resources\MaskMan\doorOpenT.png" />
+    <None Include="Resources\GameOverWiz.gif" />
+    <None Include="Resources\OverGame.gif" />
+    <None Include="Resources\GameOverWiz1.gif" />
     <Content Include="Resources\PlantBoi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
